@@ -66,17 +66,7 @@ var R6MLangTerms = (function(undefined) {
         ensb: 'English SB',
         frsb: 'Français SB',
         en: 'English',
-        de: 'Deutsch',
-        fr: 'Français',
-        he: 'עִברִית',
-        ja: '日本語',
-        kr: '한국어',
-        mn: 'Монгол',
-        pt: 'Português',
-        ru: 'Русский',
-        zh_cn: '简体中文',
-        es: 'Español',
-        pl: 'Polski'
+        fr: 'Français'
       },
       floorNames: {
         subBasement: { full: 'Sub-Basement', short: 'B'},
@@ -357,7 +347,8 @@ var R6MLangTerms = (function(undefined) {
           hallway: 'Hallway',
           terrace: 'Terrace',
           stockTradingRoom: 'Stock<br/>Trading<br/>Room',
-          conferenceRoom: 'Conference<br/>Room'
+          conferenceRoom: 'Conference<br/>Room',
+          balcony: 'Balcony'
         },
         bartlett: {
           archwayHall: 'Archway Hall',

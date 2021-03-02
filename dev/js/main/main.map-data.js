@@ -201,6 +201,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, smaller: true, description: bankTerms.elevators, top: 170, left: -118 },
           { floor: 1, smaller: true, description: bankTerms.elevators, top: 170, left: -183 },
           { floor: 2, hardToRead: true, description: bankTerms.executiveHallway, top: -166, left: 22 },
+          { floor: 2, hardToRead: true, description: bankTerms.balcony, top: -125, left: -163 },
           { floor: 2, description: bankTerms.frontDesk, top: -41, left: -138 },
           { floor: 2, hardToRead: true, description: bankTerms.executiveLounge, top: -75, left: 39 },
           { floor: 2, hardToRead: true, description: bankTerms.CEOOffice, top: -32, left: 175 },

@@ -159,7 +159,8 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           hallway: 'Couloir',
           terrace: 'Terrasse',
           stockTradingRoom: 'Salle des<br/>transactions',
-          conferenceRoom: 'Salle de<br/>conférences'
+          conferenceRoom: 'Salle de<br/>conférences',
+          balcony: 'Balcon'
         },
         bartlett: {
           archwayHall: 'Passage vouté',

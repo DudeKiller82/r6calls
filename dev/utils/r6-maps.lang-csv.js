@@ -6,18 +6,9 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsGerman,
     R6MLangTermsFrench,
     R6MLangTermsFrenchSB,
     R6MLangTermsEnglishSB,
-    R6MLangTermsKorean,
-    R6MLangTermsPortBrazil,
-    R6MLangTermsRussian,
-    R6MLangTermsJapanese,
-    R6MLangTermsSimplifiedChinese,
-    R6MLangTermsMongolian,
-    R6MLangTermsSpanish,
-    R6MLangTermsPolish,
     R6MMainData
   );
 }(function(
@@ -25,18 +16,9 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsGerman,
   R6MLangTermsFrench,
   R6MLangTermsFrenchSB,
   R6MLangTermsEnglishSB,
-  R6MLangTermsKorean,
-  R6MLangTermsPortBrazil,
-  R6MLangTermsRussian,
-  R6MLangTermsJapanese,
-  R6MLangTermsSimplifiedChinese,
-  R6MLangTermsMongolian,
-  R6MLangTermsSpanish,
-  R6MLangTermsPolish,
   R6MMainData,
   undefined
 ) {
@@ -48,18 +30,9 @@
       defaultTerms = R6MLangTerms.terms,
       translatedTerms = [
         R6MLangTerms.terms,
-        R6MLangTermsGerman.terms,
         R6MLangTermsFrench.terms,
         R6MLangTermsFrenchSB.terms,
-        R6MLangTermsEnglishSB.terms,
-        R6MLangTermsKorean.terms,
-        R6MLangTermsPortBrazil.terms,
-        R6MLangTermsRussian.terms,
-        R6MLangTermsJapanese.terms,
-        R6MLangTermsSimplifiedChinese.terms,
-        R6MLangTermsMongolian.terms,
-        R6MLangTermsSpanish.terms,
-        R6MLangTermsPolish.terms
+        R6MLangTermsEnglishSB.terms
       ];
 
     html += getOutputForTerms(defaultTerms, translatedTerms, ['mapRooms'], null);

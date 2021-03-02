@@ -6,19 +6,9 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsGerman,
-    R6MLangTermsSpanish,
     R6MLangTermsFrench,
     R6MLangTermsFrenchSB,
     R6MLangTermsEnglishSB,
-    R6MLangTermsHebrew,
-    R6MLangTermsJapanese,
-    R6MLangTermsKorean,
-    R6MLangTermsMongolian,
-    R6MLangTermsPolish,
-    R6MLangTermsPortBrazil,
-    R6MLangTermsRussian,
-    R6MLangTermsSimplifiedChinese,
     R6MMainData
   );
 }(function(
@@ -26,19 +16,9 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsGerman,
-  R6MLangTermsSpanish,
   R6MLangTermsFrench,
   R6MLangTermsFrenchSB,
   R6MLangTermsEnglishSB,
-  R6MLangTermsHebrew,
-  R6MLangTermsJapanese,
-  R6MLangTermsKorean,
-  R6MLangTermsMongolian,
-  R6MLangTermsPolish,
-  R6MLangTermsPortBrazil,
-  R6MLangTermsRussian,
-  R6MLangTermsSimplifiedChinese,
   R6MMainData,
   undefined
 ) {
@@ -51,19 +31,9 @@
       outputEl = $('#output');
 
     defaultTerms = R6MLangTerms.terms;
-    translatedTerms.german = R6MLangTermsGerman.terms;
-    translatedTerms.spanish = R6MLangTermsSpanish.terms;
     translatedTerms.french = R6MLangTermsFrench.terms;
     translatedTerms.frenchSB = R6MLangTermsFrenchSB.terms;
     translatedTerms.englishSB = R6MLangTermsEnglishSB.terms;
-    translatedTerms.hebrew = R6MLangTermsHebrew.terms;
-    translatedTerms.japanese = R6MLangTermsJapanese.terms;
-    translatedTerms.korean = R6MLangTermsKorean.terms;
-    translatedTerms.mongolian = R6MLangTermsMongolian.terms;
-    translatedTerms.polish = R6MLangTermsPolish.terms;
-    translatedTerms.portbrazil = R6MLangTermsPortBrazil.terms;
-    translatedTerms.russian = R6MLangTermsRussian.terms;
-    translatedTerms.simplifiedchinese = R6MLangTermsSimplifiedChinese.terms;
     // add new languages here and to module import above
 
     categoryKeys = getFirstLevelKeys(defaultTerms, ['mapRooms']);
