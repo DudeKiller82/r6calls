@@ -70,9 +70,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       tagStart,
       tagEnd,
       retinaUrl = (
-          window.innerWidth > RETINA_WIDTH_CUTOFF
+        window.innerWidth > RETINA_WIDTH_CUTOFF
           && window.innerHeight > RETINA_HEIGHT_CUTOFF
-        ) ? '@2x' : '';
+      ) ? '@2x' : '';
 
     cameras.forEach(function(camera) {
       positionStyle = getPositionStyle(camera);
@@ -167,9 +167,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     positionPoints = { top: 448, left: 550 }; // default if none provided
     positionPoints = $.extend(
-        positionPoints,
-        compassPoints
-      );
+      positionPoints,
+      compassPoints
+    );
     positionStyle = getPositionStyle(positionPoints);
 
     html += '<div id="compass" style="' + positionStyle + '">';

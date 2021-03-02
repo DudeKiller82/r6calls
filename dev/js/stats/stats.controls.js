@@ -8,13 +8,13 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
   };
 
   var locationsPopulateOptions = function locationsPopulateOptions(
-      $locationsControls,  mapModeLocationsData, selectedSeason, selectedMap, selectedGameMode
-    ) {
+    $locationsControls,  mapModeLocationsData, selectedSeason, selectedMap, selectedGameMode
+  ) {
     var optionsCount = 1,
       $locationsSelect = $locationsControls.find('select');
 
     $locationsSelect.append($('<option></option>')
-       .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
+      .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
 
     if (selectedMap != ALL_KEY && selectedGameMode != ALL_KEY) {
       for (var objectiveLocation in mapModeLocationsData[selectedMap].objectives[selectedGameMode]) {
@@ -25,7 +25,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
           (info.seasonSpan[1] >= selectedSeason)
         ) {
           $locationsSelect.append($('<option></option>')
-             .attr('value', objectiveLocation).text(info.name));
+            .attr('value', objectiveLocation).text(info.name));
           optionsCount++;
         }
       }
@@ -81,7 +81,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
     }
 
     $mapsSelect.append($('<option></option>')
-       .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
+      .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
 
     mapOptions.sort(function(x,y) {
       if (x.text > y.text) {
@@ -91,7 +91,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
 
     mapOptions.forEach(function(map) {
       $mapsSelect.append($('<option></option>')
-         .attr('value', map.value).text(map.text));
+        .attr('value', map.value).text(map.text));
     });
   };
 
@@ -130,7 +130,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
       $modesSelect = $modesControl.find('select');
 
     $modesSelect.append($('<option></option>')
-       .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
+      .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
 
     for (var mode in modesData) {
       if (
@@ -139,7 +139,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
         ((selectedMap == ALL_KEY) || (mapModeLocationsData[selectedMap].objectives[mode]))
       ) {
         $modesSelect.append($('<option></option>')
-           .attr('value', mode).text(modesData[mode].name));
+          .attr('value', mode).text(modesData[mode].name));
         optionsCount++;
       }
     }
@@ -180,7 +180,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
     var $platformsSelect = $platformsControl.find('select');
 
     $platformsSelect.append($('<option></option>')
-       .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
+      .attr('value', ALL_KEY).text(R6MLangTerms.terms.stats.allOption));
 
     for (var platform in platformsData) {
       if (
@@ -188,7 +188,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
         (platformsData[platform].seasonSpan[1] >= selectedSeason)
       ) {
         $platformsSelect.append($('<option></option>')
-           .attr('value', platform).text(platformsData[platform].name));
+          .attr('value', platform).text(platformsData[platform].name));
       }
     }
   };
@@ -268,7 +268,7 @@ var R6MStatsControls = (function(R6MLangTerms, undefined){
 
     for (var seasonKey in seasonsData) {
       $seasonsSelect.append($('<option></option>')
-         .attr('value', seasonKey).text(seasonsData[seasonKey].name));
+        .attr('value', seasonKey).text(seasonsData[seasonKey].name));
     }
   };
 

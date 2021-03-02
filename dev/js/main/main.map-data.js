@@ -3609,10 +3609,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 116, left: -259, set: 4, letter: objectiveTerms.bombShortB }
         ],
         secureObjectives: [
-            { floor: 3, top: -6, left: 31 },
-            { floor: 2, top: 33, left: -150 },
-            { floor: 2, top: 61, left: 343 },
-            { floor: 4, top: 14, left: 180 }
+          { floor: 3, top: -6, left: 31 },
+          { floor: 2, top: 33, left: -150 },
+          { floor: 2, top: 61, left: 343 },
+          { floor: 4, top: 14, left: 180 }
         ],
         zoomPoints: {
           topLeft: { top: -139, left: -610 },
@@ -3846,18 +3846,18 @@ var R6MMainData = (function(R6MLangTerms, undefined){
             los: [[{top: -207, left: 254}, {top: -193, left: 223}, {top: -218, left: 223}, {top: -212, left: 240}, {top: -228, left: 240}, {top: -228, left: 254}, {top: -253, left: 254}, {top: -278, left: 269}, {top: -268, left: 269}, {top: -268, left: 310}, {top: -258, left: 310}, {top: -290, left: 346}, {top: -290, left: 369}, {top: -284, left: 369}, {top: -240, left: 310}, {top: -232, left: 296}, {top: -228, left: 296}, {top: -228, left: 320}, {top: -220, left: 320}, {top: -229, left: 369}, {top: -182, left: 369}, {top: -192, left: 320}, {top: -188, left: 320}, {top: -188, left: 280}, {top: -207, left: 254}]]},
           {floor: 1, top: 206, left: 157, id: 4, location: villaTerms.mainEntrance,
             los: [[{top: 206, left: 157}, {top: 189, left: 35}, {top: 158, left: 35}, {top: 158, left: 61}, {top: 175, left: 94}],
-            [{top: 151, left: 111}, {top: 170, left: 127}],
-            [{top: 151, left: 160}, {top: 91, left: 163}, {top: 91, left: 192}, {top: 151, left: 174}],
-            [{top: 173, left: 206}, {top: 151, left: 239}, {top: 151, left: 267}, {top: 206, left: 157}]]},
+              [{top: 151, left: 111}, {top: 170, left: 127}],
+              [{top: 151, left: 160}, {top: 91, left: 163}, {top: 91, left: 192}, {top: 151, left: 174}],
+              [{top: 173, left: 206}, {top: 151, left: 239}, {top: 151, left: 267}, {top: 206, left: 157}]]},
           {floor: 0, top: -128, left: 288, id: 5, location: villaTerms.archHallway,
             los: [[{top: -143, left: 327}, {top: -128, left: 288}, {top: -86, left: 252}],
-            [{top: -163, left: 246}, {top: -167, left: 241}, {top: -193, left: 241}, {top: -158, left: 267}],
-            [{top: -162, left: 274}, {top: -204, left: 258}, {top: -204, left: 273}, {top: -250, left: 265}, {top: -250, left: 274}, {top: -254, left: 274}, {top: -302, left: 269}, {top: -302, left: 290}, {top: -163, left: 290}]]},
+              [{top: -163, left: 246}, {top: -167, left: 241}, {top: -193, left: 241}, {top: -158, left: 267}],
+              [{top: -162, left: 274}, {top: -204, left: 258}, {top: -204, left: 273}, {top: -250, left: 265}, {top: -250, left: 274}, {top: -254, left: 274}, {top: -302, left: 269}, {top: -302, left: 290}, {top: -163, left: 290}]]},
           {outdoor: true, top: -82, left: 53, id: 6, location: villaTerms.stableYard,
             los: [[{top: -77, left: 95  }, {top: -86, left: 82}, {top: -97, left: 174}], [{top: -404, left: 248}, {top: -720, left: 414}]]},
           {outdoor: true, top: 360, left: 366, id: 7, location: villaTerms.ruins, los: [[{top: 480, left: 340}, {top: 390, left: 386}, {top: 40, left: 650}]]},
           {outdoor: true, top: -73, left: 685, id: 8, location: villaTerms.driveway,
-          los: [[{top: 290, left: 392}, {top: -73, left: 686}, {top: -130, left: 720}]]}
+            los: [[{top: 290, left: 392}, {top: -73, left: 686}, {top: -130, left: 720}]]}
         ],
         ceilingHatches: [
           // scale is off b/w map and hatch, so rescaling to fit.

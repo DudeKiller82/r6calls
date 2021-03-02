@@ -9,6 +9,8 @@
     R6MLangTermsGerman,
     R6MLangTermsSpanish,
     R6MLangTermsFrench,
+    R6MLangTermsFrenchSB,
+    R6MLangTermsEnglishSB,
     R6MLangTermsHebrew,
     R6MLangTermsJapanese,
     R6MLangTermsKorean,
@@ -27,6 +29,8 @@
   R6MLangTermsGerman,
   R6MLangTermsSpanish,
   R6MLangTermsFrench,
+  R6MLangTermsFrenchSB,
+  R6MLangTermsEnglishSB,
   R6MLangTermsHebrew,
   R6MLangTermsJapanese,
   R6MLangTermsKorean,
@@ -50,6 +54,8 @@
     translatedTerms.german = R6MLangTermsGerman.terms;
     translatedTerms.spanish = R6MLangTermsSpanish.terms;
     translatedTerms.french = R6MLangTermsFrench.terms;
+    translatedTerms.frenchSB = R6MLangTermsFrenchSB.terms;
+    translatedTerms.englishSB = R6MLangTermsEnglishSB.terms;
     translatedTerms.hebrew = R6MLangTermsHebrew.terms;
     translatedTerms.japanese = R6MLangTermsJapanese.terms;
     translatedTerms.korean = R6MLangTermsKorean.terms;

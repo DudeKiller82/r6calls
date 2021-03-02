@@ -26,9 +26,9 @@ var R6MMainSelectMaps = (function($, window, document, R6MLangTerms, undefined) 
     for (var columnCount = MIN_COLUMN_NUM; columnCount <= MAX_COLUMN_NUM; columnCount++) {
       numThumbsLastRow = (numThumbs % columnCount);
       if (
-          ((numThumbsLastRow * 2) >= columnCount) ||
+        ((numThumbsLastRow * 2) >= columnCount) ||
           ((columnCount - numThumbsLastRow) < 3 )
-        ) {
+      ) {
         result.push(columnCount);
       }
     }

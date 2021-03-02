@@ -1,12 +1,8 @@
 'use strict';
 
-var R6MLangTerms = (function(undefined) {
-  var terms = {},
-    name = 'en',
-    loadedLang = 'en',
-    loadedDirection = 'LTR',
-    translations = {},
-    englishTerms = {
+var R6MLangTermsEnglishSB = (function(undefined) {
+  var name = 'ensb',
+    terms = {
       general: {
         pageTitle: 'R6Maps.com - {mapName}',
         pageTitleSelectMap: 'R6Maps.com - Select a map',
@@ -63,8 +59,6 @@ var R6MLangTerms = (function(undefined) {
         letterW: 'W'
       },
       languages: {
-        ensb: 'English SB',
-        frsb: 'Français SB',
         en: 'English',
         de: 'Deutsch',
         fr: 'Français',
@@ -1506,48 +1500,12 @@ var R6MLangTerms = (function(undefined) {
       }
     };
 
-  var getLoadedLang = function getLoadedLang() {
-    return loadedLang;
-  };
+  R6MLangTerms.registerLanguage(name, terms);
 
-  var getLoadedDirection = function getLoadedDirection() {
-    return loadedDirection;
-  };
-
-  var registerLanguage = function registerLanguage(language, terms, direction) {
-    translations[language] = {
-      terms: terms,
-      direction: (direction === 'RTL') ? 'RTL' : 'LTR'
-    };
-  };
-
-  var tryLoadLanguage = function tryLoadLanguage(language) {
-    if (translations[language]) {
-      loadTerms(translations[language].terms);
-      loadedLang = language;
-      loadedDirection = translations[language].direction;
-    }
-  };
-
-  var loadTerms = function loadTerms(newTerms) {
-    loadDefaultTerms();
-    $.extend(true, terms, newTerms);
-  };
-
-  var loadDefaultTerms = function loadDefaultTerms() {
-    $.extend(true, terms, englishTerms);
-  };
-
-  registerLanguage(name, englishTerms);
-  loadDefaultTerms();
+  // À  à  Â  â  Ç   ç  È  è  É  é  Ê  ê  Î  î  Ô  ô  Ù  ù  Û  û
 
   return  {
     name: name,
-    getLoadedLang: getLoadedLang,
-    getLoadedDirection: getLoadedDirection,
-    terms: terms,
-    registerLanguage: registerLanguage,
-    tryLoadLanguage: tryLoadLanguage,
-    loadedLanguages: translations
+    terms: terms
   };
-})();
+})(R6MLangTerms);
