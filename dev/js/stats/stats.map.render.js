@@ -14,22 +14,22 @@ var R6MStatsMapRender = (function(R6MLangTerms, undefined) {
         return statTerms.numberSeconds.replace('{num}', '<span class="num">' + Math.round(num) + '</span>');
       }
     },
-    {
-      name: statTerms.totalRoundsPlayed,
-      cssClass: 'total-rounds',
-      statKey: 'totalRounds',
-      numFormatFn: function(num) {
-        return statTerms.numberRounds.replace('{num}', '<span class="num">' + getFormattedNumberFn(num, 'number') + '</span>');
-      }
-    }].forEach(function(info) {
-      html += '<div class="map-info-wrapper">';
-      html += '<h3>' + info.name + '</h3>';
-      html += '<div class="map-info-wrapper-two">';
-      html += '<div class="map-info-icon ' + info.cssClass + '"></div>';
-      html += '<p>' + info.numFormatFn(mapStats.overall[info.statKey]) + '</p>';
-      html += '</div>';
-      html += '</div>';
-    });
+      {
+        name: statTerms.totalRoundsPlayed,
+        cssClass: 'total-rounds',
+        statKey: 'totalRounds',
+        numFormatFn: function(num) {
+          return statTerms.numberRounds.replace('{num}', '<span class="num">' + getFormattedNumberFn(num, 'number') + '</span>');
+        }
+      }].forEach(function(info) {
+        html += '<div class="map-info-wrapper">';
+        html += '<h3>' + info.name + '</h3>';
+        html += '<div class="map-info-wrapper-two">';
+        html += '<div class="map-info-icon ' + info.cssClass + '"></div>';
+        html += '<p>' + info.numFormatFn(mapStats.overall[info.statKey]) + '</p>';
+        html += '</div>';
+        html += '</div>';
+      });
     return html;
   };
 
