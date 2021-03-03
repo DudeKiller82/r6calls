@@ -995,7 +995,7 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           busYard: 'Bus Yard',
           mainEntrance: 'Main Entrance',
           parking: 'Parking',
-          constructionSite: 'Construction Site',
+          constructionSite: 'Construction',
           farmlands: 'Farmlands',
           shootingRange: 'Shooting<br/>Range',
 
@@ -1004,7 +1004,7 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           whiteStairs: 'White<br/>Stairs',
           laundryStairs: 'Laundry<br/>Stairs',
           mainStairs: 'Main<br/>Stairs',
-          backStairs: 'Back<br/>Stairs',
+          backStairs: 'Tower<br/>Stairs',
           towerStairs: 'Tower<br/>Stairs',
 
           // Basement
@@ -1014,9 +1014,9 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           basementCorridor: 'Basement<br/>Corridor',
           supplyCloset: 'Supply<br/>Closet',
           supplyRoom: 'Supply<br/>Room',
-          blueBunker: 'Blue<br/>Bunker',
+          blueBunker: 'Blue',
           bunker: 'Bunker',
-          boilerRoom: 'Boiler<br/>Room',
+          boilerRoom: 'Pillar',
           electricRoom: 'Electric<br/>Room',
 
           // 1F
@@ -1028,12 +1028,12 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           smallTower: 'Small<br/>Tower',
           showers: 'Showers',
           security: 'Security',
-          diningHall: 'Dining<br/>Hall',
+          diningHall: 'Dining',
           kitchen: 'Kitchen',
-          meetingHall: 'Meeting Hall',
+          meetingHall: 'Meeting',
           split: 'Split',
           kitchenCorridor: 'Kitchen<br/>Corridor',
-          rearStage: 'Rear Stage',
+          rearStage: 'Big Tower',
 
           // 2F
           balcony: 'Balcony',
@@ -1041,15 +1041,15 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           walkIn: 'Walk In',
           masterBedroom: 'Master<br/>Bedroom',
           smallTowerRoof: 'Small Tower<br/>Roof',
-          dormMainHall: 'Dorm<br/>Main Hall',
-          gameRoom: 'Game<br/>Room',
+          dormMainHall: 'Dorm',
+          gameRoom: 'Gaming',
           armory: 'Armory',
           armoryCorridor: 'Armory<br/>Corridor',
-          smallTowerOffice: 'Small Tower<br/>Office',
-          trophyRoom: 'Trophy<br/>Room',
-          kidsDorms: 'Kids\' Dorms',
+          smallTowerOffice: 'Office',
+          trophyRoom: 'Trophy',
+          kidsDorms: 'Kids',
           attic: 'Attic',
-          meetingHallRoof: 'Meeting<br/>Hall<br/>Roof',
+          meetingHallRoof: 'Meeting<br/>Roof',
           bigTower: 'Big Tower',
 
           // 3F
