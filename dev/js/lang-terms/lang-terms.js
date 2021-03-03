@@ -348,7 +348,7 @@ var R6MLangTerms = (function(undefined) {
           terrace: 'Terrace',
           stockTradingRoom: 'Stock<br/>Trading<br/>Room',
           conferenceRoom: 'Conference<br/>Room',
-          balcony: 'Balcony'
+          balcony: ''
         },
         bartlett: {
           archwayHall: 'Archway Hall',
