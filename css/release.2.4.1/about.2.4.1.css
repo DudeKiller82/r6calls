@@ -237,18 +237,14 @@ body.about {
     margin-top: 0.5rem; }
     body.about .bullet-list li {
       padding-bottom: 0.2rem; }
-
 body .donate-link {
   margin-bottom: 2rem; }
   body .donate-link:hover {
     cursor: pointer; }
-
 body ul.credit-list a {
   font-weight: 700; }
-
 body ul.credit-list p {
   margin-bottom: 0; }
-
 body table.credit-list {
   width: 100%;
   margin-bottom: 2rem; }
@@ -270,3 +266,5 @@ body table.credit-list {
     font-weight: 700; }
   body table.credit-list li {
     padding-bottom: 0; }
+
+/*# sourceMappingURL=about.2.4.1.css.map */

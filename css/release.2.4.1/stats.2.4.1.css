@@ -326,7 +326,6 @@ body, button, input, select {
 #section-operators .wrapper {
   margin: 0 0 1em;
   position: relative; }
-
 #section-operators .scroller {
   margin-left: 38px;
   overflow-x: scroll;
@@ -342,7 +341,6 @@ body, button, input, select {
     border-radius: 8px;
     border: 2px solid #fff;
     background-color: rgba(0, 0, 0, 0.3); }
-
 #section-operators table {
   width: 100%;
   font-size: 22px; }
@@ -473,7 +471,6 @@ body, button, input, select {
       border-right: 1px solid #000; }
   #section-operators table .warning {
     color: #d65b2b; }
-
 #section-operators input[type='checkbox'] {
   -webkit-appearance: none;
   background-color: #fff;
@@ -487,12 +484,10 @@ body, button, input, select {
   #section-operators input[type='checkbox']:hover, #section-operators input[type='checkbox']:focus {
     background-color: #3a6082;
     border-color: #3a6082; }
-
 #section-operators input[type='checkbox']:checked {
   background-position-x: 0px; }
   #section-operators input[type='checkbox']:checked:hover {
     border-color: #3a6082; }
-
 #section-operators .sortable {
   display: -webkit-box;
   display: -webkit-flex;
@@ -529,7 +524,6 @@ body, button, input, select {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
-
 #section-operators .show-unranked table .can-hide.unranked {
   width: auto;
   padding: 0 0.3rem; }
@@ -541,10 +535,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-unranked table tr.sub .can-hide.unranked {
   padding: 0; }
-
 #section-operators .show-copper table .can-hide.copper {
   width: auto;
   padding: 0 0.3rem; }
@@ -556,10 +548,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-copper table tr.sub .can-hide.copper {
   padding: 0; }
-
 #section-operators .show-bronze table .can-hide.bronze {
   width: auto;
   padding: 0 0.3rem; }
@@ -571,10 +561,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-bronze table tr.sub .can-hide.bronze {
   padding: 0; }
-
 #section-operators .show-silver table .can-hide.silver {
   width: auto;
   padding: 0 0.3rem; }
@@ -586,10 +574,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-silver table tr.sub .can-hide.silver {
   padding: 0; }
-
 #section-operators .show-gold table .can-hide.gold {
   width: auto;
   padding: 0 0.3rem; }
@@ -601,10 +587,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-gold table tr.sub .can-hide.gold {
   padding: 0; }
-
 #section-operators .show-platinum table .can-hide.platinum {
   width: auto;
   padding: 0 0.3rem; }
@@ -616,10 +600,8 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-platinum table tr.sub .can-hide.platinum {
   padding: 0; }
-
 #section-operators .show-diamond table .can-hide.diamond {
   width: auto;
   padding: 0 0.3rem; }
@@ -631,7 +613,6 @@ body, button, input, select {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 #section-operators .show-diamond table tr.sub .can-hide.diamond {
   padding: 0; }
 
@@ -775,7 +756,6 @@ body.stats.op-chart-open {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-
 body.stats #op-chart {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -901,26 +881,21 @@ body.stats {
 
 body.stats a {
   color: #fff; }
-
 body.stats h2 {
   color: #ffdb00;
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
   text-transform: uppercase; }
-
 body.stats h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   text-transform: uppercase; }
-
 body.stats p.error {
   color: #ab1513; }
-
 body.stats nav, body.stats section {
   background-color: rgba(16, 26, 36, 0.6);
   margin-bottom: 1.5rem;
   padding: 0.5rem 0.75rem 1rem 0.75rem; }
-
 body.stats section.load-in-progress div.loading {
   background-image: url("../../img/spinner.svg");
   background-position: center;
@@ -1016,7 +991,6 @@ body.stats[dir="rtl"] ul {
 
 body.not-loaded-yet #instructions {
   display: block; }
-
 body.not-loaded-yet #loaded-summary, body.not-loaded-yet #section-map, body.not-loaded-yet #section-operators {
   display: none; }
 
@@ -1134,3 +1108,5 @@ body.doc-not-ready #not-ready-overlay {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%; }
+
+/*# sourceMappingURL=stats.2.4.1.css.map */
