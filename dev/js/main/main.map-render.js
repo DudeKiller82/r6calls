@@ -357,12 +357,20 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   };
 
   var getPositionStyle = function getPositionStyle(element) {
-    return 'top: ' + element.top + 'px; left: ' + element.left + 'px; ';
+    return 'top: ' + element.top + 'px;left: ' + element.left + 'px;';
+  };
+
+  var getRotateStyle = function getRotateStyle(element) {
+    if ('rotate' in element) {
+      return 'transform: rotate(' + element.rotate + 'deg);';
+    } else {
+      return '';
+    }
   };
 
   var getDimensionStyle = function getDimensionStyle(element) {
     if ('width' in element && 'height' in element) {
-      return ' width: ' + element.width + 'px; height: ' + element.height + 'px; background-size: ' + element.width + 'px, ' + element.height + 'px;';
+      return 'width: ' + element.width + 'px;height: ' + element.height + 'px;background-size: ' + element.width + 'px,' + element.height + 'px;';
     } else {
       return '';
     }
@@ -371,13 +379,15 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var getRoomLabelsHtml = function getRoomLabelsHtml(roomLabels) {
     var html = '',
       positionStyle,
+      rotateStyle,
       classes;
 
     roomLabels.forEach(function(roomLabel) {
       positionStyle = getPositionStyle(roomLabel);
+      rotateStyle = getRotateStyle(roomLabel);
       classes = 'room-label ';
       classes += getCommonClasses(roomLabel);
-      html += '<div style="' + positionStyle + '" class="' + classes + '"><p>' + roomLabel.description + '</p></div>';
+      html += '<div style="' + positionStyle + rotateStyle + '" class="' + classes + '"><p>' + roomLabel.description + '</p></div>';
     });
     return html;
   };

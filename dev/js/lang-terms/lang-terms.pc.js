@@ -300,7 +300,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           garageRoof: 'Garage<br/>Roof',
           alleyAccess: 'Alley Access',
           backAlleyRooftop: 'Back Alley<br/>Rooftop',
-          backAlley: 'Back Alley',
+          backAlley: 'Alley',
           highRoof: 'High Roof',
           lowRoof: 'Low Roof',
           vault: 'Vault',
@@ -328,7 +328,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           staffRoom: 'Kitchen',
           electricalRoom: 'Electrical',
           adminOffice: 'Admin',
-          ATMs: 'Main Entrance',
+          ATMs: 'ATMs',
           executiveHallway: 'Executive<br/>Hallway',
           frontDesk: 'Front<br/>Desk',
           executiveLounge: 'Lounge',
@@ -338,7 +338,9 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           terrace: 'Terrace',
           stockTradingRoom: 'Stock',
           conferenceRoom: 'Meeting',
-          balcony: 'Banana'
+          balcony: 'Banana',
+          squareStairs: 'Square Stairs',
+          lobbyStairs: 'Lobby Stairs'
         },
         bartlett: {
           archwayHall: 'Archway Hall',
@@ -1034,6 +1036,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           split: 'Split',
           kitchenCorridor: 'Kitchen<br/>Corridor',
           rearStage: 'Tower',
+          stage: 'Stage',
 
           // 2F
           balcony: 'Balcony',

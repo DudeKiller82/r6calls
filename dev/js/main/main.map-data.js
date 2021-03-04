@@ -201,7 +201,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, smaller: true, description: bankTerms.elevators, top: 170, left: -118 },
           { floor: 1, smaller: true, description: bankTerms.elevators, top: 170, left: -183 },
           { floor: 2, hardToRead: true, description: bankTerms.executiveHallway, top: -166, left: 22 },
-          { floor: 2, hardToRead: true, description: bankTerms.balcony, top: -125, left: -163 },
           { floor: 2, description: bankTerms.frontDesk, top: -41, left: -138 },
           { floor: 2, hardToRead: true, description: bankTerms.executiveLounge, top: -75, left: 39 },
           { floor: 2, hardToRead: true, description: bankTerms.CEOOffice, top: -32, left: 175 },
@@ -212,7 +211,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, description: bankTerms.terrace, top: 147, left: 320 },
           { floor: 2, hardToRead: true, description: bankTerms.stockTradingRoom, top: 235, left: 117 },
           { floor: 2, hardToRead: true, description: bankTerms.conferenceRoom, top: 22, left: -32 },
-          { floor: 2, smaller: true, description: bankTerms.elevators, top: 170, left: -118 }
+          { floor: 2, smaller: true, description: bankTerms.elevators, top: 170, left: -118 },
+          { floor: 2, description: bankTerms.ATMs, top: -318, left: -223 },
+          { floor: 2, description: bankTerms.loanOffice, top: 132, left: -328 },
+          { floor: 2, hardToRead: true, description: bankTerms.balcony, top: -125, left: -156, rotate: -45 },
+          { floor: 1, description: bankTerms.squareStairs, top: -155, left: 322 },
+          { floor: 2, description: bankTerms.squareStairs, top: -155, left: 322 },
+          { floor: 1, description: bankTerms.lobbyStairs, top: -5, left: -274, rotate: 45 },
+          { floor: 2, description: bankTerms.lobbyStairs, top: -5, left: -274, rotate: 45 }
         ]
       },
       bartlett: {
@@ -2580,6 +2586,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -144, left: 71, description: oregonTerms.kitchenCorridor, hardToRead: true, smaller: true },
           { floor: 1, top: -186, left: 151, description: oregonTerms.rearStage, hardToRead: true },
           { floor: 1, top: -250, left: 158, description: oregonTerms.towerStairs, hardToRead: true },
+          { floor: 1, top: -136, left: 183, description: oregonTerms.stage, hardToRead: true },
 
           // 2F
           { floor: 2, top: 251, left: 152, description: oregonTerms.balcony, hardToRead: true },

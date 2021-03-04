@@ -347,7 +347,9 @@ var R6MLangTerms = (function(undefined) {
           terrace: 'Terrace',
           stockTradingRoom: 'Stock<br/>Trading<br/>Room',
           conferenceRoom: 'Conference<br/>Room',
-          balcony: ''
+          balcony: '',
+          squareStairs: '',
+          lobbyStairs: ''
         },
         bartlett: {
           archwayHall: 'Archway Hall',
@@ -1043,6 +1045,7 @@ var R6MLangTerms = (function(undefined) {
           split: 'Split',
           kitchenCorridor: 'Kitchen<br/>Corridor',
           rearStage: 'Rear Stage',
+          stage: '',
 
           // 2F
           balcony: 'Balcony',
