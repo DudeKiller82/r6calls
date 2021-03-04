@@ -7,8 +7,7 @@
     document,
     R6MLangTerms,
     R6MLangTermsFrench,
-    R6MLangTermsFrenchSB,
-    R6MLangTermsEnglishSB,
+    R6MLangTermsPlayerCalls,
     R6MMainData
   );
 }(function(
@@ -17,8 +16,7 @@
   document,
   R6MLangTerms,
   R6MLangTermsFrench,
-  R6MLangTermsFrenchSB,
-  R6MLangTermsEnglishSB,
+  R6MLangTermsPlayerCalls,
   R6MMainData,
   undefined
 ) {
@@ -32,8 +30,7 @@
 
     defaultTerms = R6MLangTerms.terms;
     translatedTerms.french = R6MLangTermsFrench.terms;
-    translatedTerms.frenchSB = R6MLangTermsFrenchSB.terms;
-    translatedTerms.englishSB = R6MLangTermsEnglishSB.terms;
+    translatedTerms.englishSB = R6MLangTermsPlayerCalls.terms;
     // add new languages here and to module import above
 
     categoryKeys = getFirstLevelKeys(defaultTerms, ['mapRooms']);

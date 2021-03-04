@@ -63,8 +63,7 @@ var R6MLangTerms = (function(undefined) {
         letterW: 'W'
       },
       languages: {
-        ensb: 'English SB',
-        frsb: 'Français SB',
+        pc: 'Player Calls',
         en: 'English',
         fr: 'Français'
       },

@@ -1,7 +1,7 @@
 'use strict';
 
-var R6MLangTermsEnglishSB = (function(undefined) {
-  var name = 'ensb',
+var R6MLangTermsPlayerCalls = (function(undefined) {
+  var name = 'pc',
     terms = {
       general: {
         pageTitle: 'R6Maps.com - {mapName}',
@@ -1033,7 +1033,7 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           meetingHall: 'Meeting',
           split: 'Split',
           kitchenCorridor: 'Kitchen<br/>Corridor',
-          rearStage: 'Big Tower',
+          rearStage: 'Tower',
 
           // 2F
           balcony: 'Balcony',
@@ -1050,7 +1050,7 @@ var R6MLangTermsEnglishSB = (function(undefined) {
           kidsDorms: 'Kids',
           attic: 'Attic',
           meetingHallRoof: 'Meeting<br/>Roof',
-          bigTower: 'Big Tower',
+          bigTower: 'Tower',
 
           // 3F
           dormsRoof: 'Dorms Roof',
