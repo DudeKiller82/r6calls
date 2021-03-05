@@ -160,7 +160,9 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           terrace: 'Terrasse',
           stockTradingRoom: 'Salle des<br/>transactions',
           conferenceRoom: 'Salle de<br/>conférences',
-          balcony: ''
+          balcony: '',
+          squareStairs: '',
+          lobbyStairs: ''
         },
         bartlett: {
           archwayHall: 'Passage vouté',
@@ -666,6 +668,7 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           split: 'Double Portes <br/> Meeting',
           kitchenCorridor: 'Couloir<br/>Cuisine',
           rearStage: 'Arrière Scène',
+          stage: '',
 
           // 2F
           balcony: 'Balcon',

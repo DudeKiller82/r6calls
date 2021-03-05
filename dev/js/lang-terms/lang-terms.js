@@ -64,6 +64,7 @@ var R6MLangTerms = (function(undefined) {
       },
       languages: {
         pc: 'Player Calls',
+        lr: 'Learning Calls',
         en: 'English',
         fr: 'Français'
       },
