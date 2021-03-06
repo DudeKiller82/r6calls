@@ -1760,9 +1760,13 @@ body {
             background: rgba(16, 26, 36, 0.6);
             font-weight: 600 !important; }
         .map-elements.room-label-learning .room-label p {
-          color: transparent; }
-        .map-elements.room-label-learning .room-label p:hover {
-          color: #fff; }
+          color: transparent;
+          background-color: red;
+          text-shadow: none; }
+        .map-elements.room-label-learning .room-label:hover p {
+          color: #fff;
+          background-color: transparent;
+          text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); }
         .map-elements.room-label-display-none .room-label {
           display: none; }
       .map-main .map-elements .room-label.hard-to-read {
