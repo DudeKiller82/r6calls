@@ -45,7 +45,8 @@ var R6MLangTerms = (function(undefined) {
         LightAndLarge: 'Large and Light',
         DarkAndSmall: 'Small and Dark',
         LightAndSmall: 'Small and Light',
-        DisplayNone: 'Turn Off'
+        DisplayNone: 'Turn Off',
+        Learning: 'Learning'
       },
       floorDisplayOptions: {
         one: '1 - Full',
@@ -188,7 +189,7 @@ var R6MLangTerms = (function(undefined) {
         timeExpired: 'Time expired'
       },
       toggle: {
-        labels: {full: 'Toggle Labels', short: 'Labels', shortcut: ['t','T']}
+        labels: {full: 'Toggle Learning', short: 'Learning', shortcut: ['t','T']}
       },
       ranks: {
         unranked: 'Unranked',
@@ -350,7 +351,8 @@ var R6MLangTerms = (function(undefined) {
           conferenceRoom: 'Conference<br/>Room',
           balcony: '',
           squareStairs: '',
-          lobbyStairs: ''
+          lobbyStairs: '',
+          redTruck: ''
         },
         bartlett: {
           archwayHall: 'Archway Hall',
@@ -1047,6 +1049,7 @@ var R6MLangTerms = (function(undefined) {
           kitchenCorridor: 'Kitchen<br/>Corridor',
           rearStage: 'Rear Stage',
           stage: '',
+          smallTowerStairs: '',
 
           // 2F
           balcony: 'Balcony',
@@ -1064,6 +1067,7 @@ var R6MLangTerms = (function(undefined) {
           attic: 'Attic',
           meetingHallRoof: 'Meeting<br/>Hall<br/>Roof',
           bigTower: 'Big Tower',
+          middle: '',
 
           // 3F
           dormsRoof: 'Dorms Roof',

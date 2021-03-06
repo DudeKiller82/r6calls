@@ -37,7 +37,8 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
         LightAndLarge: 'Grand et Clair',
         DarkAndSmall: 'Petit et Sombre',
         LightAndSmall: 'Petit et clair',
-        DisplayNone: 'Ne pas afficher'
+        DisplayNone: 'Ne pas afficher',
+        Learning: 'Apprentissage'
       },
       floorDisplayOptions: {
         one: '1 - Plein',
@@ -162,7 +163,8 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           conferenceRoom: 'Salle de<br/>conférences',
           balcony: '',
           squareStairs: '',
-          lobbyStairs: ''
+          lobbyStairs: '',
+          redTruck: ''
         },
         bartlett: {
           archwayHall: 'Passage vouté',
@@ -669,6 +671,7 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           kitchenCorridor: 'Couloir<br/>Cuisine',
           rearStage: 'Arrière Scène',
           stage: '',
+          smallTowerStairs: '',
 
           // 2F
           balcony: 'Balcon',
@@ -686,6 +689,7 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           attic: 'Grenier',
           meetingHallRoof: 'Toit<br/>Meeting',
           bigTower: 'Tour Rouge<br/>(Grande Tour)',
+          middle: '',
 
           // 3F
           dormsRoof: 'Toit du Dortoir',

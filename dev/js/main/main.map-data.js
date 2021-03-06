@@ -218,7 +218,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, description: bankTerms.squareStairs, top: -155, left: 322 },
           { floor: 2, description: bankTerms.squareStairs, top: -155, left: 322 },
           { floor: 1, description: bankTerms.lobbyStairs, top: -5, left: -274, rotate: 45 },
-          { floor: 2, description: bankTerms.lobbyStairs, top: -5, left: -274, rotate: 45 }
+          { floor: 2, description: bankTerms.lobbyStairs, top: -5, left: -274, rotate: 45 },
+          { floor: 0, description: bankTerms.redTruck, top: 372, left: 2 }
         ]
       },
       bartlett: {
@@ -2587,6 +2588,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -186, left: 151, description: oregonTerms.rearStage, hardToRead: true },
           { floor: 1, top: -250, left: 158, description: oregonTerms.towerStairs, hardToRead: true },
           { floor: 1, top: -136, left: 183, description: oregonTerms.stage, hardToRead: true },
+          { floor: 1, top: 36, left: -332, description: oregonTerms.smallTowerStairs, hardToRead: true },
+          { floor: 2, top: 36, left: -332, description: oregonTerms.smallTowerStairs, hardToRead: true },
 
           // 2F
           { floor: 2, top: 251, left: 152, description: oregonTerms.balcony, hardToRead: true },
@@ -2598,7 +2601,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 171, left: -268, description: oregonTerms.smallTowerRoof, hardToRead: true },
           { floor: 2, top: -19, left: -253, description: oregonTerms.smallTowerRoof, hardToRead: true },
           { floor: 2, top: 132, left: -29, description: oregonTerms.dormMainHall, hardToRead: true },
-          { floor: 2, top: 80, left: 104, description: oregonTerms.dormMainHall, hardToRead: true },
           { floor: 2, top: 153, left: 94, description: oregonTerms.gameRoom, hardToRead: true },
           { floor: 2, top: 140, left: 302, description: oregonTerms.armory, hardToRead: true },
           { floor: 2, top: 112, left: 241, description: oregonTerms.armoryCorridor, hardToRead: true, smaller: true },
@@ -2612,6 +2614,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -60, left: 233, description: oregonTerms.meetingHallRoof, hardToRead: true },
           { floor: 2, top: -189, left: 175, description: oregonTerms.bigTower, hardToRead: true },
           { floor: 2, top: -251, left: 168, description: oregonTerms.towerStairs, hardToRead: true },
+          { floor: 2, top: 80, left: 104, description: oregonTerms.middle, hardToRead: true },
 
           // 3F
           { floor: 3, top: 171, left: -32, description: oregonTerms.dormsRoof, hardToRead: true },

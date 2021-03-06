@@ -16,7 +16,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $sessionsControl,
     $menuPanel = $('#menu-panel'),
     ROOM_LABEL_STYLE_DEFAULT = 'Light',
-    ROOM_LABEL_STYLE_DISPLAY_NONE = 'DisplayNone',
+    ROOM_LABEL_STYLE_DISPLAY_NONE = 'Learning',
     SELECTED_CLASS = 'selected',
     TOGGLE_TYPE_LABEL = 'label',
     ZOOMED_IN_FAR_CLASS = 'zoomed-in-far',

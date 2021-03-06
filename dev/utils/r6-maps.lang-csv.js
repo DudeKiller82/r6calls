@@ -8,7 +8,6 @@
     R6MLangTerms,
     R6MLangTermsFrench,
     R6MLangTermsPlayerCalls,
-    R6MLangTermsLearningCalls,
     R6MMainData
   );
 }(function(
@@ -18,7 +17,6 @@
   R6MLangTerms,
   R6MLangTermsFrench,
   R6MLangTermsPlayerCalls,
-  R6MLangTermsLearningCalls,
   R6MMainData,
   undefined
 ) {
@@ -31,8 +29,7 @@
       translatedTerms = [
         R6MLangTerms.terms,
         R6MLangTermsFrench.terms,
-        R6MLangTermsPlayerCalls.terms,
-        R6MLangTermsLearningCalls.terms
+        R6MLangTermsPlayerCalls.terms
       ];
 
     html += getOutputForTerms(defaultTerms, translatedTerms, ['mapRooms'], null);

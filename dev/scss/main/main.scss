@@ -685,6 +685,20 @@ body {
             font-weight: 600 !important;
           }
         }
+        @at-root .map-elements.room-label-learning .room-label {
+          p {
+            color: transparent;
+            background-color: red;
+            text-shadow: none;
+          }
+        }
+        @at-root .map-elements.room-label-learning .room-label:hover {
+          p {
+            color: #fff;
+            background-color: transparent;
+            @include text-shadow(2px, 1px, 4px, $color: rgba(0,0,0,0.8));
+          }
+        }
         @at-root .map-elements.room-label-display-none .room-label {
           display: none;
         }

@@ -8,7 +8,6 @@
     R6MLangTerms,
     R6MLangTermsFrench,
     R6MLangTermsPlayerCalls,
-    R6MLangTermsLearningCalls,
     R6MMainData
   );
 }(function(
@@ -18,7 +17,6 @@
   R6MLangTerms,
   R6MLangTermsFrench,
   R6MLangTermsPlayerCalls,
-  R6MLangTermsLearningCalls,
   R6MMainData,
   undefined
 ) {
