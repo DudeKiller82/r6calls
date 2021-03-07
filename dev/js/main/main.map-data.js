@@ -897,6 +897,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -120, left: 27, description: clubTerms.secretStash, hardToRead: true, smaller: true },
           { floor: 2, top: -196, left: -69, description: clubTerms.centralStairs, hardToRead: true },
           { floor: 2, top: -196, left: 49, description: clubTerms.logisticOffice, hardToRead: true },
+          { floor: 2, top: 215, left: 151, description: clubTerms.catwalk, hardToRead: true, rotate: -90},
 
           // 3F
           { floor: 3, top: 44, left: 210, description: clubTerms.easternRoof, hardToRead: true },

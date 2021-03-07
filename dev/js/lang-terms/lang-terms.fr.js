@@ -459,7 +459,8 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           secretStash: 'Pièce<br/>secrète',
           cctvRoom: 'Salle de<br/>surveillance',
           cashRoom: 'Salle des<br/>recettes',
-          easternStairs: 'Escalier<br/>est'
+          easternStairs: 'Escalier<br/>est',
+          catwalk: ''
         },
         consulate: {
           spawnRiotBarricade: 'Barricades',
