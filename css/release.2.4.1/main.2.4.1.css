@@ -1761,11 +1761,11 @@ body {
             font-weight: 600 !important; }
         .map-elements.room-label-learning .room-label p {
           color: transparent;
-          background-color: red;
+          background-color: red !important;
           text-shadow: none; }
         .map-elements.room-label-learning .room-label:hover p {
           color: #fff;
-          background-color: transparent;
+          background-color: transparent !important;
           text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); }
         .map-elements.room-label-display-none .room-label {
           display: none; }
