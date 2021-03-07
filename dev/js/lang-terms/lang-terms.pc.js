@@ -869,7 +869,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           kitchenCorridor: 'Kitchen<br/>Corridor',
           rearStage: 'Tower',
           stage: 'Stage',
-          smallTowerStairs: 'Small Tower Stairs',
+          smallStairs: 'Small Stairs',
 
           // 2F
           balcony: 'Balcony',

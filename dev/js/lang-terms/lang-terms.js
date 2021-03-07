@@ -1049,7 +1049,7 @@ var R6MLangTerms = (function(undefined) {
           kitchenCorridor: 'Kitchen<br/>Corridor',
           rearStage: 'Rear Stage',
           stage: '',
-          smallTowerStairs: '',
+          smallStairs: '',
 
           // 2F
           balcony: 'Balcony',

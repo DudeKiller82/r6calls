@@ -671,7 +671,7 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           kitchenCorridor: 'Couloir<br/>Cuisine',
           rearStage: 'Arrière Scène',
           stage: '',
-          smallTowerStairs: '',
+          smallStairs: '',
 
           // 2F
           balcony: 'Balcon',

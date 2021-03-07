@@ -688,14 +688,14 @@ body {
         @at-root .map-elements.room-label-learning .room-label {
           p {
             color: transparent;
-            background-color: red;
+            background-color: red !important;
             text-shadow: none;
           }
         }
         @at-root .map-elements.room-label-learning .room-label:hover {
           p {
             color: #fff;
-            background-color: transparent;
+            background-color: black !important;
             @include text-shadow(2px, 1px, 4px, $color: rgba(0,0,0,0.8));
           }
         }

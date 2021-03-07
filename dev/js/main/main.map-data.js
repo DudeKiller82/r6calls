@@ -2588,8 +2588,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -186, left: 151, description: oregonTerms.rearStage, hardToRead: true },
           { floor: 1, top: -250, left: 158, description: oregonTerms.towerStairs, hardToRead: true },
           { floor: 1, top: -136, left: 183, description: oregonTerms.stage, hardToRead: true },
-          { floor: 1, top: 36, left: -332, description: oregonTerms.smallTowerStairs, hardToRead: true },
-          { floor: 2, top: 36, left: -332, description: oregonTerms.smallTowerStairs, hardToRead: true },
+          { floor: 1, top: 35, left: -362, description: oregonTerms.smallStairs, hardToRead: true },
+          { floor: 2, top: 35, left: -362, description: oregonTerms.smallStairs, hardToRead: true },
 
           // 2F
           { floor: 2, top: 251, left: 152, description: oregonTerms.balcony, hardToRead: true },
