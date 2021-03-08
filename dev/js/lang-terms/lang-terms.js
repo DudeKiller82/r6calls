@@ -889,7 +889,6 @@ var R6MLangTerms = (function(undefined) {
           lockGateTunnel: 'Lock Gate<br/>Tunnel',
           forkliftAlley: 'Forklift<br/>Alley',
           parkingEntrance: 'Parking Entrance',
-          parkingAlley: 'Parking Alley',
           lockGate: 'Lock<br/>Gate',
           constructionSite: 'Construction<br/>Site',
           garage: 'Garage',

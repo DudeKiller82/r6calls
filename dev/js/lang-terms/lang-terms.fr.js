@@ -400,7 +400,6 @@ var R6MLangTermsFrench = (function(R6MLangTerms, undefined) {
           quayContainers: 'Conteneurs à quai',
           lockGateTunnel: 'Tunnel<br/>à écluse',
           constructionEntrance: 'Entrée<br/>du chantier',
-          parkingAlley: 'Allée du parking',
           parkingEntrance: 'Entrée<br/>du parking',
           middleRoad: 'Route<br/>du milieu',
           forkliftAlley: 'Allée char.<br/>Élévateurs',
