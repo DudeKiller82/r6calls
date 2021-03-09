@@ -6,7 +6,6 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsFrench,
     R6MLangTermsPlayerCalls,
     R6MMainData
   );
@@ -15,7 +14,6 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsFrench,
   R6MLangTermsPlayerCalls,
   R6MMainData,
   undefined
@@ -28,7 +26,6 @@
       defaultTerms = R6MLangTerms.terms,
       translatedTerms = [
         R6MLangTerms.terms,
-        R6MLangTermsFrench.terms,
         R6MLangTermsPlayerCalls.terms
       ];
 

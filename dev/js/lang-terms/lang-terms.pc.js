@@ -342,9 +342,9 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           kennels: 'Kennels',
           warehouse: 'Warehouse',
           shippingDock: 'Shipping Dock',
-          recreationArea: 'Recreation<br/>Area',
+          recreationArea: 'Recreation',
           trash: 'Trash',
-          graffitiArea: 'Graffiti Area',
+          graffitiArea: 'Graffiti',
           constructionSite: 'Construction<br/>Site',
 
           // Stairs
@@ -716,12 +716,13 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           quayContainers: 'Containers',
           floatingDock: 'Dock',
           docksBridge: 'Docks Bridge',
+          lawnStairs: 'Lawn Stairs',
           // Stairs
           whiteStairs: 'White<br/>Stairs',
           redStairs: 'Red<br/>Stairs',
-          greenStairs: 'Green<br/>Stairs',
-          yellowStairs: 'Yellow<br/>Stairs',
-          blueStairs: 'Blue<br/>Stairs',
+          greenStairs: 'Green Stairs',
+          yellowStairs: 'Yellow Stairs',
+          blueStairs: 'Blue Stairs',
           // 3F/Roof
           controlRoomRoof: 'Control<br/>Roof',
           upperBridgeRoof: 'Upper Bridge<br/>Roof',
@@ -749,22 +750,26 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           lowerBridge: 'Bridge',
           mapRoomCorridor: 'Map Corridor',
           securityRoom: 'Security',
-          lounge: 'Gym',
+          lounge: 'Lounge',
           mapRoom: 'Map',
           kitchen: 'Kitchen',
           constructionEntrance: 'Construction<br/>Entrance',
           radioRoom: 'Radio',
           projectorRoom: 'Projector',
+          constructionStairs: 'Construction Stairs',
+          gym: 'Gym',
+          meetingRoomHallway: 'Meeting Hallway',
           // Basement
           pipes: 'Pipes',
-          supplyRoomCorridor: 'Supply<br/>Corridor',
+          supplyRoomCorridor: 'Basement Corridor',
           bathroom: 'Bathroom',
           supplyRoom: 'Supply',
           showerCorridor: 'Shower',
           kayaks: 'Kayaks',
           lockerRoom: 'Locker',
           divingRoom: 'Diving',
-          tunnel01: 'Tunnel'
+          tunnel01: 'Tunnel',
+          lawnEntrance: 'Lawn Entrance'
         },
         kafe: {
           // EXT/Spawn

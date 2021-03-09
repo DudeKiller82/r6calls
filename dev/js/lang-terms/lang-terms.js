@@ -65,9 +65,7 @@ var R6MLangTerms = (function(undefined) {
       },
       languages: {
         pc: 'Player Calls',
-        lr: 'Learning Calls',
-        en: 'English',
-        fr: 'Français'
+        en: 'English'
       },
       floorNames: {
         subBasement: { full: 'Sub-Basement', short: 'B'},
@@ -896,6 +894,7 @@ var R6MLangTerms = (function(undefined) {
           quayContainers: 'Quay Containers',
           floatingDock: 'Floating Dock',
           docksBridge: 'Docks Bridge',
+          lawnStairs: '',
           // Stairs
           // basementStairs: 'Basement Stairs',
           whiteStairs: 'White<br/>Stairs',
@@ -937,6 +936,8 @@ var R6MLangTerms = (function(undefined) {
           constructionEntrance: 'Construction<br/>Entrance',
           radioRoom: 'Radio<br/>Room',
           projectorRoom: 'Projector<br/>Room',
+          gym: '',
+          meetingRoomHallway: '',
           // Basement
           pipes: 'Pipes',
           supplyRoomCorridor: 'Supply<br/>Room<br/>Corridor',
@@ -946,7 +947,8 @@ var R6MLangTerms = (function(undefined) {
           kayaks: 'Kayaks',
           lockerRoom: 'Locker<br/>Room',
           divingRoom: 'Diving<br/>Room',
-          tunnel01: 'Tunnel 01'
+          tunnel01: 'Tunnel 01',
+          lawnEntrance: ''
         },
         kafe: {
           // EXT/Spawn

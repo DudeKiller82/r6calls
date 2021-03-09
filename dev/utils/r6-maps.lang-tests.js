@@ -6,7 +6,6 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsFrench,
     R6MLangTermsPlayerCalls,
     R6MMainData
   );
@@ -15,7 +14,6 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsFrench,
   R6MLangTermsPlayerCalls,
   R6MMainData,
   undefined
@@ -29,7 +27,6 @@
       outputEl = $('#output');
 
     defaultTerms = R6MLangTerms.terms;
-    translatedTerms.french = R6MLangTermsFrench.terms;
     translatedTerms.englishSB = R6MLangTermsPlayerCalls.terms;
     // add new languages here and to module import above
 
