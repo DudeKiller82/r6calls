@@ -440,7 +440,12 @@ var R6MLangTerms = (function(undefined) {
           eastBalcony: 'East<br/>Balcony',
           westBalcony: 'West<br/>Balcony',
           southBalcony: 'South Balcony',
-          roof: 'Roof'
+          roof: 'Roof',
+          generator: '',
+          bathroomHallway: '',
+          roofLine: '',
+          archivesBalcony: '',
+          busRoof: ''
         },
         chalet: {
           spawnFrontYard: 'Front Yard',
