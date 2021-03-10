@@ -2602,8 +2602,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -186, left: 151, description: oregonTerms.rearStage, hardToRead: true },
           { floor: 1, top: -250, left: 158, description: oregonTerms.towerStairs, hardToRead: true },
           { floor: 1, top: -136, left: 183, description: oregonTerms.stage, hardToRead: true },
-          { floor: 1, top: 35, left: -362, description: oregonTerms.smallStairs, hardToRead: true },
-          { floor: 2, top: 34, left: -368, description: oregonTerms.smallStairs, hardToRead: true },
+          { floor: 1, top: 34, left: -368, description: oregonTerms.smallStairs, hardToRead: true },
           // 2F
           { floor: 2, top: 251, left: 152, description: oregonTerms.balcony, hardToRead: true },
           { floor: 2, top: 198, left: 252, description: oregonTerms.mainStairs, hardToRead: true, rotate: -90 },
@@ -2628,6 +2627,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -189, left: 175, description: oregonTerms.bigTower, hardToRead: true },
           { floor: 2, top: -251, left: 168, description: oregonTerms.towerStairs, hardToRead: true },
           { floor: 2, top: 80, left: 104, description: oregonTerms.middle, hardToRead: true },
+          { floor: 2, top: 34, left: -368, description: oregonTerms.smallStairs, hardToRead: true },
           // 3F
           { floor: 3, top: 171, left: -32, description: oregonTerms.dormsRoof, hardToRead: true },
           { floor: 3, top: 31, left: -32, description: oregonTerms.dormsRoof, hardToRead: true },
