@@ -108,7 +108,7 @@ body.about {
     body.about h1 a {
       position: absolute; }
       body.about h1 a span.logo {
-        background-image: url("../../img/r6maps-logo.png");
+        background-image: url("../../img/r6calls-logo.png");
         background-repeat: no-repeat;
         background-size: 90px;
         display: inline-block;
@@ -127,7 +127,7 @@ body.about {
           margin-left: 0;
           margin-right: 100px; }
       body.about h1 a:hover span.logo, body.about h1 a:focus span.logo {
-        background-image: url("../../img/r6maps-logo-blue.png"); }
+        background-image: url("../../img/r6calls-logo-blue.png"); }
       body.about h1 a:hover span.site-title, body.about h1 a:focus span.site-title {
         color: #3a6082; }
     body.about h1 span.page-title {

@@ -298,7 +298,7 @@ nav {
     body.show-select-map nav #nav-logo div, nav #nav-logo:focus div {
       background-position: 0 -80px; }
     nav #nav-logo div {
-      background-image: url("../../img/r6maps-logo-nav-sprite@2x.png");
+      background-image: url("../../img/r6calls-logo-nav-sprite@2x.png");
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 30px;
@@ -1012,7 +1012,7 @@ html.mm-pagedim-black #mm-blocker {
     bottom: 0px;
     right: 0;
     z-index: -100;
-    background-image: url("../../img/r6maps-logo-blue.png");
+    background-image: url("../../img/r6calls-logo-blue.png");
     background-position: center bottom;
     background-position: 100% calc(100% + 18px);
     background-repeat: no-repeat;
