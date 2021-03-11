@@ -29,7 +29,7 @@ body, button, input, select {
     position: absolute;
 
     span.logo {
-      background-image: url($img-location + 'r6maps-logo.png');
+      background-image: url($img-location + 'r6calls-logo.png');
       background-repeat: no-repeat;
       background-size: 90px;
       display: inline-block;
@@ -55,7 +55,7 @@ body, button, input, select {
 
     &:hover, &:focus {
       span.logo {
-        background-image: url($img-location + 'r6maps-logo-blue.png');
+        background-image: url($img-location + 'r6calls-logo-blue.png');
       }
 
       span.site-title {

@@ -271,11 +271,9 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     latestUpdateCss += showUpdateLinkHighlightedFn() ? ' highlighted-item' : '';
 
     html += '<div class="mmenu-custom-panel">';
-    html += '<h2>r6maps.com</h2>';
+    html += '<h2>r6calls.com</h2>';
     html += '<button id="menu-select-maps">' + R6MLangTerms.terms.selectMaps.homeLink + '</button>';
     html += '<a class="menu-item" id="menu-about" href="' + R6MLangTerms.terms.general.linkAbout + '">' + R6MLangTerms.terms.general.about + '</a>';
-    html += '<a class="menu-item" href="stats.html">' + R6MLangTerms.terms.stats.headerMainBeta + '</a>';
-    //html += '<a id="menu-latest-updates" class="' + latestUpdateCss + '" href="' + R6MLangTerms.terms.general.linkLatestUpdate + '">' + R6MLangTerms.terms.general.latestUpdate + '</a>';
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">' + R6MLangTerms.terms.general.fullScreen + '</button>';
     }
