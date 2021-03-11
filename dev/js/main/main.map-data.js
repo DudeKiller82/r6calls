@@ -38,6 +38,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -715, left: -1275, background: true, name: floorTerms.basement },
           { index: 1, top: -537, left: -601, name: floorTerms.firstFloor, default: true },
@@ -233,6 +236,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -465, left: -451, name: floorTerms.secondFloor },
@@ -390,6 +396,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -530, left: -360, name: floorTerms.secondFloor },
@@ -555,6 +564,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -698, right: -1676, height: 147, width: 693
+        },
         floors: [
           { index: 0, top: -175, left: -315, background: true, name: floorTerms.basement },
           { index: 1, top: -175, left: -315, name: floorTerms.firstFloor, default: true },
@@ -673,7 +685,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { outdoor: true, top: 455, left: 910, description: chaletTerms.backyard },
           { outdoor: true, top: 65, left: 1105, hardToRead: true, description: chaletTerms.gazeebo },
           { outdoor: true, top: 490, left: 1085, description: chaletTerms.cliffsideStairs },
-          { outdoor: true, top: 600, left: 945, description: chaletTerms.cliffsideWoods },
+          { outdoor: true, top: 600, left: 907, description: chaletTerms.cliffsideWoods },
           { outdoor: true, top: 720, left: 1090, description: chaletTerms.cliffside },
           { outdoor: true, top: 115, left: 915, description: chaletTerms.backyard },
           { outdoor: true, top: 405, left: 730, hardToRead: true, description: chaletTerms.backyardPatio },
@@ -735,6 +747,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -914, right: -1214, width: 661
+        },
         floors: [
           //
           { index: 0, top: -1098, left: -2409, background: true, name: floorTerms.basement },
@@ -927,6 +942,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -241, left: -380, name: floorTerms.secondFloor },
@@ -1109,6 +1127,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -715, left: -1275, background: true, name: floorTerms.basement },
           { index: 1, top: -282, left: -452, name: floorTerms.firstFloor, default: true },
@@ -1298,6 +1319,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -411, left: -771, name: floorTerms.secondFloor },
@@ -1455,6 +1479,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -1678, left: -3250, background: true, dontSelect: true },
           // top pixel 1315, left pixel 2894
@@ -1679,6 +1706,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -457, right: -1174, height: 263, width: 830
+        },
         floors: [
           // add `dontSelect: true, `, to this so we can put this in the bg and have a higher rez basement image
           // also set index to -1, set delete hereford-0.jpg and then rename hereford-0a.jpg to hereford-0.jpg
@@ -1792,7 +1822,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         spawnPoints: [
           { letter: spawnTerms.a, top: 93, left: -639, description: herefordTerms.controlTower },
-          { letter: spawnTerms.b, top: 126, left: 753, description: herefordTerms.spitfireCourtyard },
+          { letter: spawnTerms.b, top: 105, left: 753, description: herefordTerms.spitfireCourtyard },
           { letter: spawnTerms.c, top: -820, left: 39, description: herefordTerms.shootingRange }
         ],
         roomLabels: [
@@ -1870,6 +1900,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -397, right: -902, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -383, left: -680, background: true, name: floorTerms.basement },
           { index: 1, top: -249, left: -234, name: floorTerms.firstFloor, default: true },
@@ -2029,6 +2062,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -1170, left: -2437, background: true, name: '', dontSelect: true },
           { index: 1, top: -166, left: -224, name: floorTerms.firstFloor, default: true },
@@ -2200,6 +2236,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -743, right: -1262, height: 217, width: 634
+        },
         floors: [
           { index: -1, top: -1190, left: -2218, background: true, name: floorTerms.subBasement },
           { index: 0, top: -346, left: -368, name: floorTerms.basement },
@@ -2438,6 +2477,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -478, right: -1051, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -525, left: -815, background: true, name: floorTerms.basement },
           { index: 1, top: -292, left: -408, name: floorTerms.firstFloor, default: true },
@@ -2660,6 +2702,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -1118, left: -2538, background: true, name: '', dontSelect: true },
           // top: 969 left: 2564
@@ -2853,6 +2898,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor },
           { index: 2, top: -715, left: -920, name: floorTerms.secondFloor, default: true },
@@ -3023,6 +3071,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -771, right: -1219, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -175, left: -630, background: true, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -175, left: -630, name: floorTerms.secondFloor },
@@ -3186,6 +3237,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 0, top: -806, left: -984, background: true, dontSelect: true },
           { index: 1, top: -295, left: -287, name: floorTerms.firstFloor, default: true },
@@ -3365,6 +3419,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, name: floorTerms.firstFloor, background: true },
           { index: 2, top: -715, left: -715, name: floorTerms.secondFloor, default: true },
@@ -3598,12 +3655,205 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 4, top: 92, left: -231, description: towerTerms.westAirDuct, hardToRead: true }
         ]
       },
+      villa: {
+        name: mapNameTerms.villa,
+        imgUrlPrefix: 'villa',
+        objectives: [
+          'bomb', 'hostage', 'secure'
+        ],
+        legend: {
+          bottom: -725, right: -1236, height: 217, width: 510
+        },
+        floors: [
+          { index: 0, top: -720, left: -1280, background: true, name: floorTerms.basement },
+          { index: 1, top: -480, left: 0, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -480, left: 0, name: floorTerms.secondFloor },
+          { index: 3, top: -480, left: 0, name: floorTerms.roof }
+        ],
+        hostageObjectives: [
+          { floor: 2, top: 62, left: 284 },
+          { floor: 2, top: -315, left: 347 },
+          { floor: 1, top: 100, left: 295 },
+          { floor: 0, top: -197, left: 487 }
+        ],
+        bombObjectives: [
+          { floor: 2, top: 103, left: 191, set: 1, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: 62, left: 324, set: 1, letter: objectiveTerms.bombShortB },
+
+          { floor: 2, top: -204, left: 417, set: 2, letter: objectiveTerms.bombShortA },
+          { floor: 2, top: -204, left: 306, set: 2, letter: objectiveTerms.bombShortB },
+
+          { floor: 1, top: -105, left: 220, set: 3, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: 75, left: 145, set: 3, letter: objectiveTerms.bombShortB },
+
+          { floor: 1, top: -333, left: 417, set: 4, letter: objectiveTerms.bombShortA },
+          { floor: 1, top: -225, left: 428, set: 4, letter: objectiveTerms.bombShortB }
+        ],
+        secureObjectives: [
+          { floor: 2, top: 170, left: 309 },
+          { floor: 2, top: -205, left: 529 },
+          { floor: 1, top: -105, left: 260 },
+          { floor: 0, top: -161, left: 370 }
+        ],
+        zoomPoints: {
+          topLeft: { left: 0, top: -420 },
+          bottomRight: { left: 270, top: 640 }
+        },
+        compassPoints: {
+        },
+        ladders: [],
+        cameras: [
+          {floor: 2, top: -353, left: 381, id: 1, location: villaTerms.astronomyRoom,
+            los: [[{top: -397, left: 393}, {top: -280, left: 393}, {top: -280, left: 380}, {top: -244, left: 381}, {top: -244, left: 346}, {top: -280, left: 357}, {top: -280, left: 255}, {top: -350, left: 255}, {top: -350, left: 335}, {top: -355, left: 335}, {top: -368, left: 255}, {top: -397, left: 255}, {top: -397, left: 393}]]},
+          {floor: 2, top: -65, left: 140, id: 2, location: villaTerms.classicalHall,
+            los: [[{top: -80, left: 125}, {top: -80, left: 248}, {top: -46, left: 248}, {top: -46, left: 176}, {top: -33, left: 198}, {top: 3, left: 198}, {top: -46, left: 155}, {top: -46, left: 137}, {top: 21, left: 161}, {top: 21, left: 132}, {top: 226, left: 132}, {top: 226, left: 110}, {top: 21, left: 110}, {top: 21, left: 103}, {top: -19, left: 103}, {top: -80, left: 125}]]},
+          {floor: 1, top: -207, left: 254, id: 3, location: villaTerms.backHallway,
+            los: [[{top: -207, left: 254}, {top: -193, left: 223}, {top: -218, left: 223}, {top: -212, left: 240}, {top: -228, left: 240}, {top: -228, left: 254}, {top: -253, left: 254}, {top: -278, left: 269}, {top: -268, left: 269}, {top: -268, left: 310}, {top: -258, left: 310}, {top: -290, left: 346}, {top: -290, left: 369}, {top: -284, left: 369}, {top: -240, left: 310}, {top: -232, left: 296}, {top: -228, left: 296}, {top: -228, left: 320}, {top: -220, left: 320}, {top: -229, left: 369}, {top: -182, left: 369}, {top: -192, left: 320}, {top: -188, left: 320}, {top: -188, left: 280}, {top: -207, left: 254}]]},
+          {floor: 1, top: 206, left: 157, id: 4, location: villaTerms.mainEntrance,
+            los: [[{top: 206, left: 157}, {top: 189, left: 35}, {top: 158, left: 35}, {top: 158, left: 61}, {top: 175, left: 94}],
+              [{top: 151, left: 111}, {top: 170, left: 127}],
+              [{top: 151, left: 160}, {top: 91, left: 163}, {top: 91, left: 192}, {top: 151, left: 174}],
+              [{top: 173, left: 206}, {top: 151, left: 239}, {top: 151, left: 267}, {top: 206, left: 157}]]},
+          {floor: 0, top: -128, left: 288, id: 5, location: villaTerms.archHallway,
+            los: [[{top: -143, left: 327}, {top: -128, left: 288}, {top: -86, left: 252}],
+              [{top: -163, left: 246}, {top: -167, left: 241}, {top: -193, left: 241}, {top: -158, left: 267}],
+              [{top: -162, left: 274}, {top: -204, left: 258}, {top: -204, left: 273}, {top: -250, left: 265}, {top: -250, left: 274}, {top: -254, left: 274}, {top: -302, left: 269}, {top: -302, left: 290}, {top: -163, left: 290}]]},
+          {outdoor: true, top: -82, left: 53, id: 6, location: villaTerms.stableYard,
+            los: [[{top: -77, left: 95  }, {top: -86, left: 82}, {top: -97, left: 174}], [{top: -404, left: 248}, {top: -720, left: 414}]]},
+          {outdoor: true, top: 360, left: 366, id: 7, location: villaTerms.ruins, los: [[{top: 480, left: 340}, {top: 390, left: 386}, {top: 40, left: 650}]]},
+          {outdoor: true, top: -73, left: 685, id: 8, location: villaTerms.driveway,
+            los: [[{top: 290, left: 392}, {top: -73, left: 686}, {top: -130, left: 720}]]}
+        ],
+        ceilingHatches: [
+          // scale is off b/w map and hatch, so rescaling to fit.
+          { floor: 1, top: -59, left: 109, width: 25, height: 25 },
+          { floor: 1, top: -304, left: 300, width: 25, height: 25 },
+          { floor: 1, top: 213, left: 360, width: 25, height: 25 },
+          { floor: 1, top: -169, left: 556, width: 25, height: 25 },
+
+          { floor: 0, top: -111, left: 296, width: 25, height: 25 },
+          { floor: 0, top: -325, left: 498, width: 25, height: 25 }
+        ],
+        skylights: [
+          {floor: 1, otherFloor: 'up', top: -176, left: 345 },
+          {floor: 2, top: -193, left: 368 }
+        ],
+        droneTunnels: [
+          { floor: 0, top: -197, left: 296, rotate: 90, size: 12 },
+          { floor: 0, top: -315, left: 521, rotate: 90, size: 57 },
+          { floor: 1, top: 274, left: 169, rotate: 0, size: 44 },
+          { floor: 1, top: 224, left: 359, rotate: 0, size: DRONE_SMALL },
+          { floor: 1, top: 89, left: 90, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: 64, left: 372, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: -123, left: 491, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: -155, left: 177, rotate: 90, size: DRONE_SMALL },
+          { floor: 1, top: -295, left: 235, rotate: 90, size: DRONE_SMALL },
+          { floor: 2, top: -32, left: 200, rotate: 90, size: 10 },
+          { floor: 2, top: -85, left: 227, rotate: 0, size: DRONE_SMALL },
+          { floor: 2, top: -279, left: 580, rotate: 0, size: DRONE_SMALL },
+          { floor: 2, top: -360, left: 409, rotate: 0, size: DRONE_SMALL }
+        ],
+        spawnPoints: [
+          { letter: spawnTerms.a, top: -371, left: -155, description: villaTerms.spawnMainRoad },
+          { letter: spawnTerms.b, top: 428, left: 371, description: villaTerms.spawnRuins },
+          { letter: spawnTerms.c, top: -290, left: 845, description: villaTerms.spawnFountain }
+        ],
+        roomLabels: [
+          // EXT
+          { outdoor: true, top: 380, left: 100, description: villaTerms.ruins, hardToRead: true },
+          { outdoor: true, top: 180, left: -50, description: villaTerms.roundabout, hardToRead: true },
+          { outdoor: true, top: 189, left: 460, description: villaTerms.terrace },
+          { outdoor: true, top: 59, left: 460, description: villaTerms.terrace, hardToRead: true },
+          { outdoor: true, top: 110, left: 600, description: villaTerms.cryptEntrance, hardToRead: true },
+          { outdoor: true, top: 119, left: 700, description: villaTerms.garden, hardToRead: true },
+          { outdoor: true, top: -20, left: 610, description: villaTerms.driveway, hardToRead: true },
+          { outdoor: true, top: -180, left: 653, description: villaTerms.driveway, hardToRead: true },
+          { outdoor: true, top: -370, left: 672, description: villaTerms.driveway, hardToRead: true },
+          { outdoor: true, top: -80, left: -80, description: villaTerms.mainRoad, hardToRead: true },
+          { outdoor: true, top: -40, left: 530, description: villaTerms.balcony, hardToRead: true },
+          { outdoor: true, top: -110, left: 724, description: villaTerms.pergola, hardToRead: true },
+          { outdoor: true, top: -170, left: 90, description: villaTerms.stableYard, hardToRead: true },
+          { outdoor: true, top: -131, left: 820, description: villaTerms.chapel, hardToRead: true },
+          { outdoor: true, top: -390, left: 740, description: villaTerms.fountain, hardToRead: true },
+          { outdoor: true, top: -281, left: 80, description: villaTerms.stable, hardToRead: true },
+          { outdoor: true, top: -390, left: 420, description: villaTerms.sideRoad, veryHardToRead: true },
+          // 0F
+          { floor: 0, top: 59, left: 320, description: villaTerms.cryptTunnel },
+          { floor: 0, top: 120, left: 512, description: villaTerms.crypt, hardToRead: true },
+          { floor: 0, top: -230, left: 570, description: villaTerms.garage, veryHardToRead: true },
+          { floor: 0, top: -380, left: 260, description: villaTerms.cellarTunnel, veryHardToRead: true },
+          { floor: 0, top: -40, left: 288, description: villaTerms.tastingRoom, veryHardToRead: true },
+          { floor: 0, top: -196, left: 268, description: villaTerms.archHallway, veryHardToRead: true },
+          { floor: 0, top: -190, left: 371, description: villaTerms.artStorage, hardToRead: true },
+          { floor: 0, top: -210, left: 466, description: villaTerms.oldOffice, veryHardToRead: true },
+          { floor: 0, top: -291, left: 357, description: villaTerms.wineCellar, veryHardToRead: true },
+          { floor: 0, top: -40, left: 370, description: villaTerms.redStairs, veryHardToRead: true },
+          { floor: 0, top: -331, left: 257, description: villaTerms.backStairs, veryHardToRead: true },
+          { floor: 0, top: -321, left: 519, description: villaTerms.pantryStairs, veryHardToRead: true },
+          // 1F
+          { floor: 1, top: 262, left: 170, description: villaTerms.mainStairs, veryHardToRead: true },
+          { floor: 1, top: -40, left: 400, description: villaTerms.redStairs, veryHardToRead: true },
+          { floor: 1, top: -316, left: 270, description: villaTerms.backStairs, veryHardToRead: true },
+          { floor: 1, top: -315, left: 541, description: villaTerms.pantryStairs, veryHardToRead: true },
+          { floor: 1, top: 270, left: 290, description: villaTerms.greenhouse },
+          { floor: 1, top: 160, left: 60, description: villaTerms.frontEntrance, veryHardToRead: true },
+          { floor: 1, top: 197, left: 200, description: villaTerms.mainEntrance, veryHardToRead: true },
+          { floor: 1, top: 191, left: 347, description: villaTerms.artStudio, hardToRead: true },
+          { floor: 1, top: 127, left: 165, description: villaTerms.library, hardToRead: true },
+          { floor: 1, top: 44, left: 135, description: villaTerms.library, hardToRead: true },
+          { floor: 1, top: 95, left: 250, description: villaTerms.mainHallway, veryHardToRead: true },
+          { floor: 1, top: 16, left: 310, description: villaTerms.mainHallway, veryHardToRead: true },
+          { floor: 1, top: -74, left: 347, description: villaTerms.mainHallway, veryHardToRead: true },
+          { floor: 1, top: 72, left: 319, description: villaTerms.pianoRoom, hardToRead: true },
+          { floor: 1, top: 50, left: 204, description: villaTerms.gallery, hardToRead: true },
+          { floor: 1, top: -26, left: 113, description: villaTerms.toilet, hardToRead: true },
+          { floor: 1, top: -41, left: 281, description: villaTerms.livingRoom, veryHardToRead: true },
+          { floor: 1, top: -131, left: 279, description: villaTerms.livingRoom, veryHardToRead: true },
+          { floor: 1, top: -40, left: 463, description: villaTerms.bicycleStorage, hardToRead: true },
+          { floor: 1, top: -128, left: 430, description: villaTerms.memorialRoom, veryHardToRead: true },
+          { floor: 1, top: -172, left: 207, description: villaTerms.mudroom, veryHardToRead: true },
+          { floor: 1, top: -204, left: 347, description: villaTerms.skylightHallway, hardToRead: true },
+          { floor: 1, top: -189, left: 528, description: villaTerms.laundry, hardToRead: true },
+          { floor: 1, top: -232, left: 280, description: villaTerms.backHallway, veryHardToRead: true },
+          { floor: 1, top: -247, left: 480, description: villaTerms.diningRoom, hardToRead: true },
+          { floor: 1, top: -254, left: 340, description: villaTerms.chinaRoom, hardToRead: true },
+          { floor: 1, top: -325, left: 371, description: villaTerms.kitchen, veryHardToRead: true },
+          { floor: 1, top: -339, left: 502, description: villaTerms.pantry, hardToRead: true },
+          // 2F
+          { floor: 2, top: -95, left: 530, description: villaTerms.bedroomRoof, hardToRead: true },
+          { floor: 2, top: 273, left: 180, description: villaTerms.mainStairs, veryHardToRead: true },
+          { floor: 2, top: -43, left: 420, description: villaTerms.redStairs, hardToRead: true },
+          { floor: 2, top: -370, left: 310, description: villaTerms.backStairs, veryHardToRead: true },
+          { floor: 2, top: 282, left: 310, description: villaTerms.veranda },
+          { floor: 2, top: 206, left: 121, description: villaTerms.classicalHall, hardToRead: true },
+          { floor: 2, top: -14, left: 150, description: villaTerms.classicalHall, hardToRead: true },
+          { floor: 2, top: -60, left: 2830, description: villaTerms.classicalHall, hardToRead: true },
+          { floor: 2, top: 184, left: 350, description: villaTerms.study, hardToRead: true },
+          { floor: 2, top: 70, left: 165, description: villaTerms.gamesRoom, veryHardToRead: true },
+          { floor: 2, top: 108, left: 320, description: villaTerms.aviatorRoom, hardToRead: true },
+          { floor: 2, top: 6, left: 255, description: villaTerms.huntingVault },
+          { floor: 2, top: -38, left: 348, description: villaTerms.landing, veryHardToRead: true },
+          { floor: 2, top: -109, left: 286, description: villaTerms.trophyEntrance, veryHardToRead: true },
+          { floor: 2, top: -159, left: 447, description: villaTerms.statuaryRoom, hardToRead: true },
+          { floor: 2, top: -243, left: 297, description: villaTerms.trophyRoom, veryHardToRead: true },
+          { floor: 2, top: -235, left: 520, description: villaTerms.masterBedroom, veryHardToRead: true },
+          { floor: 2, top: -317, left: 296, description: villaTerms.astronomyRoom, veryHardToRead: true },
+          { floor: 2, top: -313, left: 440, description: villaTerms.masterBathroom, hardToRead: true },
+          { floor: 2, top: -313, left: 533, description: villaTerms.walkInCloset, veryHardToRead: true },
+          // 3F
+          { floor: 3, top: 86, left: 263, description: villaTerms.roof, hardToRead: true },
+          { floor: 3, top: -248, left: 481, description: villaTerms.skylightRoof, hardToRead: true }
+        ]
+      },
       yacht: {
         name: mapNameTerms.yacht,
         imgUrlPrefix: 'yacht',
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [
           { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor },
           { index: 2, top: -261, left: -840, name: floorTerms.secondFloor, default: true },
@@ -3817,193 +4067,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           // 5F
           { floor: 5, top: 17, left: 108, description: yachtTerms.roof }
         ]
-      },
-      villa: {
-        name: mapNameTerms.villa,
-        imgUrlPrefix: 'villa',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
-        floors: [
-          { index: 0, top: -720, left: -1280, background: true, name: floorTerms.basement },
-          { index: 1, top: -480, left: 0, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -480, left: 0, name: floorTerms.secondFloor },
-          { index: 3, top: -480, left: 0, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 62, left: 284 },
-          { floor: 2, top: -315, left: 347 },
-          { floor: 1, top: 100, left: 295 },
-          { floor: 0, top: -197, left: 487 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 103, left: 191, set: 1, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: 62, left: 324, set: 1, letter: objectiveTerms.bombShortB },
-
-          { floor: 2, top: -204, left: 417, set: 2, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: -204, left: 306, set: 2, letter: objectiveTerms.bombShortB },
-
-          { floor: 1, top: -105, left: 220, set: 3, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: 75, left: 145, set: 3, letter: objectiveTerms.bombShortB },
-
-          { floor: 1, top: -333, left: 417, set: 4, letter: objectiveTerms.bombShortA },
-          { floor: 1, top: -225, left: 428, set: 4, letter: objectiveTerms.bombShortB }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 170, left: 309 },
-          { floor: 2, top: -205, left: 529 },
-          { floor: 1, top: -105, left: 260 },
-          { floor: 0, top: -161, left: 370 }
-        ],
-        zoomPoints: {
-          topLeft: { left: 0, top: -420 },
-          bottomRight: { left: 270, top: 640 }
-        },
-        compassPoints: {
-        },
-        ladders: [],
-        cameras: [
-          {floor: 2, top: -353, left: 381, id: 1, location: villaTerms.astronomyRoom,
-            los: [[{top: -397, left: 393}, {top: -280, left: 393}, {top: -280, left: 380}, {top: -244, left: 381}, {top: -244, left: 346}, {top: -280, left: 357}, {top: -280, left: 255}, {top: -350, left: 255}, {top: -350, left: 335}, {top: -355, left: 335}, {top: -368, left: 255}, {top: -397, left: 255}, {top: -397, left: 393}]]},
-          {floor: 2, top: -65, left: 140, id: 2, location: villaTerms.classicalHall,
-            los: [[{top: -80, left: 125}, {top: -80, left: 248}, {top: -46, left: 248}, {top: -46, left: 176}, {top: -33, left: 198}, {top: 3, left: 198}, {top: -46, left: 155}, {top: -46, left: 137}, {top: 21, left: 161}, {top: 21, left: 132}, {top: 226, left: 132}, {top: 226, left: 110}, {top: 21, left: 110}, {top: 21, left: 103}, {top: -19, left: 103}, {top: -80, left: 125}]]},
-          {floor: 1, top: -207, left: 254, id: 3, location: villaTerms.backHallway,
-            los: [[{top: -207, left: 254}, {top: -193, left: 223}, {top: -218, left: 223}, {top: -212, left: 240}, {top: -228, left: 240}, {top: -228, left: 254}, {top: -253, left: 254}, {top: -278, left: 269}, {top: -268, left: 269}, {top: -268, left: 310}, {top: -258, left: 310}, {top: -290, left: 346}, {top: -290, left: 369}, {top: -284, left: 369}, {top: -240, left: 310}, {top: -232, left: 296}, {top: -228, left: 296}, {top: -228, left: 320}, {top: -220, left: 320}, {top: -229, left: 369}, {top: -182, left: 369}, {top: -192, left: 320}, {top: -188, left: 320}, {top: -188, left: 280}, {top: -207, left: 254}]]},
-          {floor: 1, top: 206, left: 157, id: 4, location: villaTerms.mainEntrance,
-            los: [[{top: 206, left: 157}, {top: 189, left: 35}, {top: 158, left: 35}, {top: 158, left: 61}, {top: 175, left: 94}],
-              [{top: 151, left: 111}, {top: 170, left: 127}],
-              [{top: 151, left: 160}, {top: 91, left: 163}, {top: 91, left: 192}, {top: 151, left: 174}],
-              [{top: 173, left: 206}, {top: 151, left: 239}, {top: 151, left: 267}, {top: 206, left: 157}]]},
-          {floor: 0, top: -128, left: 288, id: 5, location: villaTerms.archHallway,
-            los: [[{top: -143, left: 327}, {top: -128, left: 288}, {top: -86, left: 252}],
-              [{top: -163, left: 246}, {top: -167, left: 241}, {top: -193, left: 241}, {top: -158, left: 267}],
-              [{top: -162, left: 274}, {top: -204, left: 258}, {top: -204, left: 273}, {top: -250, left: 265}, {top: -250, left: 274}, {top: -254, left: 274}, {top: -302, left: 269}, {top: -302, left: 290}, {top: -163, left: 290}]]},
-          {outdoor: true, top: -82, left: 53, id: 6, location: villaTerms.stableYard,
-            los: [[{top: -77, left: 95  }, {top: -86, left: 82}, {top: -97, left: 174}], [{top: -404, left: 248}, {top: -720, left: 414}]]},
-          {outdoor: true, top: 360, left: 366, id: 7, location: villaTerms.ruins, los: [[{top: 480, left: 340}, {top: 390, left: 386}, {top: 40, left: 650}]]},
-          {outdoor: true, top: -73, left: 685, id: 8, location: villaTerms.driveway,
-            los: [[{top: 290, left: 392}, {top: -73, left: 686}, {top: -130, left: 720}]]}
-        ],
-        ceilingHatches: [
-          // scale is off b/w map and hatch, so rescaling to fit.
-          { floor: 1, top: -59, left: 109, width: 25, height: 25 },
-          { floor: 1, top: -304, left: 300, width: 25, height: 25 },
-          { floor: 1, top: 213, left: 360, width: 25, height: 25 },
-          { floor: 1, top: -169, left: 556, width: 25, height: 25 },
-
-          { floor: 0, top: -111, left: 296, width: 25, height: 25 },
-          { floor: 0, top: -325, left: 498, width: 25, height: 25 }
-        ],
-        skylights: [
-          {floor: 1, otherFloor: 'up', top: -176, left: 345 },
-          {floor: 2, top: -193, left: 368 }
-        ],
-        droneTunnels: [
-          { floor: 0, top: -197, left: 296, rotate: 90, size: 12 },
-          { floor: 0, top: -315, left: 521, rotate: 90, size: 57 },
-          { floor: 1, top: 274, left: 169, rotate: 0, size: 44 },
-          { floor: 1, top: 224, left: 359, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 89, left: 90, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 64, left: 372, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -123, left: 491, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -155, left: 177, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -295, left: 235, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: -32, left: 200, rotate: 90, size: 10 },
-          { floor: 2, top: -85, left: 227, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -279, left: 580, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -360, left: 409, rotate: 0, size: DRONE_SMALL }
-        ],
-        spawnPoints: [
-          { letter: spawnTerms.a, top: -371, left: -155, description: villaTerms.spawnMainRoad },
-          { letter: spawnTerms.b, top: 428, left: 371, description: villaTerms.spawnRuins },
-          { letter: spawnTerms.c, top: -290, left: 845, description: villaTerms.spawnFountain }
-        ],
-        roomLabels: [
-          // EXT
-          { outdoor: true, top: 380, left: 100, description: villaTerms.ruins, hardToRead: true },
-          { outdoor: true, top: 180, left: -50, description: villaTerms.roundabout, hardToRead: true },
-          { outdoor: true, top: 189, left: 460, description: villaTerms.terrace },
-          { outdoor: true, top: 59, left: 460, description: villaTerms.terrace, hardToRead: true },
-          { outdoor: true, top: 110, left: 600, description: villaTerms.cryptEntrance, hardToRead: true },
-          { outdoor: true, top: 119, left: 700, description: villaTerms.garden, hardToRead: true },
-          { outdoor: true, top: -20, left: 610, description: villaTerms.driveway, hardToRead: true },
-          { outdoor: true, top: -180, left: 653, description: villaTerms.driveway, hardToRead: true },
-          { outdoor: true, top: -370, left: 672, description: villaTerms.driveway, hardToRead: true },
-          { outdoor: true, top: -80, left: -80, description: villaTerms.mainRoad, hardToRead: true },
-          { outdoor: true, top: -40, left: 530, description: villaTerms.balcony, hardToRead: true },
-          { outdoor: true, top: -110, left: 724, description: villaTerms.pergola, hardToRead: true },
-          { outdoor: true, top: -170, left: 90, description: villaTerms.stableYard, hardToRead: true },
-          { outdoor: true, top: -131, left: 820, description: villaTerms.chapel, hardToRead: true },
-          { outdoor: true, top: -390, left: 740, description: villaTerms.fountain, hardToRead: true },
-          { outdoor: true, top: -281, left: 80, description: villaTerms.stable, hardToRead: true },
-          { outdoor: true, top: -390, left: 420, description: villaTerms.sideRoad, veryHardToRead: true },
-          // 0F
-          { floor: 0, top: 59, left: 320, description: villaTerms.cryptTunnel },
-          { floor: 0, top: 120, left: 512, description: villaTerms.crypt, hardToRead: true },
-          { floor: 0, top: -230, left: 570, description: villaTerms.garage, veryHardToRead: true },
-          { floor: 0, top: -380, left: 260, description: villaTerms.cellarTunnel, veryHardToRead: true },
-          { floor: 0, top: -40, left: 288, description: villaTerms.tastingRoom, veryHardToRead: true },
-          { floor: 0, top: -196, left: 268, description: villaTerms.archHallway, veryHardToRead: true },
-          { floor: 0, top: -190, left: 371, description: villaTerms.artStorage, hardToRead: true },
-          { floor: 0, top: -210, left: 466, description: villaTerms.oldOffice, veryHardToRead: true },
-          { floor: 0, top: -291, left: 357, description: villaTerms.wineCellar, veryHardToRead: true },
-          { floor: 0, top: -40, left: 370, description: villaTerms.redStairs, veryHardToRead: true },
-          { floor: 0, top: -331, left: 257, description: villaTerms.backStairs, veryHardToRead: true },
-          { floor: 0, top: -321, left: 519, description: villaTerms.pantryStairs, veryHardToRead: true },
-          // 1F
-          { floor: 1, top: 262, left: 170, description: villaTerms.mainStairs, veryHardToRead: true },
-          { floor: 1, top: -40, left: 400, description: villaTerms.redStairs, veryHardToRead: true },
-          { floor: 1, top: -316, left: 270, description: villaTerms.backStairs, veryHardToRead: true },
-          { floor: 1, top: -315, left: 541, description: villaTerms.pantryStairs, veryHardToRead: true },
-          { floor: 1, top: 270, left: 290, description: villaTerms.greenhouse },
-          { floor: 1, top: 160, left: 60, description: villaTerms.frontEntrance, veryHardToRead: true },
-          { floor: 1, top: 197, left: 200, description: villaTerms.mainEntrance, veryHardToRead: true },
-          { floor: 1, top: 191, left: 347, description: villaTerms.artStudio, hardToRead: true },
-          { floor: 1, top: 127, left: 165, description: villaTerms.library, hardToRead: true },
-          { floor: 1, top: 44, left: 135, description: villaTerms.library, hardToRead: true },
-          { floor: 1, top: 95, left: 250, description: villaTerms.mainHallway, veryHardToRead: true },
-          { floor: 1, top: 16, left: 310, description: villaTerms.mainHallway, veryHardToRead: true },
-          { floor: 1, top: -74, left: 347, description: villaTerms.mainHallway, veryHardToRead: true },
-          { floor: 1, top: 72, left: 319, description: villaTerms.pianoRoom, hardToRead: true },
-          { floor: 1, top: 50, left: 204, description: villaTerms.gallery, hardToRead: true },
-          { floor: 1, top: -26, left: 113, description: villaTerms.toilet, hardToRead: true },
-          { floor: 1, top: -41, left: 281, description: villaTerms.livingRoom, veryHardToRead: true },
-          { floor: 1, top: -131, left: 279, description: villaTerms.livingRoom, veryHardToRead: true },
-          { floor: 1, top: -40, left: 463, description: villaTerms.bicycleStorage, hardToRead: true },
-          { floor: 1, top: -128, left: 430, description: villaTerms.memorialRoom, veryHardToRead: true },
-          { floor: 1, top: -172, left: 207, description: villaTerms.mudroom, veryHardToRead: true },
-          { floor: 1, top: -204, left: 347, description: villaTerms.skylightHallway, hardToRead: true },
-          { floor: 1, top: -189, left: 528, description: villaTerms.laundry, hardToRead: true },
-          { floor: 1, top: -232, left: 280, description: villaTerms.backHallway, veryHardToRead: true },
-          { floor: 1, top: -247, left: 480, description: villaTerms.diningRoom, hardToRead: true },
-          { floor: 1, top: -254, left: 340, description: villaTerms.chinaRoom, hardToRead: true },
-          { floor: 1, top: -325, left: 371, description: villaTerms.kitchen, veryHardToRead: true },
-          { floor: 1, top: -339, left: 502, description: villaTerms.pantry, hardToRead: true },
-          // 2F
-          { floor: 2, top: -95, left: 530, description: villaTerms.bedroomRoof, hardToRead: true },
-          { floor: 2, top: 273, left: 180, description: villaTerms.mainStairs, veryHardToRead: true },
-          { floor: 2, top: -43, left: 420, description: villaTerms.redStairs, hardToRead: true },
-          { floor: 2, top: -370, left: 310, description: villaTerms.backStairs, veryHardToRead: true },
-          { floor: 2, top: 282, left: 310, description: villaTerms.veranda },
-          { floor: 2, top: 206, left: 121, description: villaTerms.classicalHall, hardToRead: true },
-          { floor: 2, top: -14, left: 150, description: villaTerms.classicalHall, hardToRead: true },
-          { floor: 2, top: -60, left: 2830, description: villaTerms.classicalHall, hardToRead: true },
-          { floor: 2, top: 184, left: 350, description: villaTerms.study, hardToRead: true },
-          { floor: 2, top: 70, left: 165, description: villaTerms.gamesRoom, veryHardToRead: true },
-          { floor: 2, top: 108, left: 320, description: villaTerms.aviatorRoom, hardToRead: true },
-          { floor: 2, top: 6, left: 255, description: villaTerms.huntingVault },
-          { floor: 2, top: -38, left: 348, description: villaTerms.landing, veryHardToRead: true },
-          { floor: 2, top: -109, left: 286, description: villaTerms.trophyEntrance, veryHardToRead: true },
-          { floor: 2, top: -159, left: 447, description: villaTerms.statuaryRoom, hardToRead: true },
-          { floor: 2, top: -243, left: 297, description: villaTerms.trophyRoom, veryHardToRead: true },
-          { floor: 2, top: -235, left: 520, description: villaTerms.masterBedroom, veryHardToRead: true },
-          { floor: 2, top: -317, left: 296, description: villaTerms.astronomyRoom, veryHardToRead: true },
-          { floor: 2, top: -313, left: 440, description: villaTerms.masterBathroom, hardToRead: true },
-          { floor: 2, top: -313, left: 533, description: villaTerms.walkInCloset, veryHardToRead: true },
-          // 3F
-          { floor: 3, top: 86, left: 263, description: villaTerms.roof, hardToRead: true },
-          { floor: 3, top: -248, left: 481, description: villaTerms.skylightRoof, hardToRead: true }
-        ]
       }
       /*emptytemplate: {
         name: 'Empty',
@@ -4011,6 +4074,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         objectives: [
           'bomb', 'hostage', 'secure'
         ],
+        legend: {
+          bottom: -725, right: -1255, height: 217, width: 475
+        },
         floors: [],
         hostageObjectives: [],
         bombObjectives: [],

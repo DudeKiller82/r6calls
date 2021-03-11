@@ -49,22 +49,22 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var getBombObjectivesHtml = function getBombObjectivesHtml(bombObjectives) {
     var html = '',
       classes,
-      positionStyle,
+      inlineStyle,
       bombLabel;
 
     bombObjectives.forEach(function(bomb) {
-      positionStyle = getPositionStyle(bomb);
+      inlineStyle = getPositionStyle(bomb);
       classes = 'objective bomb ';
       classes += getCommonClasses(bomb);
       bombLabel = bomb.set + bomb.letter;
-      html += '<div style="' + positionStyle + '" class="' + classes + '"><span></span><p>' + bombLabel + '</p></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><span></span><p>' + bombLabel + '</p></div>';
     });
     return html;
   };
 
   var getCamerasHtml = function getCamerasHtml(cameras, mapimgUrlPrefix) {
     var html = '',
-      positionStyle,
+      inlineStyle,
       classes,
       grouping,
       title,
@@ -76,7 +76,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       ) ? '@2x' : '';
 
     cameras.forEach(function(camera) {
-      positionStyle = getPositionStyle(camera);
+      inlineStyle = getPositionStyle(camera);
       classes = 'camera ';
       classes += getCommonClasses(camera);
       grouping = (camera.otherFloor)
@@ -89,7 +89,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       tagEnd = (camera.id && !camera.otherFloor)
         ? '</a>'
         : '</div>';
-      html += tagStart + 'style="' + positionStyle + '" class="' + classes + '"><span class="other-floor"></span><span class="cam-num">' + camera.id + '</span>' + tagEnd;
+      html += tagStart + 'style="' + inlineStyle + '" class="' + classes + '"><span class="other-floor"></span><span class="cam-num">' + camera.id + '</span>' + tagEnd;
     });
     return html;
   };
@@ -127,16 +127,16 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
   var getCeilingHatchesHtml = function getCeilingHatchesHtml(ceilingHatches) {
     var html = '',
-      positionStyle,
+      inlineStyle,
       dimensionStyle,
       classes;
 
     ceilingHatches.forEach(function(hatch) {
-      positionStyle = getPositionStyle(hatch);
+      inlineStyle = getPositionStyle(hatch);
       dimensionStyle = getDimensionStyle(hatch);
       classes = 'ceiling-hatch ';
       classes += getCommonClasses(hatch);
-      html += '<div style="' + positionStyle + dimensionStyle + '" class="' + classes + '"></div>';
+      html += '<div style="' + inlineStyle + dimensionStyle + '" class="' + classes + '"></div>';
     });
     return html;
   };
@@ -164,16 +164,16 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var getCompassHtml = function getCompassHtml(compassPoints) {
     var html = '',
       positionPoints,
-      positionStyle;
+      inlineStyle;
 
     positionPoints = { top: 448, left: 550 }; // default if none provided
     positionPoints = $.extend(
       positionPoints,
       compassPoints
     );
-    positionStyle = getPositionStyle(positionPoints);
+    inlineStyle = getPositionStyle(positionPoints);
 
-    html += '<div id="compass" style="' + positionStyle + '">';
+    html += '<div id="compass" style="' + inlineStyle + '">';
     html += '<div class="compass-background"></div>';
     html += '<p class="letter-n"><span>' + langTerms.compass.letterN + '</span></p>';
     html += '<p class="letter-e"><span>' + langTerms.compass.letterE + '</span></p>';
@@ -189,9 +189,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       classes;
 
     droneTunnels.forEach(function(droneTunnel) {
-      inlineStyle = getPositionStyle(droneTunnel) +
-        'height: ' + droneTunnel.size + 'px; ' +
-        'margin-top: -' +  Math.round(droneTunnel.size / 2) + 'px; ' +
+      inlineStyle = getPositionStyle(droneTunnel) + 'height: ' + droneTunnel.size + 'px; ' + 'margin-top: -' +  Math.round(droneTunnel.size / 2) + 'px; ' +
         getRotateCssStatements(droneTunnel.rotate);
       classes = 'drone-tunnel ';
       classes += getCommonClasses(droneTunnel);
@@ -224,7 +222,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     var html = '',
       prefix,
       imgSrc,
-      positionStyle,
+      inlineStyle,
       classes,
       deferrs = [];
 
@@ -235,9 +233,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
       prefix = imgUrlPrefix;
       imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index + '.jpg';
-      positionStyle = getPositionStyle(floor);
+      inlineStyle = getPositionStyle(floor);
       classes = floor.background ? 'background ' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
-      html += '<img src="' + imgSrc + '" style="' + positionStyle + '" class="' + classes + '"></img>';
+      html += '<img src="' + imgSrc + '" style="' + inlineStyle + '" class="' + classes + '"></img>';
 
       // Creates a ghost image for every floor, which removes itself when it's loaded, and then
       // resolves the deferrer for this floor.
@@ -274,14 +272,14 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
      * @see getCommonClasses
      */
     var html = '',
-      positionStyle,
+      inlineStyle,
       classes;
 
     hostageObjectives.forEach(function(hostage) {
-      positionStyle = getPositionStyle(hostage);
+      inlineStyle = getPositionStyle(hostage);
       classes = 'objective hostage ';
       classes += getCommonClasses(hostage);
-      html += '<div style="' + positionStyle + '" class="' + classes + '"><p>' + langTerms.objectives.hostageShort + '</p><span></span></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + langTerms.objectives.hostageShort + '</p><span></span></div>';
     });
     return html;
   };
@@ -299,22 +297,23 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
      * @see getCommonClasses
      */
     var html = '',
-      positionStyle,
+      inlineStyle,
       classes;
 
     if (ladders) {
       ladders.forEach(function(ladder) {
-        positionStyle = getPositionStyle(ladder);
+        inlineStyle = getPositionStyle(ladder);
         classes = 'ladder ';
         classes += getCommonClasses(ladder);
-        html += '<div style="' + positionStyle + '" class="' + classes + '"><span class="other-floor"></span></div>';
+        html += '<div style="' + inlineStyle + '" class="' + classes + '"><span class="other-floor"></span></div>';
       });
     }
     return html;
   };
 
-  var getLegendHtml = function getLegendHtml() {
+  var getLegendHtml = function getLegendHtml(legend) {
     var html = '',
+      inlineStyle,
       legendTerms = langTerms.legend,
       CSS_ABBREV = 'legend-',
       legendItems = [
@@ -333,7 +332,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
         { class: CSS_ABBREV + 'ladder', description: legendTerms.ladders }
       ];
 
-    html += '<ul id="legend">';
+    inlineStyle = getPositionStyle(legend);
+
+    html += '<ul id="legend"; style="' + inlineStyle + '">';
     legendItems.forEach(function(item) {
       html += '<li class="' + item.class + '">' + item.description + '</li>';
     });
@@ -358,20 +359,35 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   };
 
   var getPositionStyle = function getPositionStyle(element) {
-    return 'top: ' + element.top + 'px;left: ' + element.left + 'px;';
-  };
+    var styleString = '';
 
-  var getRotateStyle = function getRotateStyle(element) {
-    if ('rotate' in element) {
-      return 'transform: rotate(' + element.rotate + 'deg);';
-    } else {
-      return '';
+    if ('top' in element) {
+      styleString += 'top: ' + element.top + 'px;';
     }
+    if ('bottom' in element) {
+      styleString += 'bottom: ' + element.bottom + 'px;';
+    }
+    if ('right' in element) {
+      styleString += 'right: ' + element.right + 'px;';
+    }
+    if ('left' in element) {
+      styleString += 'left: ' + element.left + 'px;';
+    }
+    if ('height' in element) {
+      styleString += 'height: ' + element.height + 'px;';
+    }
+    if ('width' in element) {
+      styleString += 'width: ' + element.width + 'px;';
+    }
+    if ('rotate' in element) {
+      styleString += 'transform: rotate(' + element.rotate + 'deg);';
+    }
+    return styleString;
   };
 
   var getDimensionStyle = function getDimensionStyle(element) {
     if ('width' in element && 'height' in element) {
-      return 'width: ' + element.width + 'px;height: ' + element.height + 'px;background-size: ' + element.width + 'px,' + element.height + 'px;';
+      return 'px;background-size: ' + element.width + 'px,' + element.height + 'px;';
     } else {
       return '';
     }
@@ -379,16 +395,14 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
   var getRoomLabelsHtml = function getRoomLabelsHtml(roomLabels) {
     var html = '',
-      positionStyle,
-      rotateStyle,
+      inlineStyle,
       classes;
 
     roomLabels.forEach(function(roomLabel) {
-      positionStyle = getPositionStyle(roomLabel);
-      rotateStyle = getRotateStyle(roomLabel);
+      inlineStyle = getPositionStyle(roomLabel);
       classes = 'room-label ';
       classes += getCommonClasses(roomLabel);
-      html += '<div style="' + positionStyle + rotateStyle + '" class="' + classes + '"><p>' + roomLabel.description + '</p></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + roomLabel.description + '</p></div>';
     });
     return html;
   };
@@ -406,28 +420,28 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
   var getSecureObjectivesHtml = function getSecureObjectiveHtml(secureObjectives) {
     var html = '',
-      positionStyle,
+      inlineStyle,
       classes;
 
     secureObjectives.forEach(function(secure) {
-      positionStyle = getPositionStyle(secure);
+      inlineStyle = getPositionStyle(secure);
       classes = 'objective secure ';
       classes += getCommonClasses(secure);
-      html += '<div style="' + positionStyle + '" class="' + classes + '"><p>' + langTerms.objectives.secureShort + '</p><span></span></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + langTerms.objectives.secureShort + '</p><span></span></div>';
     });
     return html;
   };
 
   var getSkylightsHtml = function getSkylightsHtml(skylights) {
     var html = '',
-      positionStyle,
+      inlineStyle,
       classes;
 
     skylights.forEach(function(skylight) {
-      positionStyle = getPositionStyle(skylight);
+      inlineStyle = getPositionStyle(skylight);
       classes = 'skylight ';
       classes += getCommonClasses(skylight);
-      html += '<div style="' + positionStyle + '" class="' + classes + '"><span></span></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><span></span></div>';
     });
     return html;
   };
@@ -460,7 +474,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);
     html += getLaddersHtml(mapData.ladders);
-    html += getLegendHtml();
+    html += getLegendHtml(mapData.legend);
 
     $mapElements.html(html);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
