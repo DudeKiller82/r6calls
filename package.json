@@ -21,8 +21,7 @@
     "build:js": "npm run test:js && npm run build:js:common && npm run build:js:main",
     "watch:js": "npm run build:js:mkdir && npm-watch",
     "build": "npm run build:css && npm run build:js",
-    "deploy": "gh-pages -d site",
-    "builddeploy": "npm run build:css && npm run build:js && gh-pages -d site"
+    "deploy": "gh-pages -d site"
   },
   "repository": {
     "type": "git",
