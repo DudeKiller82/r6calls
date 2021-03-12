@@ -1,9 +1,9 @@
 {
-  "name": "r6maps",
+  "name": "r6calls",
   "//1": "When changing version # search and replace in this file and index.html.  This is hacky for now but it avoided some complexities.",
   "//2": "Version number format: GAME_YEAR.GAME_SEASON.SITE_VERSION",
   "version": "2.4.1",
-  "description": "Rainbow Six Siege map quick references",
+  "description": "Rainbow Six Siege map calls quick references",
   "watch": {
     "build:js": "dev/js/**/*.js"
   },
@@ -17,7 +17,7 @@
     "watch:css": "npm run build:css:mkdir && scss --watch ./dev/scss/main/main.scss ./site/css/release.2.4.1/main.2.4.1.css",
     "build:js:mkdir": "mkdirp ./site/js/release.2.4.1",
     "build:js:common": "npm run build:js:mkdir && uglifyjs --compress --mangle -o ./site/js/release.2.4.1/common.min.js --source-map  \"filename='./site/js/release.2.4.1/common.min.js.map', url='common.min.js.map', includeSources=true\" ./dev/js/common/common.global.js ./dev/js/common/common.helpers.js ./dev/js/lang-terms/lang-terms.js ./dev/js/lang-terms/lang-terms.*.js",
-    "build:js:main": "npm run build:js:mkdir && uglifyjs --compress --mangle -o ./site/js/release.2.4.1/main.min.js --source-map  \"filename='./site/js/release.2.4.1/main.min.js.map', url='main.min.js.map', includeSources=true\" ./dev/js/main/main.map-data.js ./dev/js/main/main.map-render.js ./dev/js/main/main.controls.js ./dev/js/main/main.select-maps.js ./dev/js/main/main.drawing.js ./dev/js/main/main.sessions.js ./dev/js/main/main.js",
+    "build:js:main": "npm run build:js:mkdir && uglifyjs --compress --mangle -o ./site/js/release.2.4.1/main.min.js --source-map  \"filename='./site/js/release.2.4.1/main.min.js.map', url='main.min.js.map', includeSources=true\" ./dev/js/main/main.map-data.js ./dev/js/main/main.map-render.js ./dev/js/main/main.controls.js ./dev/js/main/main.select-maps.js ./dev/js/main/main.drawing.js ./dev/js/main/main.js",
     "build:js": "npm run test:js && npm run build:js:common && npm run build:js:main",
     "watch:js": "npm run build:js:mkdir && npm-watch",
     "build": "npm run build:css && npm run build:js",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/capajon/r6maps.git"
+    "url": "git+https://github.com/DudeKiller82/r6calls.git"
   },
   "keywords": [
     "Rainbow",
@@ -33,12 +33,9 @@
     "Maps",
     "Siege"
   ],
-  "author": "Jon Capa",
+  "author": "DudeKiller",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/capajon/r6maps/issues"
-  },
-  "homepage": "https://github.com/capajon/r6maps#readme",
+  "homepage": "https://github.com/DudeKiller82/r6calls#readme",
   "devDependencies": {
     "eslint": "^2.2.0",
     "npm-watch": "^0.6.0",

@@ -28,9 +28,6 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
         latestUpdate: 'Feb 2017 updates',
         linkLatestUpdate: 'about/updates/2017-Feb/index.html'
       },
-      sessions: {
-        button: 'Sessions (BETA)'
-      },
       roomLabelStyles: {
         Dark: 'Dark',
         Light: 'Light (Default)',

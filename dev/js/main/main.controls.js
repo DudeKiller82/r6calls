@@ -13,7 +13,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $mapPanelCountControl,
     $fullScreenControl,
     $menuSelectMapsControl,
-    $sessionsControl,
     $menuPanel = $('#menu-panel'),
     ROOM_LABEL_STYLE_DEFAULT = 'Light',
     ROOM_LABEL_STYLE_DISPLAY_NONE = 'Learning',
@@ -277,7 +276,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">' + R6MLangTerms.terms.general.fullScreen + '</button>';
     }
-    html += '<button class="feature-flagged" id="menu-sessions-launcher">' + R6MLangTerms.terms.sessions.button + '</button>';
     html += '</div>';
     return html;
   };
@@ -377,7 +375,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $enableScreenshotsControl = $('#enable-screenshtos');
     $fullScreenControl = $('#full-screen');
     $menuSelectMapsControl = $('#menu-select-maps');
-    $sessionsControl = $('#menu-sessions-launcher');
   };
 
   var menuSetupFullScreen = function menuSetupFullScreen() {
@@ -445,21 +442,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var roomLabelStylesTrySelect = function roomLabelStylesTrySelect(style) {
     return R6MHelpers.trySelectOption($roomLabelStylesControl, style);
-  };
-
-  var sessionsEnable = function sessionsEnable() {
-    $sessionsControl.removeClass('feature-flagged');
-  };
-
-  var sessionsSetupClickEvent = function sessionsSetupClickEvent(
-    sessionsLaunchCallback,
-    closeMenuCallback
-  ) {
-    $sessionsControl.on('click', function(event) {
-      event.preventDefault();
-      closeMenuCallback();
-      sessionsLaunchCallback();
-    });
   };
 
   var setupFloorChangeEvent = function setupFloorChangeEvent(callback) {
@@ -723,10 +705,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     roomLabelStyles: {
       setup: roomLabelStylesSetupChangeEvent,
       trySelect: roomLabelStylesTrySelect
-    },
-    sessions: {
-      enable: sessionsEnable,
-      setup: sessionsSetupClickEvent
     },
     toggle: {
       populate: togglePopulate,

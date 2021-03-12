@@ -1,8 +1,8 @@
 'use strict';
 
 (function(pagecode) { //eslint-disable-line wrap-iife
-  pagecode(window.jQuery, window, document, R6MMainData, R6MMainRender, R6MMainControls, R6MMainDrawing, R6MMainSelectMaps, R6MMainSessions, R6MHelpers, R6MLangTerms);
-}(function($, window, document, R6MMainData, R6MMainRender, R6MMainControls, R6MMainDrawing, R6MMainSelectMaps, R6MMainSessions, R6MHelpers, R6MLangTerms, undefined) {
+  pagecode(window.jQuery, window, document, R6MMainData, R6MMainRender, R6MMainControls, R6MMainDrawing, R6MMainSelectMaps, R6MHelpers, R6MLangTerms);
+}(function($, window, document, R6MMainData, R6MMainRender, R6MMainControls, R6MMainDrawing, R6MMainSelectMaps, R6MHelpers, R6MLangTerms, undefined) {
   var $mapWrappers,
     $mapPanelWrappers,
     $mapMains,
@@ -13,7 +13,6 @@
     $navLogo,
     $body,
     $mainNav,
-    $sessionsDialog,
     SHOW_MAP = 'show-map',
     SHOW_SELECT_MAP = 'show-select-map',
     HASH_SPLIT_CHAR = '/',
@@ -32,9 +31,6 @@
     setupMenu();
     setupSelectMap();
     R6MMainControls.maps.populate(R6MMainData.getMapData());
-
-    $sessionsDialog = $('#sessions-dialog');
-    R6MMainSessions.createJoinDialog.setup($sessionsDialog);
 
     setupEvents();
     $navLogo.on('click', toggleShowSelectMap);
@@ -412,7 +408,6 @@
     R6MMainControls.enableScreenshots.setup(handleEnableScreenshotsChange);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
-    R6MMainControls.sessions.setup(R6MMainSessions.createJoinDialog.getOpenFn($sessionsDialog), closeMenu);
 
     $(window).on('orientationchange', function() {
       R6MMainControls.pan.reset($mapMains, getResetDimensions);
@@ -559,7 +554,6 @@
   };
 
   var tryLoadMenuOptions = function tryLoadMenuOptions() {
-    tryEnableSessionFeature();
     tryLoadMapPanelCount();
     tryLoadLockPanningOption();
     tryLoadRoomLabelStyle();
@@ -597,12 +591,6 @@
 
     if (R6MMainControls.floors.trySelect(floorArg)) {
       showSelectedFloor();
-    }
-  };
-
-  var tryEnableSessionFeature = function tryEnableSessionFeature() {
-    if (R6MHelpers.queryString('sessions')) {
-      R6MMainControls.sessions.enable();
     }
   };
 
