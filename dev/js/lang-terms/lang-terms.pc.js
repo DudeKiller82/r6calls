@@ -154,7 +154,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           electricalRoom: 'Electrical',
           adminOffice: 'Admin',
           ATMs: 'ATMs',
-          executiveHallway: 'Executive<br/>Hallway',
+          executiveHallway: 'Lounge Hallway',
           frontDesk: 'Front<br/>Desk',
           executiveLounge: 'Lounge',
           CEOOffice: 'CEO',
