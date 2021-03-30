@@ -261,9 +261,9 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           roof: 'Roof',
           generator: 'Generator',
           bathroomHallway: 'Bathroom Hallway',
-          roofLine: 'Roof Line',
           archivesBalcony: 'Archives Balcony',
-          busRoof: 'Bus Roof'
+          busRoof: 'Bus Roof',
+          waitingBalcony: 'Waiting Balcony'
         },
         chalet: {
           spawnFrontYard: 'Front Yard',

@@ -398,7 +398,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -725, right: -1255, height: 217, width: 475
+          bottom: -262, right: -951, height: 210, width: 463
         },
         floors: [
           { index: 1, top: -560, left: -744, background: true, name: floorTerms.firstFloor, default: true },
@@ -552,11 +552,11 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 118, left: -157, description: borderTerms.southBalcony },
           { floor: 2, top: 118, left: 169, description: borderTerms.southBalcony },
           { floor: 2, top: -61, left: 308, description: borderTerms.generator, hardToRead: true },
+          { floor: 2, top: 73, left: 200, description: borderTerms.waitingBalcony },
           // 3F
           { floor: 3, top: 17, left: -9, description: borderTerms.roof, hardToRead: true },
           { floor: 3, top: -138, left: -215, description: borderTerms.roof, hardToRead: true },
-          { floor: 3, top: -318, left: 152, description: borderTerms.roof, hardToRead: true },
-          { floor: 3, top: 17, left: 103, description: borderTerms.roofLine, hardToRead: true, rotate: -90 }
+          { floor: 3, top: -318, left: 152, description: borderTerms.roof, hardToRead: true }
         ]
       },
       chalet: {

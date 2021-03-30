@@ -282,9 +282,9 @@ var R6MLangTerms = (function(undefined) {
           roof: 'Roof',
           generator: '',
           bathroomHallway: '',
-          roofLine: '',
           archivesBalcony: '',
-          busRoof: ''
+          busRoof: '',
+          waitingBalcony: ''
         },
         chalet: {
           spawnFrontYard: 'Front Yard',
