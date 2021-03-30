@@ -401,9 +401,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -725, right: -1255, height: 217, width: 475
         },
         floors: [
-          { index: 1, top: -715, left: -1275, background: true, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -530, left: -360, name: floorTerms.secondFloor },
-          { index: 3, top: -530, left: -360, name: floorTerms.roof }
+          { index: 1, top: -560, left: -744, background: true, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -560, left: -744, name: floorTerms.secondFloor },
+          { index: 3, top: -560, left: -744, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 1, top: -292, left: 23 },
