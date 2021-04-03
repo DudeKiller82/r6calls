@@ -26,14 +26,8 @@ var R6MLangTerms = (function(undefined) {
         labelRoomLabelStyle: 'Room label style',
         labelNumberFloorsToDisplay: 'Number of floors to display',
         lockPanning: 'Lock panning',
-        lockZooming: 'Lock zooming',
         fullScreen: 'Full screen',
-        enableScreenshots: 'Enable screenshots',
-        contributions: 'Contributions',
-        supportSiteNote: 'Please consider showing your support with a small donation. :)',
-        donateImg: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-        latestUpdate: 'Feb 2017 updates',
-        linkLatestUpdate: 'about/updates/2017-Feb/index.html'
+        enableScreenshots: 'Enable screenshots'
       },
       roomLabelStyles: {
         Dark: 'Dark',
@@ -284,7 +278,8 @@ var R6MLangTerms = (function(undefined) {
           bathroomHallway: '',
           archivesBalcony: '',
           busRoof: '',
-          waitingBalcony: ''
+          waitingBalcony: '',
+          sandwich: ''
         },
         chalet: {
           spawnFrontYard: 'Front Yard',

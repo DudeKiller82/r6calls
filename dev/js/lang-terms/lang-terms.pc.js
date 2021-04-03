@@ -3,113 +3,6 @@
 var R6MLangTermsPlayerCalls = (function(undefined) {
   var name = 'pc',
     terms = {
-      general: {
-        cameraViewCaption: '{floorName} Camera View',
-        shortcutTip: 'Shortcut: {shortcut}',
-        menu: 'Menu',
-        about: 'About',
-        languageHeader: 'Language',
-        optionsHeader: 'Options',
-        labelLosOpacity: 'Camera line-of-sight opacity',
-        linkAbout: 'about/about.html',
-        labelPercent: '{int}%', // according to: (0.12).toLocaleString('en', { style: 'percent' });
-        labelLosDefault: '(Default)',
-        labelLos105: '(Huh?)',
-        labelLos110: '(Ludicrous!)',
-        labelRoomLabelStyle: 'Room label style',
-        labelNumberFloorsToDisplay: 'Number of floors to display',
-        lockPanning: 'Lock panning',
-        lockZooming: 'Lock zooming',
-        fullScreen: 'Full screen',
-        enableScreenshots: 'Enable screenshots',
-        contributions: 'Contributions',
-        supportSiteNote: 'Please consider showing your support with a small donation. :)',
-        donateImg: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-        latestUpdate: 'Feb 2017 updates',
-        linkLatestUpdate: 'about/updates/2017-Feb/index.html'
-      },
-      roomLabelStyles: {
-        Dark: 'Dark',
-        Light: 'Light (Default)',
-        DarkAndLarge: 'Large and Dark',
-        LightAndLarge: 'Large and Light',
-        DarkAndSmall: 'Small and Dark',
-        LightAndSmall: 'Small and Light',
-        DisplayNone: 'Turn Off',
-        Learning: 'Learning'
-      },
-      floorDisplayOptions: {
-        one: '1 - Full',
-        two: '2 - Split',
-        four: '4 - Grid'
-      },
-      selectMaps: {
-        selectAMap: 'Select a map',
-        homeLink: 'Select a map'
-      },
-      compass: {
-        letterN: 'N',
-        letterE: 'E',
-        letterS: 'S',
-        letterW: 'W'
-      },
-      floorNames: {
-        subBasement: { full: 'Sub-Basement', short: 'B'},
-        basement: { full: 'Basement', short: 'B' },
-        firstFloor: { full: '1st Floor', short: '1' },
-        secondFloor: { full: '2nd Floor', short: '2' },
-        thirdFloor: { full: '3rd Floor', short: '3' },
-        fourthFloor: { full: '4th Floor', short: '4' },
-        roof: { full: 'Roof', short: 'R' }
-      },
-      objectives: {
-        bombShortA: 'A',
-        bombShortB: 'B',
-        bomb: 'Bomb',
-        hostageShort: 'H',
-        hostage: 'Hostage',
-        secureShort: 'S',
-        secure: 'Secure',
-        showAll: 'Show All'
-      },
-      legend: {
-        breakableWalls: 'Breakable walls',
-        breakableFloorTraps: 'Breakable floor traps',
-        ceilingHatches: 'Ceiling hatches',
-        lineOfSightWalls: 'Line of sight or half walls',
-        lineOfSightFloors: 'Line of sight floors',
-        droneTunnels: 'Drone tunnels',
-        objectives: 'Objectives',
-        insertionPoints: 'Insertion points',
-        securityCameras: 'Security cameras',
-        skylights: 'Skylights',
-        onFloorAboveOrBelow: 'On floor above or below',
-        cameraLineOfSight: 'Camera line of sight',
-        ladders: 'Ladders'
-      },
-      mapNames: {
-        bank: 'Bank',
-        bartlett: 'Bartlett U.',
-        border: 'Border',
-        chalet: 'Chalet',
-        club: 'Club House',
-        consulate: 'Consulate',
-        coastline: 'Coastline',
-        favela: 'Favela',
-        fortress: 'Fortress',
-        hereford: 'Hereford',
-        house: 'House',
-        kanal: 'Kanal',
-        kafe: 'Kafe Dostoyevsky',
-        oregon: 'Oregon',
-        outback: 'Outback',
-        plane: 'Plane',
-        skyscraper: 'Skyscraper',
-        themepark: 'Theme Park',
-        tower: 'Tower',
-        villa: 'Villa',
-        yacht: 'Yacht'
-      },
       mapRooms: {
         bank: {
           spawnBoulevard: 'Boulevard',
@@ -263,7 +156,9 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           bathroomHallway: 'Bathroom Hallway',
           archivesBalcony: 'Archives Balcony',
           busRoof: 'Bus Roof',
-          waitingBalcony: 'Waiting Balcony'
+          waitingBalcony: 'Waiting Balcony',
+          sandwich: 'Sandwich'
+
         },
         chalet: {
           spawnFrontYard: 'Front Yard',
@@ -283,13 +178,13 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           mainGarage: 'Main Garage',
           garageEntrance: 'Garage<br/>Entrance',
           westEntrance: 'West<br/>Entrance',
-          gamingRoomHallway: 'Gaming Room<br/>Hallway',
-          gamingRoom: 'Gaming<br/>Room',
+          gamingRoomHallway: 'Gaming Hallway',
+          gamingRoom: 'Gaming',
           bar: 'Bar',
           greatRoom: 'Great Room',
-          diningRoom: 'Dining Room',
+          diningRoom: 'Dining',
           mainEntrance: 'Main<br/>Entrance',
-          trophyRoom: 'Trophy Room',
+          trophyRoom: 'Trophy',
           kitchenHallway: 'Kitchen<br/>Hallway',
           kitchen: 'Kitchen',
           libraryHallway: 'Library Hallway',
@@ -298,8 +193,8 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           bedroomTerrace: 'Bedroom<br/>Terrace',
           fireplaceHallway: 'Fireplace<br/>Hallway',
           bedroomHallway: 'Bedroom<br/>Hallway',
-          masterBathroom: 'Master<br/>Bathroom',
-          masterBedroom: 'Master Bedroom',
+          masterBathroom: 'Bathroom',
+          masterBedroom: 'Master',
           office: 'Office',
           woodenTrail: 'Wooden<br/>Trail',
           campfireWood: 'Campfire Wood',
@@ -320,7 +215,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           solarium: 'Solarium',
           fireplace: 'Fireplace',
           westMainEntrance: 'West Main<br/>Entrance',
-          pianoRoom: 'Piano Room',
+          pianoRoom: 'Piano',
           mezzanine: 'Mezzanine',
           trophyStairs: 'Trophy Stairs',
           diningHallway: 'Dining<br/>Hallway',

@@ -207,7 +207,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           // 2F
           { floor: 2, top: 236, left: -274, description: bankTerms.garageRoof },
           { floor: 2, top: -141, left: -234, description: bankTerms.lobby },
-          { floor: 2, top: -159, left: 23, description: bankTerms.executiveHallway },
+          { floor: 2, top: -159, left: 23, description: bankTerms.executiveHallway, hardToRead: true },
           { floor: 2, top: -41, left: -138, description: bankTerms.frontDesk },
           { floor: 2, top: -75, left: 39, description: bankTerms.executiveLounge, hardToRead: true },
           { floor: 2, top: -32, left: 175, description: bankTerms.CEOOffice, hardToRead: true },
@@ -553,6 +553,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 118, left: 169, description: borderTerms.southBalcony },
           { floor: 2, top: -61, left: 308, description: borderTerms.generator, hardToRead: true },
           { floor: 2, top: 73, left: 200, description: borderTerms.waitingBalcony },
+          { floor: 2, top: -357, left: -111, description: borderTerms.sandwich, hardToRead: true, rotate: -90 },
           // 3F
           { floor: 3, top: 17, left: -9, description: borderTerms.roof, hardToRead: true },
           { floor: 3, top: -138, left: -215, description: borderTerms.roof, hardToRead: true },

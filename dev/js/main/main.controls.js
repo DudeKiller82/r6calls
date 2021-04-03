@@ -190,24 +190,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return $lockPanningControl.is(':checked');
   };
 
-  var getMenuContributionsHtml = function getMenuContributionsHtml() {
-    var html = '';
-
-    return html;
-
-    html += '<div id="contributions" class="mmenu-custom-panel">';
-    html += '<h2>' + R6MLangTerms.terms.general.contributions + '</h2>';
-    html += '<p>' + R6MLangTerms.terms.general.supportSiteNote + '</p>';
-    html += '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">';
-    html += '<input type="hidden" name="cmd" value="_s-xclick">';
-    html += '<input type="hidden" name="hosted_button_id" value="4Z2F2PS6VMDLC">';
-    html += '<input type="image" src="' + R6MLangTerms.terms.general.donateImg + '" border="0" name="submit" alt="PayPal">';
-    html += '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">';
-    html += '</form>';
-    html += '</div>';
-    return html;
-  };
-
   var getMenuLanguageHtml = function getMenuLanguageHtml() {
     var html = '';
 
@@ -263,11 +245,9 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return html;
   };
 
-  var getMenuR6MapsHtml = function getMenuR6MapsHtml(showUpdateLinkHighlightedFn) {
+  var getMenuR6MapsHtml = function getMenuR6MapsHtml() {
     var html = '',
       latestUpdateCss = 'menu-item';
-
-    latestUpdateCss += showUpdateLinkHighlightedFn() ? ' highlighted-item' : '';
 
     html += '<div class="mmenu-custom-panel">';
     html += '<h2>r6calls.com</h2>';
@@ -357,13 +337,12 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return R6MHelpers.trySelectOption($mapControl, map);
   };
 
-  var menuSetup = function menuSetup(roomLabelStyles, showUpdateLinkHighlightedFn) {
+  var menuSetup = function menuSetup(roomLabelStyles) {
     var html = '';
 
-    html += getMenuR6MapsHtml(showUpdateLinkHighlightedFn);
+    html += getMenuR6MapsHtml();
     html += getMenuLanguageHtml();
     html += getMenuOptionsHtml();
-    html += getMenuContributionsHtml();
     html += '<div class="faded-logo"></div>';
     $menuPanel.html(html);
 
@@ -558,10 +537,10 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
       return 0;
     });
 
-    options += '<option value="all">' + objectiveTerms.showAll + '</option>';
     objectives.forEach(function(objective) {
       options += '<option value="' + objective + '">' + objectiveTerms[objective] + '</option>';
     });
+    options += '<option value="all">' + objectiveTerms.showAll + '</option>';
     $objectiveControl.html(options);
     objectivesTrySelect(initialObjective);
   };

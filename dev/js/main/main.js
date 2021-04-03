@@ -16,11 +16,7 @@
     SHOW_MAP = 'show-map',
     SHOW_SELECT_MAP = 'show-select-map',
     HASH_SPLIT_CHAR = '/',
-    DEFAULT_LOS_OPACITY = 0.15,
-    UPDATE_HIGHLIGHT = {
-      LOCALSTORAGE_READ_STRING: 'feb2017updateread', // set in update html page
-      CUTOFF_TIME_MS: 1489536000000 //March 15 2017
-    };
+    DEFAULT_LOS_OPACITY = 0.15;
 
   $(function() { // equivanelt to $(document).ready() - but a bit faster
     setPageElements();
@@ -433,7 +429,7 @@
     var $menuLink = $('#mmenu-link'),
       useRtl = (R6MLangTerms.getLoadedDirection() === 'RTL');
 
-    R6MMainControls.menu.setup(R6MMainRender.roomLabelStyles, showUpdateLinkHighlighted);
+    R6MMainControls.menu.setup(R6MMainRender.roomLabelStyles);
 
     var foo = $('#mmenu-menu').mmenu({
       offCanvas: {
@@ -447,10 +443,6 @@
     });
 
     $menuLink.click(handleMenuClick);
-    if (showUpdateLinkHighlighted()) {
-      R6MMainControls.highlightControl($menuLink);
-      R6MMainControls.unhighlightControl($menuLink, 1000);
-    }
 
     $('#lang-choices').on('click','button', handleLangChange);
 
@@ -465,15 +457,6 @@
       R6MMainData.getMapData(),
       switchToMap,
       tryHideMapSelect
-    );
-  };
-
-  var showUpdateLinkHighlighted = function showUpdateLinkHighlighted() {
-    var date = new Date();
-
-    return (
-      (!localStorage.getItem(UPDATE_HIGHLIGHT.LOCALSTORAGE_READ_STRING)) &&
-      (date.getTime() < UPDATE_HIGHLIGHT.CUTOFF_TIME_MS)
     );
   };
 
