@@ -342,7 +342,8 @@ var R6MLangTerms = (function(undefined) {
           cliffside: 'Cliffside',
           campfire: 'Campfire',
           garageStairs: '',
-          blueStairs: ''
+          blueStairs: '',
+          barHallway: ''
         },
         club: {
           // EXT
