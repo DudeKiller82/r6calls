@@ -547,7 +547,7 @@ var R6MLangTerms = (function(undefined) {
           rooftops: 'Rooftops',
           courtyard: 'Courtyard',
           accessAlley: 'Access Alley',
-          shop: 'Shop<br/>(not shown)',
+          shop: 'Shop',
           marketRooftops: 'Market Rooftops'
         },
         fortress: {
