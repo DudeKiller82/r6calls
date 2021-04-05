@@ -619,13 +619,13 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           yellowStairs: 'Yellow Stairs',
           blueStairs: 'Blue Stairs',
           // 3F/Roof
-          controlRoomRoof: 'Control Roof',
+          controlRoomRoof: 'East Roof',
           upperBridgeRoof: 'Upper Bridge Roof',
           // 2F
           coastGuardRoof: 'West Roof',
           balconyRenovations: 'Balcony Renovations',
           bridgeRoof: 'Bridge Roof',
-          balcony: 'Balcony',
+          balcony: '"L"',
           renovations: 'Renovations',
           roofEntrance: 'Roof Entrance',
           controlRoomHallway: 'Radar Corridor',
@@ -648,7 +648,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           lounge: 'Lounge',
           mapRoom: 'Map',
           kitchen: 'Kitchen',
-          constructionEntrance: 'Construction Entrance',
+          constructionEntrance: 'Construction<br/>Entrance',
           radioRoom: 'Radio',
           projectorRoom: 'Projector',
           constructionStairs: 'Construction Stairs',
@@ -664,7 +664,8 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           lockerRoom: 'Locker',
           divingRoom: 'Diving',
           tunnel01: 'Tunnel',
-          lawnEntrance: 'Lawn Entrance'
+          lawnEntrance: 'Lawn Entrance',
+          divingCorridor: 'Diving Corridor'
         },
         kafe: {
           // EXT/Spawn
@@ -736,8 +737,8 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           whiteStairs: 'White Stairs',
           laundryStairs: 'Laundry Stairs',
           mainStairs: 'Main Stairs',
-          backStairs: 'Tower Stairs',
-          towerStairs: 'Tower Stairs',
+          backStairs: 'Tower<br/>Stairs',
+          towerStairs: 'Tower<br/>Stairs',
 
           // Basement
           laundryStorage: 'Storage',
@@ -784,13 +785,14 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           kidsDorms: 'Kids',
           attic: 'Attic',
           meetingHallRoof: 'Meeting Roof',
-          bigTower: 'Tower',
+          bigTower: 'Cat Walk',
           middle: 'Middle',
 
           // 3F
           dormsRoof: 'Dorms Roof',
           garageRoof: 'Garage Roof',
-          towerRoof: 'Tower Roof'
+          towerRoof: 'Tower Roof',
+          atticRoof: 'Attic Roof'
         },
         outback: {
           // EXT

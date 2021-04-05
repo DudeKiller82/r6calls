@@ -788,7 +788,8 @@ var R6MLangTerms = (function(undefined) {
           lockerRoom: 'Locker<br/>Room',
           divingRoom: 'Diving<br/>Room',
           tunnel01: 'Tunnel 01',
-          lawnEntrance: ''
+          lawnEntrance: '',
+          divingCorridor: ''
         },
         kafe: {
           // EXT/Spawn
@@ -914,7 +915,8 @@ var R6MLangTerms = (function(undefined) {
           // 3F
           dormsRoof: 'Dorms Roof',
           garageRoof: 'Garage Roof',
-          towerRoof: 'Tower<br/>Roof'
+          towerRoof: 'Tower<br/>Roof',
+          atticRoof: ''
         },
         outback: {
           // EXT
