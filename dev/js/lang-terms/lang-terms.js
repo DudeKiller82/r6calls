@@ -37,7 +37,7 @@ var R6MLangTerms = (function(undefined) {
         DarkAndSmall: 'Small and Dark',
         LightAndSmall: 'Small and Light',
         DisplayNone: 'Turn Off',
-        Learning: 'Learning'
+        Learning: 'Learning Mode'
       },
       floorDisplayOptions: {
         one: '1 - Full',
@@ -100,7 +100,7 @@ var R6MLangTerms = (function(undefined) {
         e: 'E'
       },
       toggle: {
-        labels: {full: 'Toggle Learning', short: 'Learning', shortcut: ['t','T']}
+        labels: {full: 'Learning Mode', short: 'Learning', shortcut: ['l','L']}
       },
       mapNames: {
         bank: 'Bank',
@@ -809,6 +809,8 @@ var R6MLangTerms = (function(undefined) {
           redStairs: 'Red<br/>Stairs',
           // 4F/Roof
           cafeRoofTop: 'Cafe Roof Top',
+          redHatch: '',
+          newHatch: '',
           // 3F
           cigarLounge: 'Cigar<br/>Lounge',
           whiteCorridor: 'White Corridor',
@@ -831,6 +833,7 @@ var R6MLangTerms = (function(undefined) {
           mainCorridor: 'Main<br/>Corridor',
           pillarRoom: 'Pillar Room',
           museumEntrance: 'Museum Enrance',
+          fireplace: '',
           // 1F
           vipCorridor: 'VIP<br/>Corridor',
           bakery: 'Bakery',
@@ -843,7 +846,9 @@ var R6MLangTerms = (function(undefined) {
           diningRoom: 'Dining<br/>Room',
           smallBakery: 'Small<br/>Bakery',
           coatCheck: 'Coat<br/>Check',
-          reception: 'Reception'
+          reception: 'Reception',
+          bottomBar: 'Bottom Bar',
+          woodStairs: 'woodStairs'
         },
         oregon: {
           // EXT
