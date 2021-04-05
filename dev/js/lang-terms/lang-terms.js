@@ -470,7 +470,10 @@ var R6MLangTerms = (function(undefined) {
           eastFrontYard: 'East Front Yard',
           westFrontYard: 'West Front Yard',
           frontAlley: 'Front Alley',
-          buildingRoof: 'Building Roof'
+          buildingRoof: 'Building Roof',
+          pillar: '',
+          whiteTruck: '',
+          pipes: ''
         },
         coastline: {
           aquarium: 'Aquarium',
