@@ -32,7 +32,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           lockers: 'Lockers',
           vaultLobby: 'Vault Lobby',
           vaultEntrance: 'Vault<br/>Entrance',
-          mainStairway: 'Main<br/>Stairs',
+          mainStairway: 'Main Stairs',
           bankGarage: 'Garage',
           elevators: 'Elevators',
           tellersOffice: 'Tellers\'<br/>Office',
