@@ -6,7 +6,7 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsPlayerCalls,
+    R6MLangTermsEnglish,
     R6MMainData
   );
 }(function(
@@ -14,7 +14,7 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsPlayerCalls,
+  R6MLangTermsEnglish,
   R6MMainData,
   undefined
 ) {
@@ -26,7 +26,7 @@
       defaultTerms = R6MLangTerms.terms,
       translatedTerms = [
         R6MLangTerms.terms,
-        R6MLangTermsPlayerCalls.terms
+        R6MLangTermsEnglish.terms
       ];
 
     html += getOutputForTerms(defaultTerms, translatedTerms, ['mapRooms'], null);

@@ -6,7 +6,7 @@
     window,
     document,
     R6MLangTerms,
-    R6MLangTermsPlayerCalls,
+    R6MLangTermsEnglish,
     R6MMainData
   );
 }(function(
@@ -14,7 +14,7 @@
   window,
   document,
   R6MLangTerms,
-  R6MLangTermsPlayerCalls,
+  R6MLangTermsEnglish,
   R6MMainData,
   undefined
 ) {
@@ -27,7 +27,7 @@
       outputEl = $('#output');
 
     defaultTerms = R6MLangTerms.terms;
-    translatedTerms.englishSB = R6MLangTermsPlayerCalls.terms;
+    translatedTerms.english = R6MLangTermsEnglish.terms;
     // add new languages here and to module import above
 
     categoryKeys = getFirstLevelKeys(defaultTerms, ['mapRooms']);
