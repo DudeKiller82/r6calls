@@ -834,6 +834,8 @@ var R6MLangTerms = (function(undefined) {
           pillarRoom: 'Pillar Room',
           museumEntrance: 'Museum Enrance',
           fireplace: '',
+          terraceEntrance: '',
+          main: '',
           // 1F
           vipCorridor: 'VIP<br/>Corridor',
           bakery: 'Bakery',
@@ -848,7 +850,8 @@ var R6MLangTerms = (function(undefined) {
           coatCheck: 'Coat<br/>Check',
           reception: 'Reception',
           bottomBar: 'Bottom Bar',
-          woodStairs: 'woodStairs'
+          woodStairs: '',
+          bakeryCorridor: ''
         },
         oregon: {
           // EXT

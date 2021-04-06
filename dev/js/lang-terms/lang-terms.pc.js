@@ -710,6 +710,8 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           pillarRoom: 'Pillar',
           museumEntrance: 'Red Corridor',
           fireplace: 'Fireplace',
+          terraceEntrance: 'Terrace<br/>Entrance',
+          main: 'Main',
           // 1F
           vipCorridor: 'VIP Corridor',
           bakery: 'Bakery',
@@ -724,7 +726,7 @@ var R6MLangTermsPlayerCalls = (function(undefined) {
           reception: 'Reception',
           bottomBar: 'Bottom Bar',
           woodStairs: 'Wood Stairs',
-          kitchenCorridor: 'Kitchen Corridor'
+          bakeryCorridor: 'Bakery Corridor'
         },
         oregon: {
           // EXT
