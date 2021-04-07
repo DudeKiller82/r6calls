@@ -1009,6 +1009,10 @@ var R6MLangTermsEnglish = (function(undefined) {
           storage: 'Storage',
           arcadeToilet: 'Arcade<br/>Toilet',
           lockerRoom: 'Locker<br/>Room',
+          toiletCorridor: '',
+          dragon: '',
+          oven: '',
+          lockerCorridor: '',
 
           // 2F
           upperArcade: 'Upper<br/>Arcade',
@@ -1027,9 +1031,15 @@ var R6MLangTermsEnglish = (function(undefined) {
           cafe: 'Cafe',
           officeShower: 'Office<br/>Showers',
           officeVault: 'Office<br/>Vault',
+          bar: '',
+          dragonTop: '',
+          cashBalcony: '',
+          arcadeBalcony: '',
 
           // Roof
           roof: 'Roof',
+          controlHatch: '',
+          yellowHatch: '',
 
           // Stairs
           arcadeStairs: 'Arcade<br/>Stairs',
