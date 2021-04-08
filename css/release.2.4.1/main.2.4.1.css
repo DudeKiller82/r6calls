@@ -1748,11 +1748,11 @@ body {
             background: rgba(16, 26, 36, 0.6);
             font-weight: 600 !important; }
         .map-elements.room-label-learning .room-label p {
-          color: transparent;
+          color: red !important;
           background-color: red !important;
           text-shadow: none; }
         .map-elements.room-label-learning .room-label:hover p {
-          color: #fff;
+          color: #fff !important;
           background-color: black !important;
           text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); }
         .map-elements.room-label-display-none .room-label {
@@ -1765,17 +1765,30 @@ body {
         opacity: 1.05; }
         .map-main .map-elements .room-label.very-hard-to-read p {
           background: rgba(16, 26, 36, 0.6); }
-      .map-main .map-elements .room-label.site p {
-        font-weight: bold;
-        color: red; }
     .map-main .map-elements.show-objective-all .objective {
       display: block; }
+    .map-main .map-elements.show-objective-all .site p {
+      font-weight: bold;
+      color: white;
+      background-color: black; }
     .map-main .map-elements.show-objective-hostage .hostage {
       display: block; }
+    .map-main .map-elements.show-objective-hostage .site.hostage p {
+      font-weight: bold;
+      color: white;
+      background-color: #ab1513; }
     .map-main .map-elements.show-objective-bomb .bomb {
       display: block; }
+    .map-main .map-elements.show-objective-bomb .site.bomb p {
+      font-weight: bold;
+      color: white;
+      background-color: #d65b2b; }
     .map-main .map-elements.show-objective-secure .secure {
       display: block; }
+    .map-main .map-elements.show-objective-secure .site.secure p {
+      font-weight: bold;
+      color: white;
+      background-color: #00B200; }
     .map-main .map-elements.zoomed-out-far .room-label {
       opacity: 0; }
 
