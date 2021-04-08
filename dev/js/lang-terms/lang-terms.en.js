@@ -1152,6 +1152,8 @@ var R6MLangTermsEnglish = (function(undefined) {
           astronomyRoom: 'Astronomy<br/>Room',
           masterBathroom: 'Master<br/>Bathroom',
           walkInCloset: 'Walk-In<br/>Closet',
+          ninetyCorner: '',
+          bar: '',
           // 1F
           mainEntrance: 'Main Entrance',
           artStudio: 'Art Studio',
@@ -1171,6 +1173,7 @@ var R6MLangTermsEnglish = (function(undefined) {
           chinaRoom: 'China<br/>Room',
           kitchen: 'Kitchen',
           pantry: 'Pantry',
+          astronomyStairs: '',
           // B
           tastingRoom: 'Tasting Room',
           archHallway: 'Arch<br/>Hallway',
