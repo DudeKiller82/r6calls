@@ -251,6 +251,7 @@ var R6MLangTermsEnglish = (function(undefined) {
           arsenalRoom: 'Arsenal<br/>Room',
           escapeTunnel: 'Escape<br/>Tunnel',
           container: 'Container',
+          bikeHallway: '',
 
           // 1F
           garage: 'Garage',

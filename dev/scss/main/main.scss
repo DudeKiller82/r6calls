@@ -686,14 +686,14 @@ body {
         }
         @at-root .map-elements.room-label-learning .room-label {
           p {
-            color: transparent;
+            color: red !important;
             background-color: red !important;
             text-shadow: none;
           }
         }
         @at-root .map-elements.room-label-learning .room-label:hover {
           p {
-            color: #fff;
+            color: #fff !important;
             background-color: black !important;
             @include text-shadow(2px, 1px, 4px, $color: rgba(0,0,0,0.8));
           }
@@ -724,11 +724,24 @@ body {
       .objective {
         display: block;
       }
+      .site {
+        p {
+          font-weight: bold;
+          color: white;
+          background-color: black;
+        }
+      }
     }
-
     &.show-objective-hostage {
       .hostage {
         display: block;
+      }
+      .site.hostage {
+        p {
+          font-weight: bold;
+          color: white;
+          background-color: $r6-red;
+        }
       }
     }
 
@@ -736,11 +749,25 @@ body {
       .bomb {
         display: block;
       }
+      .site.bomb {
+        p {
+          font-weight: bold;
+          color: white;
+          background-color: $r6-orange;
+        }
+      }
     }
 
     &.show-objective-secure {
       .secure {
         display: block;
+      }
+      .site.secure {
+        p {
+          font-weight: bold;
+          color: white;
+          background-color: $green-of-sorts;
+        }
       }
     }
 
