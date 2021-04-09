@@ -909,7 +909,11 @@ var R6MLangTermsEnglish = (function(undefined) {
           serverRoomA: 'Server Room A',
           serverRoomB: 'Server Room B',
           technicalSeating: 'Technical Seating',
-          ladderRoom: 'Ladder<br/>Room'
+          ladderRoom: 'Ladder<br/>Room',
+          frontStairway: '',
+          backStairway: '',
+          backCaterer: '',
+          officeHallway: ''
         },
         skyscraper: {
           helipad: 'Helipad',
