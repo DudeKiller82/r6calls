@@ -102,7 +102,14 @@ var R6MLangTermsEnglish = (function(undefined) {
           upperLibrary: 'Upper<br/>Library',
           vistaHallway: 'Vista<br/>Hallway',
           westBalcony: 'West Balcony<br/>(not shown)',
-          westCorridor: 'West<br/>Corridor'
+          westCorridor: 'West<br/>Corridor',
+          fireplace: '',
+          libraryStairs: '',
+          pianoStairs: '',
+          mezzanine: '',
+          modelHallway: '',
+          roofHatch: ''
+
         },
         border: {
           armoryLockers: 'Armory<br/>Lockers',
