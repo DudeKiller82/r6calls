@@ -514,6 +514,9 @@ var R6MLangTermsEnglish = (function(undefined) {
           tractorStorage: 'Tractor<br/>Storage',
           attic: 'Attic',
           ammoStorage: 'Ammo<br/>Storage',
+          tractorBalcony: '',
+          atticNorth: '',
+          atticSouth: '',
           // 2F
           balcony: 'Balcony',
           loomRoom: 'Loom<br/>Room',
@@ -525,6 +528,9 @@ var R6MLangTermsEnglish = (function(undefined) {
           kidsRoom: 'Kids<br/>Room',
           bathroom: 'Bathroom',
           sewingRoom: 'Sewing<br/>Room',
+          loomBalcony: '',
+          outsideStairs: '',
+          bathroomBalcony: '',
           // 1F
           prepArea: 'Prep Area',
           kitchen: 'Kitchen',
@@ -534,6 +540,7 @@ var R6MLangTermsEnglish = (function(undefined) {
           pianoRoom: 'Piano<br/>Room',
           livingRoom: 'Living<br/>Room',
           foyer: 'Foyer',
+          livingHallway: '',
           // Basement
           eastTunnel: 'East<br/>Tunnel',
           fermentationChamber: 'Fermentation<br/>Chamber',
@@ -543,7 +550,11 @@ var R6MLangTermsEnglish = (function(undefined) {
           westTunnel: 'West<br/>Tunnel',
           brewery: 'Brewery',
           barrelStorage: 'Barrel<br/>Storage',
-          barn: 'Barn'
+          barn: 'Barn',
+          breweryHallway: '',
+          workshopHallway: '',
+          garageHallway: '',
+          masterHallway: ''
         },
         house: {
           // EXT
