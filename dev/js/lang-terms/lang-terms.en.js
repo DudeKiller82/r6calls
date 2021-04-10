@@ -438,7 +438,10 @@ var R6MLangTermsEnglish = (function(undefined) {
           courtyard: 'Courtyard',
           accessAlley: 'Access Alley',
           shop: 'Shop',
-          marketRooftops: 'Market Rooftops'
+          marketRooftops: 'Market Rooftops',
+          auntsKitchen: '',
+          footballKitchen: '',
+          bikersKitchen: ''
         },
         fortress: {
           // Spawns
