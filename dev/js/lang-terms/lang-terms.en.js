@@ -476,9 +476,13 @@ var R6MLangTermsEnglish = (function(undefined) {
           lobby: 'Lobby',
           courtyardLadder: 'Courtyard<br/>Ladder',
           office: 'Office',
-          // here because this only appears for 1f
+          mezzanine: '',
           lobbyStairs: 'Lobby<br/>Stairs',
           oldTowerStairs: 'Old Tower<br/>Stairs',
+          cafeteriaHallway: '',
+          hammamHallway2: '',
+          changingHallway: '',
+          officeHallway: '',
           // 2F
           hammamRoof: 'Hammam<br/>Roof',
           shishaLounge: 'Shisha Lounge',
@@ -496,6 +500,10 @@ var R6MLangTermsEnglish = (function(undefined) {
           towerStairs: 'Tower<br/>Stairs',
           towerHallway: 'Tower Hallway',
           towerRenovation: 'Tower<br/>Renovation',
+          dormitoryHall: '',
+          bathroomHall: '',
+          portrait: '',
+          horse: '',
           // Roof
           oldRoof: 'Old<br/>Roof',
           oldTower: 'Old<br/>Tower',
