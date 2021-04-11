@@ -1132,6 +1132,7 @@ var R6MLangTermsEnglish = (function(undefined) {
           gameRoom: 'Game<br/>Room',
           eastObservatory: 'East<br/>Observatory',
           fountain: 'Fountain',
+          yellow: '',
           //Air Ducts:
           northAirDuct: 'North<br/>Air Duct',
           eastAirDuct: 'East<br/>Air Duct',
