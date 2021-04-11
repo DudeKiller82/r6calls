@@ -55,8 +55,8 @@ var R6MLangTerms = (function(undefined) {
         letterW: 'W'
       },
       languages: {
-        pc: 'Player Calls',
-        en: 'English'
+        pc: 'Player Callouts',
+        en: 'Original names'
       },
       floorNames: {
         subBasement: { full: 'Sub-Basement', short: 'B'},
