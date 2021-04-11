@@ -556,7 +556,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
   var togglePopulate = function togglePopulate() {
     var shortcutTip = R6MLangTerms.terms.general.shortcutTip;
     var toggleLabelLang = R6MLangTerms.terms.toggle.labels;
-    var btns = '<button id="toggle-label" title="' + toggleLabelLang.full + ' \n' + R6MLangTerms.terms.general.shortcutTip.replace('{shortcut}','t') + '">'
+    var btns = '<button id="toggle-label" title="' + toggleLabelLang.full + ' \n' + R6MLangTerms.terms.general.shortcutTip.replace('{shortcut}','l') + '">'
        + '<span class="short">' + toggleLabelLang.short + '</span>'
        + '<span class="full">' + toggleLabelLang.full + '</span>'
        + '</button>';
