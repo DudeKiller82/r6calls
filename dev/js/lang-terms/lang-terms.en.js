@@ -592,6 +592,8 @@ var R6MLangTermsEnglish = (function(undefined) {
           readingRoomBalcony: 'Reading R.<br/>Balcony',
           backPorch: 'Back Porch',
           backPorchTop: 'Back Porch<br/>Top',
+          treeHouse: '',
+          garageFront: '',
           // Stairs
           kitchenStairs: 'Kitchen<br/>Stairs',
           lobbyStairs: 'Lobby<br/>Stairs',

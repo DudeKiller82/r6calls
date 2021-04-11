@@ -155,6 +155,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     classes += element.outdoor ? 'outdoor ' : '';
     classes += 'hard-to-read ';
+    classes += element.veryHardToRead ? 'very-hard-to-read ' : '';
     classes += element.site ? 'site ' : '';
     classes += element.hostage ? 'hostage ' : '';
     classes += element.secure ? 'secure ' : '';
