@@ -190,18 +190,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return $lockPanningControl.is(':checked');
   };
 
-  var getMenuLanguageHtml = function getMenuLanguageHtml() {
-    var html = '';
-
-    html += '<div id="lang-choices" class="mmenu-custom-panel">';
-    html += '<h2>' + R6MLangTerms.terms.general.languageHeader + '</h2>';
-    for (var langKey in R6MLangTerms.loadedLanguages) {
-      html += '<button data-lang="' + langKey + '">' + R6MLangTerms.terms.languages[langKey] + '</button>';
-    }
-    html += '</div>';
-    return html;
-  };
-
   var getMenuOptionsHtml = function getMenuOptionsHtml() {
     var html = '';
 
@@ -341,7 +329,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     var html = '';
 
     html += getMenuR6MapsHtml();
-    html += getMenuLanguageHtml();
     html += getMenuOptionsHtml();
     html += '<div class="faded-logo"></div>';
     $menuPanel.html(html);
