@@ -1148,7 +1148,7 @@ var R6MLangTerms = (function(undefined) {
           lab: 'Lab',
           redCorridor: 'Red Corridor',
           gongRoom: 'Gong',
-          yellowCorridor: 'Yellow Corridor',
+          yellowCorridor: 'Yellow',
           tellers: 'Tellers',
           storage: 'Drug',
           arcadeToilet: 'Toilet',
