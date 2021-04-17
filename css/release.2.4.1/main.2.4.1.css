@@ -1767,6 +1767,10 @@ body {
           background: rgba(16, 26, 36, 0.6); }
     .map-main .map-elements.show-objective-all .objective {
       display: block; }
+    .map-main .map-elements.show-objective-all .call p {
+      color: green; }
+    .map-main .map-elements.show-objective-all .objective {
+      display: block; }
     .map-main .map-elements.show-objective-all .site p {
       font-weight: bold;
       color: white;
