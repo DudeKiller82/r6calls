@@ -1160,8 +1160,6 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
-  .map-wrapper.disable-cameras .camera {
-    pointer-events: none; }
   .map-wrapper[show-floor-index="-1"] .zero, .map-wrapper[show-floor-index="-1"] .one, .map-wrapper[show-floor-index="-1"] .two, .map-wrapper[show-floor-index="-1"] .three, .map-wrapper[show-floor-index="-1"] .four, .map-wrapper[show-floor-index="-1"] .five {
     display: none !important; }
   .map-wrapper[show-floor-index="0"] .neg-one, .map-wrapper[show-floor-index="0"] .one, .map-wrapper[show-floor-index="0"] .two, .map-wrapper[show-floor-index="0"] .three, .map-wrapper[show-floor-index="0"] .four, .map-wrapper[show-floor-index="0"] .five {
@@ -1765,10 +1763,8 @@ body {
         opacity: 1.05; }
         .map-main .map-elements .room-label.very-hard-to-read p {
           background: rgba(16, 26, 36, 0.6); }
-    .map-main .map-elements.show-objective-all .objective {
-      display: block; }
-    .map-main .map-elements.show-objective-all .call p {
-      color: green; }
+      .map-main .map-elements .room-label.call p {
+        color: lime; }
     .map-main .map-elements.show-objective-all .objective {
       display: block; }
     .map-main .map-elements.show-objective-all .site p {
