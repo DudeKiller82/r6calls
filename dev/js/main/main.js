@@ -181,11 +181,6 @@
     }
   };
 
-  var handleEnableScreenshotsChange = function handleEnableScreenshotsChange(value) {
-    localStorageSetItem('enablescreenshots', value);
-    R6MMainRender.setEnableScreenshots($mapWrappers, value);
-  };
-
   var handleMapChange = function handleMapChange() {
     sendMapSelectAnalyticsEvent();
     loadMap();
@@ -236,7 +231,6 @@
       R6MMainControls.zoom.reset($mapMains, getResetDimensions);
     }
 
-    setupCameraScreenshots();
     setupCameraLos();
     showSelectedFloor();
     showSelectedObjective();
@@ -379,19 +373,6 @@
     updateLosOpacity(getCameraLosOpacity());
   };
 
-  var setupCameraScreenshots = function setupCameraScreenShots(){
-    $('a.camera').fancybox({
-      padding: 0,
-      helpers: {
-        overlay: {
-          css: {
-            background: 'rgba(48,113,169, 0.3)'
-          }
-        }
-      }
-    });
-  };
-
   var setupEvents = function setupEvents() {
     $mapMains.on('click', outputCoordinates);
     R6MMainControls.objectives.setup(handleObjectiveChange);
@@ -401,7 +382,6 @@
     R6MMainControls.roomLabelStyles.setup(setRoomLabelStyle);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
     R6MMainControls.pan.setupLockOption(saveLockPanningOption);
-    R6MMainControls.enableScreenshots.setup(handleEnableScreenshotsChange);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
 
@@ -505,15 +485,6 @@
     }
   };
 
-  var tryLoadEnableScreenshotsOption = function tryLoadEnableScreenshotsOption() {
-    var enableScreenshotsOption = localStorage.getItem('enablescreenshots');
-
-    if (enableScreenshotsOption !== null) {
-      R6MMainControls.enableScreenshots.set(enableScreenshotsOption);
-      handleEnableScreenshotsChange((enableScreenshotsOption === 'true'));
-    }
-  };
-
   var tryLoadLockPanningOption = function tryLoadLockPanningOption() {
     var lockPanningOption = localStorage.getItem('lockpanning');
 
@@ -540,7 +511,6 @@
     tryLoadMapPanelCount();
     tryLoadLockPanningOption();
     tryLoadRoomLabelStyle();
-    tryLoadEnableScreenshotsOption();
   };
 
   var tryLoadRoomLabelStyle = function tryLoadRoomLabelStyle() {

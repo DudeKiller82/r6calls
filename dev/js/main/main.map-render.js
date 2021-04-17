@@ -79,12 +79,8 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       inlineStyle = getPositionStyle(camera);
       classes = 'camera ';
       classes += getCommonClasses(camera);
-      grouping = (camera.otherFloor)
-        ? ''
-        : 'data-fancybox-group="camera"';
-      title = R6MLangTerms.terms.general.cameraViewCaption.replace('{floorName}',camera.location.removeBreakTags());
       tagStart = (camera.id && !camera.otherFloor)
-        ? '<a href="' + IMG_URL + mapimgUrlPrefix + '/' + mapimgUrlPrefix + '-camera-' + camera.id + retinaUrl + '.jpg" title="' + title + '" ' + grouping + ' data-camera-id="' + camera.id + '"'
+        ? '<a data-camera-id="' + camera.id + '"'
         : '<div ';
       tagEnd = (camera.id && !camera.otherFloor)
         ? '</a>'
@@ -160,6 +156,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     classes += element.hostage ? 'hostage ' : '';
     classes += element.secure ? 'secure ' : '';
     classes += element.bomb ? 'bomb ' : '';
+    classes += element.call ? 'call ' : '';
 
     return classes;
   };
@@ -484,14 +481,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     $svgMapWrappers.html(getCamerasLosHtml(mapData.cameras));
   };
 
-  var setEnableScreenshots = function setEnableScreenshots($mapWrappers, isEnabled) {
-    if (isEnabled) {
-      $mapWrappers.removeClass('disable-cameras');
-    } else {
-      $mapWrappers.addClass('disable-cameras');
-    }
-  };
-
   var setRoomLabelStyle = function setRoomLabelStyle($mapElements, style) {
     ROOM_LABEL_STYLES.forEach(function(roomLabelStyle) {
       $mapElements.removeClass(ROOM_LABEL_CSS_TEXT[roomLabelStyle]);
@@ -552,7 +541,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   return  {
     renderMap: renderMap,
     roomLabelStyles: ROOM_LABEL_STYLES,
-    setEnableScreenshots: setEnableScreenshots,
     setRoomLabelStyle: setRoomLabelStyle,
     setupMapPanels: setupMapPanels,
     showFloor: showFloor,

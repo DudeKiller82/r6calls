@@ -8,7 +8,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $menuControl = $('#mmenu-link'),
     $toggleControl = $('#toggle-control'),
     $lockPanningControl,
-    $enableScreenshotsControl,
     $roomLabelStylesControl,
     $mapPanelCountControl,
     $fullScreenControl,
@@ -50,18 +49,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     } else if (rootEl.msRequestFullscreen) {
       rootEl.msRequestFullscreen();
     }
-  };
-
-  var enableScreenshotsSetOption = function enableScreenshotsSetOption(isEnabled) {
-    var boolValue = (isEnabled === 'true') ? true : false;
-
-    $enableScreenshotsControl.prop('checked', boolValue);
-  };
-
-  var enableScreenshotsSetupChangeEvent = function enableScreenshotsSetupChangeEvent(callback) {
-    $enableScreenshotsControl.change(function(e) {
-      callback(getEnableScreenshotValue());
-    });
   };
 
   var floorsGetCurrentIndex = function floorsGetCurrentIndex() {
@@ -115,10 +102,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
       return true;
     }
     return false;
-  };
-
-  var getEnableScreenshotValue = function getEnableScreenshotValue() {
-    return $enableScreenshotsControl.is(':checked');
   };
 
   var getFloorTooltip = function getFloorTooltip(floorIndex) {
@@ -225,7 +208,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     html += '</div>';
     html += '</div>';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" id="enable-screenshtos" checked>' + R6MLangTerms.terms.general.enableScreenshots + '</input>';
     html += '</div>';
 
     html += '</div>';
@@ -338,7 +320,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     populateRoomLabelStyleOptions($roomLabelStylesControl, roomLabelStyles);
     $mapPanelCountControl = $('#map-pane-count');
     $lockPanningControl = $('#lock-panning');
-    $enableScreenshotsControl = $('#enable-screenshtos');
     $fullScreenControl = $('#full-screen');
     $menuSelectMapsControl = $('#menu-select-maps');
   };
@@ -631,10 +612,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
   };
 
   return  {
-    enableScreenshots: {
-      set: enableScreenshotsSetOption,
-      setup: enableScreenshotsSetupChangeEvent
-    },
     floors: {
       get: floorsGetCurrentIndex,
       getMinMaxIndex: floorsGetMinAndMaxIndex,

@@ -56,12 +56,6 @@ body {
   width: 100vw;
   overflow:hidden;
 
-  &.disable-cameras {
-    .camera {
-      pointer-events: none;
-    }
-  }
-
   &[show-floor-index="-1"] {
     .zero, .one, .two, .three, .four, .five {
       display: none !important;
@@ -718,8 +712,12 @@ body {
           background: $faded-bg;
         }
       }
+      &.call {
+        p {
+          color: lime;
+        }
+      }
     }
-
     &.show-objective-all {
       .objective {
         display: block;
