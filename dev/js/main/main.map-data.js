@@ -1128,12 +1128,12 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 36, left: 44, description: coastlineTerms.vipLounge, site: true, hostage: true },
           { floor: 2, top: -124, left: 123, description: coastlineTerms.djBooth },
           { floor: 2, top: 384, left: -121, description: coastlineTerms.balcony },
-          { floor: 2, top: 259, left: 12, description: coastlineTerms.roofDrop },
+          { floor: 2, top: 267, left: 26, description: coastlineTerms.roofDrop },
           { floor: 2, top: 32, left: -60, description: coastlineTerms.hookahHallway, rotate: -90 },
           // 3F
           { floor: 3 , top: 111, left: -121, description: coastlineTerms.rooftop },
           { floor: 3 , top: 78, left: 221, description: coastlineTerms.rooftop },
-          { floor: 3, top: 259, left: 12, description: coastlineTerms.roofDrop }
+          { floor: 3, top: 266, left: 26, description: coastlineTerms.roofDrop }
         ]
       },
       consulate: {
