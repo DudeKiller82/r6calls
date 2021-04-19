@@ -1500,7 +1500,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -725, right: -1255, height: 217, width: 475
+          bottom: -1358, right: -2226, height: 432, width: 1348
         },
         floors: [
           { index: 1, top: -1673, left: -3235, width: 5544, name: floorTerms.firstFloor, default: true },
@@ -3092,9 +3092,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -771, right: -1219, height: 217, width: 475
         },
         floors: [
-          { index: 1, top: -175, left: -630, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -175, left: -630, name: floorTerms.secondFloor },
-          { index: 3, top: -175, left: -630, name: floorTerms.roof }
+          { index: 1, top: -175, left: -630, width: 1600, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -175, left: -630, width: 1600, name: floorTerms.secondFloor },
+          { index: 3, top: -175, left: -630, width: 1600, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 295, left: 200 },

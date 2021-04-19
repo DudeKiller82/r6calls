@@ -390,7 +390,7 @@ var R6MLangTerms = (function(undefined) {
           bar: 'Bar',
           stage: 'Stage',
           stockRoom: 'Stock',
-          westernHallway: 'Srip Hallway',
+          westernHallway: 'Strip Hallway',
           toilets: 'Toilets',
           centralHallway: 'Kitchen Hallway',
           kitchen: 'Kitchen',
