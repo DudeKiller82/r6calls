@@ -42,10 +42,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -806, right: -1329, height: 217, width: 657
         },
         floors: [
-          { index: 0, top: -1212, left: -2292, width: 3680, name: floorTerms.basement },
-          { index: 1, top: -1212, left: -2292, width: 3680, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1212, left: -2292, width: 3680, name: floorTerms.secondFloor },
-          { index: 3, top: -1212, left: -2292, width: 3680, name: floorTerms.roof }
+          { index: 0, top: -660, left: -1042, width: 1811, name: floorTerms.basement, background: true },
+          { index: 1, top: -538, left: -587, width: 1180, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -538, left: -587, width: 1180, name: floorTerms.secondFloor },
+          { index: 3, top: -538, left: -587, width: 1180, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 0, top: -160, left: -69 },
