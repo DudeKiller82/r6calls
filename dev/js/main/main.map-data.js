@@ -1143,7 +1143,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -771, right: -1328, height: 217, width: 611
+          bottom: -722, right: -872, height: 217, width: 462
         },
         floors: [
           { index: 0, top: -604, left: -811, width: 1683, name: floorTerms.basement, background: true },

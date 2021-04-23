@@ -478,9 +478,9 @@ var R6MLangTerms = (function(undefined) {
           pipes: 'Pipes'
         },
         coastline: {
-          aquarium: 'Aquarium',
+          aquarium: 'Aqua',
           backAlley: 'Back Alley',
-          balcony: 'Aquarium Balcony',
+          balcony: 'Aqua Balcony',
           bathroom: 'Bathroom',
           billiardsRoom: 'Pool Table',
           blueBar: 'Blue Bar',
