@@ -39,7 +39,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -806, right: -1329, height: 217, width: 657
+          bottom: -806, right: -1132, height: 217, width: 462
         },
         floors: [
           { index: 0, top: -660, left: -1042, width: 1811, name: floorTerms.basement, background: true },
@@ -74,7 +74,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 310, left: 397 }
         },
         compassPoints: {
-          top: 316, left: 741
+          top: 306, left: 662
         },
         ladders: [
           { floor: 1, top: -440, left: 554, otherFloor: 'down' },
@@ -242,9 +242,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -725, right: -1255, width: 475
         },
         floors: [
-          { index: 1, top: -715, left: -1275, name: floorTerms.firstFloor, background: true, default: true },
-          { index: 2, top: -465, left: -451, name: floorTerms.secondFloor },
-          { index: 3, top: -465, left: -451, name: floorTerms.roof }
+          { index: 1, top: -716, left: -892, width: 1721, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -466, left: -454, width: 1236, name: floorTerms.secondFloor },
+          { index: 3, top: -466, left: -454, width: 1236, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 1, top: -96, left: -296 },
@@ -407,9 +407,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -262, right: -951, height: 210, width: 463
         },
         floors: [
-          { index: 1, top: -560, left: -744, width: 1517, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -560, left: -744, width: 1517, name: floorTerms.secondFloor },
-          { index: 3, top: -560, left: -744, width: 1517, name: floorTerms.roof }
+          { index: 1, top: -560, left: -744, width: 1517, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -475, left: -307, width: 681, name: floorTerms.secondFloor },
+          { index: 3, top: -475, left: -307, width: 681, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 1, top: -292, left: 23 },
@@ -438,7 +438,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 125, left: 350 }
         },
         compassPoints: {
-          top: 252, left: 387
+          top: 196, left: 360
         },
         ladders: [
           { floor: 1, top: -128, left: -767, otherFloor: 'up' },
@@ -576,10 +576,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -718, right: -1319, height: 215, width: 465
         },
         floors: [
-          { index: 0, top: -131, left: -273, width: 1386, name: floorTerms.basement },
-          { index: 1, top: -131, left: -273, width: 1386, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -131, left: -273, width: 1386, name: floorTerms.secondFloor },
-          { index: 3, top: -131, left: -273, width: 1386, name: floorTerms.roof }
+          { index: 0, top: -131, left: -273, width: 1386, name: floorTerms.basement, background: true },
+          { index: 1, top: -128, left: 126, width: 723, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -128, left: 126, width: 723, name: floorTerms.secondFloor },
+          { index: 3, top: -128, left: 126, width: 723, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 0, top: 500, left: 440 },
@@ -608,7 +608,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 680, left: 890 }
         },
         compassPoints: {
-          top: 372, left: 1155
+          top: 258, left: 1020
         },
         ladders: [
           { floor: 0, top: 645, left: 405, otherFloor: 'up' },
@@ -759,14 +759,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -914, right: -1214, width: 661
+          bottom: -855, right: -878, width: 462
         },
         floors: [
           //
-          { index: 0, top: -1098, left: -2409, width: 3682, name: floorTerms.basement },
-          { index: 1, top: -1098, left: -2409, width: 3682, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1098, left: -2409, width: 3682, name: floorTerms.secondFloor },
-          { index: 3, top: -1098, left: -2409, width: 3682, name: floorTerms.roof }
+          { index: 0, top: -642, left: -908, width: 1789, name: floorTerms.basement, background: true },
+          { index: 1, top: -494, left: -449, width: 840, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -494, left: -449, width: 840, name: floorTerms.secondFloor },
+          { index: 3, top: -494, left: -449, width: 840, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: -13, left: -17  },
@@ -796,7 +796,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 275, left: 397 }
         },
         compassPoints: {
-          top: -297, left: 403
+          top: 503, left: 758
         },
         ladders: [
           // Garage
@@ -954,12 +954,12 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -725, right: -1255, height: 217, width: 475
+          bottom: -735, right: -1004, height: 212, width: 462
         },
         floors: [
-          { index: 1, top: -1009, left: -2136, width: 3441, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1009, left: -2136, width: 3441, name: floorTerms.secondFloor },
-          { index: 3, top: -1009, left: -2136, width: 3441, name: floorTerms.roof }
+          { index: 1, top: -751, left: -797, width: 1801, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -210, left: -365, width: 740, name: floorTerms.secondFloor },
+          { index: 3, top: -210, left: -365, width: 740, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: -46, left: 53 },
@@ -988,7 +988,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 375, left: 332 }
         },
         compassPoints: {
-          top: 522, left: 610
+          top: 522, left: 409
         },
         cameras: [
           {
@@ -1146,10 +1146,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -771, right: -1328, height: 217, width: 611
         },
         floors: [
-          { index: 0, top: -1104, left: -2044, width: 3427, name: floorTerms.basement },
-          { index: 1, top: -1104, left: -2044, width: 3427, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1104, left: -2044, width: 3427, name: floorTerms.secondFloor },
-          { index: 3, top: -1104, left: -2044, width: 3427, name: floorTerms.roof }
+          { index: 0, top: -604, left: -811, width: 1683, name: floorTerms.basement, background: true },
+          { index: 1, top: -222, left: -448, width: 943, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -222, left: -448, width: 943, name: floorTerms.secondFloor },
+          { index: 3, top: -222, left: -448, width: 943, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 1, top: 41, left: 203 },
