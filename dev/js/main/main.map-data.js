@@ -3256,12 +3256,12 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -605, right: -1168, height: 217, width: 467
+          bottom: -488, right: -889, height: 217, width: 462
         },
         floors: [
-          { index: 1, top: -600, left: -973, width: 2137, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -600, left: -973, width: 2137, name: floorTerms.secondFloor },
-          { index: 3, top: -600, left: -973, width: 2137, name: floorTerms.roof }
+          { index: 1, top: -455, left: -655, width: 1544, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -305, left: -292, width: 813, name: floorTerms.secondFloor },
+          { index: 3, top: -305, left: -292, width: 813, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 123, left: 149 },
@@ -3290,7 +3290,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 283, left: 533 }
         },
         compassPoints: {
-          top: 430, left: 594
+          top: 29, left: 793
         },
         ladders: [
         ],
@@ -3362,14 +3362,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -122, left: 285, rotate: 0, size: 10 }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: 510, left: -610, description: themeparkTerms.mainEntrance },
-          { letter: spawnTerms.b, top: -638, left: -620, description: themeparkTerms.teacups },
-          { letter: spawnTerms.c, top: 191, left: 957, description: themeparkTerms.bumperCars }
+          { letter: spawnTerms.a, top: 369, left: -548, description: themeparkTerms.mainEntrance },
+          { letter: spawnTerms.b, top: -409, left: -548, description: themeparkTerms.teacups },
+          { letter: spawnTerms.c, top: 176, left: 827, description: themeparkTerms.bumperCars }
         ],
         roomLabels: [
           // EXT
           { outdoor: true, top: 372, left: -13, description: themeparkTerms.palms },
-          { outdoor: true, top: 514, left: 430, description: themeparkTerms.roboCircuit },
+          { outdoor: true, top: 481, left: 330, description: themeparkTerms.roboCircuit },
           { outdoor: true, top: 370, left: 300, description: themeparkTerms.castleEntrance },
           { outdoor: true, top: 170, left: 450, description: themeparkTerms.castleEntrance },
           { outdoor: true, top: 246, left: -300, description: themeparkTerms.guestInfo },
@@ -3441,7 +3441,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -725, right: -1255, height: 217, width: 475
+          bottom: -725, right: -1285, height: 217, width: 462
         },
         floors: [
           { index: 1, top: -715, left: -1275, name: floorTerms.firstFloor, background: true },
@@ -3476,7 +3476,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 662, left: 584 }
         },
         compassPoints: {
-          top: 380, left: 932
+          top: 380, left: 1191
         },
         ladders: [
           { floor: 3, top: 245, left: -139, otherFloor: 'up' },
@@ -3680,13 +3680,13 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -849, right: -1241, height: 217, width: 510
+          bottom: -495, right: -902, height: 217, width: 462
         },
         floors: [
-          { index: 0, top: -722, left: -1587, width: 2871, name: floorTerms.basement },
-          { index: 1, top: -722, left: -1587, width: 2871, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -722, left: -1587, width: 2871, name: floorTerms.secondFloor },
-          { index: 3, top: -722, left: -1587, width: 2871, name: floorTerms.roof }
+          { index: 0, top: -491, left: -188, width: 1090, name: floorTerms.basement, background: true },
+          { index: 1, top: -495, left: 16, width: 624, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -495, left: 16, width: 624, name: floorTerms.secondFloor },
+          { index: 3, top: -495, left: 16, width: 624, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 62, left: 284 },
@@ -3718,6 +3718,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { left: 270, top: 640 }
         },
         compassPoints: {
+          top: 148, left: 800
         },
         ladders: [],
         cameras: [
@@ -3773,9 +3774,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -360, left: 409, rotate: 0, size: DRONE_SMALL }
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -371, left: -155, description: villaTerms.spawnMainRoad },
-          { letter: spawnTerms.b, top: 428, left: 371, description: villaTerms.spawnRuins },
-          { letter: spawnTerms.c, top: -290, left: 845, description: villaTerms.spawnFountain }
+          { letter: spawnTerms.a, top: -371, left: -110, description: villaTerms.spawnMainRoad },
+          { letter: spawnTerms.b, top: 420, left: 371, description: villaTerms.spawnRuins },
+          { letter: spawnTerms.c, top: -290, left: 834, description: villaTerms.spawnFountain }
         ],
         roomLabels: [
           // EXT
@@ -3872,14 +3873,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -754, right: -1261, height: 217, width: 546
+          bottom: -568, right: -902, height: 217, width: 462
         },
         floors: [
-          { index: 1, top: -913, left: -1741, width: 3049, name: floorTerms.firstFloor },
-          { index: 2, top: -913, left: -1741, width: 3049, name: floorTerms.secondFloor, default: true },
-          { index: 3, top: -913, left: -1741, width: 3049, name: floorTerms.thirdFloor },
-          { index: 4, top: -913, left: -1741, width: 3049, name: floorTerms.fourthFloor },
-          { index: 5, top: -913, left: -1741, width: 3049, name: floorTerms.roof }
+          { index: 1, top: -577, left: -776, width: 1679, name: floorTerms.firstFloor, background: true },
+          { index: 2, top: -175, left: -697, width: 1567, name: floorTerms.secondFloor, default: true },
+          { index: 3, top: -175, left: -697, width: 1567, name: floorTerms.thirdFloor },
+          { index: 4, top: -175, left: -697, width: 1567, name: floorTerms.fourthFloor },
+          { index: 5, top: -175, left: -697, width: 1567, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 4, top: 13, left: 16 },
@@ -3908,7 +3909,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 160, left: 590 }
         },
         compassPoints: {
-          top: 331, left: 220
+          top: 231, left: 803
         },
         ladders: [
           { floor: 3, top: -11, left: 232, otherFloor: 'up' },
@@ -4015,8 +4016,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         spawnPoints: [
           { letter: spawnTerms.a, top: -532, left: -187, description: yachtTerms.spawnSubmarine },
-          { letter: spawnTerms.b, top: 413, left: -737, description: yachtTerms.spawnZodiak },
-          { letter: spawnTerms.c, top: 354, left: 596, description: yachtTerms.spawnSnowMobile }
+          { letter: spawnTerms.b, top: 413, left: -657, description: yachtTerms.spawnZodiak },
+          { letter: spawnTerms.c, top: 264, left: 596, description: yachtTerms.spawnSnowMobile }
         ],
         roomLabels: [
           // EXT
@@ -4057,9 +4058,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           // 3F
           { floor: 3, top: 14, left: -359, description: yachtTerms.spaDeck },
           { floor: 3, top: 138, left: -89, description: yachtTerms.eastDeck },
-          { floor: 3, top: -89, left: -89, description: yachtTerms.westDeck },
+          { floor: 3, top: -96, left: -89, description: yachtTerms.westDeck },
           { floor: 3, top: 138, left: 226, description: yachtTerms.eastDeck },
-          { floor: 3, top: -89, left: 226, description: yachtTerms.westDeck },
+          { floor: 3, top: -96, left: 226, description: yachtTerms.westDeck },
           { floor: 3, top: 17, left: 407, description: yachtTerms.frontDeck, rotate: -90 },
           { floor: 3, top: 17, left: 723, description: yachtTerms.frontDeck },
           { floor: 3, top: 20, left: 801, description: yachtTerms.kingOfTheWorld },
