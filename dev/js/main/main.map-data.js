@@ -425,7 +425,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -318, left: 156, set: 3, letter: objectiveTerms.bombShortA },
           { floor: 1, top: -186, left: 213, set: 3, letter: objectiveTerms.bombShortB },
           { floor: 2, top: -325, left: -67, set: 4, letter: objectiveTerms.bombShortA },
-          { floor: 2, top: -288, left: 46, set: 4, letter: objectiveTerms.bombShortB }
+          { floor: 2, top: -321, left: 125, set: 4, letter: objectiveTerms.bombShortB }
         ],
         secureObjectives: [
           { floor: 1, top: -186, left: 249 },
@@ -2258,14 +2258,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -743, right: -1262, height: 217, width: 634
+          bottom: -581, right: -965, height: 217, width: 462
         },
         floors: [
-          { index: -1, top: -1190, left: -2218, width: 3538, name: floorTerms.subBasement },
-          { index: 0, top: -1190, left: -2218, width: 3538, name: floorTerms.basement },
-          { index: 1, top: -1190, left: -2218, width: 3538, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1190, left: -2218, width: 3538, name: floorTerms.secondFloor },
-          { index: 3, top: -1190, left: -2218, width: 3538, name: floorTerms.roof }
+          { index: -1, top: -559, left: -1042, width: 2009, name: floorTerms.subBasement, background: true },
+          { index: 0, top: -364, left: -382, width: 843, name: floorTerms.basement },
+          { index: 1, top: -364, left: -382, width: 843, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -364, left: -382, width: 843, name: floorTerms.secondFloor },
+          { index: 3, top: -364, left: -382, width: 843, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 0, top: -30, left: -312 },
@@ -2294,7 +2294,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 259, left: 547 }
         },
         compassPoints: {
-          top: 168, left: 515
+          top: 214, left: 871
         },
         ladders: [
           { floor: -1, top: -36, left: -126, otherFloor: 'up' },
@@ -2398,9 +2398,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
 
         ],
         spawnPoints: [
-          { letter: spawnTerms.a, top: -495, left: -1004, description: kanalTerms.floatingDock },
+          { letter: spawnTerms.a, top: -495, left: -976, description: kanalTerms.floatingDock },
           { letter: spawnTerms.b, top: 465, left: -426, description: kanalTerms.sailboats },
-          { letter: spawnTerms.c, top: -432, left: 924, description: kanalTerms.constructionSite }
+          { letter: spawnTerms.c, top: -432, left: 871, description: kanalTerms.constructionSite }
         ],
         roomLabels: [
           // EXT
@@ -2500,14 +2500,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -478, right: -1051, height: 217, width: 475
+          bottom: -477, right: -968, height: 217, width: 462
         },
         floors: [
-          { index: 0, top: -525, left: -815, width: 1782, name: floorTerms.basement },
-          { index: 1, top: -525, left: -815, width: 1782, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -525, left: -815, width: 1782, name: floorTerms.secondFloor },
-          { index: 3, top: -525, left: -815, width: 1782, name: floorTerms.thirdFloor },
-          { index: 4, top: -525, left: -815, width: 1782, name: floorTerms.roof }
+          { index: 0, top: -525, left: -815, width: 1782, name: floorTerms.basement, background: true },
+          { index: 1, top: -312, left: -418, width: 811, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -312, left: -418, width: 811, name: floorTerms.secondFloor },
+          { index: 3, top: -312, left: -418, width: 811, name: floorTerms.thirdFloor },
+          { index: 4, top: -312, left: -418, width: 811, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 118, left: -32 },
@@ -2540,7 +2540,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 303, left: 463 }
         },
         compassPoints: {
-          top: -297, left: -337
+          top: 92, left: 863
         },
         ladders: [
           { floor: 2, top: -255, left: 210, otherFloor: 'up' },
@@ -2619,7 +2619,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         spawnPoints: [
           { letter: spawnTerms.a, top: 318, left: -692, description: oregonTerms.junkyard },
-          { letter: spawnTerms.b, top: 487, left: 479, description: oregonTerms.street },
+          { letter: spawnTerms.b, top: 405, left: 437, description: oregonTerms.street },
           { letter: spawnTerms.c, top: -353, left: 645, description: oregonTerms.constructionSite }
         ],
         roomLabels: [
@@ -2725,12 +2725,12 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -1056, right: -1376, height: 305, width: 958
+          bottom: -829, right: -1028, height: 217, width: 462
         },
         floors: [
-          { index: 1, top: -1120, left: -2541, width: 3980, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -1120, left: -2541, width: 3980, name: floorTerms.secondFloor },
-          { index: 3, top: -1120, left: -2541, width: 3980, name: floorTerms.roof }
+          { index: 1, top: -488, left: -329, width: 1215, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -162, left: 13, width: 692, name: floorTerms.secondFloor },
+          { index: 3, top: -162, left: 13, width: 692, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: -43, left: 275 },
@@ -2749,7 +2749,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 210, left: 465, set: 4, letter: objectiveTerms.bombShortB  }
         ],
         secureObjectives: [
-          // dorms office garage kitchen
           { floor: 2, top: 4, left: 144 },
           { floor: 2, top: 192, left: 464 },
           { floor: 1, top: 325, left: 497 },
@@ -2759,7 +2758,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           topLeft: { top: -300, left: 0 },
           bottomRight: { top: 500, left: 500}
         },
-        compassPoints: { top: 398, left: -110 },
+        compassPoints: { top: 484, left: 790 },
         ladders: [],
         cameras: [
           { outdoor: true, top: 456, left: 815, id: 1,
@@ -2916,13 +2915,13 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -741, right: -1269, height: 217, width: 625
+          bottom: -650, right: -590, height: 217, width: 462
         },
         floors: [
-          { index: 1, top: -1173, left: -2174, width: 3500, name: floorTerms.firstFloor },
-          { index: 2, top: -1173, left: -2174, width: 3500, name: floorTerms.secondFloor, default: true },
-          { index: 3, top: -1173, left: -2174, width: 3500, name: floorTerms.thirdFloor },
-          { index: 4, top: -1173, left: -2174, width: 3500, name: floorTerms.roof }
+          { index: 1, top: -637, left: -879, width: 1470, name: floorTerms.firstFloor, background: true },
+          { index: 2, top: -91, left: -655, width: 1194, name: floorTerms.secondFloor, default: true },
+          { index: 3, top: -91, left: -655, width: 1194, name: floorTerms.thirdFloor },
+          { index: 4, top: -91, left: -655, width: 1194, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 30, left: 358 },
@@ -2949,7 +2948,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 178, left: 482 }
         },
         compassPoints: {
-          top: 97, left: 418
+          top: 305, left: 494
         },
         ladders: [
           { floor: 2, top: -33, left: -186, otherFloor: 'up' },
@@ -3029,7 +3028,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         spawnPoints: [
           { letter: spawnTerms.a, top: -428, left: 434, description: planeTerms.spawnOfficialEntrance },
           { letter: spawnTerms.b, top: -489, left: -408, description: planeTerms.spawnReporterEntrance },
-          { letter: spawnTerms.c, top: 385, left: 342, description: planeTerms.spawnServiceEntrance }
+          { letter: spawnTerms.c, top: 340, left: 342, description: planeTerms.spawnServiceEntrance }
         ],
         roomLabels: [
           // EXT
@@ -3090,12 +3089,12 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -771, right: -1219, height: 217, width: 475
+          bottom: -765, right: -1130, height: 217, width: 462
         },
         floors: [
-          { index: 1, top: -175, left: -630, width: 1600, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -175, left: -630, width: 1600, name: floorTerms.secondFloor },
-          { index: 3, top: -175, left: -630, width: 1600, name: floorTerms.roof }
+          { index: 1, top: -165, left: -411, width: 1221, name: floorTerms.firstFloor, background: true, default: true },
+          { index: 2, top: -115, left: -84, width: 851, name: floorTerms.secondFloor },
+          { index: 3, top: -115, left: -84, width: 851, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 2, top: 295, left: 200 },
@@ -3124,7 +3123,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 600, left: 655 }
         },
         compassPoints: {
-          top: 370, left: 875
+          top: 357, left: 722
         },
         cameras: [
           {
@@ -3160,7 +3159,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
             los: [[{top: 620, left: 675}, {top: 150, left: 690}, {top: 135, left: 285}]]
           },
           {
-            outdoor: true, top: 670, left: 700, id: 7,
+            outdoor: true, top: 670, left: 633, id: 7,
             los: [[{top: 660, left: 295}, {top: 670, left: 700}, {top: 465, left: 755}]]
           }
         ],
