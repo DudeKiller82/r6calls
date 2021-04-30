@@ -1,7 +1,7 @@
 # r6calls
 [![Build Status](https://travis-ci.com/purechaose/r6maps.svg?branch=master)](https://travis-ci.com/purechaose/r6maps)
 
-**Newest version now auto-hosted at https://dudekiller82.github.io/r6maps/**
+**Newest version now auto-hosted at https://dudekiller82.github.io/r6calls/**
 
 r6calls is designed to be a quick reference for Rainbow Six Siege maps.  Please see the about.html page for more details.
 
