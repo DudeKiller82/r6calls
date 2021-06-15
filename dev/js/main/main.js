@@ -22,8 +22,7 @@
     setPageElements();
     R6MMainRender.setupMapPanels($mapPanelWrappers, 4);
     setMapElements();
-    R6MHelpers.tryLoadStartingLanguage(R6MLangTerms.tryLoadLanguage);
-    R6MHelpers.tryChangeDirection(R6MLangTerms.getLoadedDirection());
+    R6MHelpers.tryChangeDirection('LTR');
     setupMenu();
     setupSelectMap();
     R6MMainControls.maps.populate(R6MMainData.getMapData());
@@ -41,7 +40,7 @@
       showMap();
     } else {
       showSelectMap();
-      document.title = R6MLangTerms.terms.general.pageTitleStart;
+      document.title = 'R6Calls.com';
     }
 
     setTimeout(function() {
@@ -162,10 +161,9 @@
 
     event.preventDefault();
 
-    R6MLangTerms.tryLoadLanguage(newLang);
     localStorageSetItem('language', newLang);
 
-    if (R6MHelpers.tryChangeDirection(R6MLangTerms.getLoadedDirection())) {
+    if (R6MHelpers.tryChangeDirection('LTR')) {
       location.reload();
     }
 
@@ -406,19 +404,18 @@
   };
 
   var setupMenu = function setupMenu() {
-    var $menuLink = $('#mmenu-link'),
-      useRtl = (R6MLangTerms.getLoadedDirection() === 'RTL');
+    var $menuLink = $('#mmenu-link');
 
     R6MMainControls.menu.setup(R6MMainRender.roomLabelStyles);
 
     var foo = $('#mmenu-menu').mmenu({
       offCanvas: {
-        position: useRtl ? 'left' : 'right',
+        position: 'right',
         pageSelector: '#mmenu-page'
       },
       extensions: ['pagedim'],
       rtl: {
-        use: useRtl
+        use: false
       }
     });
 
@@ -576,10 +573,10 @@
 
   var updateTitle = function updateTitle() {
     document.title = isShowingMap() ?
-      R6MLangTerms.terms.general.pageTitle.replace(
+      'R6Calls.com - {mapName}'.replace(
         '{mapName}',
         R6MMainData.getMapData()[getLoadedMapKey()].name
       ) :
-      R6MLangTerms.terms.general.pageTitleSelectMap;
+      'R6Calls.com - Select a map';
   };
 }));

@@ -175,10 +175,10 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     html += '<div id="compass" style="' + inlineStyle + '">';
     html += '<div class="compass-background"></div>';
-    html += '<p class="letter-n"><span>' + langTerms.compass.letterN + '</span></p>';
-    html += '<p class="letter-e"><span>' + langTerms.compass.letterE + '</span></p>';
-    html += '<p class="letter-s"><span>' + langTerms.compass.letterS + '</span></p>';
-    html += '<p class="letter-w"><span>' + langTerms.compass.letterW + '</span></p>';
+    html += '<p class="letter-n"><span>N</span></p>';
+    html += '<p class="letter-e"><span>E</span></p>';
+    html += '<p class="letter-s"><span>S</span></p>';
+    html += '<p class="letter-w"><span>W</span></p>';
     html += '</div>';
     return html;
   };
@@ -314,22 +314,21 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var getLegendHtml = function getLegendHtml(legend) {
     var html = '',
       inlineStyle,
-      legendTerms = langTerms.legend,
       CSS_ABBREV = 'legend-',
       legendItems = [
-        { class: CSS_ABBREV + 'breakable-floor-traps', description: legendTerms.breakableFloorTraps },
-        { class: CSS_ABBREV + 'ceiling-hatch', description: legendTerms.ceilingHatches },
-        { class: CSS_ABBREV + 'breakable-walls', description: legendTerms.breakableWalls },
-        { class: CSS_ABBREV + 'line-of-sight-walls', description: legendTerms.lineOfSightWalls },
-        { class: CSS_ABBREV + 'drone-tunnels', description: legendTerms.droneTunnels },
-        { class: CSS_ABBREV + 'lineof-sight-floors', description: legendTerms.lineOfSightFloors },
-        { class: CSS_ABBREV + 'objectives', description: legendTerms.objectives },
-        { class: CSS_ABBREV + 'insertion-point', description: legendTerms.insertionPoints },
-        { class: CSS_ABBREV + 'security-camera', description: legendTerms.securityCameras },
-        { class: CSS_ABBREV + 'skylight', description: legendTerms.skylights },
-        { class: CSS_ABBREV + 'down-and-up', description: legendTerms.onFloorAboveOrBelow },
-        { class: CSS_ABBREV + 'camera-line-of-sight', description: legendTerms.cameraLineOfSight },
-        { class: CSS_ABBREV + 'ladder', description: legendTerms.ladders }
+        { class: CSS_ABBREV + 'breakable-floor-traps', description: 'Breakable floor traps' },
+        { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatches' },
+        { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable walls' },
+        { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half walls' },
+        { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnels' },
+        { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floors' },
+        { class: CSS_ABBREV + 'objectives', description: 'Objectives' },
+        { class: CSS_ABBREV + 'insertion-point', description: 'Insertion points' },
+        { class: CSS_ABBREV + 'security-camera', description: 'Security cameras' },
+        { class: CSS_ABBREV + 'skylight', description: 'Skylights' },
+        { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
+        { class: CSS_ABBREV + 'camera-line-of-sight', description: 'Camera line of sight' },
+        { class: CSS_ABBREV + 'ladder', description: 'Ladders' }
       ];
 
     inlineStyle = getPositionStyle(legend);

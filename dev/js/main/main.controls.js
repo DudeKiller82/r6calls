@@ -105,7 +105,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
   };
 
   var getFloorTooltip = function getFloorTooltip(floorIndex) {
-    var shortcutTip = R6MLangTerms.terms.general.shortcutTip;
+    var shortcutTip = 'Shortcut: {shortcut}';
 
     if (floorIndex == 0) {
       return shortcutTip.replace('{shortcut}',"'0' or '~'");
@@ -127,7 +127,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
         if (floorsTrySelect(0)) {
           showSelectedFloorFn();
         }
-      } else if (R6MLangTerms.terms.toggle.labels.shortcut.includes(keyVal)) { // Language specific shortcut ex. 't' or 'T' in english
+      } else if (['l','L'].includes(keyVal)) {
         triggerToggleEvent(TOGGLE_TYPE_LABEL);
       }
     };
@@ -177,31 +177,31 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     var html = '';
 
     html += '<div id="options-wrapper" class="mmenu-custom-panel">';
-    html += '<h2>' + R6MLangTerms.terms.general.optionsHeader + '</h2>';
+    html += '<h2>Options</h2>';
 
     html += '<div class="map-panel-count-control">';
-    html += '<label>' + R6MLangTerms.terms.general.labelNumberFloorsToDisplay + '</label>';
+    html += '<label>Number of floors to display</label>';
     html += '<select id="map-pane-count">';
-    html += '<option value="1">' + R6MLangTerms.terms.floorDisplayOptions.one + '</option>';
-    html += '<option value="2">' + R6MLangTerms.terms.floorDisplayOptions.two + '</option>';
-    html += '<option value="4">' + R6MLangTerms.terms.floorDisplayOptions.four + '</option>';
+    html += '<option value="1">1 - Full</option>';
+    html += '<option value="2">2 - Split</option>';
+    html += '<option value="4">4 - Grid</option>';
     html += '</select>';
 
     html += '<div id="lock-wrapper">';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="lock-panning">' + R6MLangTerms.terms.general.lockPanning + '</input>';
+    html += '<input type="checkbox" checked="checked" id="lock-panning">Lock panning</input>';
     html += '</div>';
     html += '</div>';
 
     html += '</div>';
 
-    html += '<label>' + R6MLangTerms.terms.general.labelRoomLabelStyle + '</label>';
+    html += '<label>Room label style</label>';
     html += '<select id="room-label-style"></select>';
 
     html += '<hr>';
 
     html += '<div id="los-wrapper">';
-    html += '<label id="los-label">' + R6MLangTerms.terms.general.labelLosOpacity + '</label>';
+    html += '<label id="los-label">Camera line-of-sight opacity</label>';
     html += '<div class="zoom controls">';
     html += '<input id="los-opacity-range" type="range" max="1.1" min="0" step="0.05"></input>';
     html += '<p id="camera-los-percent"></p><p id="camera-los-note"></p>';
@@ -221,10 +221,10 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
     html += '<div class="mmenu-custom-panel">';
     html += '<h2>r6calls.com</h2>';
-    html += '<button id="menu-select-maps">' + R6MLangTerms.terms.selectMaps.homeLink + '</button>';
-    html += '<a class="menu-item" id="menu-about" href="' + R6MLangTerms.terms.general.linkAbout + '">' + R6MLangTerms.terms.general.about + '</a>';
+    html += '<button id="menu-select-maps">Select a map</button>';
+    html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
     if (isFullScreenAvailable()) {
-      html += '<button href="" id="full-screen">' + R6MLangTerms.terms.general.fullScreen + '</button>';
+      html += '<button href="" id="full-screen">Full screen</button>';
     }
     html += '</div>';
     return html;
@@ -315,7 +315,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     html += '<div class="faded-logo"></div>';
     $menuPanel.html(html);
 
-    $menuControl.find('.menu-text').html(R6MLangTerms.terms.general.menu);
+    $menuControl.find('.menu-text').html('Menu');
     $roomLabelStylesControl = $('#room-label-style');
     populateRoomLabelStyleOptions($roomLabelStylesControl, roomLabelStyles);
     $mapPanelCountControl = $('#map-pane-count');
@@ -411,18 +411,18 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     var $losNote = $('#camera-los-note');
 
     $('#camera-los-percent').text(
-      R6MLangTerms.terms.general.labelPercent.replace(
+      '{int}%'.replace(
         '{int}',
         Math.round(opacity * 100)
       )
     );
 
     if (opacity == defaultOpacity) {
-      $losNote.text(R6MLangTerms.terms.general.labelLosDefault);
+      $losNote.text('(Default)');
     } else if (opacity == 1.05) {
-      $losNote.text(R6MLangTerms.terms.general.labelLos105);
+      $losNote.text('(Huh?)');
     } else if (opacity == 1.10) {
-      $losNote.text(R6MLangTerms.terms.general.labelLos110);
+      $losNote.text('(Ludicrous!)');
     } else {
       $losNote.text('');
     }
@@ -522,11 +522,9 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
   };
 
   var togglePopulate = function togglePopulate() {
-    var shortcutTip = R6MLangTerms.terms.general.shortcutTip;
-    var toggleLabelLang = R6MLangTerms.terms.toggle.labels;
-    var btns = '<button id="toggle-label" title="' + toggleLabelLang.full + ' \n' + R6MLangTerms.terms.general.shortcutTip.replace('{shortcut}','l') + '">'
-       + '<span class="short">' + toggleLabelLang.short + '</span>'
-       + '<span class="full">' + toggleLabelLang.full + '</span>'
+    var btns = '<button id="toggle-label" title="Learning Mode \nShortcut: l">'
+       + '<span class="short">Learning</span>'
+       + '<span class="full">Learning Mode</span>'
        + '</button>';
 
     $toggleControl.html(btns);

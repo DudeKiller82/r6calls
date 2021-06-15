@@ -199,7 +199,7 @@ var R6MMainSelectMaps = (function($, window, document, R6MLangTerms, undefined) 
     switchToMapCallback,
     closeSelectCallback
   ) {
-    $heading.text(R6MLangTerms.terms.selectMaps.selectAMap);
+    $heading.text('Select a map');
     $selectMapGrid.html(getMapGridHtml(mapData));
     $selectMapGrid.on('click', 'a', function(event) {
       event.preventDefault();
