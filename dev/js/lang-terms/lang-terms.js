@@ -21,6 +21,15 @@ var R6MLangTerms = (function(undefined) {
       secureShort: 'S',
       secure: 'Secure',
       showAll: 'Show All'
+    },
+    floorTerms: {
+      subBasement: { full: 'Sub-Basement', short: 'B'},
+      basement: { full: 'Basement', short: 'B' },
+      firstFloor: { full: '1st Floor', short: '1' },
+      secondFloor: { full: '2nd Floor', short: '2' },
+      thirdFloor: { full: '3rd Floor', short: '3' },
+      fourthFloor: { full: '4th Floor', short: '4' },
+      roof: { full: 'Roof', short: 'R' }
     }
   };
 

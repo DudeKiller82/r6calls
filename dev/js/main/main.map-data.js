@@ -4,15 +4,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
   var DRONE_MED = 18,
     DRONE_SMALL = 14,
     objectiveTerms = R6MLangTerms.terms.objectives,
-    floorTerms = {
-      subBasement: { full: 'Sub-Basement', short: 'B'},
-      basement: { full: 'Basement', short: 'B' },
-      firstFloor: { full: '1st Floor', short: '1' },
-      secondFloor: { full: '2nd Floor', short: '2' },
-      thirdFloor: { full: '3rd Floor', short: '3' },
-      fourthFloor: { full: '4th Floor', short: '4' },
-      roof: { full: 'Roof', short: 'R' }
-    };
+    floorTerms = R6MLangTerms.terms.floorTerms;
 
   var getMapData = function getMapData() {
     return {
@@ -1321,14 +1313,14 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           'bomb', 'hostage', 'secure'
         ],
         legend: {
-          bottom: -634, right: -662, height: 217, width: 462
+          bottom: -451, right: -800, height: 217, width: 462
         },
         floors: [
-          { index: 0, top: -713, left: -777, width: 1439, name: floorTerms.basement, background: true },
-          { index: 1, top: -339, left: -626, width: 827, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -339, left: -626, width: 827, name: floorTerms.secondFloor },
-          { index: 3, top: -339, left: -626, width: 827, name: floorTerms.thirdFloor },
-          { index: 4, top: -339, left: -626, width: 827, name: floorTerms.roof }
+          { index: 0, top: -450, left: -800, width: 1600, name: floorTerms.basement, background: true },
+          { index: 1, top: -450, left: -800, width: 1600, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -450, left: -800, width: 1600, name: floorTerms.secondFloor },
+          { index: 3, top: -450, left: -800, width: 1600, name: floorTerms.thirdFloor },
+          { index: 4, top: -450, left: -800, width: 1600, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 3, top: -159, left: 114 },
@@ -1357,7 +1349,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 354, left: 183 }
         },
         compassPoints: {
-          top: 286, left: 570
+          top: 102, left: 690
         },
         ladders: [
           { floor: 1, top: 476, left: -161, otherFloor: 'up' },
@@ -1417,64 +1409,21 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 126, left: -99, rotate: 0, size: DRONE_SMALL }
         ],
         spawnPoints: [
-          { letter: 'A', top: -162, left: 562, description: 'Rooftops' },
-          { letter: 'B', top: 464, left: -668, description: 'Market' },
-          { letter: 'C', top: -617, left: -469, description: 'School Alley' }
+          { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
+          { letter: 'B', top: 469, left: -543, description: 'Market' },
+          { letter: 'C', top: -617, left: -409, description: 'Schoolyard' }
         ],
         roomLabels: [
           // EXT
-          { outdoor: true, top: -333, left: 524, description: 'Back Alley' },
-          { outdoor: true, top: -444, left: 213, description: 'Back Alley' },
-          { outdoor: true, top: -614, left: -157, description: 'School Alley' },
-          { outdoor: true, top: -59, left: -478, description: 'Pitch' },
-          { outdoor: true, top: 232, left: 580, description: 'Street' },
-          { outdoor: true, top: 394, left: 122, description: 'Street' },
-          { outdoor: true, top: 103, left: 365, description: 'Rooftops' },
-          { outdoor: true, top: 130, left: 79, description: 'BBQ' },
-          { outdoor: true, top: 242, left: -284, description: 'Market Alley', rotate: -90 },
-          { outdoor: true, top: -504, left: -227, description: 'School Roof' },
-          { outdoor: true, top: -403, left: 95, description: 'School Roof' },
+          { outdoor: true, top: -333, left: 524, description: '' },
           // 0F
-          { floor: 0, top: 282, left: -150, description: 'Shop' },
-          { floor: 0, top: 223, left: -226, description: 'Main Stairs', rotate: -90 },
+          { floor: 0, top: 282, left: -150, description: '' },
           // 1F
-          { floor: 1, top: -300, left: -34, description: 'Access Alley' },
-          { floor: 1, top: -161, left: -213, description: 'Armory', site: true, secure: true },
-          { floor: 1, top: 219, left: -159, description: 'Flat A', site: true, bomb: true, secure: true },
-          { floor: 1, top: 185, left: -61, description: 'Kitchen A' },
-          { floor: 1, top: -49, left: -140, description: 'Flat B', site: true, hostage: true , bomb: true},
-          { floor: 1, top: 46, left: -341, description: 'Bedroom B', site: true, bomb: true },
-          { floor: 1, top: -250, left: -37, description: 'Back Stairs' },
-          { floor: 1, top: 220, left: -223, description: 'Main Stairs', rotate: -90 },
-          { floor: 1, top: 86, left: -233, description: 'A to B', rotate: -90 },
-          { floor: 1, top: -155, left: -17, description: 'Laundry' },
-          { floor: 1, top: -235, left: -157, description: 'Vault' },
-          { floor: 1, top: -54, left: -306, description: 'Garage' },
-          { floor: 1, top: 355, left: -454, description: 'Market' },
-          { floor: 1, top: -143, left: 213, description: 'BBQ' },
-          { floor: 1, top: 94, left: -156, description: 'Kitchen B' },
+          { floor: 1, top: -300, left: -34, description: '' },
           // 2F
-          { floor: 2, top: 35, left: -130, description: 'Flat F', site: true, secure: true },
-          { floor: 2, top: 217, left: -57, description: 'Bedroom A', site: true, hostage: true, bomb: true },
-          { floor: 2, top: -186, left: -199, description: 'Weed', site: true, hostage: true },
-          { floor: 2, top: -253, left: 91, description: 'Lab', site: true, bomb: true },
-          { floor: 2, top: -37, left: -321, description: 'Bedroom F', site: true, bomb: true },
-          { floor: 2, top: 85, left: -321, description: 'Office', site: true, bomb: true },
-          { floor: 2, top: -261, left: -29, description: 'Back Stairs' },
-          { floor: 2, top: 152, left: -175, description: 'A to F', rotate: -90 },
-          { floor: 2, top: 299, left: -63, description: 'Kids' },
-          { floor: 2, top: 223, left: -223, description: 'Main Stairs', rotate: -90 },
-          { floor: 2, top: -167, left: -299, description: 'Weed Roof' },
-          { floor: 2, top: 355, left: -454, description: 'Market' },
-          { floor: 2, top: -143, left: 213, description: 'BBQ' },
-          { floor: 2, top: -45, left: -149, description: 'Kitchen F' },
+          { floor: 2, top: 35, left: -130, description: '' },
           // 3F
-          { floor: 3, top: -266, left: 109, description: 'Packaging', site: true, hostage: true, bomb: true, secure: true },
-          { floor: 3, top: -261, left: -22, description: 'Back Stairs' },
-          { floor: 3, top: 223, left: -218, description: 'Main Stairs', rotate: -90 },
-          { floor: 3, top: 33, left: -188, description: 'Weed Roof' },
-          { floor: 3, top: 237, left: -412, description: 'Market Roof' },
-          { floor: 3, top: 420, left: -412, description: 'Market Roof' }
+          { floor: 3, top: 420, left: -412, description: '' }
         ]
       },
       fortress: {
