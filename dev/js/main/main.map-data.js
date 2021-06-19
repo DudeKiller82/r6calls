@@ -1317,10 +1317,10 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         },
         floors: [
           { index: 0, top: -450, left: -800, width: 1600, name: floorTerms.basement, background: true },
-          { index: 1, top: -450, left: -800, width: 1600, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -450, left: -800, width: 1600, name: floorTerms.secondFloor },
-          { index: 3, top: -450, left: -800, width: 1600, name: floorTerms.thirdFloor },
-          { index: 4, top: -450, left: -800, width: 1600, name: floorTerms.roof }
+          { index: 1, top: -450, left: -532, width: 883, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -450, left: -532, width: 883, name: floorTerms.secondFloor },
+          { index: 3, top: -450, left: -532, width: 883, name: floorTerms.thirdFloor },
+          { index: 4, top: -450, left: -532, width: 883, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 3, top: -159, left: 114 },
