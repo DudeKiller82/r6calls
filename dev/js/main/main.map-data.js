@@ -1415,15 +1415,61 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         roomLabels: [
           // EXT
-          { outdoor: true, top: -333, left: 524, description: '' },
+          { outdoor: true, top: -333, left: 524, description: 'Schoolyard' },
+          { outdoor: true, top: -333, left: 524, description: 'Back Alley' },
+          { outdoor: true, top: -333, left: 524, description: 'Courtyard' },
+          { outdoor: true, top: -333, left: 524, description: 'Rooftops' },
+          { outdoor: true, top: -333, left: 524, description: 'Street' },
+          { outdoor: true, top: -333, left: 524, description: 'Market Ally' },
+          { outdoor: true, top: -333, left: 524, description: 'Football Field' },
+          { outdoor: true, top: -333, left: 524, description: 'Tunnel' },
           // 0F
-          { floor: 0, top: 282, left: -150, description: '' },
+          { floor: 0, top: 282, left: -150, description: 'Market' },
+          { floor: 0, top: 382, left: -150, description: '' },
+          { floor: 0, top: 482, left: -150, description: '' },
+          { floor: 0, top: 582, left: -150, description: '' },
+          { floor: 0, top: 682, left: -150, description: '' },
+          { floor: 0, top: 782, left: -150, description: '' },
+          { floor: 0, top: 882, left: -150, description: '' },
           // 1F
-          { floor: 1, top: -300, left: -34, description: '' },
+          { floor: 1, top: -100, left: -34, description: 'Trash Chute Stairs' },
+          { floor: 1, top: -200, left: -34, description: 'Laundry Hall' },
+          { floor: 1, top: -300, left: -34, description: 'Pink Solarium' },
+          { floor: 1, top: -400, left: -34, description: 'Pink Appartment' },
+          { floor: 1, top: -500, left: -34, description: 'Pink Kitchen' },
+          { floor: 1, top: -600, left: -34, description: 'Mezzanine Stairs' },
+          { floor: 1, top: -700, left: -34, description: 'Football Hall' },
+          { floor: 1, top: -700, left: -34, description: 'Green Appartment' }
+          { floor: 1, top: -700, left: -34, description: 'Green Bathroom' }
+          { floor: 1, top: -700, left: -34, description: 'Green Foosball' }
+          { floor: 1, top: -700, left: -34, description: 'Blue Appartment' }
+          { floor: 1, top: -700, left: -34, description: 'Blue Kitchen' }
+          { floor: 1, top: -700, left: -34, description: 'Blue Bedroom' }
+          { floor: 1, top: -700, left: -34, description: '' }
           // 2F
-          { floor: 2, top: 35, left: -130, description: '' },
+          { floor: 2, top: 15, left: -130, description: 'Mezzanine Stairs' },
+          { floor: 2, top: 25, left: -130, description: 'Red Corridor' },
+          { floor: 2, top: 35, left: -130, description: 'Red Stairs' },
+          { floor: 2, top: 45, left: -130, description: 'Storage' },
+          { floor: 2, top: 55, left: -130, description: 'Armory' },
+          { floor: 2, top: 55, left: -130, description: 'Balcony' },
+          { floor: 2, top: 65, left: -130, description: 'Trash Chute Stairs' },
+          { floor: 2, top: 75, left: -130, description: 'Coin Farm' },
+          { floor: 2, top: 75, left: -130, description: 'Haker Den' },
+          { floor: 2, top: 75, left: -130, description: 'Bunks' },
+          { floor: 2, top: 75, left: -130, description: 'Office' },
+          { floor: 2, top: 75, left: -130, description: 'Stairs' },
+          { floor: 2, top: 75, left: -130, description: 'Solarium Roof' },
+
           // 3F
-          { floor: 3, top: 420, left: -412, description: '' }
+          { floor: 3, top: 15, left: -130, description: 'Roof' },
+          { floor: 3, top: 25, left: -130, description: 'School Roof' },
+          { floor: 3, top: 35, left: -130, description: 'Market Roof' },
+          { floor: 3, top: 45, left: -130, description: 'Stairs' },
+          { floor: 3, top: 55, left: -130, description: 'Solarium Roof' },
+          { floor: 3, top: 620, left: -412, description: 'Red Stairs' },
+          { floor: 3, top: 720, left: -412, description: 'Trash Chute Stairs' },
+          { floor: 3, top: 720, left: -412, description: 'Electrical' }
         ]
       },
       fortress: {
