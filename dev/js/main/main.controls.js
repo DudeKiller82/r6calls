@@ -133,14 +133,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     };
   };
 
-  var getHandleLosOpacityChangeFn = function getHandleLosOpacityChangeFn(updateLosOpacityFn, defaultOpacity) {
-    return function handleLosOpacityFn(event) {
-      var opacity = event.target.value;
-
-      updateLosOpacityFn(opacity);
-      setLosLabelsText(opacity, defaultOpacity);
-    };
-  };
 
   var getHandlePanZoomChangeFn = function getHandlePanZoomChangeFn($mapMains) {
     return function handlePanZoomChange(event, panzoom, transform) {
@@ -197,18 +189,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
     html += '<label>Room label style</label>';
     html += '<select id="room-label-style"></select>';
-
-    html += '<hr>';
-
-    html += '<div id="los-wrapper">';
-    html += '<label id="los-label">Camera line-of-sight opacity</label>';
-    html += '<div class="zoom controls">';
-    html += '<input id="los-opacity-range" type="range" max="1.1" min="0" step="0.05"></input>';
-    html += '<p id="camera-los-percent"></p><p id="camera-los-note"></p>';
-    html += '</div>';
-    html += '</div>';
-    html += '<div class="checkbox-wrapper">';
-    html += '</div>';
 
     html += '</div>';
 
@@ -405,40 +385,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var setupFloorHotkeys = function setupFloorHotkeys(showSelectedFloorFn) {
     $(document).on('keydown', getHandleHotkeyFn(showSelectedFloorFn));
-  };
-
-  var setLosLabelsText = function setLosLabelsText(opacity, defaultOpacity) {
-    var $losNote = $('#camera-los-note');
-
-    $('#camera-los-percent').text(
-      '{int}%'.replace(
-        '{int}',
-        Math.round(opacity * 100)
-      )
-    );
-
-    if (opacity == defaultOpacity) {
-      $losNote.text('(Default)');
-    } else if (opacity == 1.05) {
-      $losNote.text('(Huh?)');
-    } else if (opacity == 1.10) {
-      $losNote.text('(Ludicrous!)');
-    } else {
-      $losNote.text('');
-    }
-  };
-
-  var setupLosOpacity = function setupLosOpacity(updateLosOpacityFn, startingValue, defaultOpacity) {
-    var $losOpacityControl = $('#los-opacity-range'),
-      handleLosOpacityChangeFn = getHandleLosOpacityChangeFn(
-        updateLosOpacityFn,
-        defaultOpacity
-      );
-
-    $losOpacityControl.val(startingValue);
-    setLosLabelsText(startingValue, defaultOpacity);
-    $losOpacityControl.on('input', handleLosOpacityChangeFn);
-    $losOpacityControl.on('change', handleLosOpacityChangeFn);
   };
 
   var setupPanZoom = function setupPanZoom($mapMains, $mapElements) {
@@ -659,7 +605,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     },
     highlightControl: highlightControl,
     removeLatestUpdateHighlight: removeLatestUpdateHighlight,
-    setupLosOpacity: setupLosOpacity,
     setupPanZoom: setupPanZoom,
     unhighlightControl: unhighlightControl
   };

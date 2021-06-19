@@ -90,37 +90,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getCamerasLosHtml = function getCamerasLosHtml(cameras){
-    var html = '',
-      classes = '';
-
-    html += '<svg class="svg-elements map" style="width: ' + SVG_DIM.WIDTH + 'px; left: -' + SVG_DIM.LEFT_OFFSET + 'px; height: ' + SVG_DIM.HEIGHT + 'px; top: -' + SVG_DIM.TOP_OFFSET + 'px;">';
-    html += '<g>';
-
-    cameras.forEach(function(camera) {
-      classes = 'camera-los camera-' + camera.id + ' ' + getCommonClasses(camera);
-      if (camera.los) {
-        camera.los.forEach(function(los) {
-          html += '<polyline class="' + classes + '" points="' +  getCameraLosPoints(los) + '"/>';
-        });
-      }
-    });
-
-    html += '</g>';
-    html += '</svg>';
-
-    return html;
-  };
-
-  var getCameraLosPoints = function getCameraLosPoints(losData) {
-    var points = '';
-
-    losData.forEach(function(data) {
-      points += (data.left + SVG_DIM.LEFT_OFFSET) + ',' + (data.top + SVG_DIM.TOP_OFFSET) + ' ';
-    });
-    return points;
-  };
-
   var getCeilingHatchesHtml = function getCeilingHatchesHtml(ceilingHatches) {
     var html = '',
       inlineStyle,
@@ -279,7 +248,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       inlineStyle = getPositionStyle(hostage);
       classes = 'objective hostage ';
       classes += getCommonClasses(hostage);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + langTerms.objectives.hostageShort + '</p><span></span></div>';
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>H</p><span></span></div>';
     });
     return html;
   };
@@ -477,7 +446,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     $mapElements.html(html);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
-    $svgMapWrappers.html(getCamerasLosHtml(mapData.cameras));
   };
 
   var setRoomLabelStyle = function setRoomLabelStyle($mapElements, style) {

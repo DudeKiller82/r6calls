@@ -176,30 +176,6 @@ $custom-mmenu-padding-smaller: 0.5rem;
   margin-top: -0.3rem;
 }
 
-#los-wrapper {
-  margin-bottom: $custom-mmenu-padding;
-}
-
-#camera-los-percent {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin-left: 0.5rem;
-
-  body[dir="rtl"] & {
-    margin-left: 0;
-    margin-right: 0.5rem;
-  }
-}
-
-#camera-los-note {
-  margin-left: 0.25rem;
-
-  body[dir="rtl"] & {
-    margin-left: 0;
-    margin-right: 0.25rem;
-  }
-}
-
 #contributions {
   p, form {
     margin: $custom-mmenu-padding;

@@ -15,8 +15,7 @@
     $mainNav,
     SHOW_MAP = 'show-map',
     SHOW_SELECT_MAP = 'show-select-map',
-    HASH_SPLIT_CHAR = '/',
-    DEFAULT_LOS_OPACITY = 0.15;
+    HASH_SPLIT_CHAR = '/';
 
   $(function() { // equivanelt to $(document).ready() - but a bit faster
     setPageElements();
@@ -66,16 +65,6 @@
 
   var getCameraIdFromEvent = function getCameraIdFromEvent(event) {
     return $(event.target).data('camera-id');
-  };
-
-  var getCameraLosOpacity = function getCameraLosOpacity() {
-    var opacity = localStorage.getItem('cameralosopacity');
-
-    if (opacity) {
-      return opacity;
-    } else {
-      return DEFAULT_LOS_OPACITY;
-    }
   };
 
   var getHashArgs = function getHashArgs() {
@@ -139,14 +128,10 @@
 
   var handleCameraIn = function handleCameraHoverIn(event) {
     var cameraId = getCameraIdFromEvent(event);
-
-    $('.camera-los.camera-' + cameraId).addClass('show-more');
   };
 
   var handleCameraOut = function handleCameraHoverOut(event) {
     var cameraId = getCameraIdFromEvent(event);
-
-    $('.camera-los.camera-' + cameraId).removeClass('show-more');
   };
 
   var handleFloorChange = function handleFloorChange() {
@@ -229,7 +214,6 @@
       R6MMainControls.zoom.reset($mapMains, getResetDimensions);
     }
 
-    setupCameraLos();
     showSelectedFloor();
     showSelectedObjective();
 
@@ -365,12 +349,6 @@
     sendRoomLabelEvent(style);
   };
 
-  var setupCameraLos = function setupCameraLos() {
-    $('.camera').on('mouseenter', handleCameraIn);
-    $('.camera').on('mouseleave', handleCameraOut);
-    updateLosOpacity(getCameraLosOpacity());
-  };
-
   var setupEvents = function setupEvents() {
     $mapMains.on('click', outputCoordinates);
     R6MMainControls.objectives.setup(handleObjectiveChange);
@@ -422,8 +400,6 @@
     $menuLink.click(handleMenuClick);
 
     $('#lang-choices').on('click','button', handleLangChange);
-
-    R6MMainControls.setupLosOpacity(updateLosOpacity, getCameraLosOpacity(), DEFAULT_LOS_OPACITY);
   };
 
   var setupSelectMap = function setupSelectMap() {
@@ -554,20 +530,6 @@
       window.location.hash = hashText;
     } else {
       removeHashFromUrl();
-    }
-  };
-
-  var updateLosOpacity = function updateLosOpacity(opacity) {
-    var $cameraLines = $('.camera-los');
-
-    localStorageSetItem('cameralosopacity', opacity);
-    $cameraLines.css('opacity', opacity);
-    $cameraLines.removeClass('opacity-105');
-    $cameraLines.removeClass('opacity-110');
-    if (opacity == 1.05) {
-      $cameraLines.addClass('opacity-105');
-    } else if (opacity == 1.10) {
-      $cameraLines.addClass('opacity-110');
     }
   };
 
