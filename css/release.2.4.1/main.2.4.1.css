@@ -1125,23 +1125,6 @@ html.mm-pagedim-black #mm-blocker {
 #lock-wrapper {
   margin-top: -0.3rem; }
 
-#los-wrapper {
-  margin-bottom: 0.7rem; }
-
-#camera-los-percent {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin-left: 0.5rem; }
-  body[dir="rtl"] #camera-los-percent {
-    margin-left: 0;
-    margin-right: 0.5rem; }
-
-#camera-los-note {
-  margin-left: 0.25rem; }
-  body[dir="rtl"] #camera-los-note {
-    margin-left: 0;
-    margin-right: 0.25rem; }
-
 #contributions p, #contributions form {
   margin: 0.7rem; }
 
@@ -1352,22 +1335,6 @@ body {
     position: absolute; }
   .map-main svg.map {
     z-index: 1112; }
-    .map-main svg.map .camera-los {
-      fill: transparent;
-      stroke: #ffdb00;
-      stroke-width: 3;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-      transition: opacity 1s; }
-      .map-main svg.map .camera-los.show-more {
-        opacity: 1 !important; }
-      .map-main svg.map .camera-los.opacity-105, .map-main svg.map .camera-los.opacity-110 {
-        stroke: #d65b2b;
-        stroke-dasharray: 7; }
-        .map-main svg.map .camera-los.opacity-105.show-more, .map-main svg.map .camera-los.opacity-110.show-more {
-          stroke-dasharray: none; }
-      .map-main svg.map .camera-los.opacity-110 {
-        stroke-width: 5; }
   .map-main .map-elements {
     position: relative; }
     .map-main .map-elements img, .map-main .map-elements div, .map-main .map-elements a {
@@ -1532,7 +1499,7 @@ body {
         background-color: #d65b2b;
         z-index: 1153; }
         .map-main .map-elements .objective.bomb p {
-          font-size: 25px; }
+          font-size: 16px; }
       .map-main .map-elements .objective.secure {
         background-color: #00B200;
         z-index: 1152; }
