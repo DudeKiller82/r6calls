@@ -344,16 +344,18 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
   };
 
   var populateRoomLabelStyleOptions = function populateRoomLabelStyleOptions(
-    $roomLabelStylesControl,
-    roomLabelStyles
+    $roomLabelStylesControl
   ) {
     var html = '';
 
-    roomLabelStyles.forEach(function(roomLabelStyle) {
-      html += '<option value="' + roomLabelStyle + '">' +
-        R6MLangTerms.terms.roomLabelStyles[roomLabelStyle] +
-        '</option>';
-    });
+    html += '<option value="Dark">Dark</option>';
+    html += '<option value="Light">Light (Default)</option>';
+    html += '<option value="DarkAndLarge">Large and Dark</option>';
+    html += '<option value="LightAndLarge">Large and Light</option>';
+    html += '<option value="DarkAndSmall">Small and Dark</option>';
+    html += '<option value="LightAndSmall">Small and Light</option>';
+    html += '<option value="DisplayNone">Turn Off</option>';
+    html += '<option value="Learning">Learning Mode</option>';
     $roomLabelStylesControl.html(html);
   };
 
@@ -438,23 +440,12 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var objectivesPopulateOptions = function objectivesPopulateOptions(objectives) {
     var options = '',
-      objectiveTerms = R6MLangTerms.terms.objectives,
       initialObjective = objectivesGetCurrentlySelected();
 
-    objectives.sort(function(a,b) {
-      if (objectiveTerms[a] < objectiveTerms[b]) {
-        return -1;
-      }
-      if (objectiveTerms[a] > objectiveTerms[b]) {
-        return 1;
-      }
-      return 0;
-    });
-
-    objectives.forEach(function(objective) {
-      options += '<option value="' + objective + '">' + objectiveTerms[objective] + '</option>';
-    });
-    options += '<option value="all">' + objectiveTerms.showAll + '</option>';
+    options += '<option value="bomb">Bomb</option>';
+    options += '<option value="hostage">Hostage</option>';
+    options += '<option value="secure">Secure</option>';
+    options += '<option value="all">Show All</option>';
     $objectiveControl.html(options);
     objectivesTrySelect(initialObjective);
   };

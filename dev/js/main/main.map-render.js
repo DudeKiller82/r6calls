@@ -10,8 +10,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       HEIGHT: SVG_HEIGHT,
       TOP_OFFSET: (SVG_HEIGHT / 2) + 12,
       LEFT_OFFSET: (SVG_WIDTH / 2) - 5
-    },
-    langTerms = R6MLangTerms.terms;
+    };
 
   $.fn.removeClassPrefix = function(prefix) {
     this.each(function(i, el) {
@@ -56,7 +55,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       inlineStyle = getPositionStyle(bomb);
       classes = 'objective bomb ';
       classes += getCommonClasses(bomb);
-      bombLabel = bomb.set + bomb.letter;
+      bombLabel = 'B' + bomb.set + bomb.letter;
       html += '<div style="' + inlineStyle + '" class="' + classes + '"><span></span><p>' + bombLabel + '</p></div>';
     });
     return html;
@@ -242,13 +241,15 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
      */
     var html = '',
       inlineStyle,
-      classes;
+      classes,
+      hostageLabel;
 
     hostageObjectives.forEach(function(hostage) {
       inlineStyle = getPositionStyle(hostage);
       classes = 'objective hostage ';
       classes += getCommonClasses(hostage);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>H</p><span></span></div>';
+      hostageLabel = 'H' + hostage.set;
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + hostageLabel + '</p><span></span></div>';
     });
     return html;
   };
@@ -389,13 +390,15 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var getSecureObjectivesHtml = function getSecureObjectiveHtml(secureObjectives) {
     var html = '',
       inlineStyle,
-      classes;
+      classes,
+      secureLabel;
 
     secureObjectives.forEach(function(secure) {
       inlineStyle = getPositionStyle(secure);
       classes = 'objective secure ';
       classes += getCommonClasses(secure);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + langTerms.objectives.secureShort + '</p><span></span></div>';
+      secureLabel = 'S' + secure.set;
+      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + secureLabel + '</p><span></span></div>';
     });
     return html;
   };

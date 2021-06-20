@@ -22,15 +22,7 @@
     var categoryKeys = [],
       floorKeys = [],
       html = '',
-      outputEl = $('#output'),
-      defaultTerms = R6MLangTerms.terms,
-      translatedTerms = [
-        R6MLangTerms.terms,
-        R6MLangTermsEnglish.terms
-      ];
-
-    html += getOutputForTerms(defaultTerms, translatedTerms, ['mapRooms'], null);
-    html += getOutputForTerms(defaultTerms, translatedTerms, [], 'mapRooms');
+      outputEl = $('#output');
 
     outputEl.html(html);
   });
