@@ -1146,19 +1146,19 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         hostageObjectives: [
           { floor: 2, top: -56, left: -99, set: 1 },
-          { floor: 2, top: 144, left: -32, set: 2 },
-          { floor: 1, top: -69, left: -38, set: 3 },
+          { floor: 2, top: 144, left: -5, set: 2 },
+          { floor: 1, top: -69, left: -18, set: 3 },
           { floor: 1, top: 133, left: -61, set: 4 }
         ],
         bombObjectives: [
-          { floor: 2, top: -160, left: 151, set: 1, letter: 'A' },
-          { floor: 2, top: -217, left: 45, set: 1, letter: 'B' },
-          { floor: 2, top: -27, left: -262, set: 2, letter: 'B' },
-          { floor: 2, top: 78, left: -263, set: 2, letter: 'A' },
-          { floor: 1, top: 155, left: -96, set: 3, letter: 'A' },
-          { floor: 1, top: 270, left: -151, set: 3, letter: 'B' },
-          { floor: 1, top: -62, left: -190, set: 4, letter: 'A' },
-          { floor: 1, top: 83, left: -344, set: 4, letter: 'B' }
+          { floor: 2, top: -182, left: 61, set: 1, letter: 'A' },
+          { floor: 2, top: -48, left: 7, set: 1, letter: 'B' },
+          { floor: 2, top: 145, left: -35, set: 2, letter: 'A' },
+          { floor: 2, top: -20, left: 7, set: 2, letter: 'B' },
+          { floor: 1, top: 199, left: -27, set: 3, letter: 'A' },
+          { floor: 1, top: 75, left: 4, set: 3, letter: 'B' },
+          { floor: 1, top: -62, left: -211, set: 4, letter: 'A' },
+          { floor: 1, top: -238, left: -79, set: 4, letter: 'B' }
         ],
         secureObjectives: [
           { floor: 2, top: -116, left: 80, set: 1 },
@@ -1174,40 +1174,37 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           top: 102, left: 690
         },
         ladders: [
-          { floor: 1, top: 476, left: -161, otherFloor: 'up' },
-          { floor: 2, top: 476, left: -161, otherFloor: 'down' },
-          { floor: 1, top: 309, left: 19, otherFloor: 'up' },
-          { floor: 2, top: 309, left: 19, otherFloor: 'down' },
-          { floor: 2, top: 166, left: 343, otherFloor: 'up' },
-          { floor: 3, top: 166, left: 343, otherFloor: 'down' },
-          { floor: 3, top: -138, left: 477, otherFloor: 'up' },
-          { floor: 4, top: -138, left: 477, otherFloor: 'down' }
+          { floor: 0, top: -170, left: 199, otherFloor: 'up' },
+          { floor: 1, top: -170, left: 199, otherFloor: 'down' },
+          { floor: 1, top: -485, left: -343, otherFloor: 'up' },
+          { floor: 4, top: -485, left: -343, otherFloor: 'down' },
+          { floor: 1, top: 89, left: 447, otherFloor: 'up' },
+          { floor: 2, top: 89, left: 447, otherFloor: 'down' }
         ],
         cameras: [
-          { floor: 3, top: -295, left: -45, id: 1 },
-          { floor: 2, top: 299, left: -210, id: 2 },
-          { floor: 1, top: -126, left: -69, id: 3 },
-          { floor: 1, top: 156, left: -246, id: 4 },
-          { outdoor: true, top: -384, left: -498, id: 5 },
-          { outdoor: true, top: 346, left: 18, id: 6 },
-          { outdoor: true, top: -525, left: 230, id: 7 }
+          { outdoor: true, top: 346, left: 18, id: 1 },
+          { floor: 3, top: -137, left: -116, id: 2 },
+          { floor: 4, top: -137, left: -116, id: 2 },
+          { outdoor: true, top: -305, left: -507, id: 3 },
+          { floor: 3, top: -244, left: 270, id: 4 },
+          { floor: 2, top: -383, left: 124, id: 5 },
+          { floor: 1, top: 248, left: -180, id: 6 },
+          { floor: 2, top: 269, left: -161, id: 6 },
+          { floor: 1, top: -375, left: 26, id: 7 }
         ],
         ceilingHatches: [
-          { floor: 1, top: 1, left: -179 },
-          { floor: 1, top: 39, left: -292 },
-          { floor: 2, top: -222, left: 79 },
-          { floor: 2, top: 264, left: -66 },
-          { floor: 1, top: -244, left: -121 }
+          { floor: 1, top: -193, left: -265 },
+          { floor: 1, top: 206, left: -234 }
         ],
         skylights: [],
         droneTunnels: [
-          { floor: 1, top: 111, left: -380, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: -285, left: -32, rotate: 0, size: DRONE_MED },
-          { floor: 2, top: 128, left: -135, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 5, left: -281, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -110, left: -184, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -91, left: -201, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 126, left: -99, rotate: 0, size: DRONE_SMALL }
+          // { floor: 1, top: 111, left: -380, rotate: 90, size: DRONE_MED },
+          // { floor: 1, top: -285, left: -32, rotate: 0, size: DRONE_MED },
+          // { floor: 2, top: 128, left: -135, rotate: 0, size: DRONE_SMALL },
+          // { floor: 1, top: 5, left: -281, rotate: 0, size: DRONE_SMALL },
+          // { floor: 2, top: -110, left: -184, rotate: 0, size: DRONE_SMALL },
+          // { floor: 2, top: -91, left: -201, rotate: 90, size: DRONE_SMALL },
+          // { floor: 1, top: 126, left: -99, rotate: 0, size: DRONE_SMALL }
         ],
         spawnPoints: [
           { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
@@ -1233,7 +1230,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -354, left: 116, description: 'Trash Chute Stairs' },
           { floor: 1, top: -54, left: 138, description: 'Laundry Hall', rotate: -90 },
           { floor: 1, top: 103, left: 224, description: 'Pink Solarium', rotate: -90 },
-          { floor: 1, top: 177, left: -45, description: 'Pink Appartment', site: true, hostage: true, secure: true },
+          { floor: 1, top: 177, left: -22, description: 'Pink Appartment', site: true, hostage: true, secure: true },
           { floor: 1, top: 98, left: 69, description: 'Pink Kitchen' },
           { floor: 1, top: 147, left: -179, description: 'Mezzanine Stairs', rotate: -90 },
           { floor: 1, top: -57, left: -243, description: 'Football Hall', rotate: -90 },
@@ -1248,10 +1245,11 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -89, left: -190, description: 'Red Corridor', rotate: -90 },
           { floor: 2, top: -102, left: -240, description: 'Red Stairs', rotate: -90 },
           { floor: 2, top: -219, left: -15, description: 'Storage', site: true, bomb: true, secure: true },
+          { floor: 2, top: -349, left: -7, description: 'Storage Balcony' },
           { floor: 2, top: -269, left: -125, description: 'Armory', rotate: -90 },
           { floor: 2, top: -262, left: -228, description: 'Armory Balcony' },
           { floor: 2, top: -358, left: 182, description: 'Trash Chute Stairs' },
-          { floor: 2, top: -48, left: 43, description: 'Coin Farm', site: true, bomb: true, secure: true },
+          { floor: 2, top: -48, left: 59, description: 'Coin Farm', site: true, bomb: true, secure: true },
           { floor: 2, top: 3, left: -120, description: 'Haker Den', site: true, hostage: true },
           { floor: 2, top: 124, left: -17, description: 'Bunks', site: true, hostage: true, bomb: true },
           { floor: 2, top: 184, left: 125, description: 'Office' },
@@ -1263,7 +1261,11 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 3, top: 127, left: 215, description: 'Solarium Roof' },
           { floor: 3, top: -102, left: -240, description: 'Red Stairs', rotate: -90 },
           { floor: 3, top: -243, left: 157, description: 'Trash Chute Stairs' },
-          { floor: 3, top: -345, left: 112, description: 'Electrical' }
+          { floor: 3, top: -345, left: 112, description: 'Electrical' },
+          // ROOF
+          { floor: 4, top: 0, left: 0, description: 'Roof' },
+          { floor: 4, top: 265, left: -411, description: 'Market Roof' },
+          { floor: 4, top: 127, left: 215, description: 'Solarium Roof' }
         ]
       },
       fortress: {
