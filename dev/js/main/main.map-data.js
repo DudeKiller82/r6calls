@@ -1194,7 +1194,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         ceilingHatches: [
           { floor: 1, top: -193, left: -265 },
-          { floor: 1, top: 206, left: -234 }
+          { floor: 1, top: 206, left: 234 }
         ],
         skylights: [],
         droneTunnels: [
