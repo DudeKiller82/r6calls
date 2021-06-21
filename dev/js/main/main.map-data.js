@@ -1198,13 +1198,21 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         skylights: [],
         droneTunnels: [
-          // { floor: 1, top: 111, left: -380, rotate: 90, size: DRONE_MED },
-          // { floor: 1, top: -285, left: -32, rotate: 0, size: DRONE_MED },
-          // { floor: 2, top: 128, left: -135, rotate: 0, size: DRONE_SMALL },
-          // { floor: 1, top: 5, left: -281, rotate: 0, size: DRONE_SMALL },
-          // { floor: 2, top: -110, left: -184, rotate: 0, size: DRONE_SMALL },
-          // { floor: 2, top: -91, left: -201, rotate: 90, size: DRONE_SMALL },
-          // { floor: 1, top: 126, left: -99, rotate: 0, size: DRONE_SMALL }
+           { floor: 0, top: 224, left: -294, rotate: 0, size: 51, otherFloor: 'up' },
+           { floor: 0, top: 243, left: -217, rotate: 90, size: 146 },
+           { floor: 1, top: -316, left: -267, rotate: 0, size: DRONE_SMALL },
+           { floor: 1, top: -342, left: 234, rotate: 90, size: DRONE_SMALL },
+           { floor: 1, top: -318, left: 222, rotate: 0, size: 60 },
+           { floor: 1, top: 138, left: -336, rotate: 0, size: 120 },
+           { floor: 1, top: 192, left: -282, rotate: 90, size: 96 },
+           { floor: 1, top: 224, left: -294, rotate: 0, size: 51, otherFloor: 'down' },
+           { floor: 1, top: -51, left: -229, rotate: 90, size: DRONE_SMALL },
+           { floor: 1, top: -153, left: 69, rotate: 0, size: DRONE_SMALL },
+           { floor: 2, top: -6, left: 151, rotate: 0, size: 64  },
+           { floor: 2, top: 20, left: 155, rotate: 90, size: DRONE_SMALL },
+           { floor: 2, top: 20, left: -167, rotate: 90, size: DRONE_SMALL },
+           { floor: 2, top: -349, left: 105, rotate: 90, size: DRONE_SMALL },
+           { floor: 2, top: -217, left: -202, rotate: 0, size: DRONE_SMALL }
         ],
         spawnPoints: [
           { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
