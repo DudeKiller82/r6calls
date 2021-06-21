@@ -1262,7 +1262,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 3, left: -120, description: 'Haker', site: true, hostage: true },
           { floor: 2, top: 124, left: -17, description: 'Bunks', site: true, hostage: true, bomb: true },
           { floor: 2, top: 184, left: 125, description: 'Office' },
-          { floor: 2, top: 36, left: 149, description: 'Stairs', rotate: -90 },
+          { floor: 2, top: 36, left: 149, description: 'Roof Stairs', rotate: -90 },
           { floor: 2, top: 127, left: 215, description: 'Solarium Roof' },
           // 3F
           { floor: 3, top: 0, left: 0, description: 'Roof' },
