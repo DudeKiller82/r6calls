@@ -1194,7 +1194,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         ],
         ceilingHatches: [
           { floor: 1, top: -193, left: -265 },
-          { floor: 1, top: 206, left: 234 }
+          { floor: 1, top: 204, left: 137 }
         ],
         skylights: [],
         droneTunnels: [
@@ -1208,11 +1208,13 @@ var R6MMainData = (function(R6MLangTerms, undefined){
            { floor: 1, top: 224, left: -294, rotate: 0, size: 51, otherFloor: 'down' },
            { floor: 1, top: -51, left: -229, rotate: 90, size: DRONE_SMALL },
            { floor: 1, top: -153, left: 69, rotate: 0, size: DRONE_SMALL },
+           { floor: 1, top: 64, left: 236, rotate: 0, size: DRONE_SMALL, otherFloor: 'up' },
            { floor: 2, top: -6, left: 151, rotate: 0, size: 64  },
            { floor: 2, top: 20, left: 155, rotate: 90, size: DRONE_SMALL },
            { floor: 2, top: 20, left: -167, rotate: 90, size: DRONE_SMALL },
            { floor: 2, top: -349, left: 105, rotate: 90, size: DRONE_SMALL },
-           { floor: 2, top: -217, left: -202, rotate: 0, size: DRONE_SMALL }
+           { floor: 2, top: -217, left: -202, rotate: 0, size: DRONE_SMALL },
+           { floor: 2, top: 64, left: 254, rotate: 0, size: DRONE_SMALL, otherFloor: 'down' }
         ],
         spawnPoints: [
           { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
