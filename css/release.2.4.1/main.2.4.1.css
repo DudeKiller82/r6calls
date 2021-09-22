@@ -600,12 +600,6 @@ nav {
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-down-and-up {
         background-position: 196px -352px; }
-    #legend li.legend-camera-line-of-sight {
-      background-position: 0px -387px;
-      height: 31px;
-      line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-camera-line-of-sight {
-        background-position: 196px -387px; }
     #legend li.legend-ladder {
       background-position: 0px -422px;
       height: 31px;
