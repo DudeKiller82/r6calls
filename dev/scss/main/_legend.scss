@@ -143,14 +143,6 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-camera-line-of-sight {
-      @include legend-smaller(12);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(12);
-      }
-    }
-
     &.legend-ladder {
       @include legend-smaller(13);
 

@@ -297,7 +297,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
         { class: CSS_ABBREV + 'security-camera', description: 'Security cameras' },
         { class: CSS_ABBREV + 'skylight', description: 'Skylights' },
         { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
-        { class: CSS_ABBREV + 'camera-line-of-sight', description: 'Camera line of sight' },
         { class: CSS_ABBREV + 'ladder', description: 'Ladders' }
       ];
 
