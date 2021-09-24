@@ -63,7 +63,7 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-breakable-floor-traps {
+    &.legend-floor-hatch {
       @include legend-smaller(1);
 
       body[dir="rtl"] & {

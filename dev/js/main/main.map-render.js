@@ -286,18 +286,18 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       inlineStyle,
       CSS_ABBREV = 'legend-',
       legendItems = [
-        { class: CSS_ABBREV + 'breakable-floor-traps', description: 'Breakable floor traps' },
-        { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatches' },
-        { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable walls' },
-        { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half walls' },
-        { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnels' },
-        { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floors' },
-        { class: CSS_ABBREV + 'objectives', description: 'Objectives' },
-        { class: CSS_ABBREV + 'insertion-point', description: 'Insertion points' },
-        { class: CSS_ABBREV + 'security-camera', description: 'Security cameras' },
-        { class: CSS_ABBREV + 'skylight', description: 'Skylights' },
+        { class: CSS_ABBREV + 'floor-hatch', description: 'Floor hatch' },
+        { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatch' },
+        { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable wall' },
+        { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half wall' },
+        { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnel' },
+        { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floor' },
+        { class: CSS_ABBREV + 'objectives', description: 'Objective' },
+        { class: CSS_ABBREV + 'insertion-point', description: 'Insertion point' },
+        { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
+        { class: CSS_ABBREV + 'skylight', description: 'Skylight' },
         { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
-        { class: CSS_ABBREV + 'ladder', description: 'Ladders' }
+        { class: CSS_ABBREV + 'ladder', description: 'Ladder' }
       ];
 
     inlineStyle = getPositionStyle(legend);
