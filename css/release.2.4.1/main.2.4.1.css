@@ -540,11 +540,11 @@ nav {
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-breakable-walls {
         background-position: 196px -72px; }
-    #legend li.legend-breakable-floor-traps {
+    #legend li.legend-floor-hatch {
       background-position: 0px -2px;
       height: 31px;
       line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-breakable-floor-traps {
+      body[dir="rtl"] #legend li.legend-floor-hatch {
         background-position: 196px -2px; }
     #legend li.legend-ceiling-hatch {
       background-position: 0px -37px;
