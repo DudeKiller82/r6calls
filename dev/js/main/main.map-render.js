@@ -213,6 +213,8 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
         html += '<img src="' + imgSrc + '-losw.png" style="' + inlineStyle + '" class="' + classes + ' losw"></img>';
         html += '<img src="' + imgSrc + '-sl.png" style="' + inlineStyle + '" class="' + classes + ' sl"></img>';
       }
+      html += '<img src="' + imgSrc + '-cam.png" style="' + inlineStyle + '" class="' + classes + ' cam"></img>';
+      html += '<img src="' + imgSrc + '-lad.png" style="' + inlineStyle + '" class="' + classes + ' lad"></img>';
 
       // Creates a ghost image for every floor, which removes itself when it's loaded, and then
       // resolves the deferrer for this floor.

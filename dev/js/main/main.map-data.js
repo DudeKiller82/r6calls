@@ -25,7 +25,7 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -806, right: -1132, height: 217, width: 462
         },
         floors: [
-          { index: 'bg', top: -927, left: -1824, width: 2789, name: floorTerms.basement, dontSelect: true, background: true },
+          { index: 'bg', top: -954, left: -1850, width: 2840, name: floorTerms.basement, dontSelect: true, background: true },
           { index: 0, top: -538, left: -587, width: 1024, name: floorTerms.basement },
           { index: 1, top: -538, left: -587, width: 1024, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -538, left: -587, width: 1024, name: floorTerms.secondFloor },
@@ -60,25 +60,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 306, left: 662
         },
-        ladders: [
-          { floor: 1, top: -440, left: 554, otherFloor: 'down' },
-          { floor: 0, top: -440, left: 554, otherFloor: 'up' },
-          { floor: 1, top: -415, left: -711, otherFloor: 'up' },
-          { floor: 2, top: -415, left: -711, otherFloor: 'down' },
-          { floor: 1, top: 542, left: 588, otherFloor: 'up' },
-          { floor: 2, top: 542, left: 588, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 1, otherFloor: 'up', top: -157, left: -392, id: 1 },
-          { floor: 2, top: -157, left: -392, id: 1 },
-          { floor: 1, top: 100, left: 42, id: 2 },
-          { floor: 2, top: -171, left: 244, id: 3 },
-          { floor: 0, top: 119, left: -203, id: 4 },
-          { outdoor: true, top: -431, left: 5, id: 5 },
-          { floor: 0, top: 148, left: -518, id: 6 },
-          { floor: 1, otherFloor: 'down', top: 148, left: -518, id: 6 },
-          { outdoor: true, top: 115, left: 562, id: 7 }
-        ],
+        ladders: [],
+        cameras: [],
         ceilingHatches: [],
         skylights: [],
         droneTunnels: [],
