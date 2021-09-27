@@ -25,10 +25,11 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottom: -806, right: -1132, height: 217, width: 462
         },
         floors: [
-          { index: 0, top: -660, left: -1042, width: 1811, name: floorTerms.basement, background: true },
-          { index: 1, top: -538, left: -587, width: 1180, name: floorTerms.firstFloor, default: true },
-          { index: 2, top: -538, left: -587, width: 1180, name: floorTerms.secondFloor },
-          { index: 3, top: -538, left: -587, width: 1180, name: floorTerms.roof }
+          { index: 'bg', top: -927, left: -1824, width: 2789, name: floorTerms.basement, dontSelect: true, background: true },
+          { index: 0, top: -538, left: -587, width: 1024, name: floorTerms.basement },
+          { index: 1, top: -538, left: -587, width: 1024, name: floorTerms.firstFloor, default: true },
+          { index: 2, top: -538, left: -587, width: 1024, name: floorTerms.secondFloor },
+          { index: 3, top: -538, left: -587, width: 1024, name: floorTerms.roof }
         ],
         hostageObjectives: [
           { floor: 0, top: -160, left: -69, set: 1 },
@@ -78,40 +79,9 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, otherFloor: 'down', top: 148, left: -518, id: 6 },
           { outdoor: true, top: 115, left: 562, id: 7 }
         ],
-        ceilingHatches: [
-          { floor: 0, top: 10, left: -138 },
-          { floor: 0, top: 197, left: -190 },
-          { floor: 0, top: 112, left: 88 },
-          { floor: 0, top: 50, left: 169 },
-          { floor: 0, top: -101, left: 320 },
-          { floor: 1, top: 196, left: -123 },
-          { floor: 1, top: 258, left: 55 },
-          { floor: 1, top: 139, left: 139 },
-          { floor: 1, top: 52, left: 134 }
-        ],
-        skylights: [
-          { floor: 1, otherFloor: 'up', top: -102, left: 320 },
-          { floor: 1, otherFloor: 'up', top: -176, left: -314 },
-          { floor: 1, otherFloor: 'up', top: 32, left: -314 },
-          { floor: 1, otherFloor: 'up', top: 201, left: -36 },
-          { floor: 2, top: -102, left: 320 },
-          { floor: 2, top: -176, left: -314 },
-          { floor: 2, top: 40, left: -314 },
-          { floor: 2, top: 201, left: -36 },
-          { floor: 3, otherFloor: 'down', top: -102, left: 320 },
-          { floor: 3, otherFloor: 'down', top: -176, left: -314 },
-          { floor: 3, otherFloor: 'down', top: 40, left: -314 },
-          { floor: 3, otherFloor: 'down', top: 201, left: -36 }
-        ],
-        droneTunnels: [
-          { floor: 0, top: -190, left: -422, rotate: 116, size: 22 },
-          { floor: 0, top: 59, left: -223, rotate: 116, size: DRONE_MED },
-          { floor: 1, top: 80, left: -101, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 5, left: 84, rotate: 0, size: DRONE_MED },
-          { floor: 2, top: -6, left: 90, rotate: 0, size: DRONE_MED },
-          { floor: 2, top: 89, left: 95, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 277, left: 321, rotate: 90, size: DRONE_MED }
-        ],
+        ceilingHatches: [],
+        skylights: [],
+        droneTunnels: [],
         spawnPoints: [
           { letter: 'A', top: -590, left: -888, description: 'Boulevard' },
           { letter: 'B', top: -446, left: 641, description: 'Jewelry' },

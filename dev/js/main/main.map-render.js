@@ -200,10 +200,19 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       var currentDeferr = $.Deferred();
 
       prefix = imgUrlPrefix;
-      imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index + '.jpg';
+      imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index;
       inlineStyle = getPositionStyle(floor);
       classes = floor.background ? 'background ' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
-      html += '<img src="' + imgSrc + '" style="' + inlineStyle + '" class="' + classes + '"></img>';
+      html += '<img src="' + imgSrc + '.png" style="' + inlineStyle + '" class="' + classes + '"></img>';
+      if (!floor.background) {
+        html += '<img src="' + imgSrc + '-bw.png" style="' + inlineStyle + '" class="' + classes + ' bw"></img>';
+        html += '<img src="' + imgSrc + '-ch.png" style="' + inlineStyle + '" class="' + classes + ' ch"></img>';
+        html += '<img src="' + imgSrc + '-dt.png" style="' + inlineStyle + '" class="' + classes + ' dt"></img>';
+        html += '<img src="' + imgSrc + '-fh.png" style="' + inlineStyle + '" class="' + classes + ' fh"></img>';
+        html += '<img src="' + imgSrc + '-losf.png" style="' + inlineStyle + '" class="' + classes + ' losf"></img>';
+        html += '<img src="' + imgSrc + '-losw.png" style="' + inlineStyle + '" class="' + classes + ' losw"></img>';
+        html += '<img src="' + imgSrc + '-sl.png" style="' + inlineStyle + '" class="' + classes + ' sl"></img>';
+      }
 
       // Creates a ghost image for every floor, which removes itself when it's loaded, and then
       // resolves the deferrer for this floor.
