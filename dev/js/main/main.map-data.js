@@ -1,26 +1,21 @@
 'use strict';
 
 var R6MMainData = (function(R6MLangTerms, undefined){
-  var DRONE_MED = 18,
-    DRONE_SMALL = 14,
-    floorTerms = {
-      subBasement: { full: 'Sub-Basement', short: 'B'},
-      basement: { full: 'Basement', short: 'B' },
-      firstFloor: { full: '1st Floor', short: '1' },
-      secondFloor: { full: '2nd Floor', short: '2' },
-      thirdFloor: { full: '3rd Floor', short: '3' },
-      fourthFloor: { full: '4th Floor', short: '4' },
-      roof: { full: 'Roof', short: 'R' }
-    };
+  var floorTerms = {
+    subBasement: { full: 'Sub-Basement', short: 'B'},
+    basement: { full: 'Basement', short: 'B' },
+    firstFloor: { full: '1st Floor', short: '1' },
+    secondFloor: { full: '2nd Floor', short: '2' },
+    thirdFloor: { full: '3rd Floor', short: '3' },
+    fourthFloor: { full: '4th Floor', short: '4' },
+    roof: { full: 'Roof', short: 'R' }
+  };
 
   var getMapData = function getMapData() {
     return {
       bank: {
         name: 'Bank',
         imgUrlPrefix: 'bank',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -806, right: -1132, height: 217, width: 462
         },
@@ -60,11 +55,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 306, left: 662
         },
-        ladders: [],
-        cameras: [],
-        ceilingHatches: [],
-        skylights: [],
-        droneTunnels: [],
         spawnPoints: [
           { letter: 'A', top: -590, left: -888, description: 'Boulevard' },
           { letter: 'B', top: -446, left: 641, description: 'Jewelry' },
@@ -150,11 +140,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       bartlett: {
         name: 'Bartlett U.',
         imgUrlPrefix: 'bartlett',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -725, right: -1179, width: 475
+          bottom: -725, right: -1179, height: 217, width: 462
         },
         floors: [
           { index: 1, top: -716, left: -892, width: 1721, name: floorTerms.firstFloor, background: true, default: true },
@@ -191,38 +178,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 392, left: 699
         },
-        cameras: [
-          { floor: 2, top: 175, left: 67, id: 1 },
-          { floor: 2, top: -185, left: 176, id: 2 },
-          { floor: 1, top: -188, left: -106, id: 3 },
-          { floor: 1, top: 177, left: -124, id: 4 },
-          { floor: 1, top: -400, left: 356, id: 5 },
-          { outdoor: true, top: 666, left: 457, id: 6 },
-          { outdoor: true, top: -525, left: 551, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: 233, left: -337 },
-          { floor: 1, top: 56, left: -17 },
-          { floor: 1, top: 168, left: 194 },
-          { floor: 1, top: 64, left: 374 },
-          { floor: 1, top: -17, left: 482 },
-          { floor: 1, top: 95, left: 558 },
-          { floor: 2, top: -174, left: 433 }
-        ],
-        skylights: [
-          { floor: 1, top: -319, left: 272, otherFloor: 'up' },
-          { floor: 2, top: -319, left: 272 },
-          { floor: 3, top: -319, left: 272 }
-        ],
-        droneTunnels: [
-          { floor: 1, top: -274, left: 137, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: 109, left: 704, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: 176, left: 140, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -31, left: -408, rotate: 0, size: 86 },
-          { floor: 1, top: -69, left: -395, rotate: 90, size: 34 },
-
-          { floor: 2, top: 1, left: 267, rotate: 90, size: 120 }
-        ],
         spawnPoints: [
           { letter: 'A', top: 595, left: -793, description: 'Festival' },
           { letter: 'B', top: 646, left: 320, description: 'Main Gate'  },
@@ -294,11 +249,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       border: {
         name: 'Border',
         imgUrlPrefix: 'border',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -293, right: -866, height: 210, width: 462
+          bottom: -293, right: -866, height: 217, width: 462
         },
         floors: [
           { index: 1, top: -560, left: -744, width: 1517, name: floorTerms.firstFloor, background: true, default: true },
@@ -334,39 +286,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: -74, left: 660
         },
-        ladders: [
-          { floor: 1, top: -128, left: -767, otherFloor: 'up' },
-          { floor: 2, top: -128, left: -767, otherFloor: 'down' },
-          { floor: 1, top: -505, left: -52, otherFloor: 'up' },
-          { floor: 2, top: -505, left: -52, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -92, left: 326, id: 1 },
-          { floor: 2, top: -81, left: -33 , id: 2 },
-          { floor: 1, top: -99, left: 122, id: 3 },
-          { floor: 1, top: -245, left: -172, id: 4 },
-          { outdoor: true, top: 268, left: -462, id: 5 },
-          { outdoor: true, top: -568, left: 425, id: 6 },
-          { outdoor: true, top: -425, left: -347, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: -237, left: -122 },
-          { floor: 1, top: -109, left: -91 },
-          { floor: 1, top: -19, left: -153 },
-          { floor: 1, top: -330, left: 67 },
-          { floor: 1, top: -142, left: 228 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 85, left: -254, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -99, left: -305, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: -392, left: -188, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -391, left: 158, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -253, left: 220, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -215, left: 108, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -103, left: 330, rotate: 0, size: 39 },
-          { floor: 1, top: -83, left: 331, rotate: 90, size: 58 }
-        ],
         spawnPoints: [
           { letter: 'A', top: -194, left: 810, description: 'East Vehicle Entrance' },
           { letter: 'B', top: 567, left: -128, description: 'Valley' },
@@ -442,11 +361,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       chalet: {
         name: 'Chalet',
         imgUrlPrefix: 'chalet',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -718, right: -1319, height: 215, width: 465
+          bottom: -718, right: -1319, height: 217, width: 462
         },
         floors: [
           { index: 0, top: -131, left: -273, width: 1386, name: floorTerms.basement, background: true },
@@ -483,49 +399,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 258, left: 1020
         },
-        ladders: [
-          { floor: 0, top: 645, left: 405, otherFloor: 'up' },
-          { floor: 1, top: 645, left: 405, otherFloor: 'down' },
-          { floor: 1, top: 380, left: 135, otherFloor: 'up' },
-          { floor: 2, top: 380, left: 135, otherFloor: 'down' },
-          { floor: 1, top: 575, left: 605, otherFloor: 'up' },
-          { floor: 2, top: 575, left: 605, otherFloor: 'down' },
-          { floor: 1, top: 267, left: 361, otherFloor: 'up' },
-          { floor: 2, top: 267, left: 361, otherFloor: 'down' },
-
-          { floor: 1, top: 600, left: -108, otherFloor: 'up' },
-          { floor: 2, top: 600, left: -108, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -83, left: 650, id: 1 },
-          { floor: 1, otherFloor: 'up', top: 363, left: 206, id: 2 },
-          { floor: 2, top: 363, left: 206, id: 2 },
-          { floor: 1, otherFloor: 'up', top: 570, left: 580, id: 3 },
-          { floor: 2, top: 570, left: 580, id: 3 },
-          { floor: 1, top: 143, left: 424, id: 4 },
-          { floor: 0, top: 415, left: 421, id: 5 },
-          { outdoor: true, top: -83, left: 37, id: 6 },
-          { outdoor: true, top: 160, left: 1060, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: 538, left: 557 },
-          { floor: 0, top: -70, left: 631 },
-          { floor: 0, top: 307, left: 629 },
-          { floor: 1, top: 475, left: 217 },
-          { floor: 1, top: 414, left: 359 },
-          { floor: 1, top: 164, left: 636 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 0, top: 612, left: 457, rotate: 0, size: DRONE_SMALL },
-          { floor: 0, top: 378, left: 488, rotate: 90, size: DRONE_SMALL },
-          { floor: 0, top: -83, left: 486, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 5, left: 662, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: 229, left: 656, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 217, left: 477, rotate: 90, size: 45 },
-          { floor: 1, top: 300, left: 400, rotate: 0, size: 60 },
-          { floor: 1, top: 539, left: 200, rotate: 90, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: -175, left: 865, description: 'Campfire' },
           { letter: 'B', top: 400, left: 1080, description: 'Cliffside' },
@@ -601,11 +474,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       club: {
         name: 'Club House',
         imgUrlPrefix: 'club-house',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -857, right: -881, width: 462
+          bottom: -857, right: -881, height: 217, width: 462
         },
         floors: [
           //
@@ -644,48 +514,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 503, left: 758
         },
-        ladders: [
-          // Garage
-          { floor: 1, top: 247, left: 177, otherFloor: 'down' },
-          { floor: 0, top: 247, left: 177, otherFloor: 'up' },
-          // Construction Balcony
-          { floor: 1, top: -131, left: 181, otherFloor: 'up' },
-          { floor: 2, top: -131, left: 181, otherFloor: 'down' },
-          // Construction Spawn
-          { floor: 1, top: -475, left: 312, otherFloor: 'up' },
-          { floor: 2, top: -475, left: 312, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -121, left: -13, id: 1 },
-          { floor: 1, top: -73, left: -70, id: 2 },
-          { floor: 1, otherFloor: 'up', top: 295, left: 240, id: 3 },
-          { floor: 2, top: 306, left: 256, id: 3 },
-          { floor: 0, top: -114, left: -73, id: 4 },
-          { outdoor: true, top: 281, left: -170, id: 5 },
-          { outdoor: true, top: -158, left: -305, id: 6 },
-          { outdoor: true, top: 329, left: 409, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: 18, left: -63 },
-          { floor: 0, top: -12, left: 173 },
-          { floor: 0, top: -190, left: 44 },
-
-          { floor: 1, top: 197, left: -216 },
-          { floor: 1, top: 14, left: -144 },
-
-          { floor: 2, top: -225, left: 63 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 0, top: -457, left: -17, rotate: 210, size: DRONE_SMALL },
-          { floor: 1, top: 150, left: -379, rotate: 90, size: 51 },
-          { floor: 1, top: 179, left: -186, rotate: 90, size: 10 },
-          { floor: 1, top: 215, left: 114, rotate: 90, size: 10 },
-          { floor: 1, top: 124, left: 140, rotate: 0, size: 8 },
-          { floor: 2, top: -74, left: -152, rotate: 90, size: 10 },
-          { floor: 2, top: 20, left: 281, rotate: 90, size: 10 },
-          { floor: 2, top: 37, left: 241, rotate: 90, size: 8 }
-        ],
         spawnPoints: [
           { letter: 'A', top: 504, left: 74, description: 'Main Gate' },
           { letter: 'B', top: 88, left: -776, description: 'Shipping Dock' },
@@ -775,11 +603,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       coastline: {
         name: 'Coastline',
         imgUrlPrefix: 'coastline',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -737, right: -1004, height: 212, width: 462
+          bottom: -737, right: -1004, height: 217, width: 462
         },
         floors: [
           { index: 1, top: -751, left: -797, width: 1801, name: floorTerms.firstFloor, background: true, default: true },
@@ -815,44 +640,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 522, left: 409
         },
-        cameras: [
-          { floor: 1, top: 95, left: -84, id: 1 },
-          { floor: 1, top: 292, left: 198, id: 2 },
-          { floor: 2, top: 316, left: -194, id: 3 },
-          { floor: 2, top: 77, left: 156, id: 4 },
-          { outdoor: true, top: -195, left: 415, id: 5 },
-          { outdoor: true, top: 436, left: -300, id: 6 },
-          { outdoor: true, top: -109, left: -551, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: 74, left: -178 },
-          { floor: 1, top: 315, left: -192 },
-          { floor: 1, top: 274, left: 105 },
-          { floor: 1, top: 77, left: 191 },
-          { floor: 2, top: -72, left: 286 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 63, left: 316, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 258, left: 82, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 226, left: -53, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 215, left: -214, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -81, left: -40, rotate: 90, size: 24 },
-          { floor: 1, top: -90, left: -48, rotate: 0, size: 30 },
-          { floor: 2, top: 223, left: -65, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -4, left: -40, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: 94, left: 176, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -86, left: -74, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 2, top: -86, left: -74, rotate: 0, size: DRONE_MED, otherFloor: 'upanddown' },
-          { floor: 3, top: -86, left: -74, rotate: 0, size: DRONE_MED, otherFloor: 'down' },
-          { floor: 1, top: 334, left: 275, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 2, top: 334, left: 275, rotate: 0, size: DRONE_MED, otherFloor: 'upanddown' },
-          { floor: 3, top: 334, left: 275, rotate: 0, size: DRONE_MED, otherFloor: 'down' },
-          { floor: 2, top: 235, left: -51, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 3, top: 235, left: -51, rotate: 0, size: DRONE_MED, otherFloor: 'down' },
-          { floor: 2, top: -81, left: 214, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 3, top: -81, left: 214, rotate: 0, size: DRONE_MED, otherFloor: 'down' }
-        ],
         spawnPoints: [
           { letter: 'A', top: 186, left: 814, description: 'Main Entrance'  },
           { letter: 'B', top: -522, left: -280, description: 'Pool Side' },
@@ -920,9 +707,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       consulate: {
         name: 'Consulate',
         imgUrlPrefix: 'consulate',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -722, right: -872, height: 217, width: 462
         },
@@ -961,44 +745,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 314, left: 422
         },
-        cameras: [
-          { floor: 2, top: 26, left: -220, id: 1 },
-          { floor: 2, top: -168, left: 11, id: 2 },
-          { floor: 1, otherFloor: 'up', top: -168, left: 11, id: 2 },
-          { floor: 1, top: -78, left: 374, id: 3 },
-          { floor: 1, top: 243, left: 11, id: 4 },
-          { floor: 0, top: -79, left: 40, id: 5 },
-          { floor: 0, top: -35, left: -150, id: 6 },
-          { outdoor: true, top: 498, left: -50, id: 7 },
-          { outdoor: true, top: -32, left: -537, id: 8 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: 20, left: -172 },
-          { floor: 0, top: 179, left: 108 },
-          { floor: 0, top: -78, left: 150 },
-          { floor: 0, top: 177, left: 316 },
-          { floor: 0, top: -79, left: 374 },
-          { floor: 0, top: 94, left: 2 },
-          { floor: 1, top: 28, left: -320 },
-          { floor: 1, top: 100, left: -37 },
-          { floor: 1, top: 28, left: 261 }
-        ],
-        skylights: [
-          { floor: 1, otherFloor: 'up', top: -102, left: 10 },
-          { floor: 1, otherFloor: 'up', top: -24, left: -303 },
-          { floor: 2, top: -24, left: -303 },
-          { floor: 2, top: -102, left: 10 },
-          { floor: 3, otherFloor: 'down', top: -24, left: -303 },
-          { floor: 3, otherFloor: 'down', top: -102, left: 10 }
-        ],
-        droneTunnels: [
-          { floor: 0, top: 26, left: -356, rotate: 90, size: DRONE_MED },
-          { floor: 0, top: 103, left: 87, rotate: 90, size: DRONE_SMALL },
-          { floor: 0, top: 200, left: 138, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -1, left: -142, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 186, left: 291, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: 67, left: 148, rotate: 90, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: 412, left: 622, description: 'Riot Barricade' },
           { letter: 'B', top: 634, left: -329, description: 'Police Line' },
@@ -1084,9 +830,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       favela: {
         name: 'Favela',
         imgUrlPrefix: 'favela',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -451, right: -800, height: 217, width: 462
         },
@@ -1126,49 +869,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 102, left: 690
         },
-        ladders: [
-          { floor: 0, top: -170, left: 199, otherFloor: 'up' },
-          { floor: 1, top: -170, left: 199, otherFloor: 'down' },
-          { floor: 1, top: -485, left: -343, otherFloor: 'up' },
-          { floor: 4, top: -485, left: -343, otherFloor: 'down' },
-          { floor: 1, top: 89, left: 447, otherFloor: 'up' },
-          { floor: 2, top: 89, left: 447, otherFloor: 'down' }
-        ],
-        cameras: [
-          { outdoor: true, top: 346, left: 18, id: 1 },
-          { floor: 3, top: -137, left: -116, id: 2 },
-          { floor: 4, top: -137, left: -116, id: 2 },
-          { outdoor: true, top: -305, left: -507, id: 3 },
-          { floor: 3, top: -244, left: 270, id: 4 },
-          { floor: 2, top: -383, left: 124, id: 5 },
-          { floor: 1, top: 248, left: -180, id: 6 },
-          { floor: 2, top: 269, left: -161, id: 6 },
-          { floor: 1, top: -375, left: 26, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: -193, left: -265 },
-          { floor: 1, top: 204, left: 137 }
-        ],
-        skylights: [],
-        droneTunnels: [
-           { floor: 0, top: 224, left: -294, rotate: 0, size: 51, otherFloor: 'up' },
-           { floor: 0, top: 243, left: -217, rotate: 90, size: 146 },
-           { floor: 1, top: -316, left: -267, rotate: 0, size: DRONE_SMALL },
-           { floor: 1, top: -342, left: 234, rotate: 90, size: DRONE_SMALL },
-           { floor: 1, top: -318, left: 222, rotate: 0, size: 60 },
-           { floor: 1, top: 138, left: -336, rotate: 0, size: 120 },
-           { floor: 1, top: 192, left: -282, rotate: 90, size: 96 },
-           { floor: 1, top: 224, left: -294, rotate: 0, size: 51, otherFloor: 'down' },
-           { floor: 1, top: -51, left: -229, rotate: 90, size: DRONE_SMALL },
-           { floor: 1, top: -153, left: 69, rotate: 0, size: DRONE_SMALL },
-           { floor: 1, top: 64, left: 236, rotate: 0, size: DRONE_SMALL, otherFloor: 'up' },
-           { floor: 2, top: -6, left: 151, rotate: 0, size: 64  },
-           { floor: 2, top: 20, left: 155, rotate: 90, size: DRONE_SMALL },
-           { floor: 2, top: 20, left: -167, rotate: 90, size: DRONE_SMALL },
-           { floor: 2, top: -349, left: 105, rotate: 90, size: DRONE_SMALL },
-           { floor: 2, top: -217, left: -202, rotate: 0, size: DRONE_SMALL },
-           { floor: 2, top: 64, left: 254, rotate: 0, size: DRONE_SMALL, otherFloor: 'down' }
-        ],
         spawnPoints: [
           { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
           { letter: 'B', top: 469, left: -543, description: 'Market' },
@@ -1235,11 +935,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       fortress: {
         name: 'Fortress',
         imgUrlPrefix: 'fortress',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -922, right: -649, height: 215, width: 462
+          bottom: -922, right: -649, height: 217, width: 462
         },
         floors: [
           { index: 1, top: -824, left: -603, width: 1252, name: floorTerms.firstFloor, background: true, default: true },
@@ -1275,61 +972,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 575, left: 533
         },
-        ladders: [
-          { floor: 1, top: -238, left: 279, otherFloor: 'up' },
-          { floor: 2, top: -238, left: 279, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -278, left: -267, id: 1 },
-          { floor: 2, top: 46, left: -57, id: 2 },
-          { floor: 2, top: 313, left: 330, id: 3 },
-          { floor: 1, top: -234, left: -176, id: 4 },
-          { floor: 1, top: 224, left: -40, id: 5 },
-          { outdoor: true, top: -234, left: -375, id: 6 },
-          { outdoor: true, top: 202, left: 415, id: 7 },
-          { floor: 3, top: 315, left: 123, id: 8 }
-        ],
-        ceilingHatches: [
-          { floor: 2, top: 358, left: 89 },
-          { floor: 1, top: 297, left: 322 },
-          { floor: 1, top: 37, left: 56 },
-          { floor: 1, top: -10, left: -63 }
-        ],
-        skylights: [
-          { floor: 1, otherFloor: 'up', top: -113, left: 186 },
-          { floor: 2, top: -113, left: 186 },
-          { floor: 3, otherFloor: 'down', top: -113, left: 186 }
-        ],
-        droneTunnels: [
-          // 1F
-          // external walls, starting south west going ccw
-          { floor: 1, top: 298, left: -98, rotate: 0, size: 23 },
-          { floor: 1, top: 259, left: 106, rotate: 90, size: 23 },
-          { floor: 1, top: 307, left: 263, rotate: 90, size: 23 },
-          { floor: 1, top: -56, left: 259, rotate: 90, size: 23 },
-          { floor: 1, top: -268, left: 287, rotate: 0, size: 23 },
-          { floor: 1, top: -316, left: -13, rotate: 0, size: 51 },
-          { floor: 1, top: -251, left: -283, rotate: 90, size: 40 },
-          { floor: 1, top: -258, left: -260, rotate: 45, size: 23 },
-          // internal walls, starting south, going north
-          { floor: 1, top: 223, left: -109, rotate: 135, size: 10 },
-          { floor: 1, top: 223, left: -93, rotate: 90, size: 29 },
-          { floor: 1, top: 147, left: 22, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -16, left: 61, rotate: 0, size: 44 },
-          { floor: 1, top: -152, left: -97, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: -199, left: -194, rotate: 90, size: DRONE_SMALL },
-          // 2F
-          // external walls
-          { floor: 2, top: 261, left: -83, rotate: 90, size: 23 },
-          { floor: 2, top: -50, left: 280, rotate: 90, size: 23 },
-          // internal walls
-          { floor: 2, top: 282, left: 132, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 185, left: 118, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: 74, left: 46, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 32, left: -28, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -117, left: 58, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: -235, left: -176, rotate: 0, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: -690, left: -370, description: 'Main Gate' },
           { letter: 'B', top: -690, left: 170, description: 'Parking' },
@@ -1417,11 +1059,8 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       hereford: {
         name: 'Hereford',
         imgUrlPrefix: 'hereford',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
-          bottom: -412, right: -823, height: 217, width: 481
+          bottom: -412, right: -823, height: 217, width: 462
         },
         floors: [
           { index: 0, top: -851, left: -754, width: 1577, name: floorTerms.basement, background: true },
@@ -1459,39 +1098,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 74, left: 569
         },
-        ladders: [
-          { floor: 0, top: 165, left: 95, otherFloor: 'up' },
-          { floor: 1, top: 163, left: 112, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 3, top: -54, left: 66, id: 1 },
-          { floor: 2, top: 8, left: 58, id: 2 },
-          { floor: 1, top: -16, left: 35, id: 3 },
-          { floor: 0, top: -13, left: 35, id: 4 },
-          { outside: true, top: -181, left: -326, id: 5 },
-          { outside: true, top: 218, left: 190, id: 6 },
-          { outside: true, top: -361, left: 273, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: -125, left: -119 },
-          { floor: 0, top: 86, left: -230 },
-          { floor: 0, top: 86, left: 123 },
-          { floor: 1, top: 129, left: -111 },
-          { floor: 1, top: -215, left: -3 },
-          { floor: 2, top: -209, left: -167 },
-          { floor: 2, top: -209, left: 147 },
-          { floor: 2, top: 143, left: 147 },
-          { floor: 2, top: 20, left: -62 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 193, left: -65, rotate: 0, size: 9 },
-          { floor: 1, top: 146, left: 141, rotate: 0, size: 9 },
-          { floor: 1, top: 7, left: -244, rotate: 90, size: 9 },
-          { floor: 1, top: -231, left: -13, rotate: 0, size: 9 },
-          { floor: 2, top: 3, left: -115, rotate: 0, size: 9 },
-          { floor: 4, top: -1, left: -41, rotate: 90, size: DRONE_SMALL, otherFloor: 'down' }
-        ],
         spawnPoints: [
           { letter: 'A', top: 93, left: -639, description: 'Tower' },
           { letter: 'B', top: 105, left: 753, description: 'Spitfire' },
@@ -1574,9 +1180,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       house: {
         name: 'House',
         imgUrlPrefix: 'house',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -455, right: -891, height: 217, width: 462
         },
@@ -1615,36 +1218,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 100, left: 534
         },
-        ladders: [
-          { floor: 1, top: -10, left: -331, otherFloor: 'up' },
-          { floor: 2, top: -10, left: -331, otherFloor: 'down' },
-          { floor: 1, top: 46, left: -270, otherFloor: 'up' },
-          { floor: 2, top: 46, left: -270, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -8, left: -166, id: 5 },
-          { floor: 1, top: -8, left: -166, otherFloor: 'up', id: 5 },
-          { floor: 2, top: -70, left: 74, id: 4 },
-          { floor: 1, top: 13, left: 52, id: 3 },
-          { floor: 0, top: -65, left: -122, id: 1 },
-          { floor: 0, top: -75, left: 85, id: 2 },
-          { outdoor: true, top: -175, left: -270, id: 6 },
-          { outdoor: true, top: 394, left: 345, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: -106, left: -145 },
-          { floor: 0, top: -20, left: -18 },
-          { floor: 0, top: 32, left: 235 },
-          { floor: 1, top: -70, left: 48 },
-          { floor: 1, top: -20, left: 240 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: -74, left: -169, rotate: 351, size: 55, alternate: true },
-          { floor: 1, top: 38, left: -141, rotate: 90, size: 10, alternate: true },
-          { floor: 1, top: -183, left: 6, rotate: 0, size: 12, alternate: true },
-          { floor: 1, top: 205, left: 21, rotate: 0, size: 12, alternate: true }
-        ],
         spawnPoints: [
           { letter: 'A', top: -439, left: 118, description: 'Front Street' },
           { letter: 'B', top: 348, left: -140, description: 'APC' },
@@ -1712,9 +1285,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       kafe: {
         name: 'Kafe Dostoyevsky',
         imgUrlPrefix: 'kafe',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -844, right: -484, height: 217, width: 462
         },
@@ -1753,44 +1323,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 460, left: 390
         },
-        ladders: [
-          { floor: 1, top: 608, left: 298, otherFloor: 'up' },
-          { floor: 2, top: 608, left: 298, otherFloor: 'down' },
-          { floor: 1, top: 151, left: -374, otherFloor: 'up' },
-          { floor: 2, top: 151, left: -374, otherFloor: 'down' },
-          { floor: 1, top: -345, left: 290, otherFloor: 'up' },
-          { floor: 2, top: -345, left: 290, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, otherFloor: 'up', top: -129, left: 268, id: 1 },
-          { floor: 3, top: -126, left: 281, id: 1 },
-          { floor: 2, top: 135, left: 96, id: 2 },
-          { floor: 1 , top: 62, left: 244 , id: 3 },
-          { floor: 1, top: 34, left: -197, id: 4 },
-          { outdoor: true, top: -138, left: -328, id: 5 },
-          { outdoor: true, top: 445, left: 396, id: 6 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: 218, left: 184 },
-          { floor: 2, top: 188, left: 30 },
-          { floor: 2, top: 156, left: 339 },
-          { floor: 2, top: -32, left: 55 },
-          { floor: 3, top: -23, left: -31 },
-          { floor: 3, top: -99, left: 59 }
-        ],
-        skylights: [
-          { floor: 3, top: -27, left: 193 },
-          { floor: 4, otherFloor: 'down', top: -15, left: 200 }
-        ],
-        droneTunnels: [
-          { floor: 1, top: 247, left: 11, rotate: 0, size: 11 },
-          { floor: 1, top: 152, left: 214, rotate: 90, size: 8 },
-          { floor: 1, top: 28, left: -79, rotate: 0, size: 8 },
-          { floor: 2, top: 119, left: 359, rotate: 0, size: 12 },
-          { floor: 2, top: 108, left: 78, rotate: 90, size: 8 },
-          { floor: 2, top: 11, left: 135, rotate: 0, size: 8 },
-          { floor: 3, top: 34, left: -4, rotate: 90, size: 8 }
-        ],
         spawnPoints: [
           { letter: 'A', top: -528, left: 111, description: 'Docks' },
           { letter: 'B', top: 112, left: -689, description: 'Market' },
@@ -1868,9 +1400,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       kanal: {
         name: 'Kanal',
         imgUrlPrefix: 'kanal',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -581, right: -965, height: 217, width: 462
         },
@@ -1910,83 +1439,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 214, left: 871
         },
-        ladders: [
-          { floor: -1, top: -36, left: -126, otherFloor: 'up' },
-          { floor: 0, top: -36, left: -110, otherFloor: 'down' },
-          { floor: -1, top: -240, left: -234, otherFloor: 'up' },
-          { floor: 0, top: -235, left: -230, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -67, left: 216, id: 1 },
-          { floor: 1, top: -69, left: 163,  id: 2 },
-          { floor: 1, top: 16, left: -180, id: 3 },
-          { floor: 0, top: -55, left: -191, id: 4 },
-          { outdoor: true, top: 437, left: -366, id: 5 },
-          { outdoor: true, top: -391, left: -465, id: 6 },
-          { outdoor: true, top: -374, left: 430, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: -156, left: -106 },
-          { floor: 0, top: -43, left: -342 },
-          { floor: 1, top: -248, left: 302 },
-          { floor: 1, top: -248, left: 126 },
-          { floor: 1, top: -56, left: 86 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          // north vents on coast guard
-          { floor: 1, top: -346, left: -171, rotate: 0, size: 8 },
-          { floor: 1, top: -341, left: -161, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -346, left: -166, rotate: 90, size: DRONE_MED },
-
-          { floor: 2, top: -353, left: -171, rotate: 0, size: 12 },
-          { floor: 2, top: -353, left: -161, rotate: 0, size: 12 },
-          { floor: 2, top: -353, left: -166, rotate: 90, size: DRONE_MED },
-
-          { floor: 3, top: -353, left: -171, rotate: 0, size: 12 },
-          { floor: 3, top: -340, left: -161, rotate: 0, size: 38 },
-          { floor: 3, top: -353, left: -166, rotate: 90, size: DRONE_MED },
-          { floor: 3, top: -324, left: -150, rotate: 90, size: 29 },
-
-          // east vents on coast guard
-          { floor: 1, top: -193, left: -55, rotate: 0, size: 8 },
-          { floor: 1, top: -193, left: -66, rotate: 90, size: 30 },
-
-          { floor: 2, top: -193, left: -56, rotate: 0, size: 10 },
-          { floor: 2, top: -193, left: -54, rotate: 0, size: 10 },
-          { floor: 2, top: -193, left: -55, rotate: 90, size: 10 },
-
-          { floor: 3, top: -204, left: -95, rotate: 0, size: 35 },
-          { floor: 3, top: -210, left: -87, rotate: 90, size: 9 },
-          { floor: 3, top: -192, left: -53, rotate: 0, size: 11 },
-          { floor: 3, top: -192, left: -74, rotate: 90, size: 51 },
-
-          // west vents on coast guard
-          { floor: 0, top: -206, left: -371, rotate: 0, size: 18 },
-          { floor: 0, top: -202, left: -365, rotate: 90, size: 21 },
-
-          { floor: 1, top: -211, left: -367, rotate: 0, size: 11 },
-          { floor: 1, top: -211, left: -367, rotate: 90, size: 10 },
-
-          { floor: 2, top: -211, left: -367, rotate: 0, size: 11 },
-          { floor: 2, top: -211, left: -357, rotate: 90, size: 29 },
-
-          { floor: 3, top: -211, left: -367, rotate: 0, size: 11 },
-          { floor: 3, top: -211, left: -357, rotate: 90, size: 29 },
-
-          // tunnel vents
-          { floor: -1, top: -177, left: -348, rotate: 0, size: 11 },
-          { floor: -1, top: -177, left: -298, rotate: 90, size: 109 },
-
-          { floor: 0, top: -190, left: -365, rotate: 0, size: 11 },
-          { floor: 0, top: -190, left: -366, rotate: 90, size: 11 },
-
-          // OF bathroom
-          { floor: 0, top: 55, left: -85, rotate: 90, size: 14 },
-          // diving room
-          { floor: 0, top: -335, left: -260, rotato: 0, size: 12 }
-
-        ],
         spawnPoints: [
           { letter: 'A', top: -495, left: -976, description: 'Dock' },
           { letter: 'B', top: 465, left: -426, description: 'Sailboats' },
@@ -2086,9 +1538,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       oregon: {
         name: 'Oregon',
         imgUrlPrefix: 'oregon',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -477, right: -968, height: 217, width: 462
         },
@@ -2128,40 +1577,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 92, left: 863
         },
-        ladders: [
-          { floor: 2, top: -255, left: 210, otherFloor: 'up' },
-          { floor: 3, top: -264, left: 227, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: 54, left: 242, id: 1 },
-          { floor: 1, top: 86, left: 168, id: 2 },
-          { floor: 1, top: 203, left: -125, id: 3 },
-          { floor: 1, top: -192, left: 230, id: 4 },
-          { floor: 0, top: 74, left: -53, id: 5 },
-          { outdoor: true, top: 187, left: -502, id: 6 },
-          { outdoor: true, top: 216, left: 413, id: 7 },
-          { outdoor: true, top: -420, left: 325, id: 8 }
-        ],
-        ceilingHatches: [
-          { floor: 0, top: 162, left: 177 },
-          { floor: 0, top: 107, left: 13 },
-          { floor: 0, top: -111, left: 183 },
-          { floor: 1, top: 157, left: 318 },
-          { floor: 1, top: 28, left: -90 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 0, top: 35, left: 236, rotate: 0, size: 47 },
-          { floor: 0, top: 30, left: 67, rotate: 90, size: 8 },
-          { floor: 0, top: 20, left: 120, rotate: 90, size: 10 },
-          { floor: 1, top: -123, left: 91, rotate: 0, size: 8 },
-          { floor: 1, top: -21, left: 73, rotate: 90, size: 10 },
-          { floor: 1, top: 72, left: 57, rotate: 0, size: 10 },
-          { floor: 1, top: 220, left: -119, rotate: 0, size: 12 },
-          { floor: 1, top: 213, left: 0, rotate: 0, size: 23 },
-          { floor: 1, top: -17, left: -307, rotate: 90, size: 14 },
-          { floor: 2, top: -143, left: 148, rotate: 90, size: 14 }
-        ],
         spawnPoints: [
           { letter: 'A', top: 318, left: -692, description: 'Junkyard' },
           { letter: 'B', top: 405, left: 437, description: 'Street' },
@@ -2266,9 +1681,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       outback: {
         name: 'Outback',
         imgUrlPrefix: 'outback',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -829, right: -1028, height: 217, width: 462
         },
@@ -2304,40 +1716,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           bottomRight: { top: 500, left: 500}
         },
         compassPoints: { top: 484, left: 790 },
-        ladders: [],
-        cameras: [
-          { outdoor: true, top: 456, left: 815, id: 1 },
-          { outdoor: true, top: -211, left: 590, id: 2 },
-          { outdoor: true, top: 339, left: 241, id: 3 },
-          { floor: 2, top: -101, left: 319, id: 4 },
-          { floor: 2, top: 452, left: 493, id: 5 },
-          { floor: 1, otherFloor: 'up', top: 443, left: 497, id: 5 },
-          { floor: 2, top: -56, left: 568, id: 6 },
-          { floor: 1, otherFloor: 'up', top: -56, left: 568, id: 6 },
-          { floor: 1, top: 28, left: 132, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: 54, left: 144 },
-          { floor: 1, top: -93, left: 258 },
-          { floor: 1, top: 147, left: 475 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 302, left: 690, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 254, left: 554, rotate: 90, size: 12 },
-          { floor: 1, top: 457, left: 497, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 340, left: 421, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 117, left: 407, rotate: 90, size: 12 },
-          { floor: 1, top: -17, left: 435, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: -144, left: 290, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 67, left: 97, rotate: 0, size: DRONE_SMALL },
-
-          { floor: 2, top: 70, left: 189, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 164, left: 418, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -38, left: 483, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: 260, left: 617, rotate: 0, size: 49 },
-          { floor: 2, top: 278, left: 620, rotate: 90, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: -406, left: 634, description: 'Storage Yard' },
           { letter: 'B', top: 657, left: 464, description: 'Pumps' },
@@ -2418,9 +1796,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       plane: {
         name: 'Plane',
         imgUrlPrefix: 'plane',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -650, right: -590, height: 217, width: 462
         },
@@ -2457,53 +1832,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 305, left: 494
         },
-        ladders: [
-          { floor: 2, top: -33, left: -186, otherFloor: 'up' },
-          { floor: 3, top: -33, left: -186, otherFloor: 'down' },
-          { floor: 2, top: -4, left: -373, otherFloor: 'up' },
-          { floor: 3, top: -4, left: -373, otherFloor: 'down' },
-          { floor: 1, top: -166, left: -232, otherFloor: 'up' },
-          { floor: 2, top: -166, left: -232, otherFloor: 'down' },
-          { floor: 1, top: -127, left: -330, otherFloor: 'up' },
-          { floor: 2, top: -127, left: -330, otherFloor: 'down' },
-          { floor: 1, top: -323, left: -304, otherFloor: 'up' },
-          { floor: 2, top: -323, left: -304, otherFloor: 'down' },
-          { floor: 1, top: -152, left: 248, otherFloor: 'up' },
-          { floor: 2, top: -152, left: 248, otherFloor: 'down' },
-          { floor: 1, top: -296, left: 145, otherFloor: 'up' },
-          { floor: 2, top: -296, left: 145, otherFloor: 'down' },
-          { floor: 1, top: 136, left: 329, otherFloor: 'up' },
-          { floor: 2, top: 136, left: 329, otherFloor: 'down' },
-          { floor: 1, top: 207, left: 335, otherFloor: 'up' },
-          { floor: 2, top: 207, left: 335, otherFloor: 'upanddown' },
-          { floor: 3, top: 207, left: 335, otherFloor: 'down' },
-          { floor: 2, top: 156, left: -470, otherFloor: 'up' },
-          { floor: 3, top: 156, left: -470, otherFloor: 'upanddown' },
-          { floor: 4, top: 156, left: -470, otherFloor: 'down' },
-          { floor: 1, top: 218, left: -497, otherFloor: 'up' },
-          { floor: 2, top: 218, left: -497, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 3, top: -14, left: 248, id: 1 },
-          { floor: 2, top: -60, left: 188, id: 2 },
-          { floor: 2, top: -41, left: -215, id: 3 },
-          { floor: 1, top: 33, left: 21, id: 4 },
-          { floor: 1, top: -49, left: -289, id: 5 }
-        ],
-        ceilingHatches: [
-          { floor: 2, top: 17, left: -116 },
-          { floor: 2, top: -34, left: 49 },
-          { floor: 2, top: 22, left: 111 },
-          { floor: 2, top: 22, left: 407 },
-          { floor: 1, top: 24, left: 72 },
-          { floor: 1, top: -2, left: -218 },
-          { floor: 1, top: 8, left: -78 },
-          { floor: 3, top: -10, left: -496 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 2, top: -42, left: 172, rotate: 90, size: DRONE_SMALL, alternate: true }
-        ],
         spawnPoints: [
           { letter: 'A', top: -428, left: 434, description: 'Official Entrance' },
           { letter: 'B', top: -489, left: -408, description: 'Reporter Entrance' },
@@ -2564,9 +1892,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       skyscraper: {
         name: 'Skyscraper',
         imgUrlPrefix: 'skyscraper',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -765, right: -1130, height: 217, width: 462
         },
@@ -2604,33 +1929,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 357, left: 722
         },
-        cameras: [
-          { floor: 1, otherFloor: 'up', top: 365, left: 310, id: 1 },
-          { floor: 2, top: 365, left: 310, id: 1 },
-          { floor: 1, top: 145, left: 115, id: 2 },
-          { floor: 1, otherFloor: 'up', top: 280, left: 555, id: 3 },
-          { floor: 2, top: 280, left: 555, id: 3 },
-          { floor: 1, top: 335, left: 415, id: 4 },
-          { outdoor: true, top: -10, left: -30, id: 5 },
-          { outdoor: true, top: 150, left: 690, id: 6 },
-          { outdoor: true, top: 670, left: 633, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: 527, left: 581 },
-          { floor: 1, top: 463, left: 118 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 150, left: 45, rotate: 0, size: 30 },
-          { floor: 1, top: 160, left: 55, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 245, left: 410, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 245, left: 310, rotate: 90, size: 8 },
-          { floor: 1, top: 255, left: 310, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 535, left: 610, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: 420, left: 620, rotate: 90, size: DRONE_MED },
-          { floor: 2, top: 385, left: 330, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 345, left: 250, rotate: 90, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: 120, left: -355, description: 'Helipad' },
           { letter: 'B', top: -100, left: 665, description: 'Tower' },
@@ -2704,9 +2002,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       themepark: {
         name: 'Theme Park',
         imgUrlPrefix: 'themepark',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -488, right: -889, height: 217, width: 462
         },
@@ -2744,49 +2039,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 29, left: 793
         },
-        ladders: [
-        ],
-        cameras: [
-          { floor: 2, top: -28, left: 381, id: 1 },
-          { floor: 2, top: 48, left: -212, id: 2 },
-          { floor: 1, otherFloor: 'up', top: 48, left: -218, id: 2 },
-          { floor: 1, top: 122, left: 213, id: 3 },
-          { floor: 1, top: -175, left: -8, id: 4 },
-          { outdoor: true, top: -384, left: -286, id: 5 },
-          { outdoor: true, top: -246, left: 583, id: 6 },
-          { outdoor: true, top: 296, left: -359, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 1, top: -28, left: 39 },
-          { floor: 1, top: 129, left: -73 },
-          { floor: 1, top: -186, left: 342},
-          { floor: 2 , top: -112, left: 75},
-          { floor: 2 , top: 150, left: 332}
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 212, left: -60, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 212, left: 103, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 125, left: -237, rotate: 90, size: DRONE_MED },
-          { floor: 1, top: -25, left: -219, rotate: 0, size: 23 },
-          { floor: 1, top: -20, left: -251, rotate: 90, size: 74 },
-          { floor: 1, top: -271, left: -148, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: -257, left: 58, rotate: 0, size: 47 },
-          { floor: 1, top: -205, left: 255, rotate: 0, size: DRONE_MED },
-          { floor: 1, top: 136, left: 373, rotate: 90, size: 38 },
-
-          { floor: 1, top: 29, left: -74, rotate: 0, size: 10 },
-          { floor: 1, top: 2, left: 197, rotate: 90, size: 10 },
-          { floor: 1, top: -66, left: 17, rotate: 90, size: 10 },
-          { floor: 1, top: -167, left: -26, rotate: 90, size: 10 },
-
-          { floor: 2, top: -135, left: -145, rotate: 0, size: DRONE_MED },
-
-          { floor: 2, top: 209, left: 94, rotate: 90, size: 10 },
-          { floor: 2, top: -73, left: 94, rotate: 90, size: 10 },
-          { floor: 2, top: -37, left: 28, rotate: 90, size: 10 },
-          { floor: 2, top: -122, left: 285, rotate: 0, size: 10 }
-        ],
         spawnPoints: [
           { letter: 'A', top: 369, left: -548, description: 'Main Entrance' },
           { letter: 'B', top: -409, left: -548, description: 'Teacups' },
@@ -2863,9 +2115,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       tower: {
         name: 'Tower',
         imgUrlPrefix: 'tower',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -725, right: -1285, height: 217, width: 462
         },
@@ -2904,72 +2153,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 380, left: 1191
         },
-        ladders: [
-          { floor: 3, top: 245, left: -139, otherFloor: 'up' },
-          { floor: 4, top: 245, left: -139, otherFloor: 'down' },
-          { floor: 3, top: 65, left: 116, otherFloor: 'up' },
-          { floor: 4, top: 65, left: 116, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 2, top: -349, left: 43, id: 1 },
-          { floor: 2, top: 47, left: 463, id: 2 },
-          { floor: 2, top: 220, left: -67, id: 3 },
-          { floor: 1, top: 335, left: -133, id: 4 },
-          { floor: 1, top: 154, left: -459, id: 5 },
-          { floor: 2, top: -627, left: -13, id: 6 },
-          { floor: 1, top: 592, left: -21, id: 7 }
-        ],
-        ceilingHatches: [
-          { floor: 2, top: -233, left: -67 },
-          { floor: 2, top: -27, left: 44 },
-          { floor: 1, top: -274, left: -328 },
-          { floor: 1, top: 307, left: -315 },
-          { floor: 1, top: 158, left: -54 },
-          { floor: 1, top: -66, left: 87 },
-          { floor: 1, top: 450, left: 342 },
-          { floor: 1, top: 505, left: -162 },
-          { floor: 1, top: -128, left: -170 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: -331, left: 92, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -331, left: -131, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -303, left: 376, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 100, left: -416, rotate: 0, size: 44 },
-          { floor: 1, top: 377, left: -21, rotate: 0, size: 70 },
-          { floor: 2, top: -369, left: -120, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 342, left: -155, rotate: 0, size: 20 },
-          { floor: 2, top: 349, left: -161, rotate: 90, size: 24 },
-          { floor: 2, top: 324, left: 249, rotate: 90, size: 192 },
-          { floor: 2, top: -46, left: 417, rotate: 90, size: DRONE_SMALL },
-          //North Air Duct
-          { floor: 3, top: -208, left: -167, rotate: 0, size: 330 },
-          { floor: 3, top: -64, left: -167, rotate: 0, size: 40, otherFloor: 'up' },
-          { floor: 4, top: -49, left: -133, rotate: 90, size: 80 },
-          { floor: 4, top: -64, left: -167, rotate: 0, size: 40, otherFloor: 'down' },
-          //East Air Duct
-          { floor: 4, top: -49, left: 270, rotate: 0, size: 12, otherFloor: 'down' },
-          { floor: 4, top: -49, left: 176, rotate: 90, size: 204 },
-          { floor: 2, top: 62, left: 370, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 3, top: -4, left: 370, rotate: 0, size: 128 },
-          { floor: 3, top: 54, left: 370, rotate: 0, size: DRONE_SMALL, otherFloor: 'down' },
-          { floor: 2, top: -64, left: 390, rotate: 0, size: 12, otherFloor: 'up' },
-          { floor: 2, top: -64, left: 404, rotate: 90, size: 40 },
-          { floor: 3, top: -64, left: 387, rotate: 0, size: 12, otherFloor: 'down' },
-          { floor: 3, top: -64, left: 261, rotate: 0, size: 12, otherFloor: 'up' },
-          { floor: 3, top: -64, left: 323, rotate: 90, size: 140 },
-          //West Air Duct
-          { floor: 2, top: 195, left: -369, rotate: 0, size: DRONE_MED, otherFloor: 'up' },
-          { floor: 2, top: 121, left: -404, rotate: 0, size: 12, otherFloor: 'up' },
-          { floor: 2, top: 121, left: -407, rotate: 90, size: 20 },
-          { floor: 3, top: 153, left: -369, rotate: 0, size: 74 },
-          { floor: 3, top: 186, left: -369, rotate: 0, size: 12, otherFloor: 'down' },
-          { floor: 3, top: 121, left: -406, rotate: 0, size: 12, otherFloor: 'down' },
-          { floor: 3, top: 121, left: -275, rotate: 0, size: 12, otherFloor: 'up' },
-          { floor: 3, top: 121, left: -340, rotate: 90, size: 144 },
-          { floor: 4, top: 121, left: -288, rotate: 0, size: 12, otherFloor: 'down' },
-          { floor: 4, top: 121, left: -230, rotate: 90, size: 128 }
-        ],
         spawnPoints: [
           { letter: 'A', top: -627, left: -317, description: 'North Roof', floor: 4 },
           { letter: 'B', top: 575, left: 527, description: 'South Roof', floor: 4 }
@@ -3063,9 +2246,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       villa: {
         name: 'Villa',
         imgUrlPrefix: 'villa',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -495, right: -902, height: 217, width: 462
         },
@@ -3107,46 +2287,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 148, left: 800
         },
-        ladders: [],
-        cameras: [
-          {floor: 2, top: -353, left: 381, id: 1 },
-          {floor: 2, top: -65, left: 140, id: 2 },
-          {floor: 1, top: -207, left: 254, id: 3 },
-          {floor: 1, top: 206, left: 157, id: 4 },
-          {floor: 0, top: -128, left: 288, id: 5 },
-          {outdoor: true, top: -82, left: 53, id: 6 },
-          {outdoor: true, top: 360, left: 366, id: 7 },
-          {outdoor: true, top: -73, left: 685, id: 8 }
-        ],
-        ceilingHatches: [
-          // scale is off b/w map and hatch, so rescaling to fit.
-          { floor: 1, top: -59, left: 109, width: 25, height: 25 },
-          { floor: 1, top: -304, left: 300, width: 25, height: 25 },
-          { floor: 1, top: 213, left: 360, width: 25, height: 25 },
-          { floor: 1, top: -169, left: 556, width: 25, height: 25 },
-
-          { floor: 0, top: -111, left: 296, width: 25, height: 25 },
-          { floor: 0, top: -325, left: 498, width: 25, height: 25 }
-        ],
-        skylights: [
-          {floor: 1, otherFloor: 'up', top: -176, left: 345 },
-          {floor: 2, top: -193, left: 368 }
-        ],
-        droneTunnels: [
-          { floor: 0, top: -197, left: 296, rotate: 90, size: 12 },
-          { floor: 0, top: -315, left: 521, rotate: 90, size: 57 },
-          { floor: 1, top: 274, left: 169, rotate: 0, size: 44 },
-          { floor: 1, top: 224, left: 359, rotate: 0, size: DRONE_SMALL },
-          { floor: 1, top: 89, left: 90, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: 64, left: 372, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -123, left: 491, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -155, left: 177, rotate: 90, size: DRONE_SMALL },
-          { floor: 1, top: -295, left: 235, rotate: 90, size: DRONE_SMALL },
-          { floor: 2, top: -32, left: 200, rotate: 90, size: 10 },
-          { floor: 2, top: -85, left: 227, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -279, left: 580, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: -360, left: 409, rotate: 0, size: DRONE_SMALL }
-        ],
         spawnPoints: [
           { letter: 'A', top: -371, left: -110, description: 'Main Road' },
           { letter: 'B', top: 420, left: 371, description: 'Ruins' },
@@ -3243,9 +2383,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       yacht: {
         name: 'Yacht',
         imgUrlPrefix: 'yacht',
-        objectives: [
-          'bomb', 'hostage', 'secure'
-        ],
         legend: {
           bottom: -568, right: -902, height: 217, width: 462
         },
@@ -3285,63 +2422,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
         compassPoints: {
           top: 231, left: 803
         },
-        ladders: [
-          { floor: 3, top: -11, left: 232, otherFloor: 'up' },
-          { floor: 4, top: -11, left: 232, otherFloor: 'down' },
-          { floor: 1, top: -109, left: -239, otherFloor: 'up' },
-          { floor: 2, top: -109, left: -239, otherFloor: 'down' },
-          { floor: 3, top: 116, left: -206, otherFloor: 'up' },
-          { floor: 4, top: 116, left: -206, otherFloor: 'down' },
-          { floor: 3, top: 116, left: 331, otherFloor: 'up' },
-          { floor: 4, top: 116, left: 331, otherFloor: 'down' },
-          { floor: 3, top: -93, left: 331, otherFloor: 'up' },
-          { floor: 4, top: -93, left: 331, otherFloor: 'down' },
-          { floor: 2, top: -39, left: 610, otherFloor: 'up' },
-          { floor: 3, top: -39, left: 610, otherFloor: 'down' }
-        ],
-        cameras: [
-          { floor: 4, top: 87, left: -134, id: 1 },
-          { floor: 3, top: 21, left: 264, id: 2 },
-          { floor: 3, top: 86, left: -227, id: 3 },
-          { floor: 2, top: 13, left: 262, id: 4 },
-          { floor: 2, top: 124, left: -266, id: 5 },
-          { floor: 1, top: -43, left: 63, id: 6 },
-          { floor: 3, top: 10, left: 631, id: 7 },
-          { floor: 2, otherFloor: 'up', top: 10, left: 631, id: 7 },
-          { floor: 4, otherFloor: 'down', top: 10, left: 631, id: 7 },
-          { floor: 5, otherFloor: 'down', top: 10, left: 631, id: 7 },
-          { floor: 3, top: 114, left: -477, id: 8 },
-          { floor: 2, otherFloor: 'up', top: 114, left: -477, id: 8 },
-          { floor: 4, otherFloor: 'down', top: 114, left: -477, id: 8 },
-          { floor: 5, otherFloor: 'down', top: 114, left: -477, id: 8 }
-        ],
-        ceilingHatches: [
-          { floor: 3, top: -63, left: 81 },
-          { floor: 3, top: -45, left: 189 },
-          { floor: 3, top: 0, left: 235 },
-          { floor: 2, top: -45, left: -210 },
-          { floor: 2, top: 46, left: -74 },
-          { floor: 2, top: 56, left: 25 },
-          { floor: 2, top: 71, left: 310 },
-          { floor: 2, top: -34, left: 310 },
-          { floor: 1, top: 15, left: -550 },
-          { floor: 1, top: 14, left: -328  },
-          { floor: 1, top: -53, left: 155 }
-        ],
-        skylights: [],
-        droneTunnels: [
-          { floor: 1, top: 63, left: -550, rotate: 90, size: 108 },
-          { floor: 1, top: -36, left: -550, rotate: 90, size: 108 },
-          { floor: 2, top: 103, left: -155, rotate: 0, size: DRONE_SMALL },
-          { floor: 2, top: 129, left: -289, rotate: 90, size: DRONE_MED },
-          { floor: 3, top: -83, left: -190, rotate: 0, size: DRONE_MED },
-          { floor: 3, top: -83, left: 175, rotate: 0, size: DRONE_MED },
-          { floor: 3, top: 106, left: -52, rotate: 0, size: DRONE_MED },
-          { floor: 3, top: 62, left: 177, rotate: 90, size: DRONE_MED },
-          { floor: 3, top: 106, left: 147, rotate: 0, size: DRONE_MED },
-          { floor: 3, top: 106, left: 289, rotate: 0, size: DRONE_MED },
-          { floor: 3, top: 0, left: 217, rotate: 90, size: DRONE_MED }
-        ],
         spawnPoints: [
           { letter: 'A', top: -532, left: -187, description: 'Submarine' },
           { letter: 'B', top: 413, left: -657, description: 'Zodiac' },

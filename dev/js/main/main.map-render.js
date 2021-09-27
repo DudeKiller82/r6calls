@@ -61,50 +61,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getCamerasHtml = function getCamerasHtml(cameras, mapimgUrlPrefix) {
-    var html = '',
-      inlineStyle,
-      classes,
-      grouping,
-      title,
-      tagStart,
-      tagEnd,
-      retinaUrl = (
-        window.innerWidth > RETINA_WIDTH_CUTOFF
-          && window.innerHeight > RETINA_HEIGHT_CUTOFF
-      ) ? '@2x' : '';
-
-    cameras.forEach(function(camera) {
-      inlineStyle = getPositionStyle(camera);
-      classes = 'camera ';
-      classes += getCommonClasses(camera);
-      tagStart = (camera.id && !camera.otherFloor)
-        ? '<a data-camera-id="' + camera.id + '"'
-        : '<div ';
-      tagEnd = (camera.id && !camera.otherFloor)
-        ? '</a>'
-        : '</div>';
-      html += tagStart + 'style="' + inlineStyle + '" class="' + classes + '"><span class="other-floor"></span><span class="cam-num">' + camera.id + '</span>' + tagEnd;
-    });
-    return html;
-  };
-
-  var getCeilingHatchesHtml = function getCeilingHatchesHtml(ceilingHatches) {
-    var html = '',
-      inlineStyle,
-      dimensionStyle,
-      classes;
-
-    ceilingHatches.forEach(function(hatch) {
-      inlineStyle = getPositionStyle(hatch);
-      dimensionStyle = getDimensionStyle(hatch);
-      classes = 'ceiling-hatch ';
-      classes += getCommonClasses(hatch);
-      html += '<div style="' + inlineStyle + dimensionStyle + '" class="' + classes + '"></div>';
-    });
-    return html;
-  };
-
   var getCommonClasses = function getCommonClasses(element) {
     var classes = '';
 
@@ -148,22 +104,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     html += '<p class="letter-s"><span>S</span></p>';
     html += '<p class="letter-w"><span>W</span></p>';
     html += '</div>';
-    return html;
-  };
-
-  var getDroneTunnelsHtml = function getDroneTunnelsHtml(droneTunnels) {
-    var html = '',
-      inlineStyle,
-      classes;
-
-    droneTunnels.forEach(function(droneTunnel) {
-      inlineStyle = getPositionStyle(droneTunnel) + 'height: ' + droneTunnel.size + 'px; ' + 'margin-top: -' +  Math.round(droneTunnel.size / 2) + 'px; ' +
-        getRotateCssStatements(droneTunnel.rotate);
-      classes = 'drone-tunnel ';
-      classes += getCommonClasses(droneTunnel);
-      classes += (droneTunnel.alternate) ? 'alternate ' : '';
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><span class="other-floor"></span></div>';
-    });
     return html;
   };
 
@@ -262,33 +202,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       hostageLabel = 'H' + hostage.set;
       html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + hostageLabel + '</p><span></span></div>';
     });
-    return html;
-  };
-
-  var getLaddersHtml = function getLaddersHtml(ladders) {
-    /** Generates the HTML for the given ladders
-     *
-     * Nominally called for only all the ladders of a single map.
-     *
-     * @param ladders A list of objects, each defining their location and classes, such as
-     *  what direction it leads to, or what floor it's on.
-     *
-     * @returns An HTML string contaitng a div for every ladder defining its location and classes.
-     *
-     * @see getCommonClasses
-     */
-    var html = '',
-      inlineStyle,
-      classes;
-
-    if (ladders) {
-      ladders.forEach(function(ladder) {
-        inlineStyle = getPositionStyle(ladder);
-        classes = 'ladder ';
-        classes += getCommonClasses(ladder);
-        html += '<div style="' + inlineStyle + '" class="' + classes + '"><span class="other-floor"></span></div>';
-      });
-    }
     return html;
   };
 
@@ -444,17 +357,12 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     var html = '';
 
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
-    html += getCeilingHatchesHtml(mapData.ceilingHatches);
-    html += getSkylightsHtml(mapData.skylights);
-    html += getCamerasHtml(mapData.cameras, mapData.imgUrlPrefix);
     html += getHostageObjectivesHtml(mapData.hostageObjectives);
     html += getBombObjectivesHtml(mapData.bombObjectives);
     html += getSecureObjectivesHtml(mapData.secureObjectives);
     html += getRoomLabelsHtml(mapData.roomLabels);
-    html += getDroneTunnelsHtml(mapData.droneTunnels);
     html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);
-    html += getLaddersHtml(mapData.ladders);
     html += getLegendHtml(mapData.legend);
 
     $mapElements.html(html);

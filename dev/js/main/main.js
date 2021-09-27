@@ -205,7 +205,7 @@
     var currentlySelectedMap = R6MMainControls.maps.get(),
       mapData = R6MMainData.getMapData();
 
-    R6MMainControls.objectives.populate(mapData[currentlySelectedMap].objectives);
+    R6MMainControls.objectives.populate(['bomb', 'hostage', 'secure']);
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
     R6MMainControls.toggle.populate();
     R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $svgMapWrappers, $mapPanelLabels);
