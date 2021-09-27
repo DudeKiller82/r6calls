@@ -80,18 +80,10 @@
   };
 
   var getResetDimensions = function getResetDimensions() {
-    var currentMapKey = R6MMainControls.maps.get(),
-      zoomPoints = {
-        topLeft: { top: -180, left: -312 }, // default
-        bottomRight: { top: 180, left: 312 }
-      };
-
-    if (currentMapKey) {
-      zoomPoints = $.extend(
-        zoomPoints,
-        R6MMainData.getMapData()[currentMapKey].zoomPoints
-      );
-    }
+    var zoomPoints = {
+      topLeft: { top: -180, left: -312 }, // default
+      bottomRight: { top: 180, left: 312 }
+    };
     var zoomWidth = zoomPoints.bottomRight.left - zoomPoints.topLeft.left,
       zoomHeight = zoomPoints.bottomRight.top - zoomPoints.topLeft.top,
       centerTop = Math.round(zoomPoints.bottomRight.top - (zoomHeight / 2)),

@@ -48,10 +48,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -100, left: 125, set: 3 },
           { floor: 2, top: -52, left: 138, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -368, left: -483 },
-          bottomRight: { top: 310, left: 397 }
-        },
         compassPoints: {
           top: 306, left: 662
         },
@@ -171,10 +167,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 193, left: -265, set: 3 },
           { floor: 2, top: -17, left: 388, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -426, left: -389 },
-          bottomRight: { top: 330, left: 731 }
-        },
         compassPoints: {
           top: 392, left: 699
         },
@@ -279,10 +271,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -212, left: 193, set: 3 },
           { floor: 2, top: -325, left: -103, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -443, left: -305 },
-          bottomRight: { top: 125, left: 350 }
-        },
         compassPoints: {
           top: -74, left: 660
         },
@@ -392,10 +380,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 220, left: 430, set: 3 },
           { floor: 2, top: 535, left: 215, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -130, left: 80 },
-          bottomRight: { top: 680, left: 890 }
-        },
         compassPoints: {
           top: 258, left: 1020
         },
@@ -507,10 +491,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -1, left: 14, set: 3 },
           { floor: 0, top: -174, left: 32, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -336, left: -416 },
-          bottomRight: { top: 275, left: 397 }
-        },
         compassPoints: {
           top: 503, left: 758
         },
@@ -633,10 +613,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 72, left: 229, set: 3 },
           { floor: 2, top: 203, left: -194, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -134, left: -317 },
-          bottomRight: { top: 375, left: 332 }
-        },
         compassPoints: {
           top: 522, left: 409
         },
@@ -738,10 +714,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -6, left: 326, set: 3 },
           { floor: 2, top: 0, left: 305, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -196, left: -354 },
-          bottomRight: { top: 299, left: 455 }
-        },
         compassPoints: {
           top: 314, left: 422
         },
@@ -862,10 +834,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: -241, left: -81, set: 3 },
           { floor: 1, top: 97, left: -73, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -310, left: -584 },
-          bottomRight: { top: 354, left: 183 }
-        },
         compassPoints: {
           top: 102, left: 690
         },
@@ -965,10 +933,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 108, left: 166, set: 3 },
           { floor: 1, top: -157, left: -10, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -344, left: -388 },
-          bottomRight: { top: 436, left: 522 }
-        },
         compassPoints: {
           top: 575, left: 533
         },
@@ -1091,10 +1055,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -67, left: 69, set: 3 },
           { floor: 0, top: -74, left: 79, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -280, left: -340 },
-          bottomRight: { top: 234, left: 285 }
-        },
         compassPoints: {
           top: 74, left: 569
         },
@@ -1211,10 +1171,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 70, left: -15, set: 3 },
           { floor: 2, top: 28, left: 168, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -250, left: -250 },
-          bottomRight: { top: 250, left: 250 }
-        },
         compassPoints: {
           top: 100, left: 534
         },
@@ -1316,10 +1272,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 151, left: -61, set: 3 },
           { floor: 3, top: 92, left: -58, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -209, left: -238 },
-          bottomRight: { top: 335, left: 479 }
-        },
         compassPoints: {
           top: 460, left: 390
         },
@@ -1432,10 +1384,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -168, left: 208, set: 3 },
           { floor: 2, top: -178, left: 260, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -337, left: -507 },
-          bottomRight: { top: 259, left: 547 }
-        },
         compassPoints: {
           top: 214, left: 871
         },
@@ -1570,10 +1518,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -56, left: 149, set: 3 },
           { floor: 0, top: 93, left: 94, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -355, left: -509 },
-          bottomRight: { top: 303, left: 463 }
-        },
         compassPoints: {
           top: 92, left: 863
         },
@@ -1711,10 +1655,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 325, left: 497, set: 3 },
           { floor: 1, top: 109, left: 468, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -300, left: 0 },
-          bottomRight: { top: 500, left: 500}
-        },
         compassPoints: { top: 484, left: 790 },
         spawnPoints: [
           { letter: 'A', top: -406, left: 634, description: 'Storage Yard' },
@@ -1825,10 +1765,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 31, left: 325, set: 3 },
           { floor: 2, top: 30, left: -43, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -218, left: -515 },
-          bottomRight: { top: 178, left: 482 }
-        },
         compassPoints: {
           top: 305, left: 494
         },
@@ -1922,10 +1858,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 330, left: 35, set: 3 },
           { floor: 1, top: 455, left: 555, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -105, left: -75 },
-          bottomRight: { top: 600, left: 655 }
-        },
         compassPoints: {
           top: 357, left: 722
         },
@@ -2032,10 +1964,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: 84, left: 91, set: 3 },
           { floor: 1, top: -128, left: -105, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -344, left: -303 },
-          bottomRight: { top: 283, left: 533 }
-        },
         compassPoints: {
           top: 29, left: 793
         },
@@ -2146,10 +2074,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -143, left: 223, set: 3 },
           { floor: 1, top: -143, left: -210, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -665, left: -694 },
-          bottomRight: { top: 662, left: 584 }
-        },
         compassPoints: {
           top: 380, left: 1191
         },
@@ -2280,10 +2204,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 1, top: -105, left: 260, set: 3 },
           { floor: 0, top: -161, left: 370, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { left: 0, top: -420 },
-          bottomRight: { left: 270, top: 640 }
-        },
         compassPoints: {
           top: 148, left: 800
         },
@@ -2415,10 +2335,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { floor: 2, top: 61, left: 343, set: 3 },
           { floor: 4, top: 14, left: 180, set: 4 }
         ],
-        zoomPoints: {
-          topLeft: { top: -139, left: -610 },
-          bottomRight: { top: 160, left: 590 }
-        },
         compassPoints: {
           top: 231, left: 803
         },
