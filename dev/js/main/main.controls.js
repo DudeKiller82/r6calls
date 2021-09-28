@@ -9,6 +9,17 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $toggleControl = $('#toggle-control'),
     $lockPanningControl,
     $roomLabelStylesControl,
+    $displayFloorHatch,
+    $displayCeilingHatch,
+    $displayBreakableWall,
+    $displayLineOfSightWall,
+    $displayDroneTunnel,
+    $displayLineOfSightFloor,
+    $displayObjective,
+    $displayInsertionPoint,
+    $displaySecurityCamera,
+    $displaySkylight,
+    $displayLadder,
     $mapPanelCountControl,
     $fullScreenControl,
     $menuSelectMapsControl,
@@ -190,6 +201,21 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     html += '<label>Room label style</label>';
     html += '<select id="room-label-style"></select>';
 
+    html += '<label>Elements to display</label>';
+    html += '<div class="display-wrapper">';
+    html += '<input type="checkbox" checked="checked" id="display-floor-hatch">Floor hatch</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-ceiling-hatch">Ceiling hatch</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-breakable-wall">Breakable wall</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-line-of-sight-wall">Line of sight or half wall</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-drone-tunnel">Drone tunnel</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-line-of-sight-floor">Line of sight floor</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-objective">Objective</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-insertion-point">Insertion point</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-security-camera">Security camera</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-skylight">Skylight</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-ladder">Ladder</input><br>';
+    html += '</div>';
+
     html += '</div>';
 
     return html;
@@ -298,6 +324,17 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $menuControl.find('.menu-text').html('Menu');
     $roomLabelStylesControl = $('#room-label-style');
     populateRoomLabelStyleOptions($roomLabelStylesControl, roomLabelStyles);
+    $displayFloorHatch = $('#display-floorfhatch');
+    $displayCeilingHatch = $('#display-ceiling-hatch');
+    $displayBreakableWall = $('#display-breakable-wall');
+    $displayLineOfSightWall = $('#display-lineofsightwall');
+    $displayDroneTunnel = $('#display-drone-tunnel');
+    $displayLineOfSightFloor = $('#display-line-of-sight-floor');
+    $displayObjective = $('#display-objective');
+    $displayInsertionPoint = $('#display-insertion-point');
+    $displaySecurityCamera = $('#display-security-camera');
+    $displaySkylight = $('#display-skylight');
+    $displayLadder = $('#display-ladder');
     $mapPanelCountControl = $('#map-pane-count');
     $lockPanningControl = $('#lock-panning');
     $fullScreenControl = $('#full-screen');
