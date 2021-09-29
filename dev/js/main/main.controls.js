@@ -9,13 +9,15 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $toggleControl = $('#toggle-control'),
     $lockPanningControl,
     $roomLabelStylesControl,
+    $displayBomb,
+    $displaySecure,
+    $displayHostage,
     $displayFloorHatch,
     $displayCeilingHatch,
     $displayBreakableWall,
     $displayLineOfSightWall,
     $displayDroneTunnel,
     $displayLineOfSightFloor,
-    $displayObjective,
     $displayInsertionPoint,
     $displaySecurityCamera,
     $displaySkylight,
@@ -202,14 +204,16 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     html += '<select id="room-label-style"></select>';
 
     html += '<label>Elements to display</label>';
-    html += '<div class="display-wrapper">';
+    html += '<div class="checkbox-wrapper">';
+    html += '<input type="checkbox" checked="checked" id="display-bomb">Bomb</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-secure">Secure</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-hostage">Hostage</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-floor-hatch">Floor hatch</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-ceiling-hatch">Ceiling hatch</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-breakable-wall">Breakable wall</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-line-of-sight-wall">Line of sight or half wall</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-drone-tunnel">Drone tunnel</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-line-of-sight-floor">Line of sight floor</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-objective">Objective</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-insertion-point">Insertion point</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-security-camera">Security camera</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-skylight">Skylight</input><br>';
@@ -324,13 +328,15 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $menuControl.find('.menu-text').html('Menu');
     $roomLabelStylesControl = $('#room-label-style');
     populateRoomLabelStyleOptions($roomLabelStylesControl, roomLabelStyles);
-    $displayFloorHatch = $('#display-floorfhatch');
+    $displayBomb = $('#display-bomb');
+    $displaySecure = $('#display-secure');
+    $displayHostage = $('#display-hostage');
+    $displayFloorHatch = $('#display-floor-hatch');
     $displayCeilingHatch = $('#display-ceiling-hatch');
     $displayBreakableWall = $('#display-breakable-wall');
-    $displayLineOfSightWall = $('#display-lineofsightwall');
+    $displayLineOfSightWall = $('#display-line-of-sight-wall');
     $displayDroneTunnel = $('#display-drone-tunnel');
     $displayLineOfSightFloor = $('#display-line-of-sight-floor');
-    $displayObjective = $('#display-objective');
     $displayInsertionPoint = $('#display-insertion-point');
     $displaySecurityCamera = $('#display-security-camera');
     $displaySkylight = $('#display-skylight');

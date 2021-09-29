@@ -3,8 +3,6 @@
 var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var SVG_WIDTH = 2560,
     SVG_HEIGHT = 1474,
-    RETINA_WIDTH_CUTOFF = 1280,
-    RETINA_HEIGHT_CUTOFF = 720,
     SVG_DIM = {
       WIDTH: SVG_WIDTH,
       HEIGHT: SVG_HEIGHT,
@@ -44,22 +42,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       DisplayNone: 'room-label-display-none',
       Learning: 'room-label-learning'
     };
-
-  var getBombObjectivesHtml = function getBombObjectivesHtml(bombObjectives) {
-    var html = '',
-      classes,
-      inlineStyle,
-      bombLabel;
-
-    bombObjectives.forEach(function(bomb) {
-      inlineStyle = getPositionStyle(bomb);
-      classes = 'objective bomb ';
-      classes += getCommonClasses(bomb);
-      bombLabel = 'B' + bomb.set + bomb.letter;
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><span></span><p>' + bombLabel + '</p></div>';
-    });
-    return html;
-  };
 
   var getCommonClasses = function getCommonClasses(element) {
     var classes = '';
@@ -144,7 +126,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       inlineStyle = getPositionStyle(floor);
       classes = floor.background ? 'background ' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
       html += '<img src="' + imgSrc + '.png" style="' + inlineStyle + '" class="' + classes + '"></img>';
-      if (!floor.background) {
+      if (floor.background) {
+        html += '<img src="' + imgSrc + '-spw.png" style="' + inlineStyle + '" class="' + classes + ' spw"></img>';
+      } else {
         html += '<img src="' + imgSrc + '-bw.png" style="' + inlineStyle + '" class="' + classes + ' bw"></img>';
         html += '<img src="' + imgSrc + '-ch.png" style="' + inlineStyle + '" class="' + classes + ' ch"></img>';
         html += '<img src="' + imgSrc + '-dt.png" style="' + inlineStyle + '" class="' + classes + ' dt"></img>';
@@ -152,6 +136,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
         html += '<img src="' + imgSrc + '-losf.png" style="' + inlineStyle + '" class="' + classes + ' losf"></img>';
         html += '<img src="' + imgSrc + '-losw.png" style="' + inlineStyle + '" class="' + classes + ' losw"></img>';
         html += '<img src="' + imgSrc + '-sl.png" style="' + inlineStyle + '" class="' + classes + ' sl"></img>';
+        html += '<img src="' + imgSrc + '-bmb.png" style="' + inlineStyle + '" class="' + classes + ' lbmb"></img>';
+        html += '<img src="' + imgSrc + '-sec.png" style="' + inlineStyle + '" class="' + classes + ' sec"></img>';
+        html += '<img src="' + imgSrc + '-hst.png" style="' + inlineStyle + '" class="' + classes + ' hst"></img>';
       }
       html += '<img src="' + imgSrc + '-cam.png" style="' + inlineStyle + '" class="' + classes + ' cam"></img>';
       html += '<img src="' + imgSrc + '-lad.png" style="' + inlineStyle + '" class="' + classes + ' lad"></img>';
@@ -162,7 +149,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       // just load from cache, it shouldnt impact performance too much.
       // This allows us to remove the loading spinner when all the deferrers are resolved, as
       // they all resolve once all the images load in.
-      $('<img/>').attr('src', imgSrc).load(function() {
+      $('<img/>').attr('src', imgSrc + '.png').load(function() {
         $(this).remove(); // prevent memory leaks
         currentDeferr.resolve();
       });
@@ -310,22 +297,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return css;
   };
 
-  var getSecureObjectivesHtml = function getSecureObjectiveHtml(secureObjectives) {
-    var html = '',
-      inlineStyle,
-      classes,
-      secureLabel;
-
-    secureObjectives.forEach(function(secure) {
-      inlineStyle = getPositionStyle(secure);
-      classes = 'objective secure ';
-      classes += getCommonClasses(secure);
-      secureLabel = 'S' + secure.set;
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + secureLabel + '</p><span></span></div>';
-    });
-    return html;
-  };
-
   var getSkylightsHtml = function getSkylightsHtml(skylights) {
     var html = '',
       inlineStyle,
@@ -348,18 +319,15 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     spawnPoints.forEach(function(spawnPoint) {
       inlineStyle = getPositionStyle(spawnPoint);
       classes = 'spawn-point ' + getCommonClasses(spawnPoint);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><div class="spawn-wrapper"><div class="spawn-letter"><p>' + spawnPoint.letter + '</p></div><div class="spawn-description"><p>' + spawnPoint.description + '</p></div></div></div>';
+      html += '</div><div class="spawn-description"><p>' + spawnPoint.description + '</p></div></div></div>';
     });
     return html;
   };
 
-  var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $svgMapWrappers, $mapPanelLabels) {
+  var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $mapPanelLabels) {
     var html = '';
 
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
-    html += getHostageObjectivesHtml(mapData.hostageObjectives);
-    html += getBombObjectivesHtml(mapData.bombObjectives);
-    html += getSecureObjectivesHtml(mapData.secureObjectives);
     html += getRoomLabelsHtml(mapData.roomLabels);
     html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);

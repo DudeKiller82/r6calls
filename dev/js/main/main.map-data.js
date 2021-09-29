@@ -26,28 +26,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -538, left: -587, width: 1024, name: floorTerms.secondFloor },
           { index: 3, top: -538, left: -587, width: 1024, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 0, top: -160, left: -69, set: 1 },
-          { floor: 1, top: -26, left: -15, set: 2 },
-          { floor: 1, top: 65, left: 281, set: 3 },
-          { floor: 2, top: -102, left: 138, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: 8, left: 193, set: 4, letter: 'A' },
-          { floor: 0, top: 34, left: -31, set: 4, letter: 'B' },
-          { floor: 1, top: -26, left: 26, set: 3, letter: 'A' },
-          { floor: 1, top: -100, left: 169, set: 3, letter: 'B' },
-          { floor: 1, top: 160, left: 97, set: 2, letter: 'A' },
-          { floor: 1, top: 100, left: 345, set: 2, letter: 'B' },
-          { floor: 2, top: -52, left: -13, set: 1, letter: 'B' },
-          { floor: 2, top: -151, left: 138, set: 1, letter: 'A' }
-        ],
-        secureObjectives: [
-          { floor: 0, top: 10, left: -67, set: 1 },
-          { floor: 1, top: 209, left: 113, set: 2 },
-          { floor: 1, top: -100, left: 125, set: 3 },
-          { floor: 2, top: -52, left: 138, set: 4 }
-        ],
         compassPoints: {
           top: 306, left: 662
         },
@@ -144,29 +122,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -466, left: -454, width: 1236, name: floorTerms.secondFloor },
           { index: 3, top: -466, left: -454, width: 1236, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 1, top: -96, left: -296, set: 1 },
-          { floor: 1, top: -199, left: 643, set: 2 },
-          { floor: 2, top: 265, left: 336, set: 3 },
-          { floor: 2, top: -171, left: 577, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -116, left: 577, set: 1, letter: 'A' },
-          { floor: 2, top: 92, left: 596, set: 1, letter: 'B' },
-          { floor: 1, top: 102, left: 524, set: 2, letter: 'A' },
-          { floor: 1, top: -199, left: 573, set: 2, letter: 'B' },
-          { floor: 1, top: -63, left: -255, set: 3, letter: 'A' },
-          { floor: 1, top: 293, left: -255, set: 3, letter: 'B' },
-          { floor: 2, top: 148, left: -265, set: 4, letter: 'A' },
-          { floor: 2, top: -18, left: -298, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: -172, left: -353, set: 1, otherFloor: 'up' },
-          { floor: 2, top: -172, left: -353, set: 1, otherFloor: 'down' },
-          { floor: 1, top: 125, left: 312, set: 2 },
-          { floor: 2, top: 193, left: -265, set: 3 },
-          { floor: 2, top: -17, left: 388, set: 4 }
-        ],
         compassPoints: {
           top: 392, left: 699
         },
@@ -248,28 +203,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -560, left: -744, width: 1517, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -475, left: -307, width: 681, name: floorTerms.secondFloor },
           { index: 3, top: -475, left: -307, width: 681, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 1, top: -292, left: 23, set: 1 },
-          { floor: 1, top: -108, left: -125, set: 2 },
-          { floor: 2, top: -272, left: 193, set: 3 },
-          { floor: 2, top: 34, left: -118, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 1, top: -123, left: -249, set: 1, letter: 'A' },
-          { floor: 1, top: -22, left: -123, set: 1, letter: 'B' },
-          { floor: 1, top: -337, left: 23, set: 2, letter: 'A' },
-          { floor: 1, top: -337, left: -213, set: 2, letter: 'B' },
-          { floor: 1, top: -318, left: 156, set: 3, letter: 'A' },
-          { floor: 1, top: -186, left: 213, set: 3, letter: 'B' },
-          { floor: 2, top: -325, left: -67, set: 4, letter: 'A' },
-          { floor: 2, top: -321, left: 125, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: -186, left: 249, set: 1 },
-          { floor: 1, top: -282, left: -12, set: 2 },
-          { floor: 2, top: -212, left: 193, set: 3 },
-          { floor: 2, top: -325, left: -103, set: 4 }
         ],
         compassPoints: {
           top: -74, left: 660
@@ -358,28 +291,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -128, left: 126, width: 723, name: floorTerms.secondFloor },
           { index: 3, top: -128, left: 126, width: 723, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 0, top: 500, left: 440, set: 1 },
-          { floor: 1, top: 476, left: 528, set: 2 },
-          { floor: 2, top: 135, left: 650, set: 3 },
-          { floor: 2, top: 530, left: 240, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: 542, left: 423, set: 4, letter: 'B' },
-          { floor: 0, top: 391, left: 514, set: 4, letter: 'A' },
-          { floor: 1, top: 92, left: 637, set: 3, letter: 'B' },
-          { floor: 1, top: 265, left: 541, set: 3, letter: 'A' },
-          { floor: 1, top: 490, left: 428, set: 2, letter: 'B' },
-          { floor: 1, top: 524, left: 217, set: 2, letter: 'A' },
-          { floor: 2, top: 115, left: 640, set: 1, letter: 'B' },
-          { floor: 2, top: 215, left: 566, set: 1, letter: 'A' }
-        ],
-        secureObjectives: [
-          { floor: 0, top: 305, left: 583, set: 1 },
-          { floor: 1, top: 438, left: 478, set: 2 },
-          { floor: 2, top: 220, left: 430, set: 3 },
-          { floor: 2, top: 535, left: 215, set: 4 }
-        ],
         compassPoints: {
           top: 258, left: 1020
         },
@@ -467,29 +378,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -494, left: -449, width: 840, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -494, left: -449, width: 840, name: floorTerms.secondFloor },
           { index: 3, top: -494, left: -449, width: 840, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: -13, left: -17 , set: 1 },
-          { floor: 2, top: -34, left: 173 , set: 2 },
-          { floor: 1, top: 94, left: -281 , set: 3 },
-          { floor: 0, top: -33, left: 9 , set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -1, left: 17, set: 1, letter: 'A' },
-          { floor: 2, top: -12, left: -136, set: 1, letter: 'B' },
-          { floor: 2, top: 6, left: 176, set: 2, letter: 'A' },
-          { floor: 2, top: 106, left: 187, set: 2, letter: 'B' },
-
-          { floor: 1, top: -3, left: -102, set: 3, letter: 'A' },
-          { floor: 1, top: -35, left: 144, set: 3, letter: 'B' },
-          { floor: 0, top: -61, left: 31, set: 4, letter: 'A' },
-          { floor: 0, top: -159, left: 47, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: 201, left: 227, set: 1 },
-          { floor: 1, top: 41, left: -82, set: 2 },
-          { floor: 2, top: -1, left: 14, set: 3 },
-          { floor: 0, top: -174, left: 32, set: 4 }
         ],
         compassPoints: {
           top: 503, left: 758
@@ -591,28 +479,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -210, left: -365, width: 740, name: floorTerms.secondFloor },
           { index: 3, top: -210, left: -365, width: 740, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 2, top: -46, left: 53, set: 1 },
-          { floor: 2, top: 148, left: 229, set: 2 },
-          { floor: 1, top: -72, left: 80, set: 3 },
-          { floor: 1, top: 150, left: -95, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 45, left: -137, set: 1, letter: 'B' },
-          { floor: 2, top: 203, left: -139, set: 1, letter: 'A' },
-          { floor: 2, top: 14, left: 279, set: 2, letter: 'B' },
-          { floor: 2, top: 148, left: 264, set: 2, letter: 'A' },
-          { floor: 1, top: -63, left: 165, set: 3, letter: 'B' },
-          { floor: 1, top: -18, left: 63, set: 3, letter: 'A' },
-          { floor: 1, top: 181, left: -153, set: 4, letter: 'A' },
-          { floor: 1, top: -24, left: -248, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: 181, left: -189, set: 1 },
-          { floor: 1, top: -18, left: 15, set: 2 },
-          { floor: 2, top: 72, left: 229, set: 3 },
-          { floor: 2, top: 203, left: -194, set: 4 }
-        ],
         compassPoints: {
           top: 522, left: 409
         },
@@ -691,28 +557,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -222, left: -448, width: 943, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -222, left: -448, width: 943, name: floorTerms.secondFloor },
           { index: 3, top: -222, left: -448, width: 943, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 1, top: 41, left: 203, set: 1 },
-          { floor: 2, top: 121, left: -294, set: 2 },
-          { floor: 2, top: 45, left: 328, set: 3 },
-          { floor: 0, top: -34, left: 328, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: -34, left: 292, set: 4, letter: 'A' },
-          { floor: 1, top: 75, left: 115, set: 4, letter: 'B' },
-          { floor: 0, top: 56, left: -239, set: 3, letter: 'B' },
-          { floor: 0, top: 130, left: -29, set: 3, letter: 'A' },
-          { floor: 1, top: 153, left: -255, set: 2, letter: 'A' },
-          { floor: 1, top: 153, left: 11, set: 2, letter: 'B' },
-          { floor: 2, top: 167, left: 11, set: 1, letter: 'A' },
-          { floor: 2, top: 121, left: -256, set: 1, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 0, top: -26, left: -183, set: 1 },
-          { floor: 0, top: -34, left: 364, set: 2 },
-          { floor: 1, top: -6, left: 326, set: 3 },
-          { floor: 2, top: 0, left: 305, set: 4 }
         ],
         compassPoints: {
           top: 314, left: 422
@@ -812,28 +656,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -450, left: -532, width: 883, name: floorTerms.thirdFloor },
           { index: 4, top: -450, left: -532, width: 883, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 2, top: -56, left: -99, set: 1 },
-          { floor: 2, top: 144, left: -5, set: 2 },
-          { floor: 1, top: -69, left: -18, set: 3 },
-          { floor: 1, top: 133, left: -61, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -182, left: 61, set: 1, letter: 'A' },
-          { floor: 2, top: -48, left: 7, set: 1, letter: 'B' },
-          { floor: 2, top: 145, left: -35, set: 2, letter: 'A' },
-          { floor: 2, top: -20, left: 7, set: 2, letter: 'B' },
-          { floor: 1, top: 199, left: -27, set: 3, letter: 'A' },
-          { floor: 1, top: 75, left: 4, set: 3, letter: 'B' },
-          { floor: 1, top: -62, left: -211, set: 4, letter: 'A' },
-          { floor: 1, top: -238, left: -79, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: -116, left: 80, set: 1 },
-          { floor: 1, top: -69, left: -47, set: 2 },
-          { floor: 2, top: -241, left: -81, set: 3 },
-          { floor: 1, top: 97, left: -73, set: 4 }
-        ],
         compassPoints: {
           top: 102, left: 690
         },
@@ -910,28 +732,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -824, left: -603, width: 1252, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -370, left: -362, width: 946, name: floorTerms.secondFloor },
           { index: 3, top: -370, left: -362, width: 946, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: -36, left: -25, set: 1 },
-          { floor: 2, top: 204, left: 215, set: 2 },
-          { floor: 1, top: 37, left: 63, set: 3 },
-          { floor: 1, top: 141, left: -202, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -161, left: -178, set: 1, letter: 'B' },
-          { floor: 2, top: -178, left: 1, set: 1, letter: 'A' },
-          { floor: 2, top: -4, left: 144, set: 2, letter: 'B' },
-          { floor: 2, top: 258, left: 13, set: 2, letter: 'A' },
-          { floor: 1, top: 108, left: 196, set: 3, letter: 'B' },
-          { floor: 1, top: 37, left: 93, set: 3, letter: 'A' },
-          { floor: 1, top: -64, left: -268, set: 4, letter: 'B' },
-          { floor: 1, top: 141, left: -232, set: 4, letter: 'A' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: -151, left: -148, set: 1 },
-          { floor: 2, top: 142, left: 54, set: 2 },
-          { floor: 1, top: 108, left: 166, set: 3 },
-          { floor: 1, top: -157, left: -10, set: 4 }
         ],
         compassPoints: {
           top: 575, left: 533
@@ -1033,28 +833,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -292, left: -277, width: 514, name: floorTerms.thirdFloor },
           { index: 4, top: -292, left: -277, width: 514, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 3, top: 58, left: -30, set: 1 },
-          { floor: 2, top: -59, left: 102, set: 2 },
-          { floor: 1, top: 83, left: -76, set: 3 },
-          { floor: 0, top: 73, left: -117, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: 58, left: -37, set: 4, letter: 'B' },
-          { floor: 0, top: -119, left: -100, set: 4, letter: 'A' },
-          { floor: 1, top: 72, left: -35, set: 3, letter: 'A' },
-          { floor: 1, top: 72, left: 73, set: 3, letter: 'B' },
-          { floor: 2, top: -37, left: 147, set: 2, letter: 'B' },
-          { floor: 2, top: -133, left: -9, set: 2, letter: 'A' },
-          { floor: 3, top: 58, left: -60, set: 1, letter: 'B' },
-          { floor: 3, top: -198, left: -64, set: 1, letter: 'A' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 112, left: -47, set: 1 },
-          { floor: 2, top: -93, left: -9, set: 2 },
-          { floor: 1, top: -67, left: 69, set: 3 },
-          { floor: 0, top: -74, left: 79, set: 4 }
-        ],
         compassPoints: {
           top: 74, left: 569
         },
@@ -1149,28 +927,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -283, left: -204, width: 515, name: floorTerms.secondFloor },
           { index: 3, top: -283, left: -204, width: 515, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 0, top: 56, left: 5, set: 1 },
-          { floor: 1, top: 16, left: 198, set: 2 },
-          { floor: 2, top: -140, left: -55, set: 3 },
-          { floor: 2, top: 28, left: 203, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: -16, left: 123, set: 4, letter: 'A' },
-          { floor: 0, top: -115, left: -68, set: 4, letter: 'B' },
-          { floor: 1, top: 160, left: 62, set: 3, letter: 'A' },
-          { floor: 1, top: 144, left: -70, set: 3, letter: 'B' },
-          { floor: 2, top: 28, left: 133, set: 2, letter: 'A' },
-          { floor: 2, top: 70, left: -50, set: 2, letter: 'B' },
-          { floor: 2, top: 70, left: -85, set: 1, letter: 'A' },
-          { floor: 2, top: -140, left: -90, set: 1, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 0, top: -16, left: 158, set: 1 },
-          { floor: 1, top: -114, left: -71, set: 2 },
-          { floor: 2, top: 70, left: -15, set: 3 },
-          { floor: 2, top: 28, left: 168, set: 4 }
-        ],
         compassPoints: {
           top: 100, left: 534
         },
@@ -1249,28 +1005,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -193, left: -242, width: 726, name: floorTerms.secondFloor },
           { index: 3, top: -193, left: -242, width: 726, name: floorTerms.thirdFloor },
           { index: 4, top: -193, left: -242, width: 726, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 1, top: 174, left: 9, set: 1 },
-          { floor: 2, top: 70, left: 307, set: 2 },
-          { floor: 2, top: 151, left: 34, set: 3 },
-          { floor: 3, top: 178, left: 221, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 1, top: 151, left: -32, set: 4, letter: 'A' },
-          { floor: 1, top: 120, left: 129, set: 4, letter: 'B' },
-          { floor: 2, top: 207, left: 174, set: 3, letter: 'A' },
-          { floor: 2, top: 25, left: 242, set: 3, letter: 'B' },
-          { floor: 2, top: 59, left: 25, set: 2, letter: 'A' },
-          { floor: 2, top: 180, left: 174, set: 2, letter: 'B' },
-          { floor: 3, top: 101, left: 318, set: 1, letter: 'A' },
-          { floor: 3, top: -38, left: 192, set: 1, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: 163, left: -9, set: 1 },
-          { floor: 2, top: 23, left: 270, set: 2 },
-          { floor: 2, top: 151, left: -61, set: 3 },
-          { floor: 3, top: 92, left: -58, set: 4 }
         ],
         compassPoints: {
           top: 460, left: 390
@@ -1361,28 +1095,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -364, left: -382, width: 843, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -364, left: -382, width: 843, name: floorTerms.secondFloor },
           { index: 3, top: -364, left: -382, width: 843, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 0, top: -30, left: -312, set: 1 },
-          { floor: 1, top: -39, left: -305, set: 2 },
-          { floor: 1, top: -168, left: 213, set: 3 },
-          { floor: 2, top: -172, left: 135, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 0, top: -30, left: -283, set: 4, letter: 'A' },
-          { floor: 0, top: -95, left: -334, set: 4, letter: 'B' },
-          { floor: 1, top: -39, left: -295, set: 3, letter: 'A' },
-          { floor: 1, top: -189, left: -149, set: 3, letter: 'B' },
-          { floor: 1, top: -246, left: 196, set: 2, letter: 'A' },
-          { floor: 1, top: -114, left: 84, set: 2, letter: 'B' },
-          { floor: 2, top: -172, left: 140, set: 1, letter: 'A' },
-          { floor: 2, top: -178, left: 265, set: 1, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 0, top: -30, left: -288, set: 1 },
-          { floor: 1, top: -39, left: -300, set: 2 },
-          { floor: 1, top: -168, left: 208, set: 3 },
-          { floor: 2, top: -178, left: 260, set: 4 }
         ],
         compassPoints: {
           top: 214, left: 871
@@ -1495,28 +1207,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -312, left: -418, width: 811, name: floorTerms.secondFloor },
           { index: 3, top: -312, left: -418, width: 811, name: floorTerms.thirdFloor },
           { index: 4, top: -312, left: -418, width: 811, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 118, left: -32, set: 1 },
-          { floor: 1, top: -84, left: 161, set: 2 },
-          { floor: 1, top: 12, left: -11, set: 3 },
-          { floor: 0, top: -37, left: 152, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 161, left: -32, set: 1, letter: 'A' },
-          { floor: 2, top: 27, left: 29, set: 1, letter: 'B' },
-          { floor: 1, top: -35, left: -198, set: 2, letter: 'A' },
-          { floor: 1, top: -3, left: -14, set: 2, letter: 'B' },
-          { floor: 1, top: -104, left: 122, set: 3, letter: 'A' },
-          { floor: 1, top: 24, left: -14, set: 3, letter: 'B' },
-          { floor: 0, top: 118, left: 89, set: 4, letter: 'A' },
-          { floor: 0, top: -40, left: 163, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 94, left: 54, set: 1 },
-          { floor: 1, top: -17, left: -195, set: 2 },
-          { floor: 1, top: -56, left: 149, set: 3 },
-          { floor: 0, top: 93, left: 94, set: 4 }
         ],
         compassPoints: {
           top: 92, left: 863
@@ -1633,28 +1323,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -162, left: 13, width: 692, name: floorTerms.secondFloor },
           { index: 3, top: -162, left: 13, width: 692, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 2, top: -43, left: 275, set: 1 },
-          { floor: 2, top: 187, left: 488, set: 2 },
-          { floor: 1, top: -48, left: 331, set: 3 },
-          { floor: 1, top: 267, left: 632, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -63, left: 275, set: 1, letter: 'A'  },
-          { floor: 2, top: 10, left: 388, set: 1, letter: 'B'  },
-          { floor: 2, top: 101, left: 566, set: 2, letter: 'A'  },
-          { floor: 2, top: 211, left: 493, set: 2, letter: 'B'  },
-          { floor: 1, top: -19, left: 221, set: 3, letter: 'A'  },
-          { floor: 1, top: -25, left: 309, set: 3, letter: 'B'  },
-          { floor: 1, top: 189, left: 609, set: 4, letter: 'A'  },
-          { floor: 1, top: 210, left: 465, set: 4, letter: 'B'  }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 4, left: 144, set: 1 },
-          { floor: 2, top: 192, left: 464, set: 2 },
-          { floor: 1, top: 325, left: 497, set: 3 },
-          { floor: 1, top: 109, left: 468, set: 4 }
-        ],
         compassPoints: { top: 484, left: 790 },
         spawnPoints: [
           { letter: 'A', top: -406, left: 634, description: 'Storage Yard' },
@@ -1745,26 +1413,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -91, left: -655, width: 1194, name: floorTerms.thirdFloor },
           { index: 4, top: -91, left: -655, width: 1194, name: floorTerms.roof }
         ],
-        hostageObjectives: [
-          { floor: 2, top: 30, left: 358, set: 1 },
-          { floor: 2, top: -12, left: -278, set: 2 },
-          { floor: 1, top: -47, left: 75, set: 3 },
-          { floor: 2, top: 30, left: -15, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 1, top: -10, left: 103, set: 3, letter: 'B' },
-          { floor: 1, top: -33, left: -203, set: 3, letter: 'A' },
-          { floor: 2, top: 31, left: 293, set: 1, letter: 'B' },
-          { floor: 2, top: -28, left: 459, set: 1, letter: 'A' },
-          { floor: 2, top: 30, left: 14, set: 2, letter: 'A' },
-          { floor: 2, top: -45, left: -105, set: 2, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 1, top: -10, left: 75, set: 1 },
-          { floor: 2, top: -45, left: -140, set: 2 },
-          { floor: 2, top: 31, left: 325, set: 3 },
-          { floor: 2, top: 30, left: -43, set: 4 }
-        ],
         compassPoints: {
           top: 305, left: 494
         },
@@ -1835,28 +1483,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -165, left: -411, width: 1221, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -115, left: -84, width: 851, name: floorTerms.secondFloor },
           { index: 3, top: -115, left: -84, width: 851, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 295, left: 200, set: 1 },
-          { floor: 2, top: 390, left: 500, set: 2 },
-          { floor: 1, top: 340, left: 45, set: 3 },
-          { floor: 1, top: 495, left: 455, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 320, left: 175, set: 1, letter: 'A' },
-          { floor: 2, top: 285, left: 30, set: 1, letter: 'B' },
-          { floor: 2, top: 500, left: 545, set: 2, letter: 'A' },
-          { floor: 2, top: 385, left: 495, set: 2, letter: 'B' },
-          { floor: 1, top: 335, left: 40, set: 3, letter: 'A' },
-          { floor: 1, top: 435, left: 50, set: 3, letter: 'B' },
-          { floor: 1, top: 450, left: 550, set: 4, letter: 'A' },
-          { floor: 1, top: 490, left: 450, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 290, left: 35, set: 1 },
-          { floor: 2, top: 525, left: 520, set: 2 },
-          { floor: 1, top: 330, left: 35, set: 3 },
-          { floor: 1, top: 455, left: 555, set: 4 }
         ],
         compassPoints: {
           top: 357, left: 722
@@ -1941,28 +1567,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -455, left: -655, width: 1544, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -305, left: -292, width: 813, name: floorTerms.secondFloor },
           { index: 3, top: -305, left: -292, width: 813, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 123, left: 149, set: 1 },
-          { floor: 2, top: 118, left: 1, set: 2 },
-          { floor: 1, top: -86, left: 102, set: 3 },
-          { floor: 1, top: -97, left: -146, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: -99, left: 166, set: 1, letter: 'A' },
-          { floor: 2, top: 56, left: 111, set: 1, letter: 'B' },
-          { floor: 2, top: -8, left: -16, set: 2, letter: 'A' },
-          { floor: 2, top: 111, left: 46, set: 2, letter: 'B' },
-          { floor: 1, top: 99, left: 114, set: 3, letter: 'A' },
-          { floor: 1, top: -70, left: 183, set: 3, letter: 'B' },
-          { floor: 1, top: -101, left: -109, set: 4, letter: 'A' },
-          { floor: 1, top: -207, left: -135, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: -99, left: 177, set: 1 },
-          { floor: 2, top: -38, left: -24, set: 2 },
-          { floor: 1, top: 84, left: 91, set: 3 },
-          { floor: 1, top: -128, left: -105, set: 4 }
         ],
         compassPoints: {
           top: 29, left: 793
@@ -2051,28 +1655,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -715, left: -715, name: floorTerms.secondFloor, default: true },
           { index: 3, top: -715, left: -1115, name: floorTerms.thirdFloor },
           { index: 4, top: -715, left: -1115, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 331, left: -257, set: 1 },
-          { floor: 2, top: -186, left: 253, set: 2 },
-          { floor: 1, top: -72, left: -171, set: 3 },
-          { floor: 1, top: -177, left: 376, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 8, left: -344, set: 1, letter: 'A' },
-          { floor: 2, top: -210, left: -344, set: 1, letter: 'B' },
-          { floor: 2, top: -130, left: 253, set: 2, letter: 'A' },
-          { floor: 2, top: 18, left: 146, set: 2, letter: 'B' },
-          { floor: 1, top: -221, left: 193, set: 3, letter: 'A' },
-          { floor: 1, top: 21, left: 193, set: 3, letter: 'B' },
-          { floor: 1, top: -143, left: -132, set: 4, letter: 'A' },
-          { floor: 1, top: -72, left: -352, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: -152, left: 208, set: 1 },
-          { floor: 2, top: 502, left: 64, set: 2 },
-          { floor: 1, top: -143, left: 223, set: 3 },
-          { floor: 1, top: -143, left: -210, set: 4 }
         ],
         compassPoints: {
           top: 380, left: 1191
@@ -2178,31 +1760,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -495, left: 16, width: 624, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -495, left: 16, width: 624, name: floorTerms.secondFloor },
           { index: 3, top: -495, left: 16, width: 624, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 2, top: 62, left: 284, set: 1 },
-          { floor: 2, top: -315, left: 347, set: 2 },
-          { floor: 1, top: 100, left: 295, set: 3 },
-          { floor: 0, top: -197, left: 487, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 2, top: 103, left: 191, set: 1, letter: 'A' },
-          { floor: 2, top: 62, left: 324, set: 1, letter: 'B' },
-
-          { floor: 2, top: -204, left: 417, set: 2, letter: 'A' },
-          { floor: 2, top: -204, left: 306, set: 2, letter: 'B' },
-
-          { floor: 1, top: -105, left: 220, set: 3, letter: 'A' },
-          { floor: 1, top: 75, left: 145, set: 3, letter: 'B' },
-
-          { floor: 1, top: -333, left: 417, set: 4, letter: 'A' },
-          { floor: 1, top: -225, left: 428, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 2, top: 170, left: 309, set: 1 },
-          { floor: 2, top: -205, left: 529, set: 2 },
-          { floor: 1, top: -105, left: 260, set: 3 },
-          { floor: 0, top: -161, left: 370, set: 4 }
         ],
         compassPoints: {
           top: 148, left: 800
@@ -2312,28 +1869,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -175, left: -697, width: 1567, name: floorTerms.thirdFloor },
           { index: 4, top: -175, left: -697, width: 1567, name: floorTerms.fourthFloor },
           { index: 5, top: -175, left: -697, width: 1567, name: floorTerms.roof }
-        ],
-        hostageObjectives: [
-          { floor: 4, top: 13, left: 16, set: 1 },
-          { floor: 3, top: -55, left: 129, set: 2 },
-          { floor: 2, top: 93, left: 81, set: 3 },
-          { floor: 1, top: -24, left: -415, set: 4 }
-        ],
-        bombObjectives: [
-          { floor: 4, top: 14, left: 141, set: 1, letter: 'A' },
-          { floor: 4, top: -32, left: -6, set: 1, letter: 'B' },
-          { floor: 2, top: 11, left: -297, set: 2, letter: 'A' },
-          { floor: 2, top: 9, left: -101, set: 2, letter: 'B' },
-          { floor: 2, top: 93, left: 45, set: 3, letter: 'A' },
-          { floor: 2, top: -86, left: 52, set: 3, letter: 'B' },
-          { floor: 1, top: -95, left: -275, set: 4, letter: 'A' },
-          { floor: 1, top: 116, left: -259, set: 4, letter: 'B' }
-        ],
-        secureObjectives: [
-          { floor: 3, top: -6, left: 31, set: 1 },
-          { floor: 2, top: 33, left: -150, set: 2 },
-          { floor: 2, top: 61, left: 343, set: 3 },
-          { floor: 4, top: 14, left: 180, set: 4 }
         ],
         compassPoints: {
           top: 231, left: 803

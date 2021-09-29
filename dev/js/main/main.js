@@ -7,7 +7,6 @@
     $mapPanelWrappers,
     $mapMains,
     $mapElements,
-    $svgMapWrappers,
     $mapPanelLabels,
     $drawingMarkerWrappers,
     $navLogo,
@@ -200,7 +199,7 @@
     R6MMainControls.objectives.populate(['bomb', 'hostage', 'secure']);
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
     R6MMainControls.toggle.populate();
-    R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $svgMapWrappers, $mapPanelLabels);
+    R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $mapPanelLabels);
     if (!DEV_MODE) {
       R6MMainControls.pan.reset($mapMains, getResetDimensions);
       R6MMainControls.zoom.reset($mapMains, getResetDimensions);
@@ -303,7 +302,6 @@
     $mapWrappers = $('.map-wrapper');
     $mapMains = $mapWrappers.find('.map-main');
     $mapElements = $mapMains.find('.map-elements');
-    $svgMapWrappers = $mapMains.find('.svg-wrapper.map');
     $mapPanelLabels = $('.map-panel-label');
     $drawingMarkerWrappers = $mapMains.find('.svg-wrapper.drawing-markers');
   };
