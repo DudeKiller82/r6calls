@@ -509,28 +509,21 @@ nav {
     top: 45px; }
 
 #legend {
-  background-color: #000;
-  border-radius: 10px 10px 0 0;
-  bottom: -725px;
-  color: #fff;
-  font-weight: 400;
   padding: 8px;
-  position: absolute;
-  right: -1255px;
-  width: 475px;
-  z-index: 1015; }
+  position: static;
+  height: 253px;
+  width: 405px; }
   #legend li {
     background-image: url("../../img/legend-sprite@2x.png");
     background-repeat: no-repeat;
     background-size: 35px;
     display: inline-block;
-    float: left;
     font-weight: 400;
     height: 35px;
     line-height: 35px;
     padding-left: 43px;
     vertical-align: middle;
-    width: 188px; }
+    width: 153px; }
     body[dir="rtl"] #legend li {
       padding-left: 0;
       padding-right: 43px; }
@@ -539,73 +532,73 @@ nav {
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-breakable-walls {
-        background-position: 196px -72px; }
+        background-position: 161px -72px; }
     #legend li.legend-floor-hatch {
       background-position: 0px -2px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-floor-hatch {
-        background-position: 196px -2px; }
+        background-position: 161px -2px; }
     #legend li.legend-ceiling-hatch {
       background-position: 0px -37px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-ceiling-hatch {
-        background-position: 196px -37px; }
+        background-position: 161px -37px; }
     #legend li.legend-line-of-sight-walls {
       background-position: 0px -107px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-line-of-sight-walls {
-        background-position: 196px -107px; }
+        background-position: 161px -107px; }
     #legend li.legend-lineof-sight-floors {
       background-position: 0px -142px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-lineof-sight-floors {
-        background-position: 196px -142px; }
+        background-position: 161px -142px; }
     #legend li.legend-drone-tunnels {
       background-position: 0px -317px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-drone-tunnels {
-        background-position: 196px -317px; }
+        background-position: 161px -317px; }
     #legend li.legend-objectives {
       background-position: 0px -212px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-objectives {
-        background-position: 196px -212px; }
+        background-position: 161px -212px; }
     #legend li.legend-insertion-point {
       background-position: 0px -177px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-insertion-point {
-        background-position: 196px -177px; }
+        background-position: 161px -177px; }
     #legend li.legend-security-camera {
       background-position: 0px -247px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-security-camera {
-        background-position: 196px -247px; }
+        background-position: 161px -247px; }
     #legend li.legend-skylight {
       background-position: 0px -282px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-skylight {
-        background-position: 196px -282px; }
+        background-position: 161px -282px; }
     #legend li.legend-down-and-up {
       background-position: 0px -352px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-down-and-up {
-        background-position: 196px -352px; }
+        background-position: 161px -352px; }
     #legend li.legend-ladder {
       background-position: 0px -422px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-ladder {
-        background-position: 196px -422px; }
+        background-position: 161px -422px; }
 
 #select-map-grid {
   background-color: rgba(16, 26, 36, 0.7);
