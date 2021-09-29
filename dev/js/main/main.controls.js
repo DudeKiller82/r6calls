@@ -448,164 +448,249 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     );
   };
 
+  var setLayerDisplay = function setLayerDisplay(layerName, visible) {
+    var x = document.getElementsByClassName(layerName),
+      i;
+
+    for (i = 0; i < x.length; i++) {
+      if (visible) {
+        x[i].hidden = false;
+      } else {
+        x[i].hidden = true;
+      }
+    }
+  };
+
+  var setBombLayerDisplay = function setBombLayerDisplay() {
+    setLayerDisplay('bmb', getDisplayBombValue());
+  };
+
   var displaySetBombOption = function displaySetBombOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setBombLayerDisplay();
     $displayBombControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayBombChangeEvent = function displaySetupDisplayBombChangeEvent(callback) {
     $displayBombControl.change(function(e) {
-      var x = document.getElementsByClassName('bmb'),
-        i;
-
-      for (i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = 'red';
-      }
+      setBombLayerDisplay();
       callback(getDisplayBombValue());
     });
+  };
+
+  var setSecureLayerDisplay = function setSecureLayerDisplay() {
+    setLayerDisplay('sec', getDisplaySecureValue());
   };
 
   var displaySetSecureOption = function displaySetSecureOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setSecureLayerDisplay();
     $displaySecureControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplaySecureChangeEvent = function displaySetupDisplaySecureChangeEvent(callback) {
     $displaySecureControl.change(function(e) {
+      setSecureLayerDisplay();
       callback(getDisplaySecureValue());
     });
+  };
+
+  var setHostageLayerDisplay = function setHostageLayerDisplay() {
+    setLayerDisplay('hst', getDisplayHostageValue());
   };
 
   var displaySetHostageOption = function displaySetHostageOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setHostageLayerDisplay();
     $displayHostageControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayHostageChangeEvent = function displaySetupDisplayHostageChangeEvent(callback) {
     $displayHostageControl.change(function(e) {
+      setHostageLayerDisplay();
       callback(getDisplayHostageValue());
     });
+  };
+
+  var setFloorHatchLayerDisplay = function setFloorHatchLayerDisplay() {
+    setLayerDisplay('fh', getDisplayFloorHatchValue());
   };
 
   var displaySetFloorHatchOption = function displaySetFloorHatchOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setFloorHatchLayerDisplay();
     $displayFloorHatchControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayFloorHatchChangeEvent = function displaySetupDisplayFloorHatchChangeEvent(callback) {
     $displayFloorHatchControl.change(function(e) {
+      setFloorHatchLayerDisplay();
       callback(getDisplayFloorHatchValue());
     });
+  };
+
+  var setCeilingHatchLayerDisplay = function setCeilingHatchLayerDisplay() {
+    setLayerDisplay('ch', getDisplayCeilingHatchValue());
   };
 
   var displaySetCeilingHatchOption = function displaySetCeilingHatchOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setCeilingHatchLayerDisplay();
     $displayCeilingHatchControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayCeilingHatchChangeEvent = function displaySetupDisplayCeilingHatchChangeEvent(callback) {
     $displayCeilingHatchControl.change(function(e) {
+      setCeilingHatchLayerDisplay();
       callback(getDisplayCeilingHatchValue());
     });
+  };
+
+  var setBreakableWallLayerDisplay = function setBreakableWallLayerDisplay() {
+    setLayerDisplay('bw', getDisplayBreakableWallValue());
   };
 
   var displaySetBreakableWallOption = function displaySetBreakableWallOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setBreakableWallLayerDisplay();
     $displayBreakableWallControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayBreakableWallChangeEvent = function displaySetupDisplayBreakableWallChangeEvent(callback) {
     $displayBreakableWallControl.change(function(e) {
+      setBreakableWallLayerDisplay();
       callback(getDisplayBreakableWallValue());
     });
+  };
+
+  var setLineOfSightWallLayerDisplay = function setLineOfSightWallLayerDisplay() {
+    setLayerDisplay('losw', getDisplayLineOfSightWallValue());
   };
 
   var displaySetLineOfSightWallOption = function displaySetLineOfSightWallOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setLineOfSightWallLayerDisplay();
     $displayLineOfSightWallControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayLineOfSightWallChangeEvent = function displaySetupDisplayLineOfSightWallChangeEvent(callback) {
     $displayLineOfSightWallControl.change(function(e) {
+      setLineOfSightWallLayerDisplay();
       callback(getDisplayLineOfSightWallValue());
     });
+  };
+
+  var setDroneTunnelLayerDisplay = function setDroneTunnelLayerDisplay() {
+    setLayerDisplay('dt', getDisplayDroneTunnelValue());
   };
 
   var displaySetDroneTunnelOption = function displaySetDroneTunnelOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setDroneTunnelLayerDisplay();
     $displayDroneTunnelControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayDroneTunnelChangeEvent = function displaySetupDisplayDroneTunnelChangeEvent(callback) {
     $displayDroneTunnelControl.change(function(e) {
+      setDroneTunnelLayerDisplay();
       callback(getDisplayDroneTunnelValue());
     });
+  };
+
+  var setLineOfSightFloorLayerDisplay = function setLineOfSightFloorLayerDisplay() {
+    setLayerDisplay('losf', getDisplayLineOfSightFloorValue());
   };
 
   var displaySetLineOfSightFloorOption = function displaySetLineOfSightFloorOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setLineOfSightFloorLayerDisplay();
     $displayLineOfSightFloorControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayLineOfSightFloorChangeEvent = function displaySetupDisplayLineOfSightFloorChangeEvent(callback) {
     $displayLineOfSightFloorControl.change(function(e) {
+      setLineOfSightFloorLayerDisplay();
       callback(getDisplayLineOfSightFloorValue());
     });
+  };
+
+  var setInsertionPointLayerDisplay = function setInsertionPointLayerDisplay() {
+    setLayerDisplay('spw', getDisplayInsertionPointValue());
   };
 
   var displaySetInsertionPointOption = function displaySetInsertionPointOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setInsertionPointLayerDisplay();
     $displayInsertionPointControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayInsertionPointChangeEvent = function displaySetupDisplayInsertionPointChangeEvent(callback) {
     $displayInsertionPointControl.change(function(e) {
+      setInsertionPointLayerDisplay();
       callback(getDisplayInsertionPointValue());
     });
+  };
+
+  var setSecurityCameraLayerDisplay = function setSecurityCameraLayerDisplay() {
+    setLayerDisplay('cam', getDisplaySecurityCameraValue());
   };
 
   var displaySetSecurityCameraOption = function displaySetSecurityCameraOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setSecurityCameraLayerDisplay();
     $displaySecurityCameraControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplaySecurityCameraChangeEvent = function displaySetupDisplaySecurityCameraChangeEvent(callback) {
     $displaySecurityCameraControl.change(function(e) {
+      setSecurityCameraLayerDisplay();
       callback(getDisplaySecurityCameraValue());
     });
+  };
+
+  var setSkylightLayerDisplay = function setSkylightLayerDisplay() {
+    setLayerDisplay('sl', getDisplaySkylightValue());
   };
 
   var displaySetSkylightOption = function displaySetSkylightOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setSkylightLayerDisplay();
     $displaySkylightControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplaySkylightChangeEvent = function displaySetupDisplaySkylightChangeEvent(callback) {
     $displaySkylightControl.change(function(e) {
+      setSkylightLayerDisplay();
       callback(getDisplaySkylightValue());
     });
+  };
+
+  var setLadderLayerDisplay = function setLadderLayerDisplay() {
+    setLayerDisplay('lad', getDisplaySkylightValue());
   };
 
   var displaySetLadderOption = function displaySetLadderOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
+    setLadderLayerDisplay();
     $displayLadderControl.prop('checked', boolValue);
   };
 
   var displaySetupDisplayLadderChangeEvent = function displaySetupDisplayLadderChangeEvent(callback) {
     $displayLadderControl.change(function(e) {
+      setLadderLayerDisplay();
       callback(getDisplayLadderValue());
     });
   };
@@ -858,30 +943,43 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
       reset: panReset,
       setDisplayBombOption: displaySetBombOption,
       setupDisplayBombOption: displaySetupDisplayBombChangeEvent,
+      setBombLayerDisplay: setBombLayerDisplay,
       setDisplaySecureOption: displaySetSecureOption,
       setupDisplaySecureOption: displaySetupDisplaySecureChangeEvent,
+      setSecureLayerDisplay: setSecureLayerDisplay,
       setDisplayHostageOption: displaySetHostageOption,
       setupDisplayHostageOption: displaySetupDisplayHostageChangeEvent,
+      setHostageLayerDisplay: setHostageLayerDisplay,
       setDisplayFloorHatchOption: displaySetFloorHatchOption,
       setupDisplayFloorHatchOption: displaySetupDisplayFloorHatchChangeEvent,
+      setFloorHatchLayerDisplay: setFloorHatchLayerDisplay,
       setDisplayCeilingHatchOption: displaySetCeilingHatchOption,
       setupDisplayCeilingHatchOption: displaySetupDisplayCeilingHatchChangeEvent,
+      setCeilingHatchLayerDisplay: setCeilingHatchLayerDisplay,
       setDisplayBreakableWallOption: displaySetBreakableWallOption,
       setupDisplayBreakableWallOption: displaySetupDisplayBreakableWallChangeEvent,
+      setBreakableWallLayerDisplay: setBreakableWallLayerDisplay,
       setDisplayLineOfSightWallOption: displaySetLineOfSightWallOption,
       setupDisplayLineOfSightWallOption: displaySetupDisplayLineOfSightWallChangeEvent,
+      setLineOfSightWallLayerDisplay: setLineOfSightWallLayerDisplay,
       setDisplayDroneTunnelOption: displaySetDroneTunnelOption,
       setupDisplayDroneTunnelOption: displaySetupDisplayDroneTunnelChangeEvent,
+      setDroneTunnelLayerDisplay: setDroneTunnelLayerDisplay,
       setDisplayLineOfSightFloorOption: displaySetLineOfSightFloorOption,
       setupDisplayLineOfSightFloorOption: displaySetupDisplayLineOfSightFloorChangeEvent,
+      setLineOfSightFloorLayerDisplay: setLineOfSightFloorLayerDisplay,
       setDisplayInsertionPointOption: displaySetInsertionPointOption,
       setupDisplayInsertionPointOption: displaySetupDisplayInsertionPointChangeEvent,
+      setInsertionPointLayerDisplay: setInsertionPointLayerDisplay,
       setDisplaySecurityCameraOption: displaySetSecurityCameraOption,
       setupDisplaySecurityCameraOption: displaySetupDisplaySecurityCameraChangeEvent,
+      setSecurityCameraLayerDisplay: setSecurityCameraLayerDisplay,
       setDisplaySkylightOption: displaySetSkylightOption,
       setupDisplaySkylightOption: displaySetupDisplaySkylightChangeEvent,
+      setSkylightLayerDisplay: setSkylightLayerDisplay,
       setDisplayLadderOption: displaySetLadderOption,
-      setupDisplayLadderOption: displaySetupDisplayLadderChangeEvent
+      setupDisplayLadderOption: displaySetupDisplayLadderChangeEvent,
+      setLadderLayerDisplay: setLadderLayerDisplay
     },
     pan: {
       reset: panReset,

@@ -124,7 +124,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       prefix = imgUrlPrefix;
       imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index;
       inlineStyle = getPositionStyle(floor);
-      classes = floor.background ? 'background ' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
+      classes = floor.background ? 'background' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
       html += '<img src="' + imgSrc + '.png" style="' + inlineStyle + '" class="' + classes + '"></img>';
       if (floor.background) {
         html += '<img src="' + imgSrc + '-spw.png" style="' + inlineStyle + '" class="' + classes + ' spw"></img>';
@@ -136,7 +136,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
         html += '<img src="' + imgSrc + '-losf.png" style="' + inlineStyle + '" class="' + classes + ' losf"></img>';
         html += '<img src="' + imgSrc + '-losw.png" style="' + inlineStyle + '" class="' + classes + ' losw"></img>';
         html += '<img src="' + imgSrc + '-sl.png" style="' + inlineStyle + '" class="' + classes + ' sl"></img>';
-        html += '<img src="' + imgSrc + '-bmb.png" style="' + inlineStyle + '" class="' + classes + ' lbmb"></img>';
+        html += '<img src="' + imgSrc + '-bmb.png" style="' + inlineStyle + '" class="' + classes + ' bmb"></img>';
         html += '<img src="' + imgSrc + '-sec.png" style="' + inlineStyle + '" class="' + classes + ' sec"></img>';
         html += '<img src="' + imgSrc + '-hst.png" style="' + inlineStyle + '" class="' + classes + ' hst"></img>';
       }
