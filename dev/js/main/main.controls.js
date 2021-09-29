@@ -296,12 +296,13 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
       { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half wall' },
       { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnel' },
       { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floor' },
-      { class: CSS_ABBREV + 'objectives', description: 'Objective' },
       { class: CSS_ABBREV + 'insertion-point', description: 'Insertion point' },
-      { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
       { class: CSS_ABBREV + 'skylight', description: 'Skylight' },
-      { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
-      { class: CSS_ABBREV + 'ladder', description: 'Ladder' }
+      { class: CSS_ABBREV + 'bomb', description: 'Bomb site' },
+      { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
+      { class: CSS_ABBREV + 'secure', description: 'Secure site' },
+      { class: CSS_ABBREV + 'ladder', description: 'Ladder' },
+      { class: CSS_ABBREV + 'hostage', description: 'Hostage site' }
     ];
     html += '<label>Legend</label>';
     html += '<ul id="legend"; style="height: 217px;width: 462px; position: relative">';

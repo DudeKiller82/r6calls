@@ -32,7 +32,7 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
   width: $legend-width + 5;
 
   li {
-    background-image: url($img-location + 'legend-sprite@2x.png');
+    background-image: url($img-location + 'legend.png');
     background-repeat: no-repeat;
     background-size: $legend-icon-width;
     display: inline-block;
@@ -96,7 +96,7 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-objectives {
+    &.legend-bomb {
       @include legend-smaller(7);
 
       body[dir="rtl"] & {
@@ -128,11 +128,19 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-down-and-up {
+    &.legend-hostage {
       @include legend-smaller(11);
 
       body[dir="rtl"] & {
         @include legend-smaller-rtl(11);
+      }
+    }
+
+    &.legend-secure {
+      @include legend-smaller(12);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(12);
       }
     }
 
