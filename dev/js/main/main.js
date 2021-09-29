@@ -258,6 +258,97 @@
     }
   };
 
+  var saveDisplayBombOption = function saveDisplayBombOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplaySecureOption = function saveDisplaySecureOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayHostageOption = function saveDisplayHostageOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayFloorHatchOption = function saveDisplayFloorHatchOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayCeilingHatchOption = function saveDisplayCeilingHatchOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayBreakableWallOption = function saveDisplayBreakableWallOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayLineOfSightWallOption = function saveDisplayLineOfSightWallOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayDroneTunnelOption = function saveDisplayDroneTunnelOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayLineOfSightFloorOption = function saveDisplayLineOfSightFloorOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayInsertionPointOption = function saveDisplayInsertionPointOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplaySecurityCameraOption = function saveDisplaySecurityCameraOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplaySkylightOption = function saveDisplaySkylightOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
+  var saveDisplayLadderOption = function saveDisplayLadderOption(value) {
+    localStorageSetItem('lockpanning', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
   var saveLockPanningOption = function saveLockPanningOption(value) {
     localStorageSetItem('lockpanning', value);
     if (value) {
@@ -347,6 +438,19 @@
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
     R6MMainControls.roomLabelStyles.setup(setRoomLabelStyle);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
+    R6MMainControls.display.setupDisplayBombOption(saveDisplayBombOption);
+    R6MMainControls.display.setupDisplaySecureOption(saveDisplaySecureOption);
+    R6MMainControls.display.setupDisplayHostageOption(saveDisplayHostageOption);
+    R6MMainControls.display.setupDisplayFloorHatchOption(saveDisplayFloorHatchOption);
+    R6MMainControls.display.setupDisplayCeilingHatchOption(saveDisplayCeilingHatchOption);
+    R6MMainControls.display.setupDisplayBreakableWallOption(saveDisplayBreakableWallOption);
+    R6MMainControls.display.setupDisplayLineOfSightWallOption(saveDisplayLineOfSightWallOption);
+    R6MMainControls.display.setupDisplayDroneTunnelOption(saveDisplayDroneTunnelOption);
+    R6MMainControls.display.setupDisplayLineOfSightFloorOption(saveDisplayLineOfSightFloorOption);
+    R6MMainControls.display.setupDisplayInsertionPointOption(saveDisplayInsertionPointOption);
+    R6MMainControls.display.setupDisplaySecurityCameraOption(saveDisplaySecurityCameraOption);
+    R6MMainControls.display.setupDisplaySkylightOption(saveDisplaySkylightOption);
+    R6MMainControls.display.setupDisplayLadderOption(saveDisplayLadderOption);
     R6MMainControls.pan.setupLockOption(saveLockPanningOption);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
@@ -448,6 +552,110 @@
     }
   };
 
+  var tryLoadDisplayBombOption = function tryLoadDisplayBombOption() {
+    var displayBombOption = localStorage.getItem('displaybomb');
+
+    if (displayBombOption !== null) {
+      R6MMainControls.display.setBombOption(displayBombOption);
+    }
+  };
+
+  var tryLoadDisplaySecureOption = function tryLoadDisplaySecureOption() {
+    var displaySecureOption = localStorage.getItem('displaysecure');
+
+    if (displaySecureOption !== null) {
+      R6MMainControls.display.setSecureOption(displaySecureOption);
+    }
+  };
+
+  var tryLoadDisplayHostageOption = function tryLoadDisplayHostageOption() {
+    var displayHostageOption = localStorage.getItem('displayhostage');
+
+    if (displayHostageOption !== null) {
+      R6MMainControls.display.setHostageOption(displayHostageOption);
+    }
+  };
+
+  var tryLoadDisplayFloorHatchOption = function tryLoadDisplayFloorHatchOption() {
+    var displayFloorHatchOption = localStorage.getItem('displayfloorhatch');
+
+    if (displayFloorHatchOption !== null) {
+      R6MMainControls.display.setFloorHatchOption(displayFloorHatchOption);
+    }
+  };
+
+  var tryLoadDisplayCeilingHatchOption = function tryLoadDisplayCeilingHatchOption() {
+    var displayCeilingHatchOption = localStorage.getItem('displayceilinghatch');
+
+    if (displayCeilingHatchOption !== null) {
+      R6MMainControls.display.setCeilingHatchOption(displayCeilingHatchOption);
+    }
+  };
+
+  var tryLoadDisplayBreakableWallOption = function tryLoadDisplayBreakableWallOption() {
+    var displayBreakableWallOption = localStorage.getItem('displaybreakablewall');
+
+    if (displayBreakableWallOption !== null) {
+      R6MMainControls.display.setBreakableWallOption(displayBreakableWallOption);
+    }
+  };
+
+  var tryLoadDisplayLineOfSightWallOption = function tryLoadDisplayLineOfSightWallOption() {
+    var displayLineOfSightWallOption = localStorage.getItem('displaylineofsightwall');
+
+    if (displayLineOfSightWallOption !== null) {
+      R6MMainControls.display.setLineOfSightWallOption(displayLineOfSightWallOption);
+    }
+  };
+
+  var tryLoadDisplayDroneTunnelOption = function tryLoadDisplayDroneTunnelOption() {
+    var displayDroneTunnelOption = localStorage.getItem('displaydronetunnel');
+
+    if (displayDroneTunnelOption !== null) {
+      R6MMainControls.display.setDroneTunnelOption(displayDroneTunnelOption);
+    }
+  };
+
+  var tryLoadDisplayLineOfSightFloorOption = function tryLoadDisplayLineOfSightFloorOption() {
+    var displayLineOfSightFloorOption = localStorage.getItem('displaylineofsightfloor');
+
+    if (displayLineOfSightFloorOption !== null) {
+      R6MMainControls.display.setLineOfSightFloorOption(displayLineOfSightFloorOption);
+    }
+  };
+
+  var tryLoadDisplayInsertionPointOption = function tryLoadDisplayInsertionPointOption() {
+    var displayInsertionPointOption = localStorage.getItem('displayinsertionpoint');
+
+    if (displayInsertionPointOption !== null) {
+      R6MMainControls.display.setInsertionPointOption(displayInsertionPointOption);
+    }
+  };
+
+  var tryLoadDisplaySecurityCameraOption = function tryLoadDisplaySecurityCameraOption() {
+    var displaySecurityCameraOption = localStorage.getItem('displaysecuritycamera');
+
+    if (displaySecurityCameraOption !== null) {
+      R6MMainControls.display.setSecurityCameraOption(displaySecurityCameraOption);
+    }
+  };
+
+  var tryLoadDisplaySkylightOption = function tryLoadDisplaySkylightOption() {
+    var displaySkylightOption = localStorage.getItem('displayskylight');
+
+    if (displaySkylightOption !== null) {
+      R6MMainControls.display.setSkylightOption(displaySkylightOption);
+    }
+  };
+
+  var tryLoadDisplayLadderOption = function tryLoadDisplayLadderOption() {
+    var displayLadderOption = localStorage.getItem('displayladder');
+
+    if (displayLadderOption !== null) {
+      R6MMainControls.display.setLadderOption(displayLadderOption);
+    }
+  };
+
   var tryLoadLockPanningOption = function tryLoadLockPanningOption() {
     var lockPanningOption = localStorage.getItem('lockpanning');
 
@@ -472,6 +680,19 @@
 
   var tryLoadMenuOptions = function tryLoadMenuOptions() {
     tryLoadMapPanelCount();
+    tryLoadDisplayBombOption();
+    tryLoadDisplaySecureOption();
+    tryLoadDisplayHostageOption();
+    tryLoadDisplayFloorHatchOption();
+    tryLoadDisplayCeilingHatchOption();
+    tryLoadDisplayBreakableWallOption();
+    tryLoadDisplayLineOfSightWallOption();
+    tryLoadDisplayDroneTunnelOption();
+    tryLoadDisplayLineOfSightFloorOption();
+    tryLoadDisplayInsertionPointOption();
+    tryLoadDisplaySecurityCameraOption();
+    tryLoadDisplaySkylightOption();
+    tryLoadDisplayLadderOption();
     tryLoadLockPanningOption();
     tryLoadRoomLabelStyle();
   };
