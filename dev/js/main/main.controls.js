@@ -227,7 +227,8 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var getMenuR6MapsHtml = function getMenuR6MapsHtml() {
     var html = '',
-      latestUpdateCss = 'menu-item';
+      legendItems,
+      CSS_ABBREV = 'legend-';
 
     html += '<div class="mmenu-custom-panel">';
     html += '<h2>r6calls.com</h2>';
@@ -236,6 +237,27 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">Full screen</button>';
     }
+    legendItems = [
+      { class: CSS_ABBREV + 'floor-hatch', description: 'Floor hatch' },
+      { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatch' },
+      { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable wall' },
+      { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half wall' },
+      { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnel' },
+      { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floor' },
+      { class: CSS_ABBREV + 'objectives', description: 'Objective' },
+      { class: CSS_ABBREV + 'insertion-point', description: 'Insertion point' },
+      { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
+      { class: CSS_ABBREV + 'skylight', description: 'Skylight' },
+      { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
+      { class: CSS_ABBREV + 'ladder', description: 'Ladder' }
+    ];
+    html += '<label>Legend</label>';
+    html += '<ul id="legend"; style="height: 217px;width: 462px; position: relative">';
+    legendItems.forEach(function(item) {
+      html += '<li class="' + item.class + '">' + item.description + '</li>';
+    });
+    html += '</ul>';
+
     html += '</div>';
     return html;
   };

@@ -192,36 +192,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getLegendHtml = function getLegendHtml(legend) {
-    var html = '',
-      inlineStyle,
-      CSS_ABBREV = 'legend-',
-      legendItems = [
-        { class: CSS_ABBREV + 'floor-hatch', description: 'Floor hatch' },
-        { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatch' },
-        { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable wall' },
-        { class: CSS_ABBREV + 'line-of-sight-walls', description: 'Line of sight or half wall' },
-        { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnel' },
-        { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floor' },
-        { class: CSS_ABBREV + 'objectives', description: 'Objective' },
-        { class: CSS_ABBREV + 'insertion-point', description: 'Insertion point' },
-        { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
-        { class: CSS_ABBREV + 'skylight', description: 'Skylight' },
-        { class: CSS_ABBREV + 'down-and-up', description: 'On floor above or below' },
-        { class: CSS_ABBREV + 'ladder', description: 'Ladder' }
-      ];
-
-    inlineStyle = getPositionStyle(legend);
-
-    html += '<ul id="legend"; style="' + inlineStyle + '">';
-    legendItems.forEach(function(item) {
-      html += '<li class="' + item.class + '">' + item.description + '</li>';
-    });
-    html += '</ul>';
-
-    return html;
-  };
-
   var getPanelLabelsHtml = function getPanelLabelsHtml(floors) {
     var html = '',
       cssClass = '';
@@ -331,7 +301,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     html += getRoomLabelsHtml(mapData.roomLabels);
     html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);
-    html += getLegendHtml(mapData.legend);
 
     $mapElements.html(html);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));

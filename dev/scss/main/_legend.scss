@@ -8,7 +8,7 @@ $legend-item-height: $legend-icon-height;
 
 $legend-padding: 8px;
 $legend-height: ($legend-number-rows * $legend-item-height) + ($legend-padding);
-$legend-width: 470px;
+$legend-width: 400px;
 
 $legend-item-width: ($legend-width - $legend-padding) / 2;
 
@@ -26,23 +26,16 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
 }
 
 #legend {
-  background-color: #000;
-  border-radius: 10px 10px 0 0;
-  bottom: -725px;
-  color: #fff;
-  font-weight: 400;
   padding: $legend-padding;
-  position: absolute;
-  right: -1255px;
+  position: static;
+  height: $legend-height;
   width: $legend-width + 5;
-  z-index: $z-legend;
 
   li {
     background-image: url($img-location + 'legend-sprite@2x.png');
     background-repeat: no-repeat;
     background-size: $legend-icon-width;
     display: inline-block;
-    float: left;
     font-weight: 400;
     height: $legend-item-height;
     line-height: $legend-item-height;

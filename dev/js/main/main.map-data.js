@@ -16,9 +16,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       bank: {
         name: 'Bank',
         imgUrlPrefix: 'bank',
-        legend: {
-          bottom: -806, right: -1132, height: 217, width: 462
-        },
         floors: [
           { index: 'bg', top: -954, left: -1850, width: 2840, name: floorTerms.basement, dontSelect: true, background: true },
           { index: 0, top: -538, left: -587, width: 1024, name: floorTerms.basement },
@@ -114,9 +111,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       bartlett: {
         name: 'Bartlett U.',
         imgUrlPrefix: 'bartlett',
-        legend: {
-          bottom: -725, right: -1179, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -716, left: -892, width: 1721, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -466, left: -454, width: 1236, name: floorTerms.secondFloor },
@@ -196,9 +190,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       border: {
         name: 'Border',
         imgUrlPrefix: 'border',
-        legend: {
-          bottom: -293, right: -866, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -560, left: -744, width: 1517, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -475, left: -307, width: 681, name: floorTerms.secondFloor },
@@ -282,9 +273,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       chalet: {
         name: 'Chalet',
         imgUrlPrefix: 'chalet',
-        legend: {
-          bottom: -718, right: -1319, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -131, left: -273, width: 1386, name: floorTerms.basement, background: true },
           { index: 1, top: -128, left: 126, width: 723, name: floorTerms.firstFloor, default: true },
@@ -369,9 +357,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       club: {
         name: 'Club House',
         imgUrlPrefix: 'club-house',
-        legend: {
-          bottom: -857, right: -881, height: 217, width: 462
-        },
         floors: [
           //
           { index: 0, top: -642, left: -908, width: 1789, name: floorTerms.basement, background: true },
@@ -471,9 +456,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       coastline: {
         name: 'Coastline',
         imgUrlPrefix: 'coastline',
-        legend: {
-          bottom: -737, right: -1004, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -751, left: -797, width: 1801, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -210, left: -365, width: 740, name: floorTerms.secondFloor },
@@ -549,9 +531,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       consulate: {
         name: 'Consulate',
         imgUrlPrefix: 'consulate',
-        legend: {
-          bottom: -722, right: -872, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -604, left: -811, width: 1683, name: floorTerms.basement, background: true },
           { index: 1, top: -222, left: -448, width: 943, name: floorTerms.firstFloor, default: true },
@@ -646,9 +625,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       favela: {
         name: 'Favela',
         imgUrlPrefix: 'favela',
-        legend: {
-          bottom: -451, right: -800, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -450, left: -800, width: 1600, name: floorTerms.basement, background: true },
           { index: 1, top: -450, left: -532, width: 883, name: floorTerms.firstFloor, default: true },
@@ -725,9 +701,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       fortress: {
         name: 'Fortress',
         imgUrlPrefix: 'fortress',
-        legend: {
-          bottom: -922, right: -649, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -824, left: -603, width: 1252, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -370, left: -362, width: 946, name: floorTerms.secondFloor },
@@ -823,9 +796,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       hereford: {
         name: 'Hereford',
         imgUrlPrefix: 'hereford',
-        legend: {
-          bottom: -412, right: -823, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -851, left: -754, width: 1577, name: floorTerms.basement, background: true },
           { index: 1, top: -292, left: -277, width: 514, name: floorTerms.firstFloor, default: true },
@@ -918,9 +888,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       house: {
         name: 'House',
         imgUrlPrefix: 'house',
-        legend: {
-          bottom: -455, right: -891, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -383, left: -337, width: 990, name: floorTerms.basement, background: true },
           { index: 1, top: -283, left: -204, width: 515, name: floorTerms.firstFloor, default: true },
@@ -997,9 +964,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       kafe: {
         name: 'Kafe Dostoyevsky',
         imgUrlPrefix: 'kafe',
-        legend: {
-          bottom: -844, right: -484, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -579, left: -758, width: 1242, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -193, left: -242, width: 726, name: floorTerms.secondFloor },
@@ -1086,9 +1050,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       kanal: {
         name: 'Kanal',
         imgUrlPrefix: 'kanal',
-        legend: {
-          bottom: -581, right: -965, height: 217, width: 462
-        },
         floors: [
           { index: -1, top: -559, left: -1042, width: 2009, name: floorTerms.subBasement, background: true },
           { index: 0, top: -364, left: -382, width: 843, name: floorTerms.basement },
@@ -1198,9 +1159,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       oregon: {
         name: 'Oregon',
         imgUrlPrefix: 'oregon',
-        legend: {
-          bottom: -477, right: -968, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -525, left: -815, width: 1782, name: floorTerms.basement, background: true },
           { index: 1, top: -312, left: -418, width: 811, name: floorTerms.firstFloor, default: true },
@@ -1315,9 +1273,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       outback: {
         name: 'Outback',
         imgUrlPrefix: 'outback',
-        legend: {
-          bottom: -829, right: -1028, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -488, left: -329, width: 1215, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -162, left: 13, width: 692, name: floorTerms.secondFloor },
@@ -1404,9 +1359,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       plane: {
         name: 'Plane',
         imgUrlPrefix: 'plane',
-        legend: {
-          bottom: -650, right: -590, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -637, left: -879, width: 1470, name: floorTerms.firstFloor, background: true },
           { index: 2, top: -91, left: -655, width: 1194, name: floorTerms.secondFloor, default: true },
@@ -1476,9 +1428,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       skyscraper: {
         name: 'Skyscraper',
         imgUrlPrefix: 'skyscraper',
-        legend: {
-          bottom: -765, right: -1130, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -165, left: -411, width: 1221, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -115, left: -84, width: 851, name: floorTerms.secondFloor },
@@ -1560,9 +1509,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       themepark: {
         name: 'Theme Park',
         imgUrlPrefix: 'themepark',
-        legend: {
-          bottom: -488, right: -889, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -455, left: -655, width: 1544, name: floorTerms.firstFloor, background: true, default: true },
           { index: 2, top: -305, left: -292, width: 813, name: floorTerms.secondFloor },
@@ -1647,9 +1593,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       tower: {
         name: 'Tower',
         imgUrlPrefix: 'tower',
-        legend: {
-          bottom: -725, right: -1285, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -715, left: -1275, name: floorTerms.firstFloor, background: true },
           { index: 2, top: -715, left: -715, name: floorTerms.secondFloor, default: true },
@@ -1752,9 +1695,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       villa: {
         name: 'Villa',
         imgUrlPrefix: 'villa',
-        legend: {
-          bottom: -495, right: -902, height: 217, width: 462
-        },
         floors: [
           { index: 0, top: -491, left: -188, width: 1090, name: floorTerms.basement, background: true },
           { index: 1, top: -495, left: 16, width: 624, name: floorTerms.firstFloor, default: true },
@@ -1860,9 +1800,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
       yacht: {
         name: 'Yacht',
         imgUrlPrefix: 'yacht',
-        legend: {
-          bottom: -568, right: -902, height: 217, width: 462
-        },
         floors: [
           { index: 1, top: -577, left: -776, width: 1679, name: floorTerms.firstFloor, background: true },
           { index: 2, top: -175, left: -697, width: 1567, name: floorTerms.secondFloor, default: true },
