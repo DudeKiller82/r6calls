@@ -118,43 +118,23 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     $mapWrappers.addClass('loading');
 
-    floors.forEach(function(floor) {
-      var currentDeferr = $.Deferred();
+    var currentDeferr = $.Deferred();
 
-      prefix = imgUrlPrefix;
-      imgSrc = IMG_URL + prefix + '/' + prefix + '-' + floor.index;
-      inlineStyle = getPositionStyle(floor);
-      classes = floor.background ? 'background' : 'floor ' + FLOOR_CSS_TEXT[floor.index];
-      html += '<img src="' + imgSrc + '.png" style="' + inlineStyle + '" class="' + classes + '"></img>';
-      if (floor.background) {
-        html += '<img src="' + imgSrc + '-spw.png" style="' + inlineStyle + '" class="' + classes + ' spw"></img>';
-      } else {
-        html += '<img src="' + imgSrc + '-bw.png" style="' + inlineStyle + '" class="' + classes + ' bw"></img>';
-        html += '<img src="' + imgSrc + '-ch.png" style="' + inlineStyle + '" class="' + classes + ' ch"></img>';
-        html += '<img src="' + imgSrc + '-dt.png" style="' + inlineStyle + '" class="' + classes + ' dt"></img>';
-        html += '<img src="' + imgSrc + '-fh.png" style="' + inlineStyle + '" class="' + classes + ' fh"></img>';
-        html += '<img src="' + imgSrc + '-losf.png" style="' + inlineStyle + '" class="' + classes + ' losf"></img>';
-        html += '<img src="' + imgSrc + '-losw.png" style="' + inlineStyle + '" class="' + classes + ' losw"></img>';
-        html += '<img src="' + imgSrc + '-sl.png" style="' + inlineStyle + '" class="' + classes + ' sl"></img>';
-        html += '<img src="' + imgSrc + '-bmb.png" style="' + inlineStyle + '" class="' + classes + ' bmb"></img>';
-        html += '<img src="' + imgSrc + '-sec.png" style="' + inlineStyle + '" class="' + classes + ' sec"></img>';
-        html += '<img src="' + imgSrc + '-hst.png" style="' + inlineStyle + '" class="' + classes + ' hst"></img>';
-      }
-      html += '<img src="' + imgSrc + '-cam.png" style="' + inlineStyle + '" class="' + classes + ' cam"></img>';
-      html += '<img src="' + imgSrc + '-lad.png" style="' + inlineStyle + '" class="' + classes + ' lad"></img>';
+    prefix = imgUrlPrefix;
+    imgSrc = IMG_URL + prefix + '/' + prefix;
+    html += '<img src="' + imgSrc + '.svg"></img>';
 
-      // Creates a ghost image for every floor, which removes itself when it's loaded, and then
-      // resolves the deferrer for this floor.
-      // The "ghost image" is just asking to load the bg image another time, and since this will
-      // just load from cache, it shouldnt impact performance too much.
-      // This allows us to remove the loading spinner when all the deferrers are resolved, as
-      // they all resolve once all the images load in.
-      $('<img/>').attr('src', imgSrc + '.png').load(function() {
-        $(this).remove(); // prevent memory leaks
-        currentDeferr.resolve();
-      });
-      deferrs.push(currentDeferr);
+    // Creates a ghost image for every floor, which removes itself when it's loaded, and then
+    // resolves the deferrer for this floor.
+    // The "ghost image" is just asking to load the bg image another time, and since this will
+    // just load from cache, it shouldnt impact performance too much.
+    // This allows us to remove the loading spinner when all the deferrers are resolved, as
+    // they all resolve once all the images load in.
+    $('<img/>').attr('src', imgSrc + '.svg').load(function() {
+      $(this).remove(); // prevent memory leaks
+      currentDeferr.resolve();
     });
+    deferrs.push(currentDeferr);
 
     $.when.apply($, deferrs).then(function() {
       $mapWrappers.removeClass('loading');
