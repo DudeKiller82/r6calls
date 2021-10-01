@@ -122,8 +122,9 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
 
     prefix = imgUrlPrefix;
     imgSrc = IMG_URL + prefix + '/' + prefix;
-    html += '<img src="' + imgSrc + '.svg"></img>';
-
+    inlineStyle = getPositionStyle(floors[0]);
+    html += '<img src="' + imgSrc + '.svg" style="' + inlineStyle + '" class="' + classes + '"></img>';
+    classes = 'background';
     // Creates a ghost image for every floor, which removes itself when it's loaded, and then
     // resolves the deferrer for this floor.
     // The "ghost image" is just asking to load the bg image another time, and since this will
