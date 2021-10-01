@@ -475,12 +475,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var displaySetupDisplayBombChangeEvent = function displaySetupDisplayBombChangeEvent(callback) {
     $displayBombControl.change(function(e) {
-      if (document.getElementByID('svg-object') !== null) {
-        var svg = document.getElementByID('svg-object');
-
-        console.log(svg);
-        var floor = svg.getElementById('Floor_1');
-      }
       setBombLayerDisplay();
       callback(getDisplayBombValue());
     });

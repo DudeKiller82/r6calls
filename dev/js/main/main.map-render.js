@@ -89,11 +89,18 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getMaxFloorIndexHtml = function getMaxFloorIndexHtml(imgUrlPrefix) {
+  var getMaxFloorIndexHtml = function getMaxFloorIndexHtml($mapWrappers, floors, imgUrlPrefix) {
     /** Generates the HTML for the given floors.
      *
      * While waiting for the images of the floors to load, a loading spinner is added to the
      * $mapWrappers.
+     *
+     * @param $mapWrappers A reference to the DOM element that will contain the floors.
+     *  A loading spinner is added to this element when generation starts, and is removed
+     *  when all the floor images are loaded.
+     *
+     * @param floors A list of objects, each containing its index and whether it's a background
+     *  floor, along with items that define the style of the floor.
      *
      * @param imgUrlPrefix A string defining the prefix for this map's floor images, which is
      *  assumed to be the folder the images are in, as well as the prefix of the actual images'
@@ -104,11 +111,34 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
      */
     var html = '',
       prefix,
-      imgSrc;
+      imgSrc,
+      inlineStyle,
+      classes,
+      deferrs = [];
+
+    $mapWrappers.addClass('loading');
+
+    var currentDeferr = $.Deferred();
 
     prefix = imgUrlPrefix;
     imgSrc = IMG_URL + prefix + '/' + prefix;
-    html += '<object id="svg-object" data="' + imgSrc + '.svg" type="image/svg+xml"></object>';
+    html += '<img src="' + imgSrc + '.svg"></img>';
+
+    // Creates a ghost image for every floor, which removes itself when it's loaded, and then
+    // resolves the deferrer for this floor.
+    // The "ghost image" is just asking to load the bg image another time, and since this will
+    // just load from cache, it shouldnt impact performance too much.
+    // This allows us to remove the loading spinner when all the deferrers are resolved, as
+    // they all resolve once all the images load in.
+    $('<img/>').attr('src', imgSrc + '.svg').load(function() {
+      $(this).remove(); // prevent memory leaks
+      currentDeferr.resolve();
+    });
+    deferrs.push(currentDeferr);
+
+    $.when.apply($, deferrs).then(function() {
+      $mapWrappers.removeClass('loading');
+    });
 
     return html;
   };
@@ -247,7 +277,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
   var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $mapPanelLabels) {
     var html = '';
 
-    html += getMaxFloorIndexHtml(mapData.imgUrlPrefix);
+    html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
     html += getRoomLabelsHtml(mapData.roomLabels);
     html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);
