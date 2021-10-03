@@ -121,9 +121,10 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     var currentDeferr = $.Deferred();
 
     prefix = imgUrlPrefix;
-    imgSrc = IMG_URL + prefix + '/' + prefix;
+    imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
     inlineStyle = getPositionStyle(floors[0]);
-    html += '<img src="' + imgSrc + '.svg" style="' + inlineStyle + '" class="' + classes + '"></img>';
+    html += '<img src="' + imgSrc + '" style="' + inlineStyle + '" class="' + classes + '"></img>';
+    // html += '<object data="' + imgSrc + '" type="image/svg+xml" style="' + inlineStyle + '" class="' + classes + '">></object>';
     classes = 'background';
     // Creates a ghost image for every floor, which removes itself when it's loaded, and then
     // resolves the deferrer for this floor.
@@ -131,7 +132,7 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     // just load from cache, it shouldnt impact performance too much.
     // This allows us to remove the loading spinner when all the deferrers are resolved, as
     // they all resolve once all the images load in.
-    $('<img/>').attr('src', imgSrc + '.svg').load(function() {
+    $('<img/>').attr('src', imgSrc).load(function() {
       $(this).remove(); // prevent memory leaks
       currentDeferr.resolve();
     });
@@ -223,20 +224,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     }
   };
 
-  var getRoomLabelsHtml = function getRoomLabelsHtml(roomLabels) {
-    var html = '',
-      inlineStyle,
-      classes;
-
-    roomLabels.forEach(function(roomLabel) {
-      inlineStyle = getPositionStyle(roomLabel);
-      classes = 'room-label ';
-      classes += getCommonClasses(roomLabel);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + roomLabel.description + '</p></div>';
-    });
-    return html;
-  };
-
   var getRotateCssStatements = function getRotateCssStatements(degree) {
     var css = '';
 
@@ -262,25 +249,10 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getSpawnPointsHtml = function getSpawnPointsHtml(spawnPoints) {
-    var html = '',
-      inlineStyle = '',
-      classes;
-
-    spawnPoints.forEach(function(spawnPoint) {
-      inlineStyle = getPositionStyle(spawnPoint);
-      classes = 'spawn-point ' + getCommonClasses(spawnPoint);
-      html += '</div><div class="spawn-description"><p>' + spawnPoint.description + '</p></div></div></div>';
-    });
-    return html;
-  };
-
   var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $mapPanelLabels) {
     var html = '';
 
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
-    html += getRoomLabelsHtml(mapData.roomLabels);
-    html += getSpawnPointsHtml(mapData.spawnPoints);
     html += getCompassHtml(mapData.compassPoints);
 
     $mapElements.html(html);
