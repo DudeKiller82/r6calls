@@ -22,90 +22,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 1, top: -538, left: -587, width: 1024, name: floorTerms.firstFloor, default: true },
           { index: 2, top: -538, left: -587, width: 1024, name: floorTerms.secondFloor },
           { index: 3, top: -538, left: -587, width: 1024, name: floorTerms.roof }
-        ],
-        compassPoints: {
-          top: 306, left: 662
-        },
-        spawnPoints: [
-          { letter: 'A', top: -590, left: -888, description: 'Boulevard' },
-          { letter: 'B', top: -446, left: 641, description: 'Jewelry' },
-          { letter: 'C', top: 497, left: 652, description: 'Alley' }
-        ],
-        roomLabels: [
-          // EXT
-          { outdoor: true, top: -575, left: -661, description: 'Parking Lot' },
-          { outdoor: true, top: -575, left: -156, description: 'Boulevard' },
-          { outdoor: true, top: -575, left: 538, description: 'Jewelry' },
-          { outdoor: true, top: -295, left: 239, description: 'Plaza' },
-          { outdoor: true, top: -448, left: -225, description: 'Main Entrance' },
-          { outdoor: true, top: -143, left: -473, description: 'Garage Ramp' },
-          { outdoor: true, top: -216, left: -720, description: 'Parking' },
-          { outdoor: true, top: 648, left: 657, description: 'Alley Access', rotate: -90 },
-          { outdoor: true, top: 495, left: 360, description: 'Alley Rooftop' },
-          { outdoor: true, top: 336, left: 647, description: 'Alley' },
-          // OF
-          { floor: 0, top: -150, left: -151, description: 'Vault', site: true, hostage: true },
-          { floor: 0, top: -114, left: 37, description: 'Cash' },
-          { floor: 0, top: -114, left: 146, description: 'Gold' },
-          { floor: 0, top: -161, left: 278, description: 'Blue Stairs' },
-          { floor: 0, top: -64, left: 321, description: 'Server' },
-          { floor: 0, top: 53, left: 201, description: 'CCTV', site: true, bomb: true },
-          { floor: 0, top: 167, left: 65 , description: 'Dock' },
-          { floor: 0, top: 21, left: 103, description: 'Red Hallway', rotate: -90},
-          { floor: 0, top: 115, left: 35, description: 'Lockers Hallway'  },
-          { floor: 0, top: -255, left: 455, description: 'Tunnel' },
-          { floor: 0, top: 4, left: 2, description: 'Lockers', site: true, bomb: true, secure: true },
-          { floor: 0, top: 94, left: -152, description: 'Vault Lobby' },
-          { floor: 0, top: -5, left: -166, description: 'Vault Entrance' },
-          { floor: 0, top: 237, left: -38, description: 'Main Stairs' },
-          { floor: 0, top: 315, left: -137, description: 'Garage' },
-          { floor: 0, top: 170, left: -183, description: 'Elevators' },
-          { floor: 0, top: 359, left: -15, description: 'Red Truck', call: true },
-          // 1F
-          { floor: 1, top: 236, left: -274, description: 'Garage Roof' },
-          { floor: 1, top: 255, left: 265, description: 'Printer' },
-          { floor: 1, top: -92, left: 27, description: 'Tellers\' Office', site: true, hostage: true, bomb: true },
-          { floor: 1, top: -56, left: 153, description: 'Archives', site: true, bomb: true, secure: true },
-          { floor: 1, top: -70, left: -90, description: 'Tellers' },
-          { floor: 1, top: 132, left: -328, description: 'Loan' },
-          { floor: 1, top: 123, left: -81, description: 'Open Space Hallway' },
-          { floor: 1, top: 245, left: -34, description: 'Main Stairs' },
-          { floor: 1, top: -61, left: 318, description: 'Square' },
-          { floor: 1, top: -141, left: -234, description: 'Lobby' },
-          { floor: 1, top: 183, left: 162, description: 'Open Space', site: true, bomb: true, secure: true },
-          { floor: 1, top: 145, left: 283, description: 'Kitchen', site: true, hostage: true, bomb: true },
-          { floor: 1, top: 18, left: 441, description: 'Electrical' },
-          { floor: 1, top: 34, left: 143, description: 'Admin' },
-          { floor: 1, top: -318, left: -223, description: 'ATMs' },
-          { floor: 1, top: 170, left: -183, description: 'Elevators' },
-          { floor: 1, top: 170, left: -114, description: 'Elevators' },
-          { floor: 1, top: -155, left: 322, description: 'Square Stairs' },
-          { floor: 1, top: -10, left: -274, description: 'Lobby Stairs', rotate: 45 },
-          // 2F
-          { floor: 2, top: 236, left: -274, description: 'Garage Roof' },
-          { floor: 2, top: -141, left: -234, description: 'Lobby' },
-          { floor: 2, top: -159, left: 33, description: 'Exec Hallway' },
-          { floor: 2, top: -32, left: -105, description: 'Front Desk' },
-          { floor: 2, top: -75, left: 39, description: 'Exec', site: true, bomb: true },
-          { floor: 2, top: -77, left: 184, description: 'CEO', site: true, hostage: true, bomb: true, secure: true },
-          { floor: 2, top: -8, left: 319, description: 'Top Square' },
-          { floor: 2, top: 47, left: 185, description: 'Janitor' },
-          { floor: 2, top: 127, left: -20, description: 'Meeting Hallway' },
-          { floor: 2, top: 240, left: -25, description: 'Main Stairs' },
-          { floor: 2, top: 147, left: 320, description: 'Terrace' },
-          { floor: 2, top: 279, left: 117, description: 'Stock' },
-          { floor: 2, top: 50, left: -2, description: 'Meeting' },
-          { floor: 2, top: 173, left: -110, description: 'Elevators' },
-          { floor: 2, top: -318, left: -223, description: 'ATMs' },
-          { floor: 2, top: 132, left: -328, description: 'Loan' },
-          { floor: 2, top: -128, left: -148, description: 'Banana', rotate: -45 },
-          { floor: 2, top: -158, left: 330, description: 'Square Stairs' },
-          { floor: 2, top: -10, left: -274, description: 'Lobby Stairs', rotate: 45 },
-          { floor: 2, top: 127, left: 145, description: 'Stock Hallway' },
-          // 3F
-          { floor: 3, top: 236, left: -274, description: 'Garage Roof' },
-          { floor: 3, top: -13, left: -136, description: 'High Roof' },
-          { floor: 3, top: 56, left: 129, description: 'Low Roof' }
         ]
       },
       bartlett: {
@@ -116,9 +32,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -466, left: -454, width: 1236, name: floorTerms.secondFloor },
           { index: 3, top: -466, left: -454, width: 1236, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 392, left: 699
-        },
         spawnPoints: [
           { letter: 'A', top: 595, left: -793, description: 'Festival' },
           { letter: 'B', top: 646, left: 320, description: 'Main Gate'  },
@@ -195,9 +108,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -475, left: -307, width: 681, name: floorTerms.secondFloor },
           { index: 3, top: -475, left: -307, width: 681, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: -74, left: 660
-        },
         spawnPoints: [
           { letter: 'A', top: -194, left: 810, description: 'East Vehicle Entrance' },
           { letter: 'B', top: 567, left: -128, description: 'Valley' },
@@ -279,9 +189,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -128, left: 126, width: 723, name: floorTerms.secondFloor },
           { index: 3, top: -128, left: 126, width: 723, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 258, left: 1020
-        },
         spawnPoints: [
           { letter: 'A', top: -175, left: 865, description: 'Campfire' },
           { letter: 'B', top: 400, left: 1080, description: 'Cliffside' },
@@ -364,9 +271,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -494, left: -449, width: 840, name: floorTerms.secondFloor },
           { index: 3, top: -494, left: -449, width: 840, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 503, left: 758
-        },
         spawnPoints: [
           { letter: 'A', top: 504, left: 74, description: 'Main Gate' },
           { letter: 'B', top: 88, left: -776, description: 'Shipping Dock' },
@@ -461,9 +365,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -210, left: -365, width: 740, name: floorTerms.secondFloor },
           { index: 3, top: -210, left: -365, width: 740, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 522, left: 409
-        },
         spawnPoints: [
           { letter: 'A', top: 186, left: 814, description: 'Main Entrance'  },
           { letter: 'B', top: -522, left: -280, description: 'Pool Side' },
@@ -537,9 +438,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -222, left: -448, width: 943, name: floorTerms.secondFloor },
           { index: 3, top: -222, left: -448, width: 943, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 314, left: 422
-        },
         spawnPoints: [
           { letter: 'A', top: 412, left: 622, description: 'Riot Barricade' },
           { letter: 'B', top: 634, left: -329, description: 'Police Line' },
@@ -632,9 +530,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -450, left: -532, width: 883, name: floorTerms.thirdFloor },
           { index: 4, top: -450, left: -532, width: 883, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 102, left: 690
-        },
         spawnPoints: [
           { letter: 'A', top: -213, left: 657, description: 'Rooftops' },
           { letter: 'B', top: 469, left: -543, description: 'Market' },
@@ -706,9 +601,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -370, left: -362, width: 946, name: floorTerms.secondFloor },
           { index: 3, top: -370, left: -362, width: 946, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 575, left: 533
-        },
         spawnPoints: [
           { letter: 'A', top: -690, left: -370, description: 'Main Gate' },
           { letter: 'B', top: -690, left: 170, description: 'Parking' },
@@ -803,9 +695,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -292, left: -277, width: 514, name: floorTerms.thirdFloor },
           { index: 4, top: -292, left: -277, width: 514, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 74, left: 569
-        },
         spawnPoints: [
           { letter: 'A', top: 93, left: -639, description: 'Tower' },
           { letter: 'B', top: 105, left: 753, description: 'Spitfire' },
@@ -894,9 +783,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -283, left: -204, width: 515, name: floorTerms.secondFloor },
           { index: 3, top: -283, left: -204, width: 515, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 100, left: 534
-        },
         spawnPoints: [
           { letter: 'A', top: -439, left: 118, description: 'Front Street' },
           { letter: 'B', top: 348, left: -140, description: 'APC' },
@@ -970,9 +856,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -193, left: -242, width: 726, name: floorTerms.thirdFloor },
           { index: 4, top: -193, left: -242, width: 726, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 460, left: 390
-        },
         spawnPoints: [
           { letter: 'A', top: -528, left: 111, description: 'Docks' },
           { letter: 'B', top: 112, left: -689, description: 'Market' },
@@ -1057,9 +940,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -364, left: -382, width: 843, name: floorTerms.secondFloor },
           { index: 3, top: -364, left: -382, width: 843, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 214, left: 871
-        },
         spawnPoints: [
           { letter: 'A', top: -495, left: -976, description: 'Dock' },
           { letter: 'B', top: 465, left: -426, description: 'Sailboats' },
@@ -1166,9 +1046,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -312, left: -418, width: 811, name: floorTerms.thirdFloor },
           { index: 4, top: -312, left: -418, width: 811, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 92, left: 863
-        },
         spawnPoints: [
           { letter: 'A', top: 318, left: -692, description: 'Junkyard' },
           { letter: 'B', top: 405, left: 437, description: 'Street' },
@@ -1278,7 +1155,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -162, left: 13, width: 692, name: floorTerms.secondFloor },
           { index: 3, top: -162, left: 13, width: 692, name: floorTerms.roof }
         ],
-        compassPoints: { top: 484, left: 790 },
         spawnPoints: [
           { letter: 'A', top: -406, left: 634, description: 'Storage Yard' },
           { letter: 'B', top: 657, left: 464, description: 'Pumps' },
@@ -1365,9 +1241,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -91, left: -655, width: 1194, name: floorTerms.thirdFloor },
           { index: 4, top: -91, left: -655, width: 1194, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 305, left: 494
-        },
         spawnPoints: [
           { letter: 'A', top: -428, left: 434, description: 'Official Entrance' },
           { letter: 'B', top: -489, left: -408, description: 'Reporter Entrance' },
@@ -1433,9 +1306,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -115, left: -84, width: 851, name: floorTerms.secondFloor },
           { index: 3, top: -115, left: -84, width: 851, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 357, left: 722
-        },
         spawnPoints: [
           { letter: 'A', top: 120, left: -355, description: 'Helipad' },
           { letter: 'B', top: -100, left: 665, description: 'Tower' },
@@ -1514,9 +1384,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -305, left: -292, width: 813, name: floorTerms.secondFloor },
           { index: 3, top: -305, left: -292, width: 813, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 29, left: 793
-        },
         spawnPoints: [
           { letter: 'A', top: 369, left: -548, description: 'Main Entrance' },
           { letter: 'B', top: -409, left: -548, description: 'Teacups' },
@@ -1599,9 +1466,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 3, top: -715, left: -1115, name: floorTerms.thirdFloor },
           { index: 4, top: -715, left: -1115, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 380, left: 1191
-        },
         spawnPoints: [
           { letter: 'A', top: -627, left: -317, description: 'North Roof', floor: 4 },
           { letter: 'B', top: 575, left: 527, description: 'South Roof', floor: 4 }
@@ -1701,9 +1565,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 2, top: -495, left: 16, width: 624, name: floorTerms.secondFloor },
           { index: 3, top: -495, left: 16, width: 624, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 148, left: 800
-        },
         spawnPoints: [
           { letter: 'A', top: -371, left: -110, description: 'Main Road' },
           { letter: 'B', top: 420, left: 371, description: 'Ruins' },
@@ -1807,9 +1668,6 @@ var R6MMainData = (function(R6MLangTerms, undefined){
           { index: 4, top: -175, left: -697, width: 1567, name: floorTerms.fourthFloor },
           { index: 5, top: -175, left: -697, width: 1567, name: floorTerms.roof }
         ],
-        compassPoints: {
-          top: 231, left: 803
-        },
         spawnPoints: [
           { letter: 'A', top: -532, left: -187, description: 'Submarine' },
           { letter: 'B', top: 413, left: -657, description: 'Zodiac' },

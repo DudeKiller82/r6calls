@@ -67,28 +67,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return classes;
   };
 
-  var getCompassHtml = function getCompassHtml(compassPoints) {
-    var html = '',
-      positionPoints,
-      inlineStyle;
-
-    positionPoints = { top: 448, left: 550 }; // default if none provided
-    positionPoints = $.extend(
-      positionPoints,
-      compassPoints
-    );
-    inlineStyle = getPositionStyle(positionPoints);
-
-    html += '<div id="compass" style="' + inlineStyle + '">';
-    html += '<div class="compass-background"></div>';
-    html += '<p class="letter-n"><span>N</span></p>';
-    html += '<p class="letter-e"><span>E</span></p>';
-    html += '<p class="letter-s"><span>S</span></p>';
-    html += '<p class="letter-w"><span>W</span></p>';
-    html += '</div>';
-    return html;
-  };
-
   var getMaxFloorIndexHtml = function getMaxFloorIndexHtml($mapWrappers, floors, imgUrlPrefix) {
     /** Generates the HTML for the given floors.
      *
@@ -145,35 +123,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return html;
   };
 
-  var getHostageObjectivesHtml = function getHostageObjectivesHtml(hostageObjectives) {
-    /** Generates the HTML for the given hostage objectives.
-     *
-     * Nominally, this will be called on only all the hostage objectives of a single map.
-     *
-     * @param hostageObjectives A list of objects containing the data of the hostage objective
-     *  markers, including the position of the markers, and their classes, such as being a
-     *  small marker, or what floor it's on.
-     *
-     * @returns An HTML string containing a div for every hostage objective defining its location
-     *  and classes.
-     *
-     * @see getCommonClasses
-     */
-    var html = '',
-      inlineStyle,
-      classes,
-      hostageLabel;
-
-    hostageObjectives.forEach(function(hostage) {
-      inlineStyle = getPositionStyle(hostage);
-      classes = 'objective hostage ';
-      classes += getCommonClasses(hostage);
-      hostageLabel = 'H' + hostage.set;
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><p>' + hostageLabel + '</p><span></span></div>';
-    });
-    return html;
-  };
-
   var getPanelLabelsHtml = function getPanelLabelsHtml(floors) {
     var html = '',
       cssClass = '';
@@ -216,44 +165,10 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     return styleString;
   };
 
-  var getDimensionStyle = function getDimensionStyle(element) {
-    if ('width' in element && 'height' in element) {
-      return 'px;background-size: ' + element.width + 'px,' + element.height + 'px;';
-    } else {
-      return '';
-    }
-  };
-
-  var getRotateCssStatements = function getRotateCssStatements(degree) {
-    var css = '';
-
-    css += 'transform: rotate(' + degree + 'deg); ';
-    css += '-webkit-transform: rotate(' + degree + 'deg); ';
-    css += '-moz-transform: rotate(' + degree + 'deg); ';
-    css += '-o-transform: rotate(' + degree + 'deg); ';
-    css += '-ms-transform: rotate(' + degree + 'deg); ';
-    return css;
-  };
-
-  var getSkylightsHtml = function getSkylightsHtml(skylights) {
-    var html = '',
-      inlineStyle,
-      classes;
-
-    skylights.forEach(function(skylight) {
-      inlineStyle = getPositionStyle(skylight);
-      classes = 'skylight ';
-      classes += getCommonClasses(skylight);
-      html += '<div style="' + inlineStyle + '" class="' + classes + '"><span></span></div>';
-    });
-    return html;
-  };
-
   var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $mapPanelLabels) {
     var html = '';
 
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
-    html += getCompassHtml(mapData.compassPoints);
 
     $mapElements.html(html);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
