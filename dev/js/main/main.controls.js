@@ -6,9 +6,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $floorControl = $('#floor-control'),
     $zoomControl = $('#zoom-range'),
     $menuControl = $('#mmenu-link'),
-    $toggleControl = $('#toggle-control'),
     $lockPanningControl,
-    $roomLabelStylesControl,
     $displayBombControl,
     $displaySecureControl,
     $displayHostageControl,
@@ -22,6 +20,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $displaySecurityCameraControl,
     $displaySkylightControl,
     $displayLadderControl,
+    $displayCompassControl,
     $mapPanelCountControl,
     $fullScreenControl,
     $menuSelectMapsControl,
@@ -140,8 +139,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
         if (floorsTrySelect(0)) {
           showSelectedFloorFn();
         }
-      } else if (['l','L'].includes(keyVal)) {
-        triggerToggleEvent(TOGGLE_TYPE_LABEL);
       }
     };
   };
@@ -226,6 +223,10 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return $displayLadderControl.is(':checked');
   };
 
+  var getDisplayCompassValue = function getDisplayCompassValue() {
+    return $displayCompassControl.is(':checked');
+  };
+
   var getLockPanningValue = function getLockPanningValue() {
     return $lockPanningControl.is(':checked');
   };
@@ -252,9 +253,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
     html += '</div>';
 
-    html += '<label>Room label style</label>';
-    html += '<select id="room-label-style"></select>';
-
     html += '<label>Elements to display</label>';
     html += '<div class="checkbox-wrapper">';
     html += '<input type="checkbox" checked="checked" id="display-bomb">Bomb</input><br>';
@@ -270,6 +268,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     html += '<input type="checkbox" checked="checked" id="display-security-camera">Security camera</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-skylight">Skylight</input><br>';
     html += '<input type="checkbox" checked="checked" id="display-ladder">Ladder</input><br>';
+    html += '<input type="checkbox" checked="checked" id="display-compass">Compass</input><br>';
     html += '</div>';
 
     html += '</div>';
@@ -392,7 +391,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     return R6MHelpers.trySelectOption($mapControl, map);
   };
 
-  var menuSetup = function menuSetup(roomLabelStyles) {
+  var menuSetup = function menuSetup() {
     var html = '';
 
     html += getMenuR6MapsHtml();
@@ -401,8 +400,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $menuPanel.html(html);
 
     $menuControl.find('.menu-text').html('Menu');
-    $roomLabelStylesControl = $('#room-label-style');
-    populateRoomLabelStyleOptions($roomLabelStylesControl, roomLabelStyles);
     $displayBombControl = $('#display-bomb');
     $displaySecureControl = $('#display-secure');
     $displayHostageControl = $('#display-hostage');
@@ -416,6 +413,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $displaySecurityCameraControl = $('#display-security-camera');
     $displaySkylightControl = $('#display-skylight');
     $displayLadderControl = $('#display-ladder');
+    $displayCompassControl = $('#display-compass');
     $mapPanelCountControl = $('#map-pane-count');
     $lockPanningControl = $('#lock-panning');
     $fullScreenControl = $('#full-screen');
@@ -696,6 +694,24 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     });
   };
 
+  var setCompassLayerDisplay = function setCompassLayerDisplay() {
+    setLayerDisplay('cmp', getDisplaySkylightValue());
+  };
+
+  var displaySetCompassOption = function displaySetCompassOption(isChecked) {
+    var boolValue = (isChecked === 'true') ? true : false;
+
+    setCompassLayerDisplay();
+    $displayCompassControl.prop('checked', boolValue);
+  };
+
+  var displaySetupDisplayCompassChangeEvent = function displaySetupDisplayCompassChangeEvent(callback) {
+    $displayCompassControl.change(function(e) {
+      setCompassLayerDisplay();
+      callback(getDisplayCompassValue());
+    });
+  };
+
   var panSetLockOption = function panSetLockOption(isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
@@ -708,34 +724,8 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     });
   };
 
-  var populateRoomLabelStyleOptions = function populateRoomLabelStyleOptions(
-    $roomLabelStylesControl
-  ) {
-    var html = '';
-
-    html += '<option value="Dark">Dark</option>';
-    html += '<option value="Light">Light (Default)</option>';
-    html += '<option value="DarkAndLarge">Large and Dark</option>';
-    html += '<option value="LightAndLarge">Large and Light</option>';
-    html += '<option value="DarkAndSmall">Small and Dark</option>';
-    html += '<option value="LightAndSmall">Small and Light</option>';
-    html += '<option value="DisplayNone">Turn Off</option>';
-    html += '<option value="Learning">Learning Mode</option>';
-    $roomLabelStylesControl.html(html);
-  };
-
   var resetSelectedFloor = function resetSelectedFloor() {
     $floorControl.find('.' + SELECTED_CLASS + '').removeClass(SELECTED_CLASS);
-  };
-
-  var roomLabelStylesSetupChangeEvent = function roomLabelStylesSetupChangeEvent(callback) {
-    $roomLabelStylesControl.on('change', function(event) {
-      callback(event.target.value);
-    });
-  };
-
-  var roomLabelStylesTrySelect = function roomLabelStylesTrySelect(style) {
-    return R6MHelpers.trySelectOption($roomLabelStylesControl, style);
   };
 
   var setupFloorChangeEvent = function setupFloorChangeEvent(callback) {
@@ -821,47 +811,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
   var objectivesTrySelect = function objectivesTrySelect(objective) {
     return R6MHelpers.trySelectOption($objectiveControl, objective);
-  };
-
-  var togglePopulate = function togglePopulate() {
-    var btns = '<button id="toggle-label" title="Learning Mode \nShortcut: l">'
-       + '<span class="short">Learning</span>'
-       + '<span class="full">Learning Mode</span>'
-       + '</button>';
-
-    $toggleControl.html(btns);
-  };
-
-  var setupToggleClickEvent = function setupToggleClickEvent(callback) {
-    $toggleControl.on('click', '#toggle-' + TOGGLE_TYPE_LABEL, function(e) {
-      var cur = $roomLabelStylesControl.val();
-      var prev = $(this).data('prevRoomStyle') ? $(this).data('prevRoomStyle') : ROOM_LABEL_STYLE_DISPLAY_NONE;
-
-      if (cur == prev){
-        prev = cur === ROOM_LABEL_STYLE_DISPLAY_NONE ? ROOM_LABEL_STYLE_DEFAULT : ROOM_LABEL_STYLE_DISPLAY_NONE;
-      }
-
-      $roomLabelStylesControl.val(prev).trigger('change');
-      $(this).data('prevRoomStyle', cur);
-      if (callback && typeof callback === 'function'){
-        callback();
-      }
-    });
-  };
-
-  var triggerToggleEvent = function triggerToggleEvent(type){
-    // Validate type and default to label
-    switch (type){
-    case TOGGLE_TYPE_LABEL:
-      break;
-    default:
-      type = TOGGLE_TYPE_LABEL;
-    }
-    $toggleControl.find('#toggle-' + type).trigger('click');
-  };
-
-  var toggleSetup = function toggleSetup(callback) {
-    setupToggleClickEvent(callback);
   };
 
   var removeLatestUpdateHighlight = function removeLatestUpdateHighlight(initialDelayMs) {
@@ -980,20 +929,15 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
       setSkylightLayerDisplay: setSkylightLayerDisplay,
       setDisplayLadderOption: displaySetLadderOption,
       setupDisplayLadderOption: displaySetupDisplayLadderChangeEvent,
-      setLadderLayerDisplay: setLadderLayerDisplay
+      setLadderLayerDisplay: setLadderLayerDisplay,
+      setDisplayCompassOption: displaySetCompassOption,
+      setupDisplayCompassOption: displaySetupDisplayCompassChangeEvent,
+      setCompassLayerDisplay: setCompassLayerDisplay
     },
     pan: {
       reset: panReset,
       setLockOption: panSetLockOption,
       setupLockOption: panSetupLockPanningChangeEvent
-    },
-    roomLabelStyles: {
-      setup: roomLabelStylesSetupChangeEvent,
-      trySelect: roomLabelStylesTrySelect
-    },
-    toggle: {
-      populate: togglePopulate,
-      setup: toggleSetup
     },
     zoom: {
       disable: zoomDisable,

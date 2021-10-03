@@ -175,7 +175,6 @@
 
     R6MMainControls.objectives.populate(['bomb', 'hostage', 'secure']);
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
-    R6MMainControls.toggle.populate();
     R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $mapPanelLabels);
 
     if (!DEV_MODE) {
@@ -210,6 +209,7 @@
     R6MMainControls.display.setSecurityCameraLayerDisplay();
     R6MMainControls.display.setSkylightLayerDisplay();
     R6MMainControls.display.setLadderLayerDisplay();
+    R6MMainControls.display.setCompassLayerDisplay();
   };
 
   var outputCoordinates = function outputCoordinates(e) {
@@ -341,6 +341,13 @@
     }
   };
 
+  var saveDisplayCompassOption = function saveDisplayCompassOption(value) {
+    localStorageSetItem('displayCompass', value);
+    if (value) {
+      R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    }
+  };
+
   var saveLockPanningOption = function saveLockPanningOption(value) {
     localStorageSetItem('lockpanning', value);
     if (value) {
@@ -425,10 +432,8 @@
   var setupEvents = function setupEvents() {
     $mapMains.on('click', outputCoordinates);
     R6MMainControls.objectives.setup(handleObjectiveChange);
-    R6MMainControls.toggle.setup();
     R6MMainControls.maps.setup(handleMapChange);
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
-    R6MMainControls.roomLabelStyles.setup(setRoomLabelStyle);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
     R6MMainControls.display.setupDisplayBombOption(saveDisplayBombOption);
     R6MMainControls.display.setupDisplaySecureOption(saveDisplaySecureOption);
@@ -443,6 +448,7 @@
     R6MMainControls.display.setupDisplaySecurityCameraOption(saveDisplaySecurityCameraOption);
     R6MMainControls.display.setupDisplaySkylightOption(saveDisplaySkylightOption);
     R6MMainControls.display.setupDisplayLadderOption(saveDisplayLadderOption);
+    R6MMainControls.display.setupDisplayCompassOption(saveDisplayCompassOption);
     R6MMainControls.pan.setupLockOption(saveLockPanningOption);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
@@ -470,7 +476,7 @@
   var setupMenu = function setupMenu() {
     var $menuLink = $('#mmenu-link');
 
-    R6MMainControls.menu.setup(R6MMainRender.roomLabelStyles);
+    R6MMainControls.menu.setup();
 
     var foo = $('#mmenu-menu').mmenu({
       offCanvas: {
@@ -646,6 +652,14 @@
     }
   };
 
+  var tryLoadDisplayCompassOption = function tryLoadDisplayCompassOption() {
+    var displayCompassOption = localStorage.getItem('displayCompass');
+
+    if (displayCompassOption !== null) {
+      R6MMainControls.display.setDisplayCompassOption(displayCompassOption);
+    }
+  };
+
   var tryLoadLockPanningOption = function tryLoadLockPanningOption() {
     var lockPanningOption = localStorage.getItem('lockpanning');
 
@@ -683,17 +697,8 @@
     tryLoadDisplaySecurityCameraOption();
     tryLoadDisplaySkylightOption();
     tryLoadDisplayLadderOption();
+    tryLoadDisplayCompassOption();
     tryLoadLockPanningOption();
-    tryLoadRoomLabelStyle();
-  };
-
-  var tryLoadRoomLabelStyle = function tryLoadRoomLabelStyle() {
-    var style = localStorage.getItem('roomlabelstyle');
-
-    if (style) {
-      R6MMainControls.roomLabelStyles.trySelect(style);
-      R6MMainRender.setRoomLabelStyle($mapElements, style);
-    }
   };
 
   var trySelectBookmarkedMap = function trySelectBookmarkedMap() {
