@@ -17,7 +17,7 @@ var R6MMainData = (function(undefined){
         name: 'Bank',
         imgUrlPrefix: 'bank',
         floors: [
-          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
           { index: 0, name: floorTerms.basement },
           { index: 1, name: floorTerms.firstFloor },
           { index: 2, name: floorTerms.secondFloor },

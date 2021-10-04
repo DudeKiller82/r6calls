@@ -20,7 +20,6 @@
     setPageElements();
     R6MMainRender.setupMapPanels($mapPanelWrappers, 4);
     setMapElements();
-    R6MHelpers.tryChangeDirection('LTR');
     setupMenu();
     setupSelectMap();
     R6MMainControls.maps.populate(R6MMainData.getMapData());
@@ -177,10 +176,8 @@
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
     R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $mapPanelLabels);
 
-    if (!DEV_MODE) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-      R6MMainControls.zoom.reset($mapMains, getResetDimensions);
-    }
+    R6MMainControls.pan.reset($mapMains, getResetDimensions);
+    R6MMainControls.zoom.reset($mapMains, getResetDimensions);
 
     showSelectedFloor();
     showSelectedObjective();
@@ -210,27 +207,6 @@
     R6MMainControls.display.setSkylightLayerDisplay();
     R6MMainControls.display.setLadderLayerDisplay();
     R6MMainControls.display.setCompassLayerDisplay();
-  };
-
-  var outputCoordinates = function outputCoordinates(e) {
-    if (!DEV_MODE) {
-      return;
-    }
-
-    var warning = R6MMainControls.zoom.isZoomed() ? ' Warning, currently zoomed, coordinates are not accurate for CSS.' : '';
-
-    console.log('SINGLE LINE TEXT:');
-    console.log(
-      'top: ' + Math.round(e.pageY - $mapElements.offset().top + 14) + ', ' +
-      'left: ' + Math.round(e.pageX - $mapElements.offset().left)
-    );
-
-    console.log('REGULAR/DOUBLE LINE TEXT:');
-    console.log(
-      'top: ' + Math.round(e.pageY - $mapElements.offset().top) + ', ' +
-      'left: ' + Math.round(e.pageX - $mapElements.offset().left) +
-      warning
-    );
   };
 
   var removeHashFromUrl = function removeHashFromUrl() {
@@ -430,7 +406,6 @@
   };
 
   var setupEvents = function setupEvents() {
-    $mapMains.on('click', outputCoordinates);
     R6MMainControls.objectives.setup(handleObjectiveChange);
     R6MMainControls.maps.setup(handleMapChange);
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
