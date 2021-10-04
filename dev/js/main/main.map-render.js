@@ -152,13 +152,6 @@ var R6MMainRender = (function($,window,document,undefined) {
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
   };
 
-  var setRoomLabelStyle = function setRoomLabelStyle($mapElements, style) {
-    ROOM_LABEL_STYLES.forEach(function(roomLabelStyle) {
-      $mapElements.removeClass(ROOM_LABEL_CSS_TEXT[roomLabelStyle]);
-    });
-    $mapElements.addClass(ROOM_LABEL_CSS_TEXT[style]);
-  };
-
   var setupMapPanels = function setupMapPanels($mapPanelWrappers, numPanels) {
     var html;
 
@@ -211,7 +204,6 @@ var R6MMainRender = (function($,window,document,undefined) {
 
   return  {
     renderMap: renderMap,
-    setRoomLabelStyle: setRoomLabelStyle,
     setupMapPanels: setupMapPanels,
     showFloor: showFloor,
     showObjective: showObjective,

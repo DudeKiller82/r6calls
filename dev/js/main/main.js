@@ -399,12 +399,6 @@
     $mainNav = $('#main-nav');
   };
 
-  var setRoomLabelStyle = function setRoomLabelStyle(style) {
-    R6MMainRender.setRoomLabelStyle($mapElements, style);
-    localStorageSetItem('roomlabelstyle', style);
-    sendRoomLabelEvent(style);
-  };
-
   var setupEvents = function setupEvents() {
     R6MMainControls.objectives.setup(handleObjectiveChange);
     R6MMainControls.maps.setup(handleMapChange);
