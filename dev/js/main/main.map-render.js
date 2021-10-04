@@ -1,6 +1,6 @@
 'use strict';
 
-var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
+var R6MMainRender = (function($,window,document,undefined) {
   var SVG_WIDTH = 2560,
     SVG_HEIGHT = 1474,
     SVG_DIM = {
@@ -42,30 +42,6 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
       DisplayNone: 'room-label-display-none',
       Learning: 'room-label-learning'
     };
-
-  var getCommonClasses = function getCommonClasses(element) {
-    var classes = '';
-
-    if (element.floor != null) {
-      classes += FLOOR_CSS_TEXT[element.floor] + ' ';
-    }
-
-    if (element.otherFloor != null && !element.alwaysShow) {
-      classes += 'other-floor ';
-      classes += element.otherFloor + ' ';
-    }
-
-    classes += element.outdoor ? 'outdoor ' : '';
-    classes += 'hard-to-read ';
-    classes += element.veryHardToRead ? 'very-hard-to-read ' : '';
-    classes += element.site ? 'site ' : '';
-    classes += element.hostage ? 'hostage ' : '';
-    classes += element.secure ? 'secure ' : '';
-    classes += element.bomb ? 'bomb ' : '';
-    classes += element.call ? 'call ' : '';
-
-    return classes;
-  };
 
   var getMaxFloorIndexHtml = function getMaxFloorIndexHtml($mapWrappers, floors, imgUrlPrefix) {
     /** Generates the HTML for the given floors.
@@ -241,4 +217,4 @@ var R6MMainRender = (function($,window,document,R6MLangTerms,undefined) {
     showObjective: showObjective,
     SVG_DIM: SVG_DIM
   };
-})(window.jQuery, window, document, R6MLangTerms);
+})(window.jQuery, window, document);

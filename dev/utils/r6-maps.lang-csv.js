@@ -5,7 +5,6 @@
     window.jQuery,
     window,
     document,
-    R6MLangTerms,
     R6MLangTermsEnglish,
     R6MMainData
   );
@@ -13,7 +12,6 @@
   $,
   window,
   document,
-  R6MLangTerms,
   R6MLangTermsEnglish,
   R6MMainData,
   undefined

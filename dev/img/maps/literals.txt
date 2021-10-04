@@ -1,0 +1,1464 @@
+bank: {
+bartlett: {
+Festival
+Main Gate
+Courtyard
+// EXT
+Patio
+Patio
+Front Entrance
+Festival
+Campus Field
+Terrace
+Terrace
+Back Alley
+Parking
+Main Gate
+Main Gate
+East Balcony
+West Balcony
+// 1F
+Reading
+Library
+Lobby
+Coat
+Fireplace
+Archway Hall
+Dining Hallway
+Dining Hallway
+Main Stairs
+Bathroom
+Dining
+Kitchen
+Service
+Kitchen Corridor
+Pantry
+Piano
+Lounge
+Garden Pass
+Garden Pass
+Library Stairs
+Piano Stairs
+// 2F
+Top Library
+Main Stairs
+Roof
+Classroom Corridor
+Classroom
+Compass
+Front Office
+Office
+Museum
+Model
+Trophy
+Garden Pass
+Garden Pass
+Library Stairs
+Piano Stairs
+Mezzanine
+Mezzanine
+Model Hallway
+// 3F
+Roof
+Roof
+Roof
+Roof Hatch
+border: {
+East Vehicle Entrance
+Valley
+West Vehicle Exit
+// EXT
+West Tower
+Pedestrian Exit
+Valley
+Valley
+Parkin Entrance
+Parking
+West Road
+Vehicle Customs
+Crash
+East Road
+Pedestrian Entrance
+Pedestrian Customs
+Pedestrian Customs
+Watch Tower
+East Alley
+Parking Alley
+Parking Alley
+Archives Balcony
+Bus Roof
+// 1F
+East Stairs
+Exit
+Ventilation
+Supply
+Supply Corridor
+Detention
+Lobby
+Passport
+Customs
+Customs Desk
+Waiting
+Tellers
+Main Stairs
+Server
+Workshop
+Bathroom
+Bathroom Hallway
+// 2F
+Archives
+Armory
+Armory Desk
+CCTV
+Cafeteria
+Red Hallway
+Red Hallway
+Fountain
+Offices Hallway
+Offices
+East Stairs
+Main Stairs
+North Balcony
+East Balcony
+West Balcony
+West Balcony
+South Balcony
+South Balcony
+Generator
+Waiting Balcony
+Sandwich
+// 3F
+Roof
+Roof
+Roof
+chalet: {
+Campfire
+Cliffside
+Lakeside
+// EXT
+Wood Trail
+Campfire Wood
+Campfire
+Backyard
+Gazebo
+Cliffside Stairs
+Cliffside Woods
+Cliffside
+Backyard
+Back Patio
+Helipad Trail
+Helipad
+Front Patio
+Front Yard
+Snowmobiles
+// 0F
+Blue Stairs
+Blue
+Blue
+Garage
+Garage Stairs
+Storage
+Wine
+Basement Hallway
+Backyard Stairs
+Main Stairs
+Car Garage
+Car Garage Entrance
+// 1F
+Library Stairs
+Gaming Hallway
+Bar Hallway
+Gaming
+Stock
+Bar
+Fireplace Stairs
+Fireplace
+Mudroom
+Dining Hallway
+Dining
+Trophy Stairs
+Main
+Trophy
+Kitchen Hallway
+Kitchen
+Backyard Stairs
+// 2F
+Fireplace
+Library Stairs
+Library Hallway
+Library Entrance
+Library
+Trophy Stairs
+Bathroom
+Master
+Solarium
+Piano
+Mezzanine
+Mezzanine
+Office
+Library Balcony
+Office Balcony
+Bathroom Balcony
+club: {
+//
+Main Gate
+Shipping Dock
+Warehouse
+Construction Site
+// EXT
+Main Gate
+Junkyard
+Junkyard
+VIP Parking
+Parking
+Kennels
+Kennels
+Recreation
+Trash
+Trash
+Trash
+Graffiti
+Construction Site
+// 0F
+Ladder
+Blue
+Bike
+Church
+Blue Stairs
+Church Hallway
+Armory
+Armory
+Main Stairs
+Tunnel
+Container
+Bike Hallway
+// 1F
+Garage
+Side Entrance
+Changing
+Strip Club
+Lobby
+Porch
+Lounge
+Lounge
+Junkyard Entrance
+Storage
+Pool
+Bar
+Stage
+Blue Stairs
+Stock
+Red Stairs
+Strip Hallway
+Toilets
+Kitchen Hallway
+Kitchen
+Main Stairs
+Kitchen Entrance
+// 2F
+Garage
+Strip Roof
+Porch
+CCTV
+Blacony
+Gym
+Bedroom
+Construction
+Cash
+Red Stairs
+Jacuzzi
+Bathroom
+Bedroom Hallway
+Secret
+Main Stairs
+Office
+Catwalk'
+Catwalk
+// 3F
+Eastern Roof
+Eastern Roof
+Strip Roof
+Porch
+Blacony
+Central Roof
+Jacuzzi
+coastline: {
+Main Entrance
+Pool Side
+Ruins
+// EXT
+Ruins
+Pool
+Pool
+Main Entrance
+Main Entrance
+Courtyard
+Terrace
+Back Alley
+Pool Side
+Walkway
+Garage Roof
+Promenade
+Promenade
+// 1F
+Delivery
+Delivery
+Toilets
+Lobby
+White Stairs
+Kitchen
+Kitchen
+Kitchen Hallway
+Security
+Sun
+Library
+Blue Bar
+Sunrise
+Pool Entrance
+Blue Stairs
+Cantina
+Reception
+Sunrise Hallway
+// 2F
+White Stairs
+Blue Stairs
+VIP Hallway
+Hookah
+Pool Table
+TV Hallway
+Luggage
+Aqua
+Guitars
+Bathroom
+Penthouse
+TV
+Hookah Balcony
+VIP
+VIP Balcony
+Aqua Balcony
+Roof Drop
+Hookah Hallway
+// 3F
+Rooftop
+Rooftop
+Roof Drop
+consulate: {
+Riot Barricade
+Police Line
+Gas Station
+Side Entrance
+// EXT
+Garage Way
+Courtyard
+Courtyard
+Back Courtyard
+Side Entrance
+Dumpster
+Parking
+Parking
+Gardens
+Gardens
+Fountain
+Yellow Entrance
+Garage Roof
+Memorial
+Police
+Barracade
+West Front Yard
+East Front Yard
+Front Alley
+// 0F
+Yellow Stairs
+Garage
+Garage Corridor
+Security
+Kitchen
+Spiral
+Locker
+Visa Stairs
+Electric
+Storage
+Archives
+Archives Corridor
+Pillar
+White Truck
+Pipes
+// 1F
+Yellow Stairs
+Piano
+West Corridor
+West Corridor
+Bathroom
+Antechamber
+Lobby
+East Corridor
+Tellers
+Visa Stairs
+Visa Stairs
+Visa
+Visa
+Spiral
+Visa Entrance
+Front Door
+// 2F
+Balcony
+Visa Stairs
+Copy
+Cabinet
+Admin
+Spiral
+Break
+Front Office
+Meeting
+Long Desk
+Flag
+Top Bathroom
+Yellow Stairs
+Connector
+CEO
+// 3F
+Balcony
+Roof
+Roof
+favela: {
+Rooftops
+Market
+Schoolyard
+// EXT
+Schoolyard
+School Roof
+Back Alley
+Courtyard
+Rooftops
+Rooftops
+Street
+Street
+Market Alley
+Football
+// 0F
+Market
+Tunnel
+// 1F
+Trash Stairs
+Laundry
+Solarium
+Pink
+Pink Kitchen
+Yellow Stairs
+Yellow
+Green
+Green Bathroom
+Gaming
+Blue
+Blue Kitchen
+Blue Bedroom
+// 2F
+Mezzanine
+Yellow Stairs
+Red
+Red Stairs
+Storage
+Storage Balcony
+Armory
+Armory Balcony
+Trash Stairs
+Servers
+Haker
+Bunks
+Office
+Roof Stairs
+Solarium Roof
+// 3F
+Roof
+Market Roof
+Solarium Roof
+Red Stairs
+Trash Stairs
+Electrical
+// ROOF
+Roof
+Market Roof
+Solarium Roof
+fortress: {
+Main Gate
+Parking
+Garden
+Stable
+// EXT
+Garden Path
+Garden Path
+Garden Path
+Stable Path
+Cliffside
+Cliffside
+Cliffside
+Cliffside
+Courtyard Path
+Courtyard Path
+Cannon
+Cannon
+Cannon
+Unloading
+Front Entrance
+// 1F
+Laundry
+Hammam
+Hammam
+Showers
+Cafeteria Hallway
+Hammam Hallway
+Old Stairs
+Cafeteria
+Main Stairs
+Infirmary
+Kitchen
+Changing
+Dining Hallway
+Changing Hallway
+Waiting
+Sitting
+Dining
+Fountain
+Music
+Lobby
+Ladder
+Office
+Office Hallway
+Lobby Stairs
+// 2F
+Hammam Roof
+Shisha
+Gaming Hallway
+Dormitory Hallway
+Bathroom  Hallway
+Dormitory
+Dormitory
+Gaming
+Main Stairs
+Briefing
+Courtyard Balcony
+Portrait
+Horse
+Bathroom
+Commander
+Bedroom
+Fountain
+mezzanine
+mezzanine
+Fountain Tower
+Lobby Stairs
+Renovation Hallway
+Renovation
+Old Stairs
+// 3F
+Hammam Roof
+Old Roof
+Old
+Modern Roof
+Courtyard Balcony
+West Tower
+East Tower
+Guard Tower
+hereford: {
+Tower
+Spitfire
+Shooting Range
+// EXT
+Street
+Street
+Street
+Street
+West Courtyard
+West Courtyard
+East Courtyard
+East Courtyard
+Barnyard
+Barnyard
+// 0F
+East Tunnel
+Fermentation
+Main Stairs
+Generator
+Workshop
+West Tunnel
+Brewery
+Barrel
+Blue Stairs
+Barn
+Brewery Hallway
+Workshop Hallway
+// 1F
+Prep
+Kitchen
+Main Stairs
+Dining
+Garage
+Kitchen Hallway
+Blue Stairs
+Piano
+Living
+Foyer
+Barn
+Garage Hallway
+Living Hallway
+// 2F
+Loom
+Main Stairs
+Laundry
+Garage Roof
+Closet
+Ninety
+Ninety
+Master
+Blue Stairs
+Kids
+Bathroom
+Sewing
+Master Hallway
+Loom Balcony
+Outside Stairs
+Bathroom Balcony
+// 3F
+Tractor
+Main Stairs
+Attic South
+Attic Middle
+Attic North
+Blue Stairs
+Outside Stairs
+Armory
+Garage Roof
+Tractor Balcony
+// 4F
+Rooftop
+Rooftop
+Rooftop
+Garage Roof
+house: {
+Front Street
+APC
+Side Street
+// EXT
+APC
+APC
+Side Street
+Garage Front
+Garage Side
+Patio
+Depot Stairs
+Treehouse Alley
+Front Yard
+Front Yard
+Treehouse
+// 0F
+Kitchen Stairs
+Back Stairs
+Depot
+Gym
+Laundry
+Garage
+Garage Entrance
+// 1F
+Red Stairs
+Kitchen Stairs', veryHardToRead: true 
+Lobby Stairs
+Back Stairs
+Front Balcony
+Porch
+Gaming
+TV Entrance
+Lobby
+Kitchen
+Office
+Dining
+Connector
+TV
+Music
+// 2F
+Front Balcony
+Porch
+Porch Top', rotate: 45 
+Reading Balcony
+Red Stairs
+Lobby Stairs
+Back Stairs
+Pink
+Pink Dressing
+Car
+Play
+Top Hallway
+Master Dressing
+Master
+Reading
+Bathroom
+Bathroom Hallway
+// 3F/Roof
+Rooftop
+kafe: {
+Docks
+Market
+Park
+// EXT
+Back Alley
+Garage
+Back Alley
+Parking
+West Street
+Main Street
+East Street
+Terrace
+// 1F
+VIP Corridor
+Garage
+Bakery
+Prep
+Cooking
+Service
+Freezer
+White Stairs
+VIP
+Bottom Bar
+Restaurant
+Small Bakery
+Red Stairs
+Coat
+Reception
+Wood Stairs
+Bakery Corridor
+// 2F
+Bakery Roof
+Train
+Dining
+Reading Corridor
+White Stairs
+Laundry
+Reading
+Reading
+Mining
+Mining Corridor
+Pillar
+Red Corridor
+Red Stairs
+Fireplace', call: true 
+Wood Stairs
+Main
+Terrace Entrance
+// 3F
+Bakery Roof
+Piano
+White Corridor
+White Stairs
+Bathroom
+Bar Freezer
+Cocktail Entrance
+Cocktail
+Storage
+Cigar
+Bar
+Red Stairs
+Cigar Balcony
+Cocktail Balcony
+Wood Stairs
+// 4F
+Bakery Roof
+Roof
+Red Hatch
+New hatch
+kanal: {
+Dock
+Sailboats
+Construction
+// EXT
+Middle
+Middle
+Parking
+Lawn
+Lock Gate Tunnel
+Lock Gate Tunnel
+Forklift
+Forklift
+Parking Entrance
+Lock Gate
+Lock Gate
+Construction
+Construction
+Construction
+Containers
+Containers
+Docks Bridge
+Lawn Stairs
+// -1F
+Tunnel
+// 0F
+Red Stairs
+Yellow Stairs
+White Stairs
+Garage
+Alcove
+Pipes
+Basement Corridor
+Bathroom
+Supply
+Shower
+Kayaks
+Locker
+Diving
+Lawn Entrance
+Diving Corridor
+// 1F
+White Stairs
+Red Stairs
+Green Stairs
+Yellow Stairs
+Blue Stairs
+Archives
+Reception
+Model
+Museum
+Meeting
+Radio Hallway
+Bridge
+Map Corridor
+Security
+Lounge
+Map
+Kitchen
+Construction Entrance
+Radio
+Projector
+Construction Stairs
+Gym
+Meeting Hallway
+// 2F
+White Stairs
+Red Stairs
+Green Stairs
+Blue Stairs
+Renovations
+Roof Entrance
+Radar Corridor
+Radar
+Server
+Server Corridor
+Printer
+Control
+Upper Bridge
+West Roof
+West Roof
+Balcony Renovations
+Bridge Roof
+"L"
+// 3F
+West Roof
+West Roof
+Balcony Renovations
+Bridge Roof
+East Roof
+"L"
+Upper Bridge Roof
+oregon: {
+Junkyard
+Street
+Construction
+// EXT
+Street
+Junkyard
+Bus
+Main Entrance
+Parking
+Construction
+Construction
+Garden
+Shooting Range
+// 0F
+Storage
+Laundry Stairs
+Freezer Stairs
+Freezer
+Laundry
+Basement Corridor
+Closet
+Supply
+Blue
+Bunker
+Pillar
+Electric
+Tower Stairs
+// 1F
+Classroom
+Lobby
+Main Stairs
+Shower Corridor
+Security Corridor
+White Stairs
+Garage
+Small Tower
+Showers
+Security
+Dining
+Kitchen
+Meeting
+Split
+Kitchen Corridor
+Tower
+Tower Stairs
+Stage
+Small Stairs
+// 2F
+Balcony
+Main Stairs
+Dining Roof
+White Stairs
+Walk In
+Master
+Small Tower Roof
+Small Tower Roof
+Dorm
+Gaming
+Armory
+Armory Corridor
+Small Tower
+Office
+Trophy
+Kids
+Attic
+Attic
+Meeting Roof
+Meeting Roof
+Cat Walk
+Tower Stairs
+Middle
+Small Stairs
+// 3F
+Dorms Roof
+Dorms Roof
+Dorms Roof
+Dining Roof
+Small Tower Roof
+Garage Roof
+Meeting Roof
+Meeting Roof
+Attic Roof
+Tower Roof
+Cat Walk
+// 4F
+Dorms Roof
+Dorms Roof
+Dorms Roof
+Dining Roof
+Small Tower Roof
+Garage Roof
+Meeting Roof
+Meeting Roof
+Meeting Roof
+Tower Roof
+Tower Roof
+outback: {
+Storage Yard
+Pumps
+Camping
+// EXT
+Pumps
+Pumps
+Motel Parking
+Motel Parking
+Restaurant Parking
+Restaurant Parking
+Picnic
+Golf
+// 1F
+Walkway
+Walkway
+Restaurant Entrance
+Loading
+Garage Stairs
+Balcony Stairs
+Back Stairs
+Piano Stairs
+Shark Stairs
+Terrace Stairs
+Garage
+Garage
+Waiting
+Shop
+Beer
+Gear
+Compressor
+Reception
+Reptile
+Reptile
+Kitchen
+Restaurant
+Restaurant
+Back Entrance
+Ranger
+Nature
+Lobby
+Kitchen Hallway
+Connector
+Closet
+Bathroom
+// 2F
+Garage Stairs
+Balcony Stairs
+Back Stairs
+Piano Stairs
+Shark Stairs
+Terrace Stairs
+Lounge
+Shop Roof
+Balcony
+Office
+Supplies
+Bull
+Party
+Electrical
+Gaming
+Dorms
+Showers
+Shark
+Laundry
+Showers Hallway
+Piano
+Terrace
+// 3F
+Shop Roof
+Restaurant Roof
+Garage Roof
+Motel Roof
+plane: {
+Official Entrance
+Reporter Entrance
+Service Entrance
+// EXT
+Main Entrance
+Front Service Entrance
+Right Wing
+Back Service Entrance
+Reporter Entrance
+Left Wing
+Front Stairway
+Back Stairway
+// 0F
+// 1F
+Back Stairs
+Cargo
+Storage Corridor
+Storage
+Luggage
+Infirmary
+Front Stairs
+Technical
+// 2F
+Meeting
+Office Hallway
+Office
+Meeting Hallway
+Front Stairs
+Pantry
+Kitchen
+Bedroom Hallway
+Bedroom
+Changing
+Laundry
+Staff
+Security
+Press A
+Press B
+Back Stairs
+Bath room
+Cockpit Stairs
+Back Caterer
+Ladder
+// 3F
+Cockpit Stairs
+Cabin Staff
+Radio
+Cabin
+Front Caterer
+Server A
+Server B
+Server B
+skyscraper: {
+Helipad
+Tower
+Ventilation
+// EXT
+Tree
+Contemplation
+West Garden
+Gazebo
+Bridge
+East Garden
+Sand
+Side Path
+Side Stairs
+Ventilation
+Tower
+Helipad
+// 1F
+Kitchen
+Pantry
+Delivery
+Lobby
+Coat
+Reception
+Bedroom
+Closet
+Lobby Entrance
+Dressing
+Bathroom
+Lobby Stairs
+Restaurant
+Toilet
+BBQ
+Bar
+Sushi
+Back Hallway
+Geisha Stairs
+Karaoke Stairs
+Main Entrance
+House Balcony
+Kitchen Balcony
+// 2F
+Geisha Stairs
+Geisha
+Makeup
+Geisha Hallway
+Karaoke Hallway
+Tea
+Karaoke
+Karaoke Stairs
+Drums
+Mezzanine
+Shrine
+Dragon
+Terrace
+VIP
+Lobby Stairs
+Lounge
+Museum
+Display
+Office
+Shrine Balcony
+Office Balcony
+Office Balcony
+Terrace Balcony
+Geisha Balcony
+themepark: {
+Main Entrance
+Teacups
+Bumper
+// EXT
+Palms
+Robo
+Castle
+Castle
+Guest
+Village
+Sweet
+Service
+Alley
+Alley
+// 1F
+Castle
+Arcade
+Barrel
+Throne
+Maintenance
+Maintenance
+Dragon
+Dragon Stairs
+Blue
+Lab Corridor
+Toilet Corridor
+Armory
+Oven
+Lab
+Red Corridor
+Gong
+Locker Corridor
+Tellers
+Drug
+Toilet
+Locker
+Arcade Stairs
+Yellow Stairs
+// 2F
+Cash Balcony
+Arcade Balcony
+Top Arcade
+Kitchen
+Initiation
+Initiation
+Control
+Bunk
+Day Care
+Yellow
+Waiting
+Terrace
+Cash Corridor
+Bar
+Office
+Cash
+Cafe Corridor
+Cafe
+Showers
+Vault
+Dragon Top
+Dragon Stairs
+Yellow Stairs
+Arcade Stairs
+// 3F
+Roof
+Roof
+Control Hatch
+Yellow Hatch
+tower: {
+North Roof
+South Roof
+// EXT
+North Rappel
+North Rappel
+South Rappel
+South Rappel
+// 1F
+West Atrium
+East Atrium
+Center Atrium
+Center Atrium
+Main Reception
+Kitchen
+West Balcony
+West Balcony
+Restaurant
+Bird
+Restaurant Reception
+Tea
+Lounge
+East Balcony
+East Balcony
+Bar
+Elevator
+Bar Hallway
+Restaurant Hallway
+Traditional
+Bonsai
+Gaming
+Fountain
+West Observatory
+East Observatory
+North Stairs
+West Stairs
+East Stairs
+Yellow
+// 2F
+North Stairs
+West Stairs
+East Stairs
+Elevator
+Elevator
+West Atrium
+East Atrium
+Center Atrium
+Center Atrium
+Info
+Blue
+Blue
+Gallery
+Lantern
+Media
+Exhibit Hallway
+Exhibit
+East Balcony
+East Balcony
+Gift Shop
+West Balcony
+West Balcony
+Offices Hallway
+Offices
+Supply
+Meeting
+CEO
+Bathroom
+Server
+CEO Reception
+// 3F
+North Vent
+East Vent
+West Vent
+Ventilation
+Ventilation
+Catwalk
+Catwalk
+Catwalk
+Elevator
+// 4F
+Roof Access
+Roof Access
+Elevator
+North Vent
+East Vent
+West Vent
+villa: {
+Main Road
+Ruins
+Fountain
+// EXT
+Ruins
+Roundabout
+Terrace
+Terrace
+Crypt Entrance
+Garden
+Driveway
+Driveway
+Driveway
+Main Road
+Balcony
+Pergola
+Stable YArd
+Chapel
+Fountain
+Stable
+Side Road
+// 0F
+Crypt Tunnel
+Crypt
+Garage
+Cellar Tunnel
+Tasting
+Arch
+Art
+Office
+Wine
+Red Stairs
+Back Stairs
+Pantry Stairs
+// 1F
+Main Stairs
+Red Stairs
+Astro Stairs
+Back Stairs
+Pantry Stairs
+Greenhouse
+Front Entrance
+Main
+Studio
+Library
+Library
+Piano Hallway
+Piano Hallway
+Piano
+Gallery
+Toilet
+Living
+Living
+Bicycle
+Memorial
+Mudroom
+Living Hallway
+Laundry
+Back Hallway
+Dining
+China
+Kitchen
+Pantry
+// 2F
+Bedroom Roof
+Main Stairs
+Red Stairs
+Astro Stairs
+Veranda
+Ninety
+Ninety Corner
+Ninety
+Study
+Gaming
+Bar
+Aviator
+Vault
+Landing
+Trophy Entrance
+Statue
+Trophy
+Master
+Astro
+Bathroom
+Closet
+// 3F
+Roof
+Skyligh Roof
+yacht: {
+Submarine
+Zodiac
+Snow Mobile
+// EXT
+Submarine
+West Glacier
+East Breach
+East Glacier
+Frozen River
+Zodiac
+West Breach
+// 1F
+Engine
+Back Entrance
+Rear Deck
+Server
+Storage
+Back Stairs
+ladder
+Engine Hallway
+Front Stairs
+// 2F
+Cafeteria
+Control
+Rear Deck
+Kitchen
+Dorms
+Kitchen Hallway
+Back Stairs
+Kitchen Stairs
+Pantry
+Infirmary
+Boreal
+Cafeteria Hallway
+Front Stairs
+Utility
+Anchor
+Boreal Entrance
+// 3F
+Spa Deck
+East Deck
+West Deck
+East Deck
+West Deck
+Front Deck
+Front Deck
+King
+Master
+Casino
+Poker
+Bathroom
+Master Hallway
+Casino Hallway
+Globe Hallway
+Lounge
+Top Stairs
+Front Stairs
+Kitchen Stairs
+Back Stairs
+// 4F
+Maps
+Cockpit
+Cockpit Hallway
+Office
+Cockpit Balcony
+Top Stairs
+Helipad Entrance
+Helipad
+West Balcony
+East Balcony
+// 5F
+Roof

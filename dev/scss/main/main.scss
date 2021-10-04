@@ -5,7 +5,6 @@
 @import "../common/_common.scss";
 @import "_loading.scss";
 @import "_nav.scss";
-@import "_compass.scss";
 @import "_legend.scss";
 @import "_select-map.scss";
 @import "_drawing.scss";
@@ -321,12 +320,8 @@ body {
       z-index: $z-background;
     }
 
-    .floor {
-      z-index: $z-floor;
-    }
-
     &.zoomed-in-far {
-
+      position: relative;
     }
 
     &.zoomed-out-far {

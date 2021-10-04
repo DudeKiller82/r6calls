@@ -1,6 +1,6 @@
 'use strict';
 
-var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
+var R6MMainControls = (function($, window, document, undefined) {
   var $mapControl = $('#map-control'),
     $objectiveControl = $('#objective-control'),
     $floorControl = $('#floor-control'),
@@ -25,10 +25,7 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     $fullScreenControl,
     $menuSelectMapsControl,
     $menuPanel = $('#menu-panel'),
-    ROOM_LABEL_STYLE_DEFAULT = 'Light',
-    ROOM_LABEL_STYLE_DISPLAY_NONE = 'Learning',
     SELECTED_CLASS = 'selected',
-    TOGGLE_TYPE_LABEL = 'label',
     ZOOMED_IN_FAR_CLASS = 'zoomed-in-far',
     ZOOMED_OUT_FAR_CLASS = 'zoomed-out-far',
     CSS_TRANSITION_MS = 1800; // currently in highlighted-item mixin for .highlighted-item-in-transition
@@ -857,7 +854,6 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
 
     $zoomControl.val(resetDimensions.zoomValue);
     $zoomControl.trigger('input');
-    //$zoomControl.trigger('change'); // todo: needed??
   };
 
   return  {
@@ -950,4 +946,4 @@ var R6MMainControls = (function($, window, document, R6MLangTerms, undefined) {
     setupPanZoom: setupPanZoom,
     unhighlightControl: unhighlightControl
   };
-})(window.jQuery, window, document, R6MLangTerms);
+})(window.jQuery, window, document);
