@@ -81,7 +81,7 @@ var R6MMainRender = (function($,window,document,undefined) {
     //              https://greensock.com/forums/topic/11187-accessing-svg-paths-in-external-file/
     // html += '<img src="' + imgSrc + '" style="' + inlineStyle + '" class="' + classes + '"></img>';
     html += '<div style="' + inlineStyle + '" class="' + classes + '"></object>';
-    html += '<object data="' + imgSrc + '" type="image/svg+xml"></object>';
+    html += '<object id="mapSVG" data="' + imgSrc + '" type="image/svg+xml"></object>';
     // Creates a ghost image for every floor, which removes itself when it's loaded, and then
     // resolves the deferrer for this floor.
     // The "ghost image" is just asking to load the bg image another time, and since this will
