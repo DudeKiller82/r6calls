@@ -226,106 +226,8 @@
     }
   };
 
-  var saveDisplayBombOption = function saveDisplayBombOption(value) {
-    localStorageSetItem('displaybomb', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplaySecureOption = function saveDisplaySecureOption(value) {
-    localStorageSetItem('displaysecure', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayHostageOption = function saveDisplayHostageOption(value) {
-    localStorageSetItem('displayhostage', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayFloorHatchOption = function saveDisplayFloorHatchOption(value) {
-    localStorageSetItem('displayfloorhatch', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayCeilingHatchOption = function saveDisplayCeilingHatchOption(value) {
-    localStorageSetItem('displayceilinghatch', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayBreakableWallOption = function saveDisplayBreakableWallOption(value) {
-    localStorageSetItem('displaybreakablewall', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayLineOfSightWallOption = function saveDisplayLineOfSightWallOption(value) {
-    localStorageSetItem('displaylineofsightwall', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayDroneTunnelOption = function saveDisplayDroneTunnelOption(value) {
-    localStorageSetItem('lockpanning', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayLineOfSightFloorOption = function saveDisplayLineOfSightFloorOption(value) {
-    localStorageSetItem('displaylineofsightfloor', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayInsertionPointOption = function saveDisplayInsertionPointOption(value) {
-    localStorageSetItem('displayinsertionpoint', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplaySecurityCameraOption = function saveDisplaySecurityCameraOption(value) {
-    localStorageSetItem('displaysecuritycamera', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplaySkylightOption = function saveDisplaySkylightOption(value) {
-    localStorageSetItem('displayskylight', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayLadderOption = function saveDisplayLadderOption(value) {
-    localStorageSetItem('displayladder', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveDisplayCompassOption = function saveDisplayCompassOption(value) {
-    localStorageSetItem('displayCompass', value);
-    if (value) {
-      R6MMainControls.pan.reset($mapMains, getResetDimensions);
-    }
-  };
-
-  var saveLockPanningOption = function saveLockPanningOption(value) {
-    localStorageSetItem('lockpanning', value);
+  var saveOption = function saveOption(key, value) {
+    localStorageSetItem(key, value);
     if (value) {
       R6MMainControls.pan.reset($mapMains, getResetDimensions);
     }
@@ -404,21 +306,21 @@
     R6MMainControls.maps.setup(handleMapChange);
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
-    R6MMainControls.display.setupDisplayBombOption(saveDisplayBombOption);
-    R6MMainControls.display.setupDisplaySecureOption(saveDisplaySecureOption);
-    R6MMainControls.display.setupDisplayHostageOption(saveDisplayHostageOption);
-    R6MMainControls.display.setupDisplayFloorHatchOption(saveDisplayFloorHatchOption);
-    R6MMainControls.display.setupDisplayCeilingHatchOption(saveDisplayCeilingHatchOption);
-    R6MMainControls.display.setupDisplayBreakableWallOption(saveDisplayBreakableWallOption);
-    R6MMainControls.display.setupDisplayLineOfSightWallOption(saveDisplayLineOfSightWallOption);
-    R6MMainControls.display.setupDisplayDroneTunnelOption(saveDisplayDroneTunnelOption);
-    R6MMainControls.display.setupDisplayLineOfSightFloorOption(saveDisplayLineOfSightFloorOption);
-    R6MMainControls.display.setupDisplayInsertionPointOption(saveDisplayInsertionPointOption);
-    R6MMainControls.display.setupDisplaySecurityCameraOption(saveDisplaySecurityCameraOption);
-    R6MMainControls.display.setupDisplaySkylightOption(saveDisplaySkylightOption);
-    R6MMainControls.display.setupDisplayLadderOption(saveDisplayLadderOption);
-    R6MMainControls.display.setupDisplayCompassOption(saveDisplayCompassOption);
-    R6MMainControls.pan.setupLockOption(saveLockPanningOption);
+    R6MMainControls.display.setupDisplayBombOption(saveOption);
+    R6MMainControls.display.setupDisplaySecureOption(saveOption);
+    R6MMainControls.display.setupDisplayHostageOption(saveOption);
+    R6MMainControls.display.setupDisplayFloorHatchOption(saveOption);
+    R6MMainControls.display.setupDisplayCeilingHatchOption(saveOption);
+    R6MMainControls.display.setupDisplayBreakableWallOption(saveOption);
+    R6MMainControls.display.setupDisplayLineOfSightWallOption(saveOption);
+    R6MMainControls.display.setupDisplayDroneTunnelOption(saveOption);
+    R6MMainControls.display.setupDisplayLineOfSightFloorOption(saveOption);
+    R6MMainControls.display.setupDisplayInsertionPointOption(saveOption);
+    R6MMainControls.display.setupDisplaySecurityCameraOption(saveOption);
+    R6MMainControls.display.setupDisplaySkylightOption(saveOption);
+    R6MMainControls.display.setupDisplayLadderOption(saveOption);
+    R6MMainControls.display.setupDisplayCompassOption(saveOption);
+    R6MMainControls.pan.setupLockOption(saveOption);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
 

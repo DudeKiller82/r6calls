@@ -471,7 +471,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayBombChangeEvent = function displaySetupDisplayBombChangeEvent(callback) {
     $displayBombControl.change(function(e) {
       setBombLayerDisplay();
-      callback(getDisplayBombValue());
+      callback('displaybomb', getDisplayBombValue());
     });
   };
 
@@ -489,7 +489,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplaySecureChangeEvent = function displaySetupDisplaySecureChangeEvent(callback) {
     $displaySecureControl.change(function(e) {
       setSecureLayerDisplay();
-      callback(getDisplaySecureValue());
+      callback('displaysecure', getDisplaySecureValue());
     });
   };
 
@@ -507,7 +507,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayHostageChangeEvent = function displaySetupDisplayHostageChangeEvent(callback) {
     $displayHostageControl.change(function(e) {
       setHostageLayerDisplay();
-      callback(getDisplayHostageValue());
+      callback('displayhostage', getDisplayHostageValue());
     });
   };
 
@@ -525,7 +525,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayFloorHatchChangeEvent = function displaySetupDisplayFloorHatchChangeEvent(callback) {
     $displayFloorHatchControl.change(function(e) {
       setFloorHatchLayerDisplay();
-      callback(getDisplayFloorHatchValue());
+      callback('displayfloorhatch', getDisplayFloorHatchValue());
     });
   };
 
@@ -543,7 +543,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayCeilingHatchChangeEvent = function displaySetupDisplayCeilingHatchChangeEvent(callback) {
     $displayCeilingHatchControl.change(function(e) {
       setCeilingHatchLayerDisplay();
-      callback(getDisplayCeilingHatchValue());
+      callback('displayceilinghatch', getDisplayCeilingHatchValue());
     });
   };
 
@@ -561,7 +561,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayBreakableWallChangeEvent = function displaySetupDisplayBreakableWallChangeEvent(callback) {
     $displayBreakableWallControl.change(function(e) {
       setBreakableWallLayerDisplay();
-      callback(getDisplayBreakableWallValue());
+      callback('displaybreakablewall', getDisplayBreakableWallValue());
     });
   };
 
@@ -579,7 +579,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayLineOfSightWallChangeEvent = function displaySetupDisplayLineOfSightWallChangeEvent(callback) {
     $displayLineOfSightWallControl.change(function(e) {
       setLineOfSightWallLayerDisplay();
-      callback(getDisplayLineOfSightWallValue());
+      callback('displaylineofsightwall', getDisplayLineOfSightWallValue());
     });
   };
 
@@ -597,7 +597,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayDroneTunnelChangeEvent = function displaySetupDisplayDroneTunnelChangeEvent(callback) {
     $displayDroneTunnelControl.change(function(e) {
       setDroneTunnelLayerDisplay();
-      callback(getDisplayDroneTunnelValue());
+      callback('displaydronetunnel', getDisplayDroneTunnelValue());
     });
   };
 
@@ -615,7 +615,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayLineOfSightFloorChangeEvent = function displaySetupDisplayLineOfSightFloorChangeEvent(callback) {
     $displayLineOfSightFloorControl.change(function(e) {
       setLineOfSightFloorLayerDisplay();
-      callback(getDisplayLineOfSightFloorValue());
+      callback('displaylineofsightfloor', getDisplayLineOfSightFloorValue());
     });
   };
 
@@ -633,7 +633,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayInsertionPointChangeEvent = function displaySetupDisplayInsertionPointChangeEvent(callback) {
     $displayInsertionPointControl.change(function(e) {
       setInsertionPointLayerDisplay();
-      callback(getDisplayInsertionPointValue());
+      callback('displayinsertionpoint', getDisplayInsertionPointValue());
     });
   };
 
@@ -651,7 +651,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplaySecurityCameraChangeEvent = function displaySetupDisplaySecurityCameraChangeEvent(callback) {
     $displaySecurityCameraControl.change(function(e) {
       setSecurityCameraLayerDisplay();
-      callback(getDisplaySecurityCameraValue());
+      callback('displaysecuritycamera', getDisplaySecurityCameraValue());
     });
   };
 
@@ -669,7 +669,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplaySkylightChangeEvent = function displaySetupDisplaySkylightChangeEvent(callback) {
     $displaySkylightControl.change(function(e) {
       setSkylightLayerDisplay();
-      callback(getDisplaySkylightValue());
+      callback('displayskylight', getDisplaySkylightValue());
     });
   };
 
@@ -687,7 +687,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayLadderChangeEvent = function displaySetupDisplayLadderChangeEvent(callback) {
     $displayLadderControl.change(function(e) {
       setLadderLayerDisplay();
-      callback(getDisplayLadderValue());
+      callback('displayladder', getDisplayLadderValue());
     });
   };
 
@@ -705,7 +705,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var displaySetupDisplayCompassChangeEvent = function displaySetupDisplayCompassChangeEvent(callback) {
     $displayCompassControl.change(function(e) {
       setCompassLayerDisplay();
-      callback(getDisplayCompassValue());
+      callback('displayCompass', getDisplayCompassValue());
     });
   };
 
@@ -717,7 +717,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
   var panSetupLockPanningChangeEvent = function panSetupLockPanningChangeEvent(callback) {
     $lockPanningControl.change(function(e) {
-      callback(getLockPanningValue());
+      callback('lockpanning', getLockPanningValue());
     });
   };
 
