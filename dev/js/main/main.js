@@ -420,7 +420,7 @@
   };
 
   var tryLoadDisplayOption = function tryLoadDisplayption(key) {
-    var displayBombOption;
+    var displayOption;
 
     switch (key) {
     case 'bmb':
