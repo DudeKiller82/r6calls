@@ -176,20 +176,9 @@
       R6MMainRender.SVG_DIM
     );
 
-    R6MMainControls.display.setLayerDisplay('bmb');
-    R6MMainControls.display.setLayerDisplay('sec');
-    R6MMainControls.display.setLayerDisplay('hst');
-    R6MMainControls.display.setLayerDisplay('fh');
-    R6MMainControls.display.setLayerDisplay('ch');
-    R6MMainControls.display.setLayerDisplay('bw');
-    R6MMainControls.display.setLayerDisplay('losw');
-    R6MMainControls.display.setLayerDisplay('dt');
-    R6MMainControls.display.setLayerDisplay('losf');
-    R6MMainControls.display.setLayerDisplay('ip');
-    R6MMainControls.display.setLayerDisplay('cam');
-    R6MMainControls.display.setLayerDisplay('sl');
-    R6MMainControls.display.setLayerDisplay('lad');
-    R6MMainControls.display.setLayerDisplay('cmp');
+    R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+      R6MMainControls.display.setLayerDisplay(layer.short);
+    });
   };
 
   var removeHashFromUrl = function removeHashFromUrl() {
@@ -241,10 +230,6 @@
     sendControlAnalyticsEvent('Objective', R6MMainControls.objectives.get());
   };
 
-  var sendRoomLabelEvent = function sendRoomLabelEvent(style) {
-    sendControlAnalyticsEvent('RoomLabel', style);
-  };
-
   var setLoadedMapKey = function setLoadedMapKey(mapKey) {
     $body.attr('loaded-map', mapKey);
   };
@@ -289,21 +274,10 @@
     R6MMainControls.maps.setup(handleMapChange);
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
-    R6MMainControls.display.setupDisplayChangeEvent('bmb', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('sec', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('hst', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('fh', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('ch', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('bw', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('losw', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('dt', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('losf', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('ip', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('cam', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('sl', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('lad', saveOption);
-    R6MMainControls.display.setupDisplayChangeEvent('cmp', saveOption);
-    R6MMainControls.pan.setupLockOption(saveOption);
+    R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+      R6MMainControls.menu.setupMenuOptionChangeEvent(layer.short, saveOption);
+    });
+    R6MMainControls.menu.setupMenuOptionChangeEvent('lp', saveOption);
     R6MMainControls.menu.setupSelectMaps(showSelectMap, closeMenu);
     R6MMainControls.menu.setupFullScreen();
 
@@ -402,60 +376,11 @@
     }
   };
 
-  var tryLoadDisplayOption = function tryLoadDisplayption(key) {
-    var displayOption;
+  var tryLoadMenuOption = function tryLoadDisplayption(key) {
+    var menuOption = localStorage.getItem(key);
 
-    switch (key) {
-    case 'bmb':
-      displayOption = localStorage.getItem('displaybomb');
-      break;
-    case 'sec':
-      displayOption = localStorage.getItem('displaysecure');
-      break;
-    case 'hst':
-      displayOption = localStorage.getItem('displayhostage');
-      break;
-    case 'fh':
-      displayOption = localStorage.getItem('displayfloorhatch');
-      break;
-    case 'ch':
-      displayOption = localStorage.getItem('displayceilinghatch');
-      break;
-    case 'bw':
-      displayOption = localStorage.getItem('displaybreakablewall');
-      break;
-    case 'losw':
-      displayOption = localStorage.getItem('displaylineofsightwall');
-      break;
-    case 'dt':
-      displayOption = localStorage.getItem('displaydronetunnel');
-      break;
-    case 'losf':
-      displayOption = localStorage.getItem('displaylineofsightfloor');
-      break;
-    case 'ip':
-      displayOption = localStorage.getItem('displayinsertionpoint');
-      break;
-    case 'cam':
-      displayOption = localStorage.getItem('displaysecuritycamera');
-      break;
-    case 'sl':
-      displayOption = localStorage.getItem('displayskylight');
-      break;
-    case 'lad':
-      displayOption = localStorage.getItem('displayladder');
-      break;
-    case 'cmp':
-      displayOption = localStorage.getItem('displayCompass');
-      break;
-    case 'lp':
-      displayOption = localStorage.getItem('lockpanning');
-      break;
-    default:
-      break;
-    }
-    if (displayOption !== null) {
-      R6MMainControls.display.setDisplayOption(key, displayOption);
+    if (menuOption !== null) {
+      R6MMainControls.menu.setMenuOption(key, menuOption);
     }
   };
 
@@ -475,21 +400,10 @@
 
   var tryLoadMenuOptions = function tryLoadMenuOptions() {
     tryLoadMapPanelCount();
-    tryLoadDisplayOption('bmb');
-    tryLoadDisplayOption('sec');
-    tryLoadDisplayOption('hst');
-    tryLoadDisplayOption('fh');
-    tryLoadDisplayOption('ch');
-    tryLoadDisplayOption('bw');
-    tryLoadDisplayOption('losw');
-    tryLoadDisplayOption('dt');
-    tryLoadDisplayOption('losf');
-    tryLoadDisplayOption('ip');
-    tryLoadDisplayOption('cam');
-    tryLoadDisplayOption('sl');
-    tryLoadDisplayOption('lad');
-    tryLoadDisplayOption('cmp');
-    tryLoadDisplayOption('lp');
+    R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+      tryLoadMenuOption(layer.short);
+    });
+    tryLoadMenuOption('lp');
   };
 
   var trySelectBookmarkedMap = function trySelectBookmarkedMap() {

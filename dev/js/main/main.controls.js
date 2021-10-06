@@ -6,21 +6,6 @@ var R6MMainControls = (function($, window, document, undefined) {
     $floorControl = $('#floor-control'),
     $zoomControl = $('#zoom-range'),
     $menuControl = $('#mmenu-link'),
-    $lockPanningControl,
-    $displayBombControl,
-    $displaySecureControl,
-    $displayHostageControl,
-    $displayFloorHatchControl,
-    $displayCeilingHatchControl,
-    $displayBreakableWallControl,
-    $displayLineOfSightWallControl,
-    $displayDroneTunnelControl,
-    $displayLineOfSightFloorControl,
-    $displayInsertionPointControl,
-    $displaySecurityCameraControl,
-    $displaySkylightControl,
-    $displayLadderControl,
-    $displayCompassControl,
     $mapPanelCountControl,
     $fullScreenControl,
     $menuSelectMapsControl,
@@ -28,7 +13,23 @@ var R6MMainControls = (function($, window, document, undefined) {
     SELECTED_CLASS = 'selected',
     ZOOMED_IN_FAR_CLASS = 'zoomed-in-far',
     ZOOMED_OUT_FAR_CLASS = 'zoomed-out-far',
-    CSS_TRANSITION_MS = 1800; // currently in highlighted-item mixin for .highlighted-item-in-transition
+    CSS_TRANSITION_MS = 1800, // currently in highlighted-item mixin for .highlighted-item-in-transition
+    MAP_LAYER = [
+      {short: 'bmb', full: 'Bomb'},
+      {short: 'sec', full: 'Secure'},
+      {short: 'hst', full: 'Hostage'},
+      {short: 'fh', full: 'Floor hatch'},
+      {short: 'ch', full: 'Ceiling hatch'},
+      {short: 'bw', full: 'Breakable wall'},
+      {short: 'losw', full: 'Line of sight or half wall'},
+      {short: 'dt', full: 'Drone tunnel'},
+      {short: 'losf', full: 'Line of sight floor'},
+      {short: 'ip', full: 'Insertion point'},
+      {short: 'cam', full: 'Security camera'},
+      {short: 'sl', full: 'Skylight'},
+      {short: 'lad', full: 'Ladder'},
+      {short: 'cmp', full: 'Compass'}
+    ];
 
   var disableFullScreen = function disableFullScreen() {
     if (document.exitFullscreen) {
@@ -169,40 +170,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   };
 
   var getDisplayValue = function getDisplayValue(key) {
-    switch (key) {
-    case 'bmb':
-      return $displayBombControl.is(':checked');
-    case 'sec':
-      return $displaySecureControl.is(':checked');
-    case 'hst':
-      return $displayHostageControl.is(':checked');
-    case 'fh':
-      return $displayFloorHatchControl.is(':checked');
-    case 'ch':
-      return $displayCeilingHatchControl.is(':checked');
-    case 'bw':
-      return $displayBreakableWallControl.is(':checked');
-    case 'losw':
-      return $displayLineOfSightWallControl.is(':checked');
-    case 'dt':
-      return $displayDroneTunnelControl.is(':checked');
-    case 'losf':
-      return $displayLineOfSightFloorControl.is(':checked');
-    case 'ip':
-      return $displayInsertionPointControl.is(':checked');
-    case 'cam':
-      return $displaySecurityCameraControl.is(':checked');
-    case 'sl':
-      return $displaySkylightControl.is(':checked');
-    case 'lad':
-      return $displayLadderControl.is(':checked');
-    case 'cmp':
-      return $displayCompassControl.is(':checked');
-    case 'lp':
-      return $lockPanningControl.is(':checked');
-    default:
-      return false;
-    }
+    return $('#option-' + key).is(':checked');
   };
 
   var getMenuOptionsHtml = function getMenuOptionsHtml() {
@@ -221,7 +189,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<div id="lock-wrapper">';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="lock-panning">Lock panning</input>';
+    html += '<input type="checkbox" checked="checked" id="option-lp">Lock panning</input>';
     html += '</div>';
     html += '</div>';
 
@@ -229,20 +197,9 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<label>Elements to display</label>';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="display-bomb">Bomb</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-secure">Secure</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-hostage">Hostage</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-floor-hatch">Floor hatch</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-ceiling-hatch">Ceiling hatch</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-breakable-wall">Breakable wall</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-line-of-sight-wall">Line of sight or half wall</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-drone-tunnel">Drone tunnel</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-line-of-sight-floor">Line of sight floor</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-insertion-point">Insertion point</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-security-camera">Security camera</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-skylight">Skylight</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-ladder">Ladder</input><br>';
-    html += '<input type="checkbox" checked="checked" id="display-compass">Compass</input><br>';
+    MAP_LAYER.forEach(function(layer) {
+      html += '<input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
+    });
     html += '</div>';
 
     html += '</div>';
@@ -374,22 +331,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     $menuPanel.html(html);
 
     $menuControl.find('.menu-text').html('Menu');
-    $displayBombControl = $('#display-bomb');
-    $displaySecureControl = $('#display-secure');
-    $displayHostageControl = $('#display-hostage');
-    $displayFloorHatchControl = $('#display-floor-hatch');
-    $displayCeilingHatchControl = $('#display-ceiling-hatch');
-    $displayBreakableWallControl = $('#display-breakable-wall');
-    $displayLineOfSightWallControl = $('#display-line-of-sight-wall');
-    $displayDroneTunnelControl = $('#display-drone-tunnel');
-    $displayLineOfSightFloorControl = $('#display-line-of-sight-floor');
-    $displayInsertionPointControl = $('#display-insertion-point');
-    $displaySecurityCameraControl = $('#display-security-camera');
-    $displaySkylightControl = $('#display-skylight');
-    $displayLadderControl = $('#display-ladder');
-    $displayCompassControl = $('#display-compass');
     $mapPanelCountControl = $('#map-pane-count');
-    $lockPanningControl = $('#lock-panning');
     $fullScreenControl = $('#full-screen');
     $menuSelectMapsControl = $('#menu-select-maps');
   };
@@ -435,158 +377,17 @@ var R6MMainControls = (function($, window, document, undefined) {
     }
   };
 
-  var setDisplayOption = function setDisplayOption(key, isChecked) {
+  var setMenuOption = function setMenuOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
     setLayerDisplay(key);
-    switch (key) {
-    case 'bmb':
-      $displayBombControl.prop('checked', boolValue);
-      break;
-    case 'sec':
-      $displaySecureControl.prop('checked', boolValue);
-      break;
-    case 'hst':
-      $displayHostageControl.prop('checked', boolValue);
-      break;
-    case 'fh':
-      $displayFloorHatchControl.prop('checked', boolValue);
-      break;
-    case 'ch':
-      $displayCeilingHatchControl.prop('checked', boolValue);
-      break;
-    case 'bw':
-      $displayBreakableWallControl.prop('checked', boolValue);
-      break;
-    case 'losw':
-      $displayLineOfSightWallControl.prop('checked', boolValue);
-      break;
-    case 'dt':
-      $displayDroneTunnelControl.prop('checked', boolValue);
-      break;
-    case 'losf':
-      $displayLineOfSightFloorControl.prop('checked', boolValue);
-      break;
-    case 'ip':
-      $displayInsertionPointControl.prop('checked', boolValue);
-      break;
-    case 'cam':
-      $displaySecurityCameraControl.prop('checked', boolValue);
-      break;
-    case 'sl':
-      $displaySkylightControl.prop('checked', boolValue);
-      break;
-    case 'lad':
-      $displayLadderControl.prop('checked', boolValue);
-      break;
-    case 'cmp':
-      $displayCompassControl.prop('checked', boolValue);
-      break;
-    default:
-      break;
-    }
+    $('#option-' + key).prop('checked', boolValue);
   };
 
-  var setupDisplayChangeEvent = function setupDisplayChangeEvent(key, callback) {
-    switch (key) {
-    case 'bmb':
-      $displayBombControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaybomb', getDisplayValue(key));
-      });
-      break;
-    case 'sec':
-      $displaySecureControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaysecure', getDisplayValue(key));
-      });
-      break;
-    case 'hst':
-      $displayHostageControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayhostage', getDisplayValue(key));
-      });
-      break;
-    case 'fh':
-      $displayFloorHatchControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayfloorhatch', getDisplayValue(key));
-      });
-      break;
-    case 'ch':
-      $displayCeilingHatchControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayceilinghatch', getDisplayValue(key));
-      });
-      break;
-    case 'bw':
-      $displayBreakableWallControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaybreakablewall', getDisplayValue(key));
-      });
-      break;
-    case 'losw':
-      $displayLineOfSightWallControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaylineofsightwall', getDisplayValue(key));
-      });
-      break;
-    case 'dt':
-      $displayDroneTunnelControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaydronetunnel', getDisplayValue(key));
-      });
-      break;
-    case 'losf':
-      $displayLineOfSightFloorControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaylineofsightfloor', getDisplayValue(key));
-      });
-      break;
-    case 'ip':
-      $displayInsertionPointControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayinsertionpoint', getDisplayValue(key));
-      });
-      break;
-    case 'cam':
-      $displaySecurityCameraControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displaysecuritycamera', getDisplayValue(key));
-      });
-      break;
-    case 'sl':
-      $displaySkylightControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayskylight', getDisplayValue(key));
-      });
-      break;
-    case 'lad':
-      $displayLadderControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayladder', getDisplayValue(key));
-      });
-      break;
-    case 'cmp':
-      $displayCompassControl.change(function(e) {
-        setLayerDisplay(key);
-        callback('displayCompass', getDisplayValue(key));
-      });
-      break;
-    default:
-      break;
-    }
-  };
-
-  var panSetLockOption = function panSetLockOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    $lockPanningControl.prop('checked', boolValue);
-  };
-
-  var panSetupLockPanningChangeEvent = function panSetupLockPanningChangeEvent(callback) {
-    $lockPanningControl.change(function(e) {
-      callback('lockpanning', getLockPanningValue());
+  var setupMenuOptionChangeEvent = function setupMenuOptionChangeEvent(key, callback) {
+    $('#option-' + key).change(function(e) {
+      setLayerDisplay(key);
+      callback(key, getDisplayValue(key));
     });
   };
 
@@ -746,7 +547,13 @@ var R6MMainControls = (function($, window, document, undefined) {
     menu: {
       setup: menuSetup,
       setupFullScreen: menuSetupFullScreen,
-      setupSelectMaps: menuSetupSelectMaps
+      setupSelectMaps: menuSetupSelectMaps,
+      setMenuOption: setMenuOption,
+      setupMenuOptionChangeEvent: setupMenuOptionChangeEvent
+    },
+    display: {
+      setLayerDisplay: setLayerDisplay,
+      MAP_LAYER: MAP_LAYER
     },
     objectives: {
       get: objectivesGetCurrentlySelected,
@@ -754,16 +561,8 @@ var R6MMainControls = (function($, window, document, undefined) {
       setup: objectivesSetupChangeEvent,
       trySelect: objectivesTrySelect
     },
-    display: {
-      reset: panReset,
-      setLayerDisplay: setLayerDisplay,
-      setDisplayOption: setDisplayOption,
-      setupDisplayChangeEvent: setupDisplayChangeEvent
-    },
     pan: {
-      reset: panReset,
-      setLockOption: panSetLockOption,
-      setupLockOption: panSetupLockPanningChangeEvent
+      reset: panReset
     },
     zoom: {
       disable: zoomDisable,
