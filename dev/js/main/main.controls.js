@@ -367,6 +367,20 @@ var R6MMainControls = (function($, window, document, undefined) {
     var visible = getDisplayValue(key),
       x = document.getElementsByClassName(key),
       i;
+    var svgObject = document.getElementById('mapSVG');
+
+    if (svgObject) {
+      var svgDoc = svgObject.getSVGDocument();
+
+      svgDoc = svgObject.contentDocument;
+      if (svgDoc) {
+        var rect = svgDoc.getElementById('layer5');
+
+        if (rect) {
+          rect.setAttribute('fill', 'green');
+        }
+      }
+    }
 
     for (i = 0; i < x.length; i++) {
       if (visible) {
