@@ -1,8 +1,8 @@
 'use strict';
 
 var R6MMainRender = (function($,window,document,undefined) {
-  var SVG_WIDTH = 2560,
-    SVG_HEIGHT = 1474,
+  var SVG_WIDTH = 5000,
+    SVG_HEIGHT = 5000,
     SVG_DIM = {
       WIDTH: SVG_WIDTH,
       HEIGHT: SVG_HEIGHT,
