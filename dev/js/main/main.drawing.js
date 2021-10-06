@@ -14,30 +14,25 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     $pingMarkersVertical,
     $pingMarkersHorizontal,
     $pingMarkersOtherFloor,
-    isCameraCallback,
     SVG_DIM
   ) {
     return function handleTap(event) {
-      var $targetEl = $(event.srcEvent.target);
+      var $mapWrapper =  $(event.target).closest('.map-wrapper'),
+        pingPosition = getPingPosition(event.center.x, event.center.y, $mapWrapper),
+        newX = pingPosition.x,
+        newY = pingPosition.y,
+        originFloorIndex = $mapWrapper.attr('show-floor-index');
 
-      if (!isCameraCallback($targetEl)) {
-        var $mapWrapper =  $(event.target).closest('.map-wrapper'),
-          pingPosition = getPingPosition(event.center.x, event.center.y, $mapWrapper),
-          newX = pingPosition.x,
-          newY = pingPosition.y,
-          originFloorIndex = $mapWrapper.attr('show-floor-index');
-
-        movePingMarkers(
-          $pingMarkers,
-          $pingMarkerAccents,
-          $pingMarkersVertical,
-          $pingMarkersHorizontal,
-          $pingMarkersOtherFloor,
-          newX + SVG_DIM.LEFT_OFFSET,
-          newY + SVG_DIM.TOP_OFFSET,
-          originFloorIndex
-        );
-      }
+      movePingMarkers(
+        $pingMarkers,
+        $pingMarkerAccents,
+        $pingMarkersVertical,
+        $pingMarkersHorizontal,
+        $pingMarkersOtherFloor,
+        newX + SVG_DIM.LEFT_OFFSET,
+        newY + SVG_DIM.TOP_OFFSET,
+        originFloorIndex
+      );
     };
   };
 
@@ -178,7 +173,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
   var setup = function setup (
     $mapMains,
     $drawingMarkerWrappers,
-    isCameraCallback,
+
     SVG_DIM
   ) {
     populateStartingMarkers($drawingMarkerWrappers, SVG_DIM);
@@ -188,7 +183,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
       $pingMarkersVertical = $drawingMarkerWrappers.find('.ping-marker.vertical'),
       $pingMarkersHorizontal = $drawingMarkerWrappers.find('.ping-marker.horizontal'),
       $pingMarkersOtherFloor = $drawingMarkerWrappers.find('.ping-marker.other-floor'),
-      handleTap = getHandleTapFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor, isCameraCallback, SVG_DIM),
+      handleTap = getHandleTapFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor, SVG_DIM),
       resizePingMarkers = getResizePingMarkersFn($pingMarkers, $pingMarkerAccents, $mapMains, $pingMarkersOtherFloor),
       hidePingMarkers = getHidePingMarkersFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor);
 

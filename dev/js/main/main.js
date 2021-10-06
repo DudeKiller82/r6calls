@@ -53,16 +53,8 @@
     getMenuApi().close();
   };
 
-  var isCamera = function isCamera(element) {
-    return element.hasClass('camera');
-  };
-
   var isShowingMap = function isShowingMap() {
     return $body.hasClass(SHOW_MAP);
-  };
-
-  var getCameraIdFromEvent = function getCameraIdFromEvent(event) {
-    return $(event.target).data('camera-id');
   };
 
   var getHashArgs = function getHashArgs() {
@@ -114,14 +106,6 @@
     };
 
     return result;
-  };
-
-  var handleCameraIn = function handleCameraHoverIn(event) {
-    var cameraId = getCameraIdFromEvent(event);
-  };
-
-  var handleCameraOut = function handleCameraHoverOut(event) {
-    var cameraId = getCameraIdFromEvent(event);
   };
 
   var handleFloorChange = function handleFloorChange() {
@@ -189,7 +173,6 @@
     R6MMainDrawing.setup(
       $mapMains,
       $drawingMarkerWrappers,
-      isCamera,
       R6MMainRender.SVG_DIM
     );
 
