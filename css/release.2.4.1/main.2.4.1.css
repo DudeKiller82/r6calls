@@ -335,9 +335,6 @@ nav {
     @media screen and (max-width: 620px) {
       nav #map-control {
         width: 80px; } }
-  @media screen and (max-width: 620px) {
-    nav #objective-control {
-      width: 80px; } }
   nav a {
     color: #fff;
     text-decoration: none; }
