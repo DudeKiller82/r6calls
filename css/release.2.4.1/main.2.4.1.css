@@ -33,7 +33,6 @@ table {
 /* FOLDERS */
 /* MISC */
 /* RESPONSIVE BREAKPOINTS */
-/* MAP ELEMENTS */
 /* COLORS */
 /* Z-INDEXES */
 input[type=range] {
@@ -152,7 +151,6 @@ input[type=range]:focus::-ms-fill-upper {
 /* FOLDERS */
 /* MISC */
 /* RESPONSIVE BREAKPOINTS */
-/* MAP ELEMENTS */
 /* COLORS */
 /* Z-INDEXES */
 .offscreen {
@@ -345,26 +343,22 @@ nav {
     text-decoration: none; }
     nav a:hover, nav a:focus {
       text-decoration: underline; }
-  nav #toggle-control button:focus {
-    background-color: #fff; }
-  nav #toggle-control button:focus:hover {
-    background-color: #3a6082; }
-  nav #floor-control, nav #toggle-control {
+  nav #floor-control {
     display: inline-block;
     margin-left: 0.5em; }
-    body[dir="rtl"] nav #floor-control, body[dir="rtl"] nav #toggle-control {
+    body[dir="rtl"] nav #floor-control {
       margin-left: 0;
       margin-right: 0.5em; }
-    nav #floor-control .short, nav #toggle-control .short {
+    nav #floor-control .short {
       display: none; }
       @media screen and (max-width: 620px) {
-        nav #floor-control .short, nav #toggle-control .short {
+        nav #floor-control .short {
           display: inline; } }
     @media screen and (max-width: 620px) {
-      nav #floor-control .full, nav #toggle-control .full {
+      nav #floor-control .full {
         display: none; } }
     @media screen and (max-width: 620px) {
-      nav #floor-control button, nav #toggle-control button {
+      nav #floor-control button {
         padding-left: 0.7em;
         padding-right: 0.7em; } }
   nav #zoom-range {
@@ -452,69 +446,13 @@ nav {
         nav button#mmenu-link span.menu-text {
           display: none; } }
 
-/* FOLDERS */
-/* MISC */
-/* RESPONSIVE BREAKPOINTS */
-/* MAP ELEMENTS */
-/* COLORS */
-/* Z-INDEXES */
-#compass {
-  height: 95px;
-  --pointer-events: none;
-  position: absolute;
-  width: 88px;
-  z-index: 1015; }
-  #compass .compass-background {
-    background-image: url("../../img/compass@2x.png");
-    background-repeat: no-repeat;
-    background-size: 88px 95px;
-    height: 100%;
-    opacity: 0.4;
-    width: 100%; }
-  #compass .letter-n,
-  #compass .letter-e,
-  #compass .letter-s,
-  #compass .letter-w {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    position: absolute;
-    width: 30px; }
-    #compass .letter-n span,
-    #compass .letter-e span,
-    #compass .letter-s span,
-    #compass .letter-w span {
-      background-color: rgba(0, 0, 0, 0.3);
-      display: inline-block;
-      padding: 0 1px;
-      text-align: center; }
-  #compass .letter-n {
-    left: 29px;
-    text-align: center;
-    top: 19px; }
-    #compass .letter-n span {
-      background-color: #ab1513; }
-  #compass .letter-e {
-    left: 45px;
-    text-align: right;
-    top: 45px; }
-  #compass .letter-s {
-    left: 29px;
-    text-align: center;
-    top: 70px; }
-  #compass .letter-w {
-    left: 12px;
-    text-align: left;
-    top: 45px; }
-
 #legend {
   padding: 8px;
   position: static;
   height: 253px;
   width: 405px; }
   #legend li {
-    background-image: url("../../img/legend-sprite@2x.png");
+    background-image: url("../../img/legend.png");
     background-repeat: no-repeat;
     background-size: 35px;
     display: inline-block;
@@ -563,11 +501,11 @@ nav {
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-drone-tunnels {
         background-position: 161px -317px; }
-    #legend li.legend-objectives {
+    #legend li.legend-bomb {
       background-position: 0px -212px;
       height: 31px;
       line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-objectives {
+      body[dir="rtl"] #legend li.legend-bomb {
         background-position: 161px -212px; }
     #legend li.legend-insertion-point {
       background-position: 0px -177px;
@@ -587,12 +525,18 @@ nav {
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-skylight {
         background-position: 161px -282px; }
-    #legend li.legend-down-and-up {
+    #legend li.legend-hostage {
       background-position: 0px -352px;
       height: 31px;
       line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-down-and-up {
+      body[dir="rtl"] #legend li.legend-hostage {
         background-position: 161px -352px; }
+    #legend li.legend-secure {
+      background-position: 0px -387px;
+      height: 31px;
+      line-height: 31px; }
+      body[dir="rtl"] #legend li.legend-secure {
+        background-position: 161px -387px; }
     #legend li.legend-ladder {
       background-position: 0px -422px;
       height: 31px;
@@ -1331,179 +1275,8 @@ body {
       -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 1000; }
-    .map-main .map-elements .floor {
-      z-index: 1010; }
-    .map-main .map-elements .objective {
-      width: 30px;
-      height: 40px;
-      margin-left: -15px;
-      margin-top: -20px;
-      border-radius: 5px;
-      display: none;
-      z-index: 1150; }
-      .map-main .map-elements .objective.hostage {
-        background-color: #ab1513;
-        z-index: 1151; }
-      .map-main .map-elements .objective.bomb {
-        background-color: #d65b2b;
-        z-index: 1153; }
-        .map-main .map-elements .objective.bomb p {
-          font-size: 16px; }
-      .map-main .map-elements .objective.secure {
-        background-color: #00B200;
-        z-index: 1152; }
-      .map-main .map-elements .objective p {
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-        color: #fff;
-        font-size: 30px;
-        line-height: 40px;
-        text-align: center;
-        width: 30px; }
-      .map-main .map-elements .objective.smaller {
-        width: 25px;
-        height: 32px;
-        margin-left: -12.5px;
-        margin-top: -16px; }
-        .map-main .map-elements .objective.smaller p {
-          font-size: 23px;
-          line-height: 32px;
-          width: 25px; }
-      .map-main .map-elements .objective.up span {
-        background: url("../../img/icons/up@2x.png");
-        background-size: 15px, 22px;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-        height: 22px;
-        left: 22.5px;
-        margin-left: 0px;
-        margin-top: -2px;
-        position: absolute;
-        top: 29px;
-        width: 15px;
-        z-index: 1151; }
-      .map-main .map-elements .objective.down span {
-        background: url("../../img/icons/down@2x.png");
-        background-size: 15px, 22px;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-        height: 22px;
-        left: 22.5px;
-        margin-left: 0px;
-        margin-top: 2px;
-        position: absolute;
-        top: 29px;
-        width: 15px;
-        z-index: 1151; }
-    .map-main .map-elements .spawn-point {
-      z-index: 1013; }
-      .map-main .map-elements .spawn-point .spawn-wrapper {
-        position: relative; }
-        .map-main .map-elements .spawn-point .spawn-wrapper .spawn-letter {
-          background-color: #4C4C4C;
-          left: -33px;
-          padding: 4px;
-          position: absolute;
-          top: -33px;
-          width: 58px;
-          height: 58px; }
-          .map-main .map-elements .spawn-point .spawn-wrapper .spawn-letter p {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-            border: 2px solid #000;
-            color: #fff;
-            font-size: 50px;
-            text-align: center;
-            width: 54px;
-            height: 54px;
-            line-height: 54px; }
-        .map-main .map-elements .spawn-point .spawn-wrapper .spawn-description {
-          position: absolute;
-          top: 38px;
-          left: -150px;
-          width: 300px;
-          text-align: center; }
-          .map-main .map-elements .spawn-point .spawn-wrapper .spawn-description p {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-            background-color: #4C4C4C;
-            color: #fff;
-            display: inline-block;
-            font-size: 27px;
-            padding: 2px 6px;
-            text-transform: uppercase; }
-    .map-main .map-elements .room-label {
-      height: 2.5em;
-      margin-left: -110px;
-      margin-top: -1.25em;
-      opacity: 0.7;
-      text-align: center;
-      width: 220px;
-      z-index: 1165; }
-      .map-main .map-elements .room-label.smaller p {
-        font-size: 14px; }
-      .map-main .map-elements .room-label p {
-        text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
-        color: #fff;
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 400; }
-        .map-elements.room-label-large .room-label.smaller p {
-          font-size: 18px !important; }
-        .map-elements.room-label-large .room-label p {
-          font-size: 21px !important; }
-        .map-elements.room-label-small .room-label.smaller p {
-          font-size: 11px !important; }
-        .map-elements.room-label-small .room-label p {
-          font-size: 11px !important; }
-        .map-elements.room-label-dark .room-label {
-          opacity: 1 !important; }
-          .map-elements.room-label-dark .room-label p {
-            background: rgba(16, 26, 36, 0.6);
-            font-weight: 600 !important; }
-        .map-elements.room-label-learning .room-label p {
-          color: red !important;
-          background-color: red !important;
-          text-shadow: none; }
-        .map-elements.room-label-learning .room-label:hover p {
-          color: #fff !important;
-          background-color: black !important;
-          text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8); }
-        .map-elements.room-label-display-none .room-label {
-          display: none; }
-      .map-main .map-elements .room-label.hard-to-read {
-        opacity: 0.8; }
-        .map-main .map-elements .room-label.hard-to-read p {
-          background: rgba(16, 26, 36, 0.6); }
-      .map-main .map-elements .room-label.very-hard-to-read {
-        opacity: 1.05; }
-        .map-main .map-elements .room-label.very-hard-to-read p {
-          background: rgba(16, 26, 36, 0.6); }
-      .map-main .map-elements .room-label.call p {
-        color: lime; }
-    .map-main .map-elements.show-objective-all .objective {
-      display: block; }
-    .map-main .map-elements.show-objective-all .site p {
-      font-weight: bold;
-      color: white;
-      background-color: black; }
-    .map-main .map-elements.show-objective-hostage .hostage {
-      display: block; }
-    .map-main .map-elements.show-objective-hostage .site.hostage p {
-      font-weight: bold;
-      color: white;
-      background-color: #ab1513; }
-    .map-main .map-elements.show-objective-bomb .bomb {
-      display: block; }
-    .map-main .map-elements.show-objective-bomb .site.bomb p {
-      font-weight: bold;
-      color: white;
-      background-color: #d65b2b; }
-    .map-main .map-elements.show-objective-secure .secure {
-      display: block; }
-    .map-main .map-elements.show-objective-secure .site.secure p {
-      font-weight: bold;
-      color: white;
-      background-color: #00B200; }
+    .map-main .map-elements.zoomed-in-far {
+      position: relative; }
     .map-main .map-elements.zoomed-out-far .room-label {
       opacity: 0; }
 
