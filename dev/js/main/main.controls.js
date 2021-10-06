@@ -143,7 +143,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
   var getHandlePanZoomChangeFn = function getHandlePanZoomChangeFn($mapMains) {
     return function handlePanZoomChange(event, panzoom, transform) {
-      if (getLockPanningValue()) {
+      if (getDisplayValue('lp')) {
         $mapMains.each(function(index, map) {
           if (map !== event.target) {
             $(map).panzoom('pan', transform[4], transform[5], {silent: true});
@@ -168,64 +168,41 @@ var R6MMainControls = (function($, window, document, undefined) {
     };
   };
 
-  var getDisplayBombValue = function getDisplayBombValue() {
-    return $displayBombControl.is(':checked');
-  };
-
-  var getDisplaySecureValue = function getDisplaySecureValue() {
-    return $displaySecureControl.is(':checked');
-  };
-
-  var getDisplayHostageValue = function getDisplayHostageValue() {
-    return $displayHostageControl.is(':checked');
-  };
-
-  var getDisplayFloorHatchValue = function getDisplayFloorHatchValue() {
-    return $displayFloorHatchControl.is(':checked');
-  };
-
-  var getDisplayCeilingHatchValue = function getDisplayCeilingHatchValue() {
-    return $displayCeilingHatchControl.is(':checked');
-  };
-
-  var getDisplayBreakableWallValue = function getDisplayBreakableWallValue() {
-    return $displayBreakableWallControl.is(':checked');
-  };
-
-  var getDisplayLineOfSightWallValue = function getDisplayLineOfSightWallValue() {
-    return $displayLineOfSightWallControl.is(':checked');
-  };
-
-  var getDisplayDroneTunnelValue = function getDisplayDroneTunnelValue() {
-    return $displayDroneTunnelControl.is(':checked');
-  };
-
-  var getDisplayLineOfSightFloorValue = function getDisplayLineOfSightFloorValue() {
-    return $displayLineOfSightFloorControl.is(':checked');
-  };
-
-  var getDisplayInsertionPointValue = function getDisplayInsertionPointValue() {
-    return $displayInsertionPointControl.is(':checked');
-  };
-
-  var getDisplaySecurityCameraValue = function getDisplaySecurityCameraValue() {
-    return $displaySecurityCameraControl.is(':checked');
-  };
-
-  var getDisplaySkylightValue = function getDisplaySkylightValue() {
-    return $displaySkylightControl.is(':checked');
-  };
-
-  var getDisplayLadderValue = function getDisplayLadderValue() {
-    return $displayLadderControl.is(':checked');
-  };
-
-  var getDisplayCompassValue = function getDisplayCompassValue() {
-    return $displayCompassControl.is(':checked');
-  };
-
-  var getLockPanningValue = function getLockPanningValue() {
-    return $lockPanningControl.is(':checked');
+  var getDisplayValue = function getDisplayValue(key) {
+    switch (key) {
+    case 'bmb':
+      return $displayBombControl.is(':checked');
+    case 'sec':
+      return $displaySecureControl.is(':checked');
+    case 'hst':
+      return $displayHostageControl.is(':checked');
+    case 'fh':
+      return $displayFloorHatchControl.is(':checked');
+    case 'ch':
+      return $displayCeilingHatchControl.is(':checked');
+    case 'bw':
+      return $displayBreakableWallControl.is(':checked');
+    case 'losw':
+      return $displayLineOfSightWallControl.is(':checked');
+    case 'dt':
+      return $displayDroneTunnelControl.is(':checked');
+    case 'losf':
+      return $displayLineOfSightFloorControl.is(':checked');
+    case 'ip':
+      return $displayInsertionPointControl.is(':checked');
+    case 'cam':
+      return $displaySecurityCameraControl.is(':checked');
+    case 'sl':
+      return $displaySkylightControl.is(':checked');
+    case 'lad':
+      return $displayLadderControl.is(':checked');
+    case 'cmp':
+      return $displayCompassControl.is(':checked');
+    case 'lp':
+      return $lockPanningControl.is(':checked');
+    default:
+      return false;
+    }
   };
 
   var getMenuOptionsHtml = function getMenuOptionsHtml() {
@@ -444,8 +421,9 @@ var R6MMainControls = (function($, window, document, undefined) {
     );
   };
 
-  var setLayerDisplay = function setLayerDisplay(layerName, visible) {
-    var x = document.getElementsByClassName(layerName),
+  var setLayerDisplay = function setLayerDisplay(key) {
+    var visible = getDisplayValue(key),
+      x = document.getElementsByClassName(key),
       i;
 
     for (i = 0; i < x.length; i++) {
@@ -457,256 +435,147 @@ var R6MMainControls = (function($, window, document, undefined) {
     }
   };
 
-  var setBombLayerDisplay = function setBombLayerDisplay() {
-    setLayerDisplay('bmb', getDisplayBombValue());
-  };
-
-  var displaySetBombOption = function displaySetBombOption(isChecked) {
+  var setDisplayOption = function setDisplayOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
-    setBombLayerDisplay();
-    $displayBombControl.prop('checked', boolValue);
+    setLayerDisplay(key);
+    switch (key) {
+    case 'bmb':
+      $displayBombControl.prop('checked', boolValue);
+      break;
+    case 'sec':
+      $displaySecureControl.prop('checked', boolValue);
+      break;
+    case 'hst':
+      $displayHostageControl.prop('checked', boolValue);
+      break;
+    case 'fh':
+      $displayFloorHatchControl.prop('checked', boolValue);
+      break;
+    case 'ch':
+      $displayCeilingHatchControl.prop('checked', boolValue);
+      break;
+    case 'bw':
+      $displayBreakableWallControl.prop('checked', boolValue);
+      break;
+    case 'losw':
+      $displayLineOfSightWallControl.prop('checked', boolValue);
+      break;
+    case 'dt':
+      $displayDroneTunnelControl.prop('checked', boolValue);
+      break;
+    case 'losf':
+      $displayLineOfSightFloorControl.prop('checked', boolValue);
+      break;
+    case 'ip':
+      $displayInsertionPointControl.prop('checked', boolValue);
+      break;
+    case 'cam':
+      $displaySecurityCameraControl.prop('checked', boolValue);
+      break;
+    case 'sl':
+      $displaySkylightControl.prop('checked', boolValue);
+      break;
+    case 'lad':
+      $displayLadderControl.prop('checked', boolValue);
+      break;
+    case 'cmp':
+      $displayCompassControl.prop('checked', boolValue);
+      break;
+    default:
+      break;
+    }
   };
 
-  var displaySetupDisplayBombChangeEvent = function displaySetupDisplayBombChangeEvent(callback) {
-    $displayBombControl.change(function(e) {
-      setBombLayerDisplay();
-      callback('displaybomb', getDisplayBombValue());
-    });
-  };
-
-  var setSecureLayerDisplay = function setSecureLayerDisplay() {
-    setLayerDisplay('sec', getDisplaySecureValue());
-  };
-
-  var displaySetSecureOption = function displaySetSecureOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setSecureLayerDisplay();
-    $displaySecureControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplaySecureChangeEvent = function displaySetupDisplaySecureChangeEvent(callback) {
-    $displaySecureControl.change(function(e) {
-      setSecureLayerDisplay();
-      callback('displaysecure', getDisplaySecureValue());
-    });
-  };
-
-  var setHostageLayerDisplay = function setHostageLayerDisplay() {
-    setLayerDisplay('hst', getDisplayHostageValue());
-  };
-
-  var displaySetHostageOption = function displaySetHostageOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setHostageLayerDisplay();
-    $displayHostageControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayHostageChangeEvent = function displaySetupDisplayHostageChangeEvent(callback) {
-    $displayHostageControl.change(function(e) {
-      setHostageLayerDisplay();
-      callback('displayhostage', getDisplayHostageValue());
-    });
-  };
-
-  var setFloorHatchLayerDisplay = function setFloorHatchLayerDisplay() {
-    setLayerDisplay('fh', getDisplayFloorHatchValue());
-  };
-
-  var displaySetFloorHatchOption = function displaySetFloorHatchOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setFloorHatchLayerDisplay();
-    $displayFloorHatchControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayFloorHatchChangeEvent = function displaySetupDisplayFloorHatchChangeEvent(callback) {
-    $displayFloorHatchControl.change(function(e) {
-      setFloorHatchLayerDisplay();
-      callback('displayfloorhatch', getDisplayFloorHatchValue());
-    });
-  };
-
-  var setCeilingHatchLayerDisplay = function setCeilingHatchLayerDisplay() {
-    setLayerDisplay('ch', getDisplayCeilingHatchValue());
-  };
-
-  var displaySetCeilingHatchOption = function displaySetCeilingHatchOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setCeilingHatchLayerDisplay();
-    $displayCeilingHatchControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayCeilingHatchChangeEvent = function displaySetupDisplayCeilingHatchChangeEvent(callback) {
-    $displayCeilingHatchControl.change(function(e) {
-      setCeilingHatchLayerDisplay();
-      callback('displayceilinghatch', getDisplayCeilingHatchValue());
-    });
-  };
-
-  var setBreakableWallLayerDisplay = function setBreakableWallLayerDisplay() {
-    setLayerDisplay('bw', getDisplayBreakableWallValue());
-  };
-
-  var displaySetBreakableWallOption = function displaySetBreakableWallOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setBreakableWallLayerDisplay();
-    $displayBreakableWallControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayBreakableWallChangeEvent = function displaySetupDisplayBreakableWallChangeEvent(callback) {
-    $displayBreakableWallControl.change(function(e) {
-      setBreakableWallLayerDisplay();
-      callback('displaybreakablewall', getDisplayBreakableWallValue());
-    });
-  };
-
-  var setLineOfSightWallLayerDisplay = function setLineOfSightWallLayerDisplay() {
-    setLayerDisplay('losw', getDisplayLineOfSightWallValue());
-  };
-
-  var displaySetLineOfSightWallOption = function displaySetLineOfSightWallOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setLineOfSightWallLayerDisplay();
-    $displayLineOfSightWallControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayLineOfSightWallChangeEvent = function displaySetupDisplayLineOfSightWallChangeEvent(callback) {
-    $displayLineOfSightWallControl.change(function(e) {
-      setLineOfSightWallLayerDisplay();
-      callback('displaylineofsightwall', getDisplayLineOfSightWallValue());
-    });
-  };
-
-  var setDroneTunnelLayerDisplay = function setDroneTunnelLayerDisplay() {
-    setLayerDisplay('dt', getDisplayDroneTunnelValue());
-  };
-
-  var displaySetDroneTunnelOption = function displaySetDroneTunnelOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setDroneTunnelLayerDisplay();
-    $displayDroneTunnelControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayDroneTunnelChangeEvent = function displaySetupDisplayDroneTunnelChangeEvent(callback) {
-    $displayDroneTunnelControl.change(function(e) {
-      setDroneTunnelLayerDisplay();
-      callback('displaydronetunnel', getDisplayDroneTunnelValue());
-    });
-  };
-
-  var setLineOfSightFloorLayerDisplay = function setLineOfSightFloorLayerDisplay() {
-    setLayerDisplay('losf', getDisplayLineOfSightFloorValue());
-  };
-
-  var displaySetLineOfSightFloorOption = function displaySetLineOfSightFloorOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setLineOfSightFloorLayerDisplay();
-    $displayLineOfSightFloorControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayLineOfSightFloorChangeEvent = function displaySetupDisplayLineOfSightFloorChangeEvent(callback) {
-    $displayLineOfSightFloorControl.change(function(e) {
-      setLineOfSightFloorLayerDisplay();
-      callback('displaylineofsightfloor', getDisplayLineOfSightFloorValue());
-    });
-  };
-
-  var setInsertionPointLayerDisplay = function setInsertionPointLayerDisplay() {
-    setLayerDisplay('spw', getDisplayInsertionPointValue());
-  };
-
-  var displaySetInsertionPointOption = function displaySetInsertionPointOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setInsertionPointLayerDisplay();
-    $displayInsertionPointControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayInsertionPointChangeEvent = function displaySetupDisplayInsertionPointChangeEvent(callback) {
-    $displayInsertionPointControl.change(function(e) {
-      setInsertionPointLayerDisplay();
-      callback('displayinsertionpoint', getDisplayInsertionPointValue());
-    });
-  };
-
-  var setSecurityCameraLayerDisplay = function setSecurityCameraLayerDisplay() {
-    setLayerDisplay('cam', getDisplaySecurityCameraValue());
-  };
-
-  var displaySetSecurityCameraOption = function displaySetSecurityCameraOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setSecurityCameraLayerDisplay();
-    $displaySecurityCameraControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplaySecurityCameraChangeEvent = function displaySetupDisplaySecurityCameraChangeEvent(callback) {
-    $displaySecurityCameraControl.change(function(e) {
-      setSecurityCameraLayerDisplay();
-      callback('displaysecuritycamera', getDisplaySecurityCameraValue());
-    });
-  };
-
-  var setSkylightLayerDisplay = function setSkylightLayerDisplay() {
-    setLayerDisplay('sl', getDisplaySkylightValue());
-  };
-
-  var displaySetSkylightOption = function displaySetSkylightOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setSkylightLayerDisplay();
-    $displaySkylightControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplaySkylightChangeEvent = function displaySetupDisplaySkylightChangeEvent(callback) {
-    $displaySkylightControl.change(function(e) {
-      setSkylightLayerDisplay();
-      callback('displayskylight', getDisplaySkylightValue());
-    });
-  };
-
-  var setLadderLayerDisplay = function setLadderLayerDisplay() {
-    setLayerDisplay('lad', getDisplaySkylightValue());
-  };
-
-  var displaySetLadderOption = function displaySetLadderOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setLadderLayerDisplay();
-    $displayLadderControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayLadderChangeEvent = function displaySetupDisplayLadderChangeEvent(callback) {
-    $displayLadderControl.change(function(e) {
-      setLadderLayerDisplay();
-      callback('displayladder', getDisplayLadderValue());
-    });
-  };
-
-  var setCompassLayerDisplay = function setCompassLayerDisplay() {
-    setLayerDisplay('cmp', getDisplaySkylightValue());
-  };
-
-  var displaySetCompassOption = function displaySetCompassOption(isChecked) {
-    var boolValue = (isChecked === 'true') ? true : false;
-
-    setCompassLayerDisplay();
-    $displayCompassControl.prop('checked', boolValue);
-  };
-
-  var displaySetupDisplayCompassChangeEvent = function displaySetupDisplayCompassChangeEvent(callback) {
-    $displayCompassControl.change(function(e) {
-      setCompassLayerDisplay();
-      callback('displayCompass', getDisplayCompassValue());
-    });
+  var setupDisplayChangeEvent = function setupDisplayChangeEvent(key, callback) {
+    switch (key) {
+    case 'bmb':
+      $displayBombControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaybomb', getDisplayValue(key));
+      });
+      break;
+    case 'sec':
+      $displaySecureControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaysecure', getDisplayValue(key));
+      });
+      break;
+    case 'hst':
+      $displayHostageControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayhostage', getDisplayValue(key));
+      });
+      break;
+    case 'fh':
+      $displayFloorHatchControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayfloorhatch', getDisplayValue(key));
+      });
+      break;
+    case 'ch':
+      $displayCeilingHatchControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayceilinghatch', getDisplayValue(key));
+      });
+      break;
+    case 'bw':
+      $displayBreakableWallControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaybreakablewall', getDisplayValue(key));
+      });
+      break;
+    case 'losw':
+      $displayLineOfSightWallControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaylineofsightwall', getDisplayValue(key));
+      });
+      break;
+    case 'dt':
+      $displayDroneTunnelControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaydronetunnel', getDisplayValue(key));
+      });
+      break;
+    case 'losf':
+      $displayLineOfSightFloorControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaylineofsightfloor', getDisplayValue(key));
+      });
+      break;
+    case 'ip':
+      $displayInsertionPointControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayinsertionpoint', getDisplayValue(key));
+      });
+      break;
+    case 'cam':
+      $displaySecurityCameraControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displaysecuritycamera', getDisplayValue(key));
+      });
+      break;
+    case 'sl':
+      $displaySkylightControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayskylight', getDisplayValue(key));
+      });
+      break;
+    case 'lad':
+      $displayLadderControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayladder', getDisplayValue(key));
+      });
+      break;
+    case 'cmp':
+      $displayCompassControl.change(function(e) {
+        setLayerDisplay(key);
+        callback('displayCompass', getDisplayValue(key));
+      });
+      break;
+    default:
+      break;
+    }
   };
 
   var panSetLockOption = function panSetLockOption(isChecked) {
@@ -887,48 +756,9 @@ var R6MMainControls = (function($, window, document, undefined) {
     },
     display: {
       reset: panReset,
-      setDisplayBombOption: displaySetBombOption,
-      setupDisplayBombOption: displaySetupDisplayBombChangeEvent,
-      setBombLayerDisplay: setBombLayerDisplay,
-      setDisplaySecureOption: displaySetSecureOption,
-      setupDisplaySecureOption: displaySetupDisplaySecureChangeEvent,
-      setSecureLayerDisplay: setSecureLayerDisplay,
-      setDisplayHostageOption: displaySetHostageOption,
-      setupDisplayHostageOption: displaySetupDisplayHostageChangeEvent,
-      setHostageLayerDisplay: setHostageLayerDisplay,
-      setDisplayFloorHatchOption: displaySetFloorHatchOption,
-      setupDisplayFloorHatchOption: displaySetupDisplayFloorHatchChangeEvent,
-      setFloorHatchLayerDisplay: setFloorHatchLayerDisplay,
-      setDisplayCeilingHatchOption: displaySetCeilingHatchOption,
-      setupDisplayCeilingHatchOption: displaySetupDisplayCeilingHatchChangeEvent,
-      setCeilingHatchLayerDisplay: setCeilingHatchLayerDisplay,
-      setDisplayBreakableWallOption: displaySetBreakableWallOption,
-      setupDisplayBreakableWallOption: displaySetupDisplayBreakableWallChangeEvent,
-      setBreakableWallLayerDisplay: setBreakableWallLayerDisplay,
-      setDisplayLineOfSightWallOption: displaySetLineOfSightWallOption,
-      setupDisplayLineOfSightWallOption: displaySetupDisplayLineOfSightWallChangeEvent,
-      setLineOfSightWallLayerDisplay: setLineOfSightWallLayerDisplay,
-      setDisplayDroneTunnelOption: displaySetDroneTunnelOption,
-      setupDisplayDroneTunnelOption: displaySetupDisplayDroneTunnelChangeEvent,
-      setDroneTunnelLayerDisplay: setDroneTunnelLayerDisplay,
-      setDisplayLineOfSightFloorOption: displaySetLineOfSightFloorOption,
-      setupDisplayLineOfSightFloorOption: displaySetupDisplayLineOfSightFloorChangeEvent,
-      setLineOfSightFloorLayerDisplay: setLineOfSightFloorLayerDisplay,
-      setDisplayInsertionPointOption: displaySetInsertionPointOption,
-      setupDisplayInsertionPointOption: displaySetupDisplayInsertionPointChangeEvent,
-      setInsertionPointLayerDisplay: setInsertionPointLayerDisplay,
-      setDisplaySecurityCameraOption: displaySetSecurityCameraOption,
-      setupDisplaySecurityCameraOption: displaySetupDisplaySecurityCameraChangeEvent,
-      setSecurityCameraLayerDisplay: setSecurityCameraLayerDisplay,
-      setDisplaySkylightOption: displaySetSkylightOption,
-      setupDisplaySkylightOption: displaySetupDisplaySkylightChangeEvent,
-      setSkylightLayerDisplay: setSkylightLayerDisplay,
-      setDisplayLadderOption: displaySetLadderOption,
-      setupDisplayLadderOption: displaySetupDisplayLadderChangeEvent,
-      setLadderLayerDisplay: setLadderLayerDisplay,
-      setDisplayCompassOption: displaySetCompassOption,
-      setupDisplayCompassOption: displaySetupDisplayCompassChangeEvent,
-      setCompassLayerDisplay: setCompassLayerDisplay
+      setLayerDisplay: setLayerDisplay,
+      setDisplayOption: setDisplayOption,
+      setupDisplayChangeEvent: setupDisplayChangeEvent
     },
     pan: {
       reset: panReset,
