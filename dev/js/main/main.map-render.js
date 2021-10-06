@@ -67,10 +67,8 @@ var R6MMainRender = (function($,window,document,undefined) {
     imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
     inlineStyle = getPositionStyle(floors[0]);
     classes = 'background';
-    //              https://greensock.com/forums/topic/11187-accessing-svg-paths-in-external-file/
-    // html += '<img src="' + imgSrc + '" style="' + inlineStyle + '" class="' + classes + '"></img>';
     html += '<div style="' + inlineStyle + '" class="' + classes + '"></object>';
-    html += '<object id="mapSVG" data="' + imgSrc + '" type="image/svg+xml"></object>';
+    html += '<img class="inject-me" src="' + imgSrc + '"></img>';
     // Creates a ghost image for every floor, which removes itself when it's loaded, and then
     // resolves the deferrer for this floor.
     // The "ghost image" is just asking to load the bg image another time, and since this will
@@ -138,6 +136,11 @@ var R6MMainRender = (function($,window,document,undefined) {
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
 
     $mapElements.html(html);
+      // Elements to inject
+    var mySVGsToInject = document.querySelectorAll('img.inject-me');
+
+    // Do the injection
+    SVGInjector(mySVGsToInject);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
   };
 

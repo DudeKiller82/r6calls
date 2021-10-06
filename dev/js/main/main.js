@@ -32,7 +32,6 @@
 
     if (trySelectBookmarkedMap()) {
       loadMap();
-      trySelectBookmarkedObjective();
       trySelectBookmarkedFloor();
       showMap();
     } else {
@@ -134,12 +133,6 @@
     R6MMainControls.removeLatestUpdateHighlight(200);
   };
 
-  var handleObjectiveChange = function handleObjectiveChange() {
-    sendObjectiveSelectAnalyticsEvent();
-    showSelectedObjective();
-    updateUrl();
-  };
-
   var hideSelectMap = function hideSelectMap() {
     $body.removeClass(SHOW_SELECT_MAP);
   };
@@ -156,7 +149,6 @@
     var currentlySelectedMap = R6MMainControls.maps.get(),
       mapData = R6MMainData.getMapData();
 
-    R6MMainControls.objectives.populate(['bomb', 'hostage', 'secure']);
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
     R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $mapPanelLabels);
 
@@ -164,7 +156,6 @@
     R6MMainControls.zoom.reset($mapMains, getResetDimensions);
 
     showSelectedFloor();
-    showSelectedObjective();
 
     setLoadedMapKey(currentlySelectedMap);
     $navLogo.addClass('enabled');
@@ -176,9 +167,9 @@
       R6MMainRender.SVG_DIM
     );
 
-    R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
-      R6MMainControls.display.setLayerDisplay(layer.short);
-    });
+    // R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+    //   R6MMainControls.display.setLayerDisplay(layer.short);
+    // });
   };
 
   var removeHashFromUrl = function removeHashFromUrl() {
@@ -226,10 +217,6 @@
     sendControlAnalyticsEvent('Map', R6MMainControls.maps.get());
   };
 
-  var sendObjectiveSelectAnalyticsEvent = function sendObjectiveSelectAnalyticsEvent() {
-    sendControlAnalyticsEvent('Objective', R6MMainControls.objectives.get());
-  };
-
   var setLoadedMapKey = function setLoadedMapKey(mapKey) {
     $body.attr('loaded-map', mapKey);
   };
@@ -270,7 +257,6 @@
   };
 
   var setupEvents = function setupEvents() {
-    R6MMainControls.objectives.setup(handleObjectiveChange);
     R6MMainControls.maps.setup(handleMapChange);
     R6MMainControls.floors.setup(handleFloorChange, showSelectedFloor);
     R6MMainControls.mapPanels.setup(handleMapPanelCountChange);
@@ -343,10 +329,6 @@
     );
   };
 
-  var showSelectedObjective =  function showSelectedObjective() {
-    R6MMainRender.showObjective(R6MMainControls.objectives.get(), $mapElements);
-  };
-
   var switchToMap = function switchToMap(mapArg) {
     if (R6MMainControls.maps.trySelect(mapArg)) {
       hideSelectMap();
@@ -413,15 +395,6 @@
     return R6MMainControls.maps.trySelect(mapArg);
   };
 
-  var trySelectBookmarkedObjective = function trySelectBookmarkedObjective() {
-    var hashArgs = getHashArgs(),
-      objectiveArg = hashArgs[2];
-
-    if (R6MMainControls.objectives.trySelect(objectiveArg)) {
-      showSelectedObjective();
-    }
-  };
-
   var trySelectBookmarkedFloor = function trySelectBookmarkedFloor() {
     var hashArgs = getHashArgs(),
       floorArg = hashArgs[1];
@@ -437,7 +410,6 @@
 
       hashText += '' + R6MMainControls.maps.get();
       hashText += HASH_SPLIT_CHAR + R6MMainControls.floors.get();
-      hashText += HASH_SPLIT_CHAR + R6MMainControls.objectives.get();
       window.location.hash = hashText;
     } else {
       removeHashFromUrl();

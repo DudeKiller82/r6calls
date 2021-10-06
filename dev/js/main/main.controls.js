@@ -2,7 +2,6 @@
 
 var R6MMainControls = (function($, window, document, undefined) {
   var $mapControl = $('#map-control'),
-    $objectiveControl = $('#objective-control'),
     $floorControl = $('#floor-control'),
     $zoomControl = $('#zoom-range'),
     $menuControl = $('#mmenu-link'),
@@ -27,8 +26,9 @@ var R6MMainControls = (function($, window, document, undefined) {
       {short: 'ip', full: 'Insertion point'},
       {short: 'cam', full: 'Security camera'},
       {short: 'sl', full: 'Skylight'},
-      {short: 'lad', full: 'Ladder'},
-      {short: 'cmp', full: 'Compass'}
+      {short: 'ld', full: 'Ladder'},
+      {short: 'cmp', full: 'Compass'},
+      {short: 'txt', full: 'Label'}
     ];
 
   var disableFullScreen = function disableFullScreen() {
@@ -365,28 +365,20 @@ var R6MMainControls = (function($, window, document, undefined) {
 
   var setLayerDisplay = function setLayerDisplay(key) {
     var visible = getDisplayValue(key),
-      x = document.getElementsByClassName(key),
       i;
-    var svgObject = document.getElementById('mapSVG');
 
-    if (svgObject) {
-      var svgDoc = svgObject.getSVGDocument();
+    for (i = -2; i < 5; i++) {
+      var layer = document.getElementById(i + '-' + key);
 
-      svgDoc = svgObject.contentDocument;
-      if (svgDoc) {
-        var rect = svgDoc.getElementById('layer5');
-
-        if (rect) {
-          rect.setAttribute('fill', 'green');
-        }
+      if (i == -2 ) {
+        layer = document.getElementById('bg-' + key);
       }
-    }
-
-    for (i = 0; i < x.length; i++) {
-      if (visible) {
-        x[i].hidden = false;
-      } else {
-        x[i].hidden = true;
+      if (layer) {
+        if (visible) {
+          layer.style.display = 'inline';
+        } else {
+          layer.style.display = 'none';
+        }
       }
     }
   };
@@ -394,7 +386,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var setMenuOption = function setMenuOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
-    setLayerDisplay(key);
+    // setLayerDisplay(key);
     $('#option-' + key).prop('checked', boolValue);
   };
 
@@ -468,30 +460,6 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     $mapPanelCountControl.trigger('change');
     return result;
-  };
-
-  var objectivesGetCurrentlySelected = function objectivesGetCurrentlySelected() {
-    return $objectiveControl.val();
-  };
-
-  var objectivesPopulateOptions = function objectivesPopulateOptions(objectives) {
-    var options = '',
-      initialObjective = objectivesGetCurrentlySelected();
-
-    options += '<option value="bomb">Bomb</option>';
-    options += '<option value="hostage">Hostage</option>';
-    options += '<option value="secure">Secure</option>';
-    options += '<option value="all">Show All</option>';
-    $objectiveControl.html(options);
-    objectivesTrySelect(initialObjective);
-  };
-
-  var objectivesSetupChangeEvent = function objectivesSetupChangeEvent(callback) {
-    $objectiveControl.on('change', callback);
-  };
-
-  var objectivesTrySelect = function objectivesTrySelect(objective) {
-    return R6MHelpers.trySelectOption($objectiveControl, objective);
   };
 
   var removeLatestUpdateHighlight = function removeLatestUpdateHighlight(initialDelayMs) {
@@ -568,12 +536,6 @@ var R6MMainControls = (function($, window, document, undefined) {
     display: {
       setLayerDisplay: setLayerDisplay,
       MAP_LAYER: MAP_LAYER
-    },
-    objectives: {
-      get: objectivesGetCurrentlySelected,
-      populate: objectivesPopulateOptions,
-      setup: objectivesSetupChangeEvent,
-      trySelect: objectivesTrySelect
     },
     pan: {
       reset: panReset
