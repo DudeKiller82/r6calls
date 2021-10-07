@@ -173,40 +173,6 @@ var R6MMainControls = (function($, window, document, undefined) {
     return $('#option-' + key).is(':checked');
   };
 
-  var getMenuOptionsHtml = function getMenuOptionsHtml() {
-    var html = '';
-
-    html += '<div id="options-wrapper" class="mmenu-custom-panel">';
-    html += '<h2>Options</h2>';
-
-    html += '<div class="map-panel-count-control">';
-    html += '<label>Number of floors to display</label>';
-    html += '<select id="map-pane-count">';
-    html += '<option value="1">1 - Full</option>';
-    html += '<option value="2">2 - Split</option>';
-    html += '<option value="4">4 - Grid</option>';
-    html += '</select>';
-
-    html += '<div id="lock-wrapper">';
-    html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="option-lp">Lock panning</input>';
-    html += '</div>';
-    html += '</div>';
-
-    html += '</div>';
-
-    html += '<label>Elements to display</label>';
-    html += '<div class="checkbox-wrapper">';
-    MAP_LAYER.forEach(function(layer) {
-      html += '<input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
-    });
-    html += '</div>';
-
-    html += '</div>';
-
-    return html;
-  };
-
   var getMenuR6MapsHtml = function getMenuR6MapsHtml() {
     var html = '',
       legendItems,
@@ -242,6 +208,40 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '</ul>';
 
     html += '</div>';
+    return html;
+  };
+
+  var getMenuOptionsHtml = function getMenuOptionsHtml() {
+    var html = '';
+
+    html += '<div id="options-wrapper" class="mmenu-custom-panel">';
+    html += '<h2>Options</h2>';
+
+    html += '<div class="map-panel-count-control">';
+    html += '<label>Number of floors to display</label>';
+    html += '<select id="map-pane-count">';
+    html += '<option value="1">1 - Full</option>';
+    html += '<option value="2">2 - Split</option>';
+    html += '<option value="4">4 - Grid</option>';
+    html += '</select>';
+
+    html += '<div id="lock-wrapper">';
+    html += '<div class="checkbox-wrapper">';
+    html += '<input type="checkbox" checked="checked" id="option-lp">Lock panning</input>';
+    html += '</div>';
+    html += '</div>';
+
+    html += '</div>';
+
+    html += '<label>Elements to display</label>';
+    html += '<div class="checkbox-wrapper">';
+    MAP_LAYER.forEach(function(layer) {
+      html += '<input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
+    });
+    html += '</div>';
+
+    html += '</div>';
+
     return html;
   };
 
@@ -393,7 +393,6 @@ var R6MMainControls = (function($, window, document, undefined) {
   var setMenuOption = function setMenuOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
-    // setLayerDisplay(key);
     $('#option-' + key).prop('checked', boolValue);
   };
 

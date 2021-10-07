@@ -32,62 +32,15 @@ var R6MMainRender = (function($,window,document,undefined) {
       5: 'five'
     };
 
-  var getMaxFloorIndexHtml = function getMaxFloorIndexHtml($mapWrappers, floors, imgUrlPrefix) {
-    /** Generates the HTML for the given floors.
-     *
-     * While waiting for the images of the floors to load, a loading spinner is added to the
-     * $mapWrappers.
-     *
-     * @param $mapWrappers A reference to the DOM element that will contain the floors.
-     *  A loading spinner is added to this element when generation starts, and is removed
-     *  when all the floor images are loaded.
-     *
-     * @param floors A list of objects, each containing its index and whether it's a background
-     *  floor, along with items that define the style of the floor.
-     *
-     * @param imgUrlPrefix A string defining the prefix for this map's floor images, which is
-     *  assumed to be the folder the images are in, as well as the prefix of the actual images'
-     *  filenames.
-     *
-     * @returns An HTML string, which is every floor as an img, each with its styles, classes
-     *  and image source.
-     */
+  var getMaxFloorIndexHtml = function getMaxFloorIndexHtml(floors, imgUrlPrefix) {
     var html = '',
-      prefix,
-      imgSrc,
-      inlineStyle,
-      classes,
-      deferrs = [];
+      prefix = imgUrlPrefix,
+      imgSrc = IMG_URL + prefix + '/' + prefix + '.svg',
+      inlineStyle = getPositionStyle(floors[0]);
 
-    $mapWrappers.addClass('loading');
-
-    var currentDeferr = $.Deferred();
-
-    prefix = imgUrlPrefix;
-    imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
-    inlineStyle = getPositionStyle(floors[0]);
-    classes = 'background';
-    html += '<div style="' + inlineStyle + '" class="' + classes + '">';
-    // html += '<img class="inject-me" src="' + imgSrc + '"></img>';
-
+    html += '<div style="' + inlineStyle + '" class="background loading">';
     html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml"></object>';
     html += '</div>';
-    // Creates a ghost image for every floor, which removes itself when it's loaded, and then
-    // resolves the deferrer for this floor.
-    // The "ghost image" is just asking to load the bg image another time, and since this will
-    // just load from cache, it shouldnt impact performance too much.
-    // This allows us to remove the loading spinner when all the deferrers are resolved, as
-    // they all resolve once all the images load in.
-    $('<object/>').attr('data', imgSrc).load(function() {
-      $(this).remove(); // prevent memory leaks
-      currentDeferr.resolve();
-    });
-    deferrs.push(currentDeferr);
-
-    $.when.apply($, deferrs).then(function() {
-      $mapWrappers.removeClass('loading');
-    });
-
     return html;
   };
 
@@ -133,10 +86,10 @@ var R6MMainRender = (function($,window,document,undefined) {
     return styleString;
   };
 
-  var renderMap = function renderMap(mapData, $mapWrappers, $mapElements, $mapPanelLabels) {
+  var renderMap = function renderMap(mapData, $mapElements, $mapPanelLabels) {
     var html = '';
 
-    html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
+    html += getMaxFloorIndexHtml(mapData.floors, mapData.imgUrlPrefix);
 
     $mapElements.html(html);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));

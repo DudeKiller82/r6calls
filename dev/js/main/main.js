@@ -150,7 +150,7 @@
       mapData = R6MMainData.getMapData();
 
     R6MMainControls.floors.populate(mapData[currentlySelectedMap].floors);
-    R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapWrappers, $mapElements, $mapPanelLabels);
+    R6MMainRender.renderMap(mapData[currentlySelectedMap], $mapElements, $mapPanelLabels);
 
     R6MMainControls.pan.reset($mapMains, getResetDimensions);
     R6MMainControls.zoom.reset($mapMains, getResetDimensions);
@@ -278,6 +278,14 @@
     $body.addClass(SHOW_MAP);
     updateUrl();
     updateTitle();
+    var svgholder = document.getElementById('svgMap');
+
+    svgholder.onload = function() {
+      alert('some svg loaded');
+      R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+        R6MMainControls.display.setLayerDisplay(layer.short);
+      });
+    };
   };
 
   var showSelectMap = function showSelectMap() {
@@ -292,7 +300,7 @@
 
     R6MMainControls.menu.setup();
 
-    var foo = $('#mmenu-menu').mmenu({
+    $('#mmenu-menu').mmenu({
       offCanvas: {
         position: 'right',
         pageSelector: '#mmenu-page'
