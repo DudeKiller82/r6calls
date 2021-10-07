@@ -319,7 +319,7 @@ body {
       @include box-shadow(0, 0, 50px, rgba(0,0,0,0.5));
       z-index: $z-background;
       
-      .mapSVG {
+      .svgMap {
         pointer-events: none;
       }
     }

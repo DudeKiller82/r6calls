@@ -365,22 +365,29 @@ var R6MMainControls = (function($, window, document, undefined) {
 
   var setLayerDisplay = function setLayerDisplay(key) {
     var visible = getDisplayValue(key),
-      i;
+      i, j;
+    var svgMaps = document.getElementsByClassName('svgMap');
 
-    for (i = -2; i < 5; i++) {
-      var layer = document.getElementById(i + '-' + key);
+    for (i = 0; i < svgMaps.length; i++) {
+      var svgObject = svgMaps[i].getSVGDocument();
 
-      if (i == -2 ) {
-        layer = document.getElementById('bg-' + key);
-      }
-      if (layer) {
-        if (visible) {
-          layer.style.display = 'inline';
-        } else {
-          layer.style.display = 'none';
+      if (svgObject) {
+        for (j = -2; j < 5; j++) {
+          var layer = svgObject.getElementById(j + '-' + key);
+
+          if (j == -2 ) {
+            layer = svgObject.getElementById('bg-' + key);
+          }
+          if (layer) {
+            if (visible) {
+              layer.style.display = 'inline';
+            } else {
+              layer.style.display = 'none';
+            }
+          }
         }
       }
-    }
+    };
   };
 
   var setMenuOption = function setMenuOption(key, isChecked) {

@@ -67,15 +67,18 @@ var R6MMainRender = (function($,window,document,undefined) {
     imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
     inlineStyle = getPositionStyle(floors[0]);
     classes = 'background';
-    html += '<div style="' + inlineStyle + '" class="' + classes + '"></object>';
-    html += '<img class="inject-me" src="' + imgSrc + '"></img>';
+    html += '<div style="' + inlineStyle + '" class="' + classes + '">';
+    // html += '<img class="inject-me" src="' + imgSrc + '"></img>';
+
+    html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml"></object>';
+    html += '</div>';
     // Creates a ghost image for every floor, which removes itself when it's loaded, and then
     // resolves the deferrer for this floor.
     // The "ghost image" is just asking to load the bg image another time, and since this will
     // just load from cache, it shouldnt impact performance too much.
     // This allows us to remove the loading spinner when all the deferrers are resolved, as
     // they all resolve once all the images load in.
-    $('<img/>').attr('src', imgSrc).load(function() {
+    $('<object/>').attr('data', imgSrc).load(function() {
       $(this).remove(); // prevent memory leaks
       currentDeferr.resolve();
     });
@@ -136,11 +139,6 @@ var R6MMainRender = (function($,window,document,undefined) {
     html += getMaxFloorIndexHtml($mapWrappers, mapData.floors, mapData.imgUrlPrefix);
 
     $mapElements.html(html);
-      // Elements to inject
-    var mySVGsToInject = document.querySelectorAll('img.inject-me');
-
-    // Do the injection
-    SVGInjector(mySVGsToInject);
     $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
   };
 
