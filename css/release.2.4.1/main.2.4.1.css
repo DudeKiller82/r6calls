@@ -1272,7 +1272,7 @@ body {
       -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 1000; }
-      .map-main .map-elements .background .mapSVG {
+      .map-main .map-elements .background .svgMap {
         pointer-events: none; }
     .map-main .map-elements.zoomed-in-far {
       position: relative; }
