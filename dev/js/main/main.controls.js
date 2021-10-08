@@ -61,11 +61,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     }
   };
 
-  var floorsGetCurrentIndex = function floorsGetCurrentIndex() {
+  var getSelectedFloor = function getSelectedFloor() {
     return $floorControl.find('.selected').data('index');
   };
 
-  var floorsGetMinAndMaxIndex = function floorsGetMinAndMaxIndex() { // TO DO CHANGE TO MAX FLOOR INDEX
+  var getMinMaxFloor = function getMinMaxFloor() { // TO DO CHANGE TO MAX FLOOR INDEX
     var $floorInputs = $floorControl.find('button');
 
     return {
@@ -74,11 +74,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     };
   };
 
-  var floorsPopulate = function floorsPopulate(floors) {
+  var getFloorButtonsHTML = function getFloorButtonsHTML(floors) {
     var buttonsAsString = '',
       classes = '',
       tooltip = '',
-      initalFloor = floorsGetCurrentIndex();
+      initalFloor = getSelectedFloor();
 
     floors.forEach(function(floor) {
       // allows to have a bg image that can't be selected as a "floor"
@@ -94,15 +94,15 @@ var R6MMainControls = (function($, window, document, undefined) {
       buttonsAsString += '</button>';
     });
     $floorControl.html(buttonsAsString);
-    floorsTrySelect(initalFloor);
+    setSelectedFloor(initalFloor);
   };
 
-  var floorsSetup = function floorsSetup(handleChangeCallback, showSelectedFloorFn) {
+  var setFloorsChangeEventAndHotkeys = function setFloorsChangeEventAndHotkeys(handleChangeCallback, showSelectedFloorFn) {
     setupFloorChangeEvent(handleChangeCallback);
     setupFloorHotkeys(showSelectedFloorFn);
   };
 
-  var floorsTrySelect = function floorsTrySelect(floorIndex) {
+  var setSelectedFloor = function setSelectedFloor(floorIndex) {
     var $selectedFloor = $floorControl.find("[data-index='" + floorIndex + "']");
 
     if ($selectedFloor.length) {
@@ -130,11 +130,11 @@ var R6MMainControls = (function($, window, document, undefined) {
       var keyVal = e.key;
 
       if (keyCode >= 48 && keyCode <= 53) {  // '0' through '1'
-        if (floorsTrySelect(keyCode - 48)) {
+        if (setSelectedFloor(keyCode - 48)) {
           showSelectedFloorFn();
         }
       } else if (keyCode == 192) { // '`'
-        if (floorsTrySelect(0)) {
+        if (setSelectedFloor(0)) {
           showSelectedFloorFn();
         }
       }
@@ -249,10 +249,6 @@ var R6MMainControls = (function($, window, document, undefined) {
     $zoomControl.trigger('input');
   };
 
-  var highlightControl = function highlightControl($el) {
-    $el.addClass('highlighted-item');
-  };
-
   var isCurrentlyFullScreen = function isCurrentlyFullScreen() {
     return (
       document.fullscreenElement ||
@@ -273,11 +269,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     );
   };
 
-  var mapsSetupChangeEvent = function mapsSetupChangeEvent(callback) {
+  var setMapChangeEvent = function setMapChangeEvent(callback) {
     $mapControl.on('change', callback);
   };
 
-  var mapPanelsSetupChangeEvent = function mapPanelsSetupChangeEvent(callback) {
+  var setMapPanelChangeEvent = function setMapPanelChangeEvent(callback) {
     $mapPanelCountControl.on('change', function(event) {
       var panelCount = $mapPanelCountControl.val();
 
@@ -286,14 +282,14 @@ var R6MMainControls = (function($, window, document, undefined) {
     });
   };
 
-  var mapsGetCurrentlySelected = function mapsGetCurrentlySelected() {
+  var getSelectedMap = function getSelectedMap() {
     return $mapControl.val();
   };
 
-  var mapsPopulateOptions = function mapsPopulateOptions(mapData) {
+  var getMapComboHTML = function getMapComboHTML(mapData) {
     var optionsAsString = '',
       maps = [],
-      currentMap = mapsGetCurrentlySelected();
+      currentMap = getSelectedMap();
 
     for (var mapKey in mapData) {
       if (mapData.hasOwnProperty(mapKey)) {
@@ -315,14 +311,14 @@ var R6MMainControls = (function($, window, document, undefined) {
     });
 
     $mapControl.html(optionsAsString);
-    mapsTrySelect(currentMap);
+    setSelectedMap(currentMap);
   };
 
-  var mapsTrySelect = function mapsTrySelect(map) {
+  var setSelectedMap = function setSelectedMap(map) {
     return R6MHelpers.trySelectOption($mapControl, map);
   };
 
-  var menuSetup = function menuSetup() {
+  var getMenuHTML = function getMenuHTML() {
     var html = '';
 
     html += getMenuR6MapsHtml();
@@ -336,13 +332,13 @@ var R6MMainControls = (function($, window, document, undefined) {
     $menuSelectMapsControl = $('#menu-select-maps');
   };
 
-  var menuSetupFullScreen = function menuSetupFullScreen() {
+  var setMenuFullScreenClickEvent = function setMenuFullScreenClickEvent() {
     if ($fullScreenControl) {
       $fullScreenControl.on('click', toggleFullScreen);
     }
   };
 
-  var menuSetupSelectMaps = function menuSetupSelectMaps(
+  var setMenuSelectMapClickEvent = function setMenuSelectMapClickEvent(
     showSelectMapCallback,
     closeMenuCallback
   ) {
@@ -353,7 +349,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     });
   };
 
-  var panReset = function panReset($mapMains, getResetDimensions) {
+  var resetPan = function resetPan($mapMains, getResetDimensions) {
     var resetDimensions = getResetDimensions();
 
     $mapMains.panzoom(
@@ -413,13 +409,13 @@ var R6MMainControls = (function($, window, document, undefined) {
     };
   };
 
-  var setMenuOption = function setMenuOption(key, isChecked) {
+  var setMenuCheckboxOption = function setMenuCheckboxOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
     $('#option-' + key).prop('checked', boolValue);
   };
 
-  var setupMenuOptionChangeEvent = function setupMenuOptionChangeEvent(key, callback) {
+  var setMenuCheckboxChangeEvent = function setMenuCheckboxChangeEvent(key, callback) {
     $('#option-' + key).change(function(e) {
       setLayerDisplay(key);
       callback(key, getDisplayValue(key));
@@ -447,7 +443,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     $(document).on('keydown', getHandleHotkeyFn(showSelectedFloorFn));
   };
 
-  var setupPanZoom = function setupPanZoom($mapMains, $mapElements) {
+  var setPanZoom = function setPanZoom($mapMains, $mapElements) {
     $mapMains.panzoom({
       $zoomRange: $zoomControl,
       minScale: 0.3,
@@ -485,15 +481,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     }
   };
 
-  var mapPanelsTrySelect = function mapPanelsTrySelect(number) {
+  var setSelectedMapPanel = function setSelectedMapPanel(number) {
     var result = R6MHelpers.trySelectOption($mapPanelCountControl, number);
 
     $mapPanelCountControl.trigger('change');
     return result;
-  };
-
-  var removeLatestUpdateHighlight = function removeLatestUpdateHighlight(initialDelayMs) {
-    unhighlightControl($('#menu-latest-updates'), initialDelayMs);
   };
 
   var tryShowLockControls = function tryShowLockControls(numberPanels) {
@@ -519,19 +511,19 @@ var R6MMainControls = (function($, window, document, undefined) {
     }
   };
 
-  var zoomDisable = function zoomDisable($mapElements) {
+  var disableZoom = function disableZoom($mapElements) {
     $mapElements.panzoom('disable');
   };
 
-  var zoomEnable = function zoomEnable($mapElements) {
+  var enableZoom = function enableZoom($mapElements) {
     $mapElements.panzoom('enable');
   };
 
-  var zoomIsZoomed = function zoomIsZoomed() {
+  var isZoomed = function isZoomed() {
     return ($zoomControl.val() != 1);
   };
 
-  var zoomReset = function zoomReset($mapMains, getResetDimensions) {
+  var resetZoom = function resetZoom($mapMains, getResetDimensions) {
     var resetDimensions = getResetDimensions();
 
     $zoomControl.val(resetDimensions.zoomValue);
@@ -539,47 +531,37 @@ var R6MMainControls = (function($, window, document, undefined) {
   };
 
   return  {
-    floors: {
-      get: floorsGetCurrentIndex,
-      getMinMaxIndex: floorsGetMinAndMaxIndex,
-      populate: floorsPopulate,
-      setup: floorsSetup,
-      trySelect: floorsTrySelect
-    },
-    mapPanels: {
-      setup: mapPanelsSetupChangeEvent,
-      trySelect: mapPanelsTrySelect
-    },
-    maps: {
-      get: mapsGetCurrentlySelected,
-      populate: mapsPopulateOptions,
-      setup: mapsSetupChangeEvent,
-      trySelect: mapsTrySelect
-    },
-    menu: {
-      setup: menuSetup,
-      setupFullScreen: menuSetupFullScreen,
-      setupSelectMaps: menuSetupSelectMaps,
-      setMenuOption: setMenuOption,
-      setupMenuOptionChangeEvent: setupMenuOptionChangeEvent
-    },
-    display: {
-      setLayerDisplay: setLayerDisplay,
-      setFoorDisplay: setFoorDisplay,
-      MAP_LAYER: MAP_LAYER
-    },
-    pan: {
-      reset: panReset
-    },
-    zoom: {
-      disable: zoomDisable,
-      enable: zoomEnable,
-      isZoomed: zoomIsZoomed,
-      reset: zoomReset
-    },
-    highlightControl: highlightControl,
-    removeLatestUpdateHighlight: removeLatestUpdateHighlight,
-    setupPanZoom: setupPanZoom,
-    unhighlightControl: unhighlightControl
+    // floor
+    getSelectedFloor: getSelectedFloor,
+    getMinMaxFloor: getMinMaxFloor,
+    getFloorButtonsHTML: getFloorButtonsHTML,
+    setFloorsChangeEventAndHotkeys: setFloorsChangeEventAndHotkeys,
+    setSelectedFloor: setSelectedFloor,
+    // mapPanel
+    setMapPanelChangeEvent: setMapPanelChangeEvent,
+    setSelectedMapPanel: setSelectedMapPanel,
+    // map
+    getSelectedMap: getSelectedMap,
+    getMapComboHTML: getMapComboHTML,
+    setMapChangeEvent: setMapChangeEvent,
+    setSelectedMap: setSelectedMap,
+    // menu
+    getMenuHTML: getMenuHTML,
+    setMenuFullScreenClickEvent: setMenuFullScreenClickEvent,
+    setMenuSelectMapClickEvent: setMenuSelectMapClickEvent,
+    setMenuCheckboxOption: setMenuCheckboxOption,
+    setMenuCheckboxChangeEvent: setMenuCheckboxChangeEvent,
+    // display
+    setLayerDisplay: setLayerDisplay,
+    setFoorDisplay: setFoorDisplay,
+    MAP_LAYER: MAP_LAYER,
+    // pan
+    resetPan: resetPan,
+    // zoom
+    disableZoom: disableZoom,
+    enableZoom: enableZoom,
+    isZoomed: isZoomed,
+    resetZoom: resetZoom,
+    setPanZoom: setPanZoom
   };
 })(window.jQuery, window, document);
