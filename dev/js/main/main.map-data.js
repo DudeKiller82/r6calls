@@ -19,7 +19,7 @@ var R6MMainData = (function(undefined){
         floors: [
           { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]

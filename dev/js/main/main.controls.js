@@ -390,6 +390,29 @@ var R6MMainControls = (function($, window, document, undefined) {
     };
   };
 
+  var setFoorDisplay = function setFoorDisplay(floorNumber) {
+    var i, j;
+    var svgMaps = document.getElementsByClassName('svgMap');
+
+    for (i = 0; i < svgMaps.length; i++) {
+      var svgObject = svgMaps[i].getSVGDocument();
+
+      if (svgObject) {
+        for (j = -1; j < 5; j++) {
+          var layer = svgObject.getElementById('Floor ' + j);
+
+          if (layer) {
+            if (j == floorNumber) {
+              layer.style.display = 'inline';
+            } else {
+              layer.style.display = 'none';
+            }
+          }
+        }
+      }
+    };
+  };
+
   var setMenuOption = function setMenuOption(key, isChecked) {
     var boolValue = (isChecked === 'true') ? true : false;
 
@@ -415,6 +438,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
       resetSelectedFloor();
       floorButton.addClass(SELECTED_CLASS);
+      setFoorDisplay(e.currentTarget.getAttribute('data-index'));
       callback();
     });
   };
@@ -541,6 +565,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     },
     display: {
       setLayerDisplay: setLayerDisplay,
+      setFoorDisplay: setFoorDisplay,
       MAP_LAYER: MAP_LAYER
     },
     pan: {

@@ -121,18 +121,10 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
     };
   };
 
-  var checkIe11orLess = function checkIe11orLess() {
-    return (navigator && (
-      (navigator.appName == 'Microsoft Internet Explorer') || // IE <= 10
-      ((navigator.appName == 'Netscape') && (navigator.appVersion.indexOf('Trident') > 0))  // IE = 11 and not Edge
-    ));
-  };
-
   var resizeMapLinks = function resizeMapLinks(
     $selectMapGrid,
     $mapLinks,
-    $mainNav,
-    $mapLinksContainer
+    $mainNav
   ) {
     var viewportDimensions = getViewportDimensions(),
       navHeight = $mainNav.height(),
@@ -147,8 +139,7 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
         availableHeight
       ),
       thumbImgScale = getBackgroundImgScale(mapLinkDimensions),
-      $spinners = $mapLinks.find('.spinner'),
-      isIe11OrLess;
+      $spinners = $mapLinks.find('.spinner');
 
     $selectMapGrid.css('padding-top', (navHeight + VIEWPORT_PADDING_HEIGHT) + 'px');
     $mapLinks.height(mapLinkDimensions.height);
@@ -159,29 +150,21 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
     );
     $spinners.css('background-size', (Math.min(mapLinkDimensions.height, mapLinkDimensions.width) - 20) + 'px');
 
-    isIe11OrLess = checkIe11orLess();
-    // IE11 had an issue with transform scale that caused thumbnails to not center and look awkward
-    // This is a workaround that seems fine given the scale/zoom effect is just nice-to-have and it doesn't look awkward now
-    if (!isIe11OrLess) {
+    setTransformScale(
+      $mapLinks.find('div.image.thumb'),
+      thumbImgScale
+    );
+
+    $mapLinks.hover(function(event) {
       setTransformScale(
-        $mapLinks.find('div.image.thumb'),
+        $(event.target).closest('li').find('div.image.thumb'),
+        thumbImgScale * THUMB_SCALE_ZOOMED_IN_FACTOR
+      );
+    }, function(event) {
+      setTransformScale(
+        $(event.target).closest('li').find('div.image.thumb'),
         thumbImgScale
       );
-    }
-    $mapLinks.hover(function(event) {
-      if (!isIe11OrLess) {
-        setTransformScale(
-          $(event.target).closest('li').find('div.image.thumb'),
-          thumbImgScale * THUMB_SCALE_ZOOMED_IN_FACTOR
-        );
-      }
-    }, function(event) {
-      if (!isIe11OrLess) {
-        setTransformScale(
-          $(event.target).closest('li').find('div.image.thumb'),
-          thumbImgScale
-        );
-      }
     });
   };
 
@@ -211,8 +194,7 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
       resizeMapLinks(
         $selectMapGrid,
         $selectMapGrid.find('a'),
-        $mainNav,
-        $selectMapGrid.find('ul')
+        $mainNav
       );
     };
 

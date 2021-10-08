@@ -42,7 +42,17 @@
     setTimeout(function() {
       $body.removeClass('loading');
     }, 10);
+
+    window.onload = function() {
+      setLayerDisplays();
+    };
   });
+
+  var setLayerDisplays = function setLayerDisplays() {
+    R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
+      R6MMainControls.display.setLayerDisplay(layer.short);
+    });
+  };
 
   var checkIfMapLoaded = function checkIfMapLoaded() {
     return $body.attr('loaded-map');
@@ -108,20 +118,17 @@
   };
 
   var handleFloorChange = function handleFloorChange() {
-    sendFloorSelectAnalyticsEvent();
     showSelectedFloor();
     updateUrl();
     R6MMainDrawing.refreshPings(); // hacky drawing module for now
   };
 
   var handleMapChange = function handleMapChange() {
-    sendMapSelectAnalyticsEvent();
     loadMap();
     updateUrl();
   };
 
   var handleMapPanelCountChange = function handleMapPanelCountChange(numPanels) {
-    sendMapPanelCountEvent(numPanels);
     setMapPanelCount(numPanels);
   };
 
@@ -196,27 +203,6 @@
     }
   };
 
-  var sendControlAnalyticsEvent = function sendControlAnalyticsEvent(control, value) {
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'Controls',
-      eventAction: control,
-      eventLabel: value
-    });
-  };
-
-  var sendFloorSelectAnalyticsEvent = function sendFloorSelectAnalyticsEvent() {
-    sendControlAnalyticsEvent('Floor', R6MMainControls.floors.get());
-  };
-
-  var sendMapPanelCountEvent = function sendMapPanelCountEvent(panelCount) {
-    sendControlAnalyticsEvent('PanelsCount', panelCount);
-  };
-
-  var sendMapSelectAnalyticsEvent = function sendMapSelectAnalyticsEvent() {
-    sendControlAnalyticsEvent('Map', R6MMainControls.maps.get());
-  };
-
   var setLoadedMapKey = function setLoadedMapKey(mapKey) {
     $body.attr('loaded-map', mapKey);
   };
@@ -278,14 +264,6 @@
     $body.addClass(SHOW_MAP);
     updateUrl();
     updateTitle();
-    var svgholder = document.getElementById('svgMap');
-
-    svgholder.onload = function() {
-      alert('some svg loaded');
-      R6MMainControls.display.MAP_LAYER.forEach(function(layer) {
-        R6MMainControls.display.setLayerDisplay(layer.short);
-      });
-    };
   };
 
   var showSelectMap = function showSelectMap() {
