@@ -11,25 +11,25 @@ body.loading {
   }
 }
 
-#map-panel-wrapper {
-  &[map-panel-count="1"] {
-    .map-wrapper.loading {
+#map-panels-container {
+  &[map-panels-count="1"] {
+    .map-container.loading {
       @media all and (min-width: 1000px ) {
         background-size: 500px;
       }
     }
   }
 
-  &[map-panel-count="2"] {
-    .map-wrapper.loading {
+  &[map-panels-count="2"] {
+    .map-container.loading {
       @media all and (min-width: 2000px ) {
         background-size: 500px;
       }
     }
   }
 
-  &[map-panel-count="4"] {
-    .map-wrapper.loading {
+  &[map-panels-count="4"] {
+    .map-container.loading {
       @media all and (min-width: 1200px ) {
         background-size: 280px;
       }

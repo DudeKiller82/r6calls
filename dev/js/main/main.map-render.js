@@ -32,7 +32,7 @@ var R6MMainRender = (function($,window,document,undefined) {
       5: 'five'
     };
 
-  var getMaxFloorIndexHtml = function getMaxFloorIndexHtml(floors, imgUrlPrefix) {
+  var getSVGMapHTML = function getSVGMapHTML(floors, imgUrlPrefix) {
     var html = '',
       prefix = imgUrlPrefix,
       imgSrc = IMG_URL + prefix + '/' + prefix + '.svg',
@@ -44,7 +44,7 @@ var R6MMainRender = (function($,window,document,undefined) {
     return html;
   };
 
-  var getPanelLabelsHtml = function getPanelLabelsHtml(floors) {
+  var getPanelLabelHTML = function getPanelLabelHTML(floors) {
     var html = '',
       cssClass = '';
 
@@ -86,21 +86,21 @@ var R6MMainRender = (function($,window,document,undefined) {
     return styleString;
   };
 
-  var renderMap = function renderMap(mapData, $mapElements, $mapPanelLabels) {
+  var getMapHTML = function getMapHTML(mapData, $mapElements, $mapPanelsLabels) {
     var html = '';
 
-    html += getMaxFloorIndexHtml(mapData.floors, mapData.imgUrlPrefix);
+    html += getSVGMapHTML(mapData.floors, mapData.imgUrlPrefix);
 
     $mapElements.html(html);
-    $mapPanelLabels.html(getPanelLabelsHtml(mapData.floors));
+    $mapPanelsLabels.html(getPanelLabelHTML(mapData.floors));
   };
 
-  var setupMapPanels = function setupMapPanels($mapPanelWrappers, numPanels) {
+  var getMapPanelsHTML = function getMapPanelsHTML($mapPanelsContainer, mapPanelsCount) {
     var html;
 
-    for (var x = 0; x < numPanels; x++) {
+    for (var x = 0; x < mapPanelsCount; x++) {
       html = '';
-      html += '<div class="map-wrapper">';
+      html += '<div class="map-container">';
       html += '<div class="helper-border vertical"></div>';
       html += '<div class="helper-border horizontal"></div>';
       html += '<p class="map-panel-label"></p>';
@@ -111,28 +111,28 @@ var R6MMainRender = (function($,window,document,undefined) {
       html += '<div class="svg-wrapper map"></div>';
       html += '</div>'; // end center-helper
       html += '</div>'; // end map-main
-      html += '</div>'; // end map-wrapper
-      $mapPanelWrappers.append(html);
+      html += '</div>'; // end map-container
+      $mapPanelsContainer.append(html);
     }
   };
 
   var showFloor = function showFloor(
     selectedFloorIndex,
-    $mapPanelWrappers,
-    $mapWrappers,
+    $mapPanelsContainer,
+    $mapContainer,
     minFloorIndex,
     maxFloorIndex
   ) {
-    $mapPanelWrappers.attr('selected-floor-index', selectedFloorIndex);
-    var numPanels = $mapPanelWrappers.attr('map-panel-count');
+    $mapPanelsContainer.attr('selected-floor-index', selectedFloorIndex);
+    var mapPanelsCount = $mapPanelsContainer.attr('map-panels-count');
 
-    if (numPanels > 2)  {
+    if (mapPanelsCount > 2)  {
       selectedFloorIndex = Math.max(minFloorIndex, selectedFloorIndex - 1);
     }
-    var tempMinIndex = Math.max(minFloorIndex, maxFloorIndex - numPanels + 1),
+    var tempMinIndex = Math.max(minFloorIndex, maxFloorIndex - mapPanelsCount + 1),
       startingIndex = Math.min(tempMinIndex, selectedFloorIndex);
 
-    $mapWrappers.each(function(index, map) {
+    $mapContainer.each(function(index, map) {
       $(map).attr('show-floor-index', Math.min(startingIndex, maxFloorIndex));
       startingIndex++;
     });
@@ -146,8 +146,8 @@ var R6MMainRender = (function($,window,document,undefined) {
   };
 
   return  {
-    renderMap: renderMap,
-    setupMapPanels: setupMapPanels,
+    getMapHTML: getMapHTML,
+    getMapPanelsHTML: getMapPanelsHTML,
     showFloor: showFloor,
     showObjective: showObjective,
     SVG_DIM: SVG_DIM

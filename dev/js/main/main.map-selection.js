@@ -11,7 +11,7 @@ var MIN_COLUMN_NUM = 2,
   MIN_MAP_LINK_WIDTH = 100,
   THUMB_SCALE_ZOOMED_IN_FACTOR = 1.25;
 
-var R6MMainSelectMaps = (function($, window, document, undefined) {
+var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
   var getBackgroundImgScale = function getBackgroundImgScale(thumbDimensions) {
     return Math.max(
       thumbDimensions.height / (NATIVE_THUMB_IMG_HEIGHT - 1),
@@ -35,7 +35,7 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
     return result;
   };
 
-  var getMapGridHtml = function getMapGridHtml(mapData) {
+  var getMapGridHTML = function getMapGridHTML(mapData) {
     var maps = [],
       html = '<ul>';
 
@@ -174,21 +174,21 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
     element.css('transform', 'scale(' + scale + ')');
   };
 
-  var setup = function setup(
+  var setMapSelectionGrid = function setMapSelectionGrid(
     $selectMapGrid,
     $heading,
     $mainNav,
     mapData,
-    switchToMapCallback,
-    closeSelectCallback
+    showSelectedMapCallback,
+    hideMapSelectionGridCallback
   ) {
     $heading.text('Select a map');
-    $selectMapGrid.html(getMapGridHtml(mapData));
+    $selectMapGrid.html(getMapGridHTML(mapData));
     $selectMapGrid.on('click', 'a', function(event) {
       event.preventDefault();
-      switchToMapCallback($(event.target).closest('li').data('key'));
+      showSelectedMapCallback($(event.target).closest('li').data('key'));
     });
-    $selectMapGrid.on('click', closeSelectCallback);
+    $selectMapGrid.on('click', hideMapSelectionGridCallback);
 
     var handleResize = function handleResize() {
       resizeMapLinks(
@@ -211,6 +211,6 @@ var R6MMainSelectMaps = (function($, window, document, undefined) {
   };
 
   return  {
-    setup: setup
+    setMapSelectionGrid: setMapSelectionGrid
   };
 })(window.jQuery, window, document);

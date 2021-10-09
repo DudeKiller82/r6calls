@@ -58,7 +58,7 @@ nav {
       }
     }
 
-    body.show-select-map &,
+    body.show-map-selection-grid &,
     &:focus {
       div {
         background-position: 0 -80px;
@@ -78,7 +78,7 @@ nav {
     }
   }
 
-  #select-map-heading {
+  #map-selection-heading {
     display: none;
     font-size: 1.4rem;
     font-weight: 700;
@@ -90,7 +90,7 @@ nav {
       margin-right: $control-padding-left-right;
     }
 
-    body.show-select-map & {
+    body.show-map-selection-grid & {
       display: inline;
     }
 

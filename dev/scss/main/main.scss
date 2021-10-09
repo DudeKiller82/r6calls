@@ -50,7 +50,7 @@ body {
   position: relative;
 }
 
-.map-wrapper {
+.map-container {
   height: 100vh;
   width: 100vw;
   overflow:hidden;
@@ -98,31 +98,31 @@ body {
   }
 }
 
-#map-panel-wrapper {
+#map-panels-container {
   @include align-content(space-around);
   @include flexbox;
   @include flex-wrap(wrap);
   @include justify-content(space-around);
 
-  &[selected-floor-index="-1"] .map-wrapper[show-floor-index="-1"] .map-panel-label {
+  &[selected-floor-index="-1"] .map-container[show-floor-index="-1"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="0"] .map-wrapper[show-floor-index="0"] .map-panel-label {
+  &[selected-floor-index="0"] .map-container[show-floor-index="0"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="1"] .map-wrapper[show-floor-index="1"] .map-panel-label {
+  &[selected-floor-index="1"] .map-container[show-floor-index="1"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="2"] .map-wrapper[show-floor-index="2"] .map-panel-label {
+  &[selected-floor-index="2"] .map-container[show-floor-index="2"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="3"] .map-wrapper[show-floor-index="3"] .map-panel-label {
+  &[selected-floor-index="3"] .map-container[show-floor-index="3"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="4"] .map-wrapper[show-floor-index="4"] .map-panel-label {
+  &[selected-floor-index="4"] .map-container[show-floor-index="4"] .map-panel-label {
      @include current-label();
   }
-  &[selected-floor-index="5"] .map-wrapper[show-floor-index="5"] .map-panel-label {
+  &[selected-floor-index="5"] .map-container[show-floor-index="5"] .map-panel-label {
      @include current-label();
   }
 
@@ -185,7 +185,7 @@ body {
     }
   }
 
-  .map-wrapper {
+  .map-container {
     display: none;
 
     &:first-child {
@@ -199,7 +199,7 @@ body {
     }
   }
 
-  &[map-panel-count="2"] .map-wrapper {
+  &[map-panels-count="2"] .map-container {
     @include flex(1 1 50%);
 
     .map-panel-label {
@@ -247,7 +247,7 @@ body {
     }
   }
 
-  &[map-panel-count="4"] .map-wrapper {
+  &[map-panels-count="4"] .map-container {
     @include flex(1 1 50%);
     display: block;
     height: 50vh;

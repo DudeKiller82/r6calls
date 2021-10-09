@@ -5,15 +5,15 @@ var R6MMainControls = (function($, window, document, undefined) {
     $floorControl = $('#floor-control'),
     $zoomControl = $('#zoom-range'),
     $menuControl = $('#mmenu-link'),
-    $mapPanelCountControl,
+    $mapPanelsCountControl,
     $fullScreenControl,
-    $menuSelectMapsControl,
+    $menuMapSelectionControl,
     $menuPanel = $('#menu-panel'),
     SELECTED_CLASS = 'selected',
     ZOOMED_IN_FAR_CLASS = 'zoomed-in-far',
     ZOOMED_OUT_FAR_CLASS = 'zoomed-out-far',
     CSS_TRANSITION_MS = 1800, // currently in highlighted-item mixin for .highlighted-item-in-transition
-    MAP_LAYER = [
+    MAP_LAYERS = [
       {short: 'bmb', full: 'Bomb'},
       {short: 'sec', full: 'Secure'},
       {short: 'hst', full: 'Hostage'},
@@ -180,7 +180,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<div class="mmenu-custom-panel">';
     html += '<h2>r6calls.com</h2>';
-    html += '<button id="menu-select-maps">Select a map</button>';
+    html += '<button id="menu-map-selection">Select a map</button>';
     html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">Full screen</button>';
@@ -217,7 +217,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '<div id="options-wrapper" class="mmenu-custom-panel">';
     html += '<h2>Options</h2>';
 
-    html += '<div class="map-panel-count-control">';
+    html += '<div class="map-panels-count-control">';
     html += '<label>Number of floors to display</label>';
     html += '<select id="map-pane-count">';
     html += '<option value="1">1 - Full</option>';
@@ -225,7 +225,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '<option value="4">4 - Grid</option>';
     html += '</select>';
 
-    html += '<div id="lock-wrapper">';
+    html += '<div id="lock-container">';
     html += '<div class="checkbox-wrapper">';
     html += '<input type="checkbox" checked="checked" id="option-lp">Lock panning</input>';
     html += '</div>';
@@ -235,7 +235,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<label>Elements to display</label>';
     html += '<div class="checkbox-wrapper">';
-    MAP_LAYER.forEach(function(layer) {
+    MAP_LAYERS.forEach(function(layer) {
       html += '<input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
     });
     html += '</div>';
@@ -273,12 +273,12 @@ var R6MMainControls = (function($, window, document, undefined) {
     $mapControl.on('change', callback);
   };
 
-  var setMapPanelChangeEvent = function setMapPanelChangeEvent(callback) {
-    $mapPanelCountControl.on('change', function(event) {
-      var panelCount = $mapPanelCountControl.val();
+  var setMapPanelsCountChangeEvent = function setMapPanelsCountChangeEvent(callback) {
+    $mapPanelsCountControl.on('change', function(event) {
+      var mapPanelsCount = $mapPanelsCountControl.val();
 
-      tryShowLockControls(panelCount);
-      callback(panelCount);
+      showLockControls(mapPanelsCount);
+      callback(mapPanelsCount);
     });
   };
 
@@ -289,7 +289,7 @@ var R6MMainControls = (function($, window, document, undefined) {
   var getMapComboHTML = function getMapComboHTML(mapData) {
     var optionsAsString = '',
       maps = [],
-      currentMap = getSelectedMap();
+      mapName = getSelectedMap();
 
     for (var mapKey in mapData) {
       if (mapData.hasOwnProperty(mapKey)) {
@@ -311,11 +311,21 @@ var R6MMainControls = (function($, window, document, undefined) {
     });
 
     $mapControl.html(optionsAsString);
-    setSelectedMap(currentMap);
+    setSelectedMap(mapName);
   };
 
-  var setSelectedMap = function setSelectedMap(map) {
-    return R6MHelpers.trySelectOption($mapControl, map);
+  var setOption = function setOption($selectEl, optionName) {
+    var $option = $selectEl.find('option[value="' + optionName + '"]');
+
+    if ($option.length) {
+      $option.prop('selected', true);
+      return true;
+    }
+    return false;
+  };
+
+  var setSelectedMap = function setSelectedMap(mapName) {
+    return setOption($mapControl, mapName);
   };
 
   var getMenuHTML = function getMenuHTML() {
@@ -327,9 +337,9 @@ var R6MMainControls = (function($, window, document, undefined) {
     $menuPanel.html(html);
 
     $menuControl.find('.menu-text').html('Menu');
-    $mapPanelCountControl = $('#map-pane-count');
+    $mapPanelsCountControl = $('#map-pane-count');
     $fullScreenControl = $('#full-screen');
-    $menuSelectMapsControl = $('#menu-select-maps');
+    $menuMapSelectionControl = $('#menu-map-selection');
   };
 
   var setMenuFullScreenClickEvent = function setMenuFullScreenClickEvent() {
@@ -342,7 +352,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     showSelectMapCallback,
     closeMenuCallback
   ) {
-    $menuSelectMapsControl.on('click', function(event) {
+    $menuMapSelectionControl.on('click', function(event) {
       event.preventDefault();
       showSelectMapCallback();
       closeMenuCallback();
@@ -482,32 +492,19 @@ var R6MMainControls = (function($, window, document, undefined) {
   };
 
   var setSelectedMapPanel = function setSelectedMapPanel(number) {
-    var result = R6MHelpers.trySelectOption($mapPanelCountControl, number);
+    var result = setOption($mapPanelsCountControl, number);
 
-    $mapPanelCountControl.trigger('change');
+    $mapPanelsCountControl.trigger('change');
     return result;
   };
 
-  var tryShowLockControls = function tryShowLockControls(numberPanels) {
-    var $lockWrapper = $('#lock-wrapper');
+  var showLockControls = function showLockControls(panelsCount) {
+    var $lockWrapper = $('#lock-container');
 
-    if (numberPanels > 1) {
+    if (panelsCount > 1) {
       $lockWrapper.show(600);
     } else {
       $lockWrapper.hide(600);
-    }
-  };
-
-  var unhighlightControl = function unhighlightControl($el, initialDelayMs) {
-    if ($el.hasClass('highlighted-item')) {
-      $el.addClass('highlighted-item-in-transition');
-      setTimeout(function() {
-        $el.removeClass('highlighted-item');
-
-        setTimeout(function() {
-          $el.removeClass('highlighted-item-in-transition');
-        }, CSS_TRANSITION_MS);
-      }, initialDelayMs);
     }
   };
 
@@ -538,7 +535,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     setFloorsChangeEventAndHotkeys: setFloorsChangeEventAndHotkeys,
     setSelectedFloor: setSelectedFloor,
     // mapPanel
-    setMapPanelChangeEvent: setMapPanelChangeEvent,
+    setMapPanelsCountChangeEvent: setMapPanelsCountChangeEvent,
     setSelectedMapPanel: setSelectedMapPanel,
     // map
     getSelectedMap: getSelectedMap,
@@ -554,7 +551,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     // display
     setLayerDisplay: setLayerDisplay,
     setFoorDisplay: setFoorDisplay,
-    MAP_LAYER: MAP_LAYER,
+    MAP_LAYERS: MAP_LAYERS,
     // pan
     resetPan: resetPan,
     // zoom

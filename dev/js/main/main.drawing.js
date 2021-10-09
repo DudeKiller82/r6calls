@@ -17,7 +17,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     SVG_DIM
   ) {
     return function handleTap(event) {
-      var $mapWrapper =  $(event.target).closest('.map-wrapper'),
+      var $mapWrapper =  $(event.target).closest('.map-container'),
         pingPosition = getPingPosition(event.center.x, event.center.y, $mapWrapper),
         newX = pingPosition.x,
         newY = pingPosition.y,
@@ -114,7 +114,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     refreshPings = function refreshPings() {
       $.each($pingMarkersOtherFloor, function(index, otherFloorMarker) {
         var $marker = $(otherFloorMarker);
-        var currentFloorIndex = $marker.closest('.map-wrapper').attr('show-floor-index');
+        var currentFloorIndex = $marker.closest('.map-container').attr('show-floor-index');
 
         if (!originFloorIndex || originFloorIndex == currentFloorIndex) {
           $marker.attr('transform', 'translate(-10000 -10000)');
@@ -127,7 +127,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
 
       $.each($pingMarkers, function(index, pingMarker) {
         var $marker = $(pingMarker);
-        var currentFloorIndex = $marker.closest('.map-wrapper').attr('show-floor-index');
+        var currentFloorIndex = $marker.closest('.map-container').attr('show-floor-index');
 
         if (!originFloorIndex || originFloorIndex == currentFloorIndex) {
           $marker.removeClass('other-floor');
