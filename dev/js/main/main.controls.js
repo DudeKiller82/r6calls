@@ -12,7 +12,6 @@ var R6MMainControls = (function($, window, document, undefined) {
     SELECTED_CLASS = 'selected',
     ZOOMED_IN_FAR_CLASS = 'zoomed-in-far',
     ZOOMED_OUT_FAR_CLASS = 'zoomed-out-far',
-    CSS_TRANSITION_MS = 1800, // currently in highlighted-item mixin for .highlighted-item-in-transition
     MAP_LAYERS = [
       {short: 'bmb', full: 'Bomb'},
       {short: 'sec', full: 'Secure'},
@@ -127,7 +126,6 @@ var R6MMainControls = (function($, window, document, undefined) {
   var getHandleHotkeyFn = function getHandleHotkeyFn(showSelectedFloorFn) {
     return function handleHotKey(e) {
       var keyCode = e.which;
-      var keyVal = e.key;
 
       if (keyCode >= 48 && keyCode <= 53) {  // '0' through '1'
         if (setSelectedFloor(keyCode - 48)) {
@@ -227,7 +225,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<div id="lock-container">';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="option-lp">Lock panning</input>';
+    html += '<input type="checkbox" checked="checked" id="option-lp">Lock floor alignment</input>';
     html += '</div>';
     html += '</div>';
 
@@ -286,7 +284,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     return $mapControl.val();
   };
 
-  var getMapComboHTML = function getMapComboHTML(mapData) {
+  var createMapCombo = function createMapCombo(mapData) {
     var optionsAsString = '',
       maps = [],
       mapName = getSelectedMap();
@@ -397,8 +395,20 @@ var R6MMainControls = (function($, window, document, undefined) {
   };
 
   var setFoorDisplay = function setFoorDisplay(floorNumber) {
-    var i, j;
-    var svgMaps = document.getElementsByClassName('svgMap');
+    var minMaxFloor = getMinMaxFloor(),
+      svgMaps = document.getElementsByClassName('svgMap'),
+      selectedFloorNumber = floorNumber,
+      currentFloor,
+      i,
+      j;
+
+    var mapPanelsCount = $('#map-panels-container').attr('map-panels-count');
+
+    if (mapPanelsCount > 2)  {
+      selectedFloorNumber = Math.max(minMaxFloor.min, selectedFloorNumber - 1);
+    }
+    var tempMinIndex = Math.max(minMaxFloor.min, minMaxFloor.max - mapPanelsCount + 1),
+      currentFloor = Math.min(tempMinIndex, selectedFloorNumber);
 
     for (i = 0; i < svgMaps.length; i++) {
       var svgObject = svgMaps[i].getSVGDocument();
@@ -408,7 +418,7 @@ var R6MMainControls = (function($, window, document, undefined) {
           var layer = svgObject.getElementById('Floor ' + j);
 
           if (layer) {
-            if (j == floorNumber) {
+            if (j == currentFloor) {
               layer.style.display = 'inline';
             } else {
               layer.style.display = 'none';
@@ -416,6 +426,7 @@ var R6MMainControls = (function($, window, document, undefined) {
           }
         }
       }
+      currentFloor++;
     };
   };
 
@@ -539,7 +550,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     setSelectedMapPanel: setSelectedMapPanel,
     // map
     getSelectedMap: getSelectedMap,
-    getMapComboHTML: getMapComboHTML,
+    createMapCombo: createMapCombo,
     setMapChangeEvent: setMapChangeEvent,
     setSelectedMap: setSelectedMap,
     // menu

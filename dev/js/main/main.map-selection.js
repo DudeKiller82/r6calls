@@ -174,7 +174,7 @@ var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
     element.css('transform', 'scale(' + scale + ')');
   };
 
-  var setMapSelectionGrid = function setMapSelectionGrid(
+  var createMapSelectionGrid = function createMapSelectionGrid(
     $selectMapGrid,
     $heading,
     $mainNav,
@@ -211,6 +211,6 @@ var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
   };
 
   return  {
-    setMapSelectionGrid: setMapSelectionGrid
+    createMapSelectionGrid: createMapSelectionGrid
   };
 })(window.jQuery, window, document);

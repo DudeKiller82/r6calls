@@ -95,7 +95,7 @@ var R6MMainRender = (function($,window,document,undefined) {
     $mapPanelsLabels.html(getPanelLabelHTML(mapData.floors));
   };
 
-  var getMapPanelsHTML = function getMapPanelsHTML($mapPanelsContainer, mapPanelsCount) {
+  var createMapPanels = function createMapPanels($mapPanelsContainer, mapPanelsCount) {
     var html;
 
     for (var x = 0; x < mapPanelsCount; x++) {
@@ -147,7 +147,7 @@ var R6MMainRender = (function($,window,document,undefined) {
 
   return  {
     getMapHTML: getMapHTML,
-    getMapPanelsHTML: getMapPanelsHTML,
+    createMapPanels: createMapPanels,
     showFloor: showFloor,
     showObjective: showObjective,
     SVG_DIM: SVG_DIM

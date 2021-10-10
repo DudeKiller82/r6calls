@@ -17,23 +17,20 @@
     HASH_SPLIT_CHAR = '/';
 
   $(function() { // equivanelt to $(document).ready() - but a bit faster
-    setPageVariables();
-    R6MMainRender.getMapPanelsHTML($mapPanelsContainer, 4);
-    setMapVariables();
-    setMenu();
-    setMapSelectionGrid();
-    R6MMainControls.getMapComboHTML(R6MMainData.getMapData());
-
-    setupEvents();
-    $navLogo.on('click', toggleShowSelectMap);
+    associatePageVariables();
+    R6MMainRender.createMapPanels($mapPanelsContainer, 4);
+    associateMapVariables();
+    createMenu();
+    createMapSelectionGrid();
+    R6MMainControls.createMapCombo(R6MMainData.getMapData());
+    setPageEvents();
     setMenuOptions();
-
     R6MMainControls.setPanZoom($mapMains, $mapElements);
 
     if (setSelectedMapFromBookmark()) {
       loadMap();
       setSelectedFloorFromBookmark();
-      showMap();
+      showMapContainer();
     } else {
       showMapSelectionGrid();
       document.title = 'R6Calls.com';
@@ -42,16 +39,120 @@
     setTimeout(function() {
       $body.removeClass('loading');
     }, 10);
-
-    window.onload = function() {
-      setLayerDisplays();
-    };
   });
+
+  var associatePageVariables = function associatePageVariables() {
+    $mapPanelsContainer = $('#map-panels-container');
+    $navLogo = $('#nav-logo');
+    $body = $('body');
+    $mainNav = $('#main-nav');
+  };
+
+  var associateMapVariables = function associateMapVariables() {
+    $mapContainer = $('.map-container');
+    $mapMains = $mapContainer.find('.map-main');
+    $mapElements = $mapMains.find('.map-elements');
+    $mapPanelsLabels = $('.map-panel-label');
+    $drawingMarkerWrappers = $mapMains.find('.svg-wrapper.drawing-markers');
+  };
+
+  var createMenu = function createMenu() {
+    var $menuLink = $('#mmenu-link');
+
+    R6MMainControls.getMenuHTML();
+
+    $('#mmenu-menu').mmenu({
+      offCanvas: {
+        position: 'right',
+        pageSelector: '#mmenu-page'
+      },
+      extensions: ['pagedim'],
+      rtl: {
+        use: false
+      }
+    });
+
+    $menuLink.click(menuClickEvent);
+  };
+
+  var createMapSelectionGrid = function createMapSelectionGrid() {
+    R6MMainMapSelectionGrid.createMapSelectionGrid(
+      $('#map-selection-grid'),
+      $('#map-selection-heading'),
+      $mainNav,
+      R6MMainData.getMapData(),
+      showSelectedMap,
+      hideMapSelectionGrid
+    );
+  };
+
+  var setPageEvents = function setPageEvents() {
+    R6MMainControls.setMapChangeEvent(mapChangeEvent);
+    R6MMainControls.setFloorsChangeEventAndHotkeys(floorChangeEvent, showSelectedFloor);
+    R6MMainControls.setMapPanelsCountChangeEvent(setMapPanelsCountChangeEvent);
+    R6MMainControls.MAP_LAYERS.forEach(function(layer) {
+      R6MMainControls.setMenuCheckboxChangeEvent(layer.short, saveOption);
+    });
+    R6MMainControls.setMenuCheckboxChangeEvent('lp', saveOption);
+    R6MMainControls.setMenuSelectMapClickEvent(showMapSelectionGrid, closeMenu);
+    R6MMainControls.setMenuFullScreenClickEvent();
+
+    $(window).on('orientationchange', function() {
+      R6MMainControls.resetPan($mapMains, getResetDimensions);
+      R6MMainControls.resetZoom($mapMains, getResetDimensions);
+    });
+    $navLogo.on('click', toggleShowSelectMap);
+  };
+
+  var setMenuOptions = function setMenuOptions() {
+    loadMapPanelCount();
+    R6MMainControls.MAP_LAYERS.forEach(function(layer) {
+      setMenuCheckboxOption(layer.short);
+    });
+    setMenuCheckboxOption('lp');
+  };
+
+  var loadMap = function loadMap() {
+    var mapName = R6MMainControls.getSelectedMap(),
+      mapData = R6MMainData.getMapData();
+
+    R6MMainControls.getFloorButtonsHTML(mapData[mapName].floors);
+    R6MMainRender.getMapHTML(mapData[mapName], $mapElements, $mapPanelsLabels);
+
+    R6MMainControls.resetPan($mapMains, getResetDimensions);
+    R6MMainControls.resetZoom($mapMains, getResetDimensions);
+
+    showSelectedFloor();
+
+    setLoadedMapKey(mapName);
+    $navLogo.addClass('enabled');
+    setTitle();
+
+    var svgMaps = document.getElementsByClassName('svgMap'),
+      i;
+
+    for (i = 0; i < svgMaps.length; i++) {
+      svgMaps[i].onload = function() {
+        setLayerDisplays();
+        setFloorDisplay();
+      };
+    }
+
+    R6MMainDrawing.setup(
+      $mapMains,
+      $drawingMarkerWrappers,
+      R6MMainRender.SVG_DIM
+    );
+  };
 
   var setLayerDisplays = function setLayerDisplays() {
     R6MMainControls.MAP_LAYERS.forEach(function(layer) {
       R6MMainControls.setLayerDisplay(layer.short);
     });
+  };
+
+  var setFloorDisplay = function setFloorDisplay() {
+    R6MMainControls.setFoorDisplay(R6MMainControls.getSelectedFloor());
   };
 
   var isMapLoaded = function isMapLoaded() {
@@ -130,6 +231,7 @@
 
   var setMapPanelsCountChangeEvent = function setMapPanelsCountChangeEvent(mapPanelsCount) {
     setMapPanelsCount(mapPanelsCount);
+    setFloorDisplay();
   };
 
   var menuClickEvent = function menuClickEvent(e) {
@@ -145,29 +247,6 @@
     } catch (e) {
       //guarding against safari in private browsing mode
     }
-  };
-
-  var loadMap = function loadMap() {
-    var mapName = R6MMainControls.getSelectedMap(),
-      mapData = R6MMainData.getMapData();
-
-    R6MMainControls.getFloorButtonsHTML(mapData[mapName].floors);
-    R6MMainRender.getMapHTML(mapData[mapName], $mapElements, $mapPanelsLabels);
-
-    R6MMainControls.resetPan($mapMains, getResetDimensions);
-    R6MMainControls.resetZoom($mapMains, getResetDimensions);
-
-    showSelectedFloor();
-
-    setLoadedMapKey(mapName);
-    $navLogo.addClass('enabled');
-    setTitle();
-
-    R6MMainDrawing.setup(
-      $mapMains,
-      $drawingMarkerWrappers,
-      R6MMainRender.SVG_DIM
-    );
   };
 
   var removeHashFromUrl = function removeHashFromUrl() {
@@ -198,14 +277,6 @@
     $body.attr('loaded-map', mapName);
   };
 
-  var setMapVariables = function setMapVariables() {
-    $mapContainer = $('.map-container');
-    $mapMains = $mapContainer.find('.map-main');
-    $mapElements = $mapMains.find('.map-elements');
-    $mapPanelsLabels = $('.map-panel-label');
-    $drawingMarkerWrappers = $mapMains.find('.svg-wrapper.drawing-markers');
-  };
-
   var setMapPanelsCount = function setMapPanelsCount(mapPanelsCount) {
     localStorageSetItem('mappanelscount', mapPanelsCount);
     $mapPanelsContainer.attr('map-panels-count', mapPanelsCount);
@@ -226,37 +297,6 @@
     showSelectedFloor();
   };
 
-  var setPageVariables = function setPageVariables() {
-    $mapPanelsContainer = $('#map-panels-container');
-    $navLogo = $('#nav-logo');
-    $body = $('body');
-    $mainNav = $('#main-nav');
-  };
-
-  var setupEvents = function setupEvents() {
-    R6MMainControls.setMapChangeEvent(mapChangeEvent);
-    R6MMainControls.setFloorsChangeEventAndHotkeys(floorChangeEvent, showSelectedFloor);
-    R6MMainControls.setMapPanelsCountChangeEvent(setMapPanelsCountChangeEvent);
-    R6MMainControls.MAP_LAYERS.forEach(function(layer) {
-      R6MMainControls.setMenuCheckboxChangeEvent(layer.short, saveOption);
-    });
-    R6MMainControls.setMenuCheckboxChangeEvent('lp', saveOption);
-    R6MMainControls.setMenuSelectMapClickEvent(showMapSelectionGrid, closeMenu);
-    R6MMainControls.setMenuFullScreenClickEvent();
-
-    $(window).on('orientationchange', function() {
-      R6MMainControls.resetPan($mapMains, getResetDimensions);
-      R6MMainControls.resetZoom($mapMains, getResetDimensions);
-    });
-  };
-
-  var showMap = function showMap() {
-    $body.removeClass(SHOW_MAP_SELECTION_GRID);
-    $body.addClass(SHOW_MAP);
-    setPageURL();
-    setTitle();
-  };
-
   var showMapSelectionGrid = function showMapSelectionGrid() {
     $body.removeClass(SHOW_MAP);
     $body.addClass(SHOW_MAP_SELECTION_GRID);
@@ -264,38 +304,11 @@
     setTitle();
   };
 
-  var hideMapSelectionGrid = function hideMapSelectionGrid() {
+  var showMapContainer = function showMapContainer() {
     $body.removeClass(SHOW_MAP_SELECTION_GRID);
-  };
-
-  var setMenu = function setMenu() {
-    var $menuLink = $('#mmenu-link');
-
-    R6MMainControls.getMenuHTML();
-
-    $('#mmenu-menu').mmenu({
-      offCanvas: {
-        position: 'right',
-        pageSelector: '#mmenu-page'
-      },
-      extensions: ['pagedim'],
-      rtl: {
-        use: false
-      }
-    });
-
-    $menuLink.click(menuClickEvent);
-  };
-
-  var setMapSelectionGrid = function setMapSelectionGrid() {
-    R6MMainMapSelectionGrid.setMapSelectionGrid(
-      $('#map-selection-grid'),
-      $('#map-selection-heading'),
-      $mainNav,
-      R6MMainData.getMapData(),
-      showSelectedMap,
-      hideMapSelectionGrid
-    );
+    $body.addClass(SHOW_MAP);
+    setPageURL();
+    setTitle();
   };
 
   var showSelectedFloor =  function showSelectedFloor() {
@@ -315,7 +328,7 @@
       hideMapSelectionGrid();
       setTimeout(function() {
         loadMap();
-        showMap();
+        showMapContainer();
       },1);
     }
   };
@@ -328,14 +341,14 @@
       showMapSelectionGrid();
       menuApi.close();
     } else if (isMapLoaded()) {
-      showMap();
+      showMapContainer();
       menuApi.close();
     }
   };
 
   var hideMapSelectionGrid = function hideMapSelectionGrid() {
     if (isMapLoaded()) {
-      showMap();
+      showMapContainer();
     }
   };
 
@@ -347,7 +360,7 @@
     }
   };
 
-  var tryLoadMapPanelCount = function tryLoadMapPanelCount() {
+  var loadMapPanelCount = function loadMapPanelCount() {
     var mapPanelsCount = localStorage.getItem('mappanelscount');
 
     if (!mapPanelsCount) {
@@ -359,14 +372,6 @@
     }
     R6MMainControls.setSelectedMapPanel(mapPanelsCount);
     setMapPanelsCount(mapPanelsCount);
-  };
-
-  var setMenuOptions = function setMenuOptions() {
-    tryLoadMapPanelCount();
-    R6MMainControls.MAP_LAYERS.forEach(function(layer) {
-      setMenuCheckboxOption(layer.short);
-    });
-    setMenuCheckboxOption('lp');
   };
 
   var setSelectedMapFromBookmark = function setSelectedMapFromBookmark() {
