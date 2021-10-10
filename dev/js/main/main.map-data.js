@@ -28,7 +28,7 @@ var R6MMainData = (function(undefined){
         name: 'Bartlett U.',
         imgUrlPrefix: 'bartlett',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, top: -1662, left: -2955, dontSelect: true },
           { index: 1, name: floorTerms.firstFloor },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
