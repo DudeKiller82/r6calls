@@ -446,7 +446,7 @@ nav {
 #legend {
   padding: 8px;
   position: static;
-  height: 253px;
+  height: 218px;
   width: 405px; }
   #legend li {
     background-image: url("../../img/legend.png");
@@ -480,66 +480,60 @@ nav {
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-ceiling-hatch {
         background-position: 161px -37px; }
-    #legend li.legend-line-of-sight-walls {
+    #legend li.legend-lineof-sight-floors {
       background-position: 0px -107px;
       height: 31px;
       line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-line-of-sight-walls {
-        background-position: 161px -107px; }
-    #legend li.legend-lineof-sight-floors {
-      background-position: 0px -142px;
-      height: 31px;
-      line-height: 31px; }
       body[dir="rtl"] #legend li.legend-lineof-sight-floors {
-        background-position: 161px -142px; }
+        background-position: 161px -107px; }
     #legend li.legend-drone-tunnels {
-      background-position: 0px -317px;
-      height: 31px;
-      line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-drone-tunnels {
-        background-position: 161px -317px; }
-    #legend li.legend-bomb {
-      background-position: 0px -212px;
-      height: 31px;
-      line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-bomb {
-        background-position: 161px -212px; }
-    #legend li.legend-insertion-point {
-      background-position: 0px -177px;
-      height: 31px;
-      line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-insertion-point {
-        background-position: 161px -177px; }
-    #legend li.legend-security-camera {
-      background-position: 0px -247px;
-      height: 31px;
-      line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-security-camera {
-        background-position: 161px -247px; }
-    #legend li.legend-skylight {
       background-position: 0px -282px;
       height: 31px;
       line-height: 31px; }
-      body[dir="rtl"] #legend li.legend-skylight {
+      body[dir="rtl"] #legend li.legend-drone-tunnels {
         background-position: 161px -282px; }
+    #legend li.legend-bomb {
+      background-position: 0px -177px;
+      height: 31px;
+      line-height: 31px; }
+      body[dir="rtl"] #legend li.legend-bomb {
+        background-position: 161px -177px; }
+    #legend li.legend-insertion-point {
+      background-position: 0px -142px;
+      height: 31px;
+      line-height: 31px; }
+      body[dir="rtl"] #legend li.legend-insertion-point {
+        background-position: 161px -142px; }
+    #legend li.legend-security-camera {
+      background-position: 0px -212px;
+      height: 31px;
+      line-height: 31px; }
+      body[dir="rtl"] #legend li.legend-security-camera {
+        background-position: 161px -212px; }
+    #legend li.legend-skylight {
+      background-position: 0px -247px;
+      height: 31px;
+      line-height: 31px; }
+      body[dir="rtl"] #legend li.legend-skylight {
+        background-position: 161px -247px; }
     #legend li.legend-hostage {
-      background-position: 0px -352px;
+      background-position: 0px -317px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-hostage {
-        background-position: 161px -352px; }
+        background-position: 161px -317px; }
     #legend li.legend-secure {
-      background-position: 0px -387px;
+      background-position: 0px -352px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-secure {
-        background-position: 161px -387px; }
+        background-position: 161px -352px; }
     #legend li.legend-ladder {
-      background-position: 0px -422px;
+      background-position: 0px -387px;
       height: 31px;
       line-height: 31px; }
       body[dir="rtl"] #legend li.legend-ladder {
-        background-position: 161px -422px; }
+        background-position: 161px -387px; }
 
 #map-selection-grid {
   background-color: rgba(16, 26, 36, 0.7);
