@@ -367,6 +367,25 @@ var R6MMainControls = (function($, window, document, undefined) {
     );
   };
 
+  var setBackgroundTopLeft = function setBackgroundTopLeft(key) {
+    var i;
+
+    var svgMaps = document.getElementsByClassName('svgMap');
+
+    for (i = 0; i < svgMaps.length; i++) {
+      var svgObject = svgMaps[i].getSVGDocument();
+
+      if (svgObject) {
+        var mainSVG = svgObject.getElementById('mainSVG');
+        var top = -1 * mainSVG.getAttribute('height') / 2;
+        var left = -1 * mainSVG.getAttribute('width') / 2;
+
+        svgMaps[i].parentElement.style.top = top + 'px';
+        svgMaps[i].parentElement.style.left = left + 'px';
+      }
+    };
+  };
+
   var setLayerDisplay = function setLayerDisplay(key) {
     var visible = getDisplayValue(key),
       i, j;
@@ -562,6 +581,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     // display
     setLayerDisplay: setLayerDisplay,
     setFoorDisplay: setFoorDisplay,
+    setBackgroundTopLeft: setBackgroundTopLeft,
     MAP_LAYERS: MAP_LAYERS,
     // pan
     resetPan: resetPan,

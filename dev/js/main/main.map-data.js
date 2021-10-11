@@ -17,7 +17,7 @@ var R6MMainData = (function(undefined){
         name: 'Bank',
         imgUrlPrefix: 'bank',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
           { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
@@ -28,8 +28,8 @@ var R6MMainData = (function(undefined){
         name: 'Bartlett U.',
         imgUrlPrefix: 'bartlett',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1662, left: -2955, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -38,8 +38,8 @@ var R6MMainData = (function(undefined){
         name: 'Border',
         imgUrlPrefix: 'border',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -48,9 +48,9 @@ var R6MMainData = (function(undefined){
         name: 'Chalet',
         imgUrlPrefix: 'chalet',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -59,9 +59,9 @@ var R6MMainData = (function(undefined){
         name: 'Club House',
         imgUrlPrefix: 'club-house',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -70,8 +70,8 @@ var R6MMainData = (function(undefined){
         name: 'Coastline',
         imgUrlPrefix: 'coastline',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -80,9 +80,9 @@ var R6MMainData = (function(undefined){
         name: 'Consulate',
         imgUrlPrefix: 'consulate',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -91,9 +91,9 @@ var R6MMainData = (function(undefined){
         name: 'Favela',
         imgUrlPrefix: 'favela',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -103,8 +103,8 @@ var R6MMainData = (function(undefined){
         name: 'Fortress',
         imgUrlPrefix: 'fortress',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -113,9 +113,9 @@ var R6MMainData = (function(undefined){
         name: 'Hereford',
         imgUrlPrefix: 'hereford',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -125,9 +125,9 @@ var R6MMainData = (function(undefined){
         name: 'House',
         imgUrlPrefix: 'house',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -136,8 +136,8 @@ var R6MMainData = (function(undefined){
         name: 'Kafe Dostoyevsky',
         imgUrlPrefix: 'kafe',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -147,10 +147,10 @@ var R6MMainData = (function(undefined){
         name: 'Kanal',
         imgUrlPrefix: 'kanal',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: -1, name: floorTerms.subBasement },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -159,9 +159,9 @@ var R6MMainData = (function(undefined){
         name: 'Oregon',
         imgUrlPrefix: 'oregon',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -171,8 +171,8 @@ var R6MMainData = (function(undefined){
         name: 'Outback',
         imgUrlPrefix: 'outback',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -181,8 +181,8 @@ var R6MMainData = (function(undefined){
         name: 'Plane',
         imgUrlPrefix: 'plane',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -192,8 +192,8 @@ var R6MMainData = (function(undefined){
         name: 'Skyscraper',
         imgUrlPrefix: 'skyscraper',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -202,8 +202,8 @@ var R6MMainData = (function(undefined){
         name: 'Theme Park',
         imgUrlPrefix: 'themepark',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -212,8 +212,8 @@ var R6MMainData = (function(undefined){
         name: 'Tower',
         imgUrlPrefix: 'tower',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.roof }
@@ -223,9 +223,9 @@ var R6MMainData = (function(undefined){
         name: 'Villa',
         imgUrlPrefix: 'villa',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
           { index: 0, name: floorTerms.basement },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.roof }
         ]
@@ -234,8 +234,8 @@ var R6MMainData = (function(undefined){
         name: 'Yacht',
         imgUrlPrefix: 'yacht',
         floors: [
-          { index: 'bg', name: floorTerms.basement, top: -1077, left: -1915, dontSelect: true },
-          { index: 1, name: floorTerms.firstFloor },
+          { index: 'bg', name: floorTerms.basement, dontSelect: true },
+          { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
           { index: 4, name: floorTerms.fourthFloor },

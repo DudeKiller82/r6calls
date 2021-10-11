@@ -133,6 +133,7 @@
 
     for (i = 0; i < svgMaps.length; i++) {
       svgMaps[i].onload = function() {
+        setBackgroundTopLeft();
         setLayerDisplays();
         setFloorDisplay();
       };
@@ -143,6 +144,10 @@
       $drawingMarkerWrappers,
       R6MMainRender.SVG_DIM
     );
+  };
+
+  var setBackgroundTopLeft = function setBackgroundTopLeft() {
+    R6MMainControls.setBackgroundTopLeft();
   };
 
   var setLayerDisplays = function setLayerDisplays() {

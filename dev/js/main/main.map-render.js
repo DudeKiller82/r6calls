@@ -35,10 +35,9 @@ var R6MMainRender = (function($,window,document,undefined) {
   var getSVGMapHTML = function getSVGMapHTML(floors, imgUrlPrefix) {
     var html = '',
       prefix = imgUrlPrefix,
-      imgSrc = IMG_URL + prefix + '/' + prefix + '.svg',
-      inlineStyle = getPositionStyle(floors[0]);
+      imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
 
-    html += '<div style="' + inlineStyle + '" class="background loading">';
+    html += '<div class="background loading">';
     html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml"></object>';
     html += '</div>';
     return html;
@@ -57,33 +56,6 @@ var R6MMainRender = (function($,window,document,undefined) {
       html += '<span class="' + cssClass + '">' + floor.name.full + '</span>';
     });
     return html;
-  };
-
-  var getPositionStyle = function getPositionStyle(element) {
-    var styleString = '';
-
-    if ('top' in element) {
-      styleString += 'top: ' + element.top + 'px;';
-    }
-    if ('bottom' in element) {
-      styleString += 'bottom: ' + element.bottom + 'px;';
-    }
-    if ('right' in element) {
-      styleString += 'right: ' + element.right + 'px;';
-    }
-    if ('left' in element) {
-      styleString += 'left: ' + element.left + 'px;';
-    }
-    if ('height' in element) {
-      styleString += 'height: ' + element.height + 'px;';
-    }
-    if ('width' in element) {
-      styleString += 'width: ' + element.width + 'px;';
-    }
-    if ('rotate' in element) {
-      styleString += 'transform: rotate(' + element.rotate + 'deg);';
-    }
-    return styleString;
   };
 
   var getMapHTML = function getMapHTML(mapData, $mapElements, $mapPanelsLabels) {
