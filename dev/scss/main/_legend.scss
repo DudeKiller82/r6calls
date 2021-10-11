@@ -1,4 +1,4 @@
-$legend-number-items: 13;
+$legend-number-items: 12;
 $legend-number-rows: ($legend-number-items  + ($legend-number-items % 2))/2;
 
 $legend-icon-height: 35px;
@@ -72,7 +72,7 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-line-of-sight-walls {
+    &.legend-lineof-sight-floors {
       @include legend-smaller(4);
 
       body[dir="rtl"] & {
@@ -80,47 +80,7 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-lineof-sight-floors {
-      @include legend-smaller(5);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(5);
-      }
-    }
-
     &.legend-drone-tunnels {
-      @include legend-smaller(10);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(10);
-      }
-    }
-
-    &.legend-bomb {
-      @include legend-smaller(7);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(7);
-      }
-    }
-
-    &.legend-insertion-point {
-      @include legend-smaller(6);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(6);
-      }
-    }
-
-    &.legend-security-camera {
-      @include legend-smaller(8);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(8);
-      }
-    }
-
-    &.legend-skylight {
       @include legend-smaller(9);
 
       body[dir="rtl"] & {
@@ -128,7 +88,47 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
+    &.legend-bomb {
+      @include legend-smaller(6);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(6);
+      }
+    }
+
+    &.legend-insertion-point {
+      @include legend-smaller(5);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(5);
+      }
+    }
+
+    &.legend-security-camera {
+      @include legend-smaller(7);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(7);
+      }
+    }
+
+    &.legend-skylight {
+      @include legend-smaller(8);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(8);
+      }
+    }
+
     &.legend-hostage {
+      @include legend-smaller(10);
+
+      body[dir="rtl"] & {
+        @include legend-smaller-rtl(10);
+      }
+    }
+
+    &.legend-secure {
       @include legend-smaller(11);
 
       body[dir="rtl"] & {
@@ -136,19 +136,11 @@ $legend-item-smaller-height: $legend-item-height - $legend-item-smaller-height-d
       }
     }
 
-    &.legend-secure {
+    &.legend-ladder {
       @include legend-smaller(12);
 
       body[dir="rtl"] & {
         @include legend-smaller-rtl(12);
-      }
-    }
-
-    &.legend-ladder {
-      @include legend-smaller(13);
-
-      body[dir="rtl"] & {
-        @include legend-smaller-rtl(13);
       }
     }
 
