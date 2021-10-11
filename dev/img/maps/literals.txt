@@ -1,4 +1,4 @@
-bank: {
+
 bartlett: {
 Festival
 Main Gate
