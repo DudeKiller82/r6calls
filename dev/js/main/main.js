@@ -93,7 +93,7 @@
     R6MMainControls.MAP_LAYERS.forEach(function(layer) {
       R6MMainControls.setMenuCheckboxChangeEvent(layer.short, saveOption);
     });
-    R6MMainControls.setMenuCheckboxChangeEvent('lp', saveOption);
+    R6MMainControls.setMenuCheckboxChangeEvent('lfa', saveOptionLockFloorAlignment);
     R6MMainControls.setMenuSelectMapClickEvent(showMapSelectionGrid, closeMenu);
     R6MMainControls.setMenuFullScreenClickEvent();
 
@@ -109,7 +109,7 @@
     R6MMainControls.MAP_LAYERS.forEach(function(layer) {
       setMenuCheckboxOption(layer.short);
     });
-    setMenuCheckboxOption('lp');
+    setMenuCheckboxOption('lfa');
   };
 
   var loadMap = function loadMap() {
@@ -272,6 +272,10 @@
   };
 
   var saveOption = function saveOption(key, value) {
+    localStorageSetItem(key, value);
+  };
+
+  var saveOptionLockFloorAlignment = function saveOptionLockFloorAlignment(key, value) {
     localStorageSetItem(key, value);
     if (value) {
       R6MMainControls.resetPan($mapMains, getResetDimensions);

@@ -141,7 +141,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
   var getHandlePanZoomChangeFn = function getHandlePanZoomChangeFn($mapMains) {
     return function handlePanZoomChange(event, panzoom, transform) {
-      if (getDisplayValue('lp')) {
+      if (getDisplayValue('lfa')) {
         $mapMains.each(function(index, map) {
           if (map !== event.target) {
             $(map).panzoom('pan', transform[4], transform[5], {silent: true});
@@ -223,7 +223,7 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<div id="lock-container">';
     html += '<div class="checkbox-wrapper">';
-    html += '<input type="checkbox" checked="checked" id="option-lp">Lock floor alignment</input>';
+    html += '<input type="checkbox" checked="checked" id="option-lfa">Lock floor alignment</input>';
     html += '</div>';
     html += '</div>';
 
