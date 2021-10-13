@@ -139,7 +139,7 @@
       };
     }
 
-    R6MMainDrawing.setup(
+    R6MMainDrawing.setupMarkers(
       $mapMains,
       $drawingMarkerWrappers,
       R6MMainRender.SVG_DIM

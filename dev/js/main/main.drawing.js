@@ -170,12 +170,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     refreshPings();
   };
 
-  var setup = function setup (
-    $mapMains,
-    $drawingMarkerWrappers,
-
-    SVG_DIM
-  ) {
+  var setupMarkers = function setupMarkers ($mapMains, $drawingMarkerWrappers, SVG_DIM) {
     populateStartingMarkers($drawingMarkerWrappers, SVG_DIM);
 
     var $pingMarkers = $drawingMarkerWrappers.find('.ping-marker.center'),
@@ -199,7 +194,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
   };
 
   return  {
-    setup: setup,
+    setupMarkers: setupMarkers,
     refreshPings: refreshPingsWrapper
   };
 })(window.jQuery, window, document);
