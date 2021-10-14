@@ -1,72 +1,3 @@
-
-bartlett: {
-Festival
-Main Gate
-Courtyard
-// EXT
-Patio
-Patio
-Front Entrance
-Festival
-Campus Field
-Terrace
-Terrace
-Back Alley
-Parking
-Main Gate
-Main Gate
-East Balcony
-West Balcony
-// 1F
-Reading
-Library
-Lobby
-Coat
-Fireplace
-Archway Hall
-Dining Hallway
-Dining Hallway
-Main Stairs
-Bathroom
-Dining
-Kitchen
-Service
-Kitchen Corridor
-Pantry
-Piano
-Lounge
-Garden Pass
-Garden Pass
-Library Stairs
-Piano Stairs
-// 2F
-Top Library
-Main Stairs
-Roof
-Classroom Corridor
-Classroom
-Compass
-Front Office
-Office
-Museum
-Model
-Trophy
-Garden Pass
-Garden Pass
-Library Stairs
-Piano Stairs
-Mezzanine
-Mezzanine
-Model Hallway
-// 3F
-Roof
-Roof
-Roof
-Roof Hatch
-border: {
-East Vehicle Entrance
-Valley
-West Vehicle Exit
 // EXT
 West Tower
 Pedestrian Exit
@@ -87,6 +18,8 @@ Parking Alley
 Parking Alley
 Archives Balcony
 Bus Roof
+
+
 // 1F
 East Stairs
 Exit
@@ -105,6 +38,8 @@ Server
 Workshop
 Bathroom
 Bathroom Hallway
+
+
 // 2F
 Archives
 Armory
@@ -127,10 +62,17 @@ South Balcony
 Generator
 Waiting Balcony
 Sandwich
+
+
 // 3F
 Roof
 Roof
 Roof
+
+
+
+
+
 chalet: {
 Campfire
 Cliffside
