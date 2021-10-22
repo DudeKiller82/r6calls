@@ -171,38 +171,17 @@ var R6MMainControls = (function($, window, document, undefined) {
   };
 
   var getMenuR6MapsHtml = function getMenuR6MapsHtml() {
-    var html = '',
-      legendItems,
-      CSS_ABBREV = 'legend-';
+    var html = '';
 
     html += '<div class="mmenu-custom-panel">';
     html += '<h2>r6calls.com</h2>';
     html += '<button id="menu-map-selection">Select a map</button>';
+    html += '<br>';
     html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
+    html += '<br>';
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">Full screen</button>';
     }
-    legendItems = [
-      { class: CSS_ABBREV + 'floor-hatch', description: 'Floor hatch' },
-      { class: CSS_ABBREV + 'ceiling-hatch', description: 'Ceiling hatch' },
-      { class: CSS_ABBREV + 'breakable-walls', description: 'Breakable wall' },
-      { class: CSS_ABBREV + 'drone-tunnels', description: 'Drone tunnel' },
-      { class: CSS_ABBREV + 'lineof-sight-floors', description: 'Line of sight floor' },
-      { class: CSS_ABBREV + 'insertion-point', description: 'Insertion point' },
-      { class: CSS_ABBREV + 'skylight', description: 'Skylight' },
-      { class: CSS_ABBREV + 'bomb', description: 'Bomb site' },
-      { class: CSS_ABBREV + 'security-camera', description: 'Security camera' },
-      { class: CSS_ABBREV + 'secure', description: 'Secure site' },
-      { class: CSS_ABBREV + 'ladder', description: 'Ladder' },
-      { class: CSS_ABBREV + 'hostage', description: 'Hostage site' }
-    ];
-    html += '<label>Legend</label>';
-    html += '<ul id="legend"; style="height: 217px;width: 462px; position: relative">';
-    legendItems.forEach(function(item) {
-      html += '<li class="' + item.class + '">' + item.description + '</li>';
-    });
-    html += '</ul>';
-
     html += '</div>';
     return html;
   };
@@ -232,7 +211,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '<label>Elements to display</label>';
     html += '<div class="checkbox-wrapper">';
     MAP_LAYERS.forEach(function(layer) {
-      html += '<input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
+      html += '<img class="legend-icon" src="./img/legend/' + layer.short + '.png"><input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
     });
     html += '</div>';
 

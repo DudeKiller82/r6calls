@@ -21,21 +21,20 @@ var R6MMainRender = (function($,window,document,undefined) {
     return this;
   };
 
-  var IMG_URL = 'img/',
-    FLOOR_CSS_TEXT = {
-      '-1': 'neg-one', // bare -1 doesn't lint, but this should still work
-      0: 'zero',
-      1: 'one',
-      2: 'two',
-      3: 'three',
-      4: 'four',
-      5: 'five'
-    };
+  var FLOOR_CSS_TEXT = {
+    '-1': 'neg-one', // bare -1 doesn't lint, but this should still work
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five'
+  };
 
   var getSVGMapHTML = function getSVGMapHTML(floors, imgUrlPrefix) {
     var html = '',
       prefix = imgUrlPrefix,
-      imgSrc = IMG_URL + prefix + '/' + prefix + '.svg';
+      imgSrc = 'img/maps/' + prefix + '/' + prefix + '.svg';
 
     html += '<div class="background loading">';
     html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml"></object>';
