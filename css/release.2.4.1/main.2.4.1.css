@@ -443,6 +443,11 @@ nav {
         nav button#mmenu-link span.menu-text {
           display: none; } }
 
+.legend-icon {
+  width: 30px;
+  padding: 5px;
+  background-color: black; }
+
 #legend {
   padding: 8px;
   position: static;
