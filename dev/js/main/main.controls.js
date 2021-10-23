@@ -26,7 +26,8 @@ var R6MMainControls = (function($, window, document, undefined) {
       {short: 'sl', full: 'Skylight'},
       {short: 'ld', full: 'Ladder'},
       {short: 'cmp', full: 'Compass'},
-      {short: 'txt', full: 'Label'}
+      {short: 'txt', full: 'Label'},
+      {short: 'lg', full: 'Legend'}
     ];
 
   var disableFullScreen = function disableFullScreen() {
@@ -177,11 +178,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '<h2>r6calls.com</h2>';
     html += '<button id="menu-map-selection">Select a map</button>';
     html += '<br>';
-    html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
-    html += '<br>';
     if (isFullScreenAvailable()) {
       html += '<button href="" id="full-screen">Full screen</button>';
+      html += '<br>';
     }
+    html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
     html += '</div>';
     return html;
   };
