@@ -445,7 +445,7 @@ nav {
 
 .legend-icon {
   height: 42px;
-  background-color: black; }
+  width: 42px; }
 
 #map-selection-grid {
   background-color: rgba(16, 26, 36, 0.7);
