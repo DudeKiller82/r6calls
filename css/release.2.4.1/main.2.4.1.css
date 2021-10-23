@@ -444,8 +444,7 @@ nav {
           display: none; } }
 
 .legend-icon {
-  width: 20px;
-  padding: 5px;
+  height: 42px;
   background-color: black; }
 
 #map-selection-grid {
