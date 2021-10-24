@@ -19,14 +19,14 @@ var R6MMainControls = (function($, window, document, undefined) {
       {short: 'fh', full: 'Floor hatch'},
       {short: 'ch', full: 'Ceiling hatch'},
       {short: 'bw', full: 'Breakable wall'},
-      {short: 'dt', full: 'Drone tunnel'},
       {short: 'losf', full: 'Line of sight floor'},
-      {short: 'ip', full: 'Insertion point'},
-      {short: 'cam', full: 'Security camera'},
       {short: 'sl', full: 'Skylight'},
+      {short: 'dt', full: 'Drone tunnel'},
+      {short: 'cam', full: 'Security camera'},
       {short: 'ld', full: 'Ladder'},
-      {short: 'cmp', full: 'Compass'},
+      {short: 'ip', full: 'Insertion point'},
       {short: 'txt', full: 'Label'},
+      {short: 'cmp', full: 'Compass'},
       {short: 'lg', full: 'Legend'}
     ];
 
@@ -194,7 +194,7 @@ var R6MMainControls = (function($, window, document, undefined) {
     html += '<h2>Options</h2>';
 
     html += '<div class="map-panels-count-control">';
-    html += '<label>Number of floors to display</label>';
+    html += '<label>Number of floors to display:</label>';
     html += '<select id="map-pane-count">';
     html += '<option value="1">1 - Full</option>';
     html += '<option value="2">2 - Split</option>';
@@ -209,10 +209,12 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '</div>';
 
-    html += '<label>Elements to display</label>';
+    html += '<label>Elements to display:</label>';
     html += '<div class="checkbox-wrapper">';
     MAP_LAYERS.forEach(function(layer) {
+      html += '<div class="checkbox-item">';
       html += '<img class="legend-icon" src="./img/legend/' + layer.short + '.png"><input type="checkbox" checked="checked" id="option-' + layer.short + '">' + layer.full + '</input><br>';
+      html += '</div>';
     });
     html += '</div>';
 
