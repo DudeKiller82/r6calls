@@ -41,7 +41,7 @@ var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
 
     for (var mapKey in mapData) {
       if (mapData.hasOwnProperty(mapKey)) {
-        maps.push({ key: mapKey, name: mapData[mapKey].name });
+        maps.push({ key: mapKey, name: mapData[mapKey].name, imgUrlPrefix: mapData[mapKey].imgUrlPrefix });
       }
     }
 
@@ -58,7 +58,7 @@ var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
     maps.forEach(function(map) {
       html += '<li data-key="' + map.key + '">';
       html += '<a href="" class="' + map.key + '">';
-      html += '<div class="wrapper absolute thumb"><div class="image thumb"></div></div>';
+      html += '<div class="wrapper absolute thumb"><div class="image thumb" style="background-image: url(./img/maps/' + map.imgUrlPrefix + '/' + map.imgUrlPrefix + '.webp);"></div></div>';
       html += '<div class="wrapper absolute spinner loading"><div>';
       html += '</div></div>';
       html += '<p>' + map.name + '</p>';
