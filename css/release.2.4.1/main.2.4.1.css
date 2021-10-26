@@ -296,7 +296,7 @@ nav {
     body.show-map-selection-grid nav #nav-logo div, nav #nav-logo:focus div {
       background-position: 0 -80px; }
     nav #nav-logo div {
-      background-image: url("../../img/r6calls-logo-nav-sprite@2x.png");
+      background-image: url("../../img/r6calls-logo-nav-sprite.png");
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 30px;
