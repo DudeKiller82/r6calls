@@ -1,62 +1,4 @@
-consulate: {
-Riot Barricade
-Police Line
-Gas Station
-Side Entrance
-// EXT
-Garage Way
-Courtyard
-Courtyard
-Back Courtyard
-Side Entrance
-Dumpster
-Parking
-Parking
-Gardens
-Gardens
-Fountain
-Yellow Entrance
 Garage Roof
-Memorial
-Police
-Barracade
-West Front Yard
-East Front Yard
-Front Alley
-// 0F
-Yellow Stairs
-Garage
-Garage Corridor
-Security
-Kitchen
-Spiral
-Locker
-Visa Stairs
-Electric
-Storage
-Archives
-Archives Corridor
-Pillar
-White Truck
-Pipes
-// 1F
-Yellow Stairs
-Piano
-West Corridor
-West Corridor
-Bathroom
-Antechamber
-Lobby
-East Corridor
-Tellers
-Visa Stairs
-Visa Stairs
-Visa
-Visa
-Spiral
-Visa Entrance
-Front Door
-// 2F
 Balcony
 Visa Stairs
 Copy
@@ -72,10 +14,30 @@ Top Bathroom
 Yellow Stairs
 Connector
 CEO
+
+
+
+
 // 3F
+Garage Roof
 Balcony
 Roof
 Roof
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 favela: {
 Rooftops
 Market
