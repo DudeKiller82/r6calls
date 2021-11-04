@@ -1,9 +1,3 @@
-fortress: {
-Main Gate
-Parking
-Garden
-Stable
-// EXT
 Garden Path
 Garden Path
 Garden Path
@@ -19,6 +13,9 @@ Cannon
 Cannon
 Unloading
 Front Entrance
+
+
+
 // 1F
 Laundry
 Hammam
