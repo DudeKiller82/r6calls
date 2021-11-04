@@ -1,31 +1,4 @@
 Hammam Roof
-Shisha
-Gaming Hallway
-Dormitory Hallway
-Bathroom  Hallway
-Dormitory
-Dormitory
-Gaming
-Main Stairs
-Briefing
-Courtyard Balcony
-Portrait
-Horse
-Bathroom
-Commander
-Bedroom
-Fountain
-mezzanine
-mezzanine
-Fountain Tower
-Lobby Stairs
-Renovation Hallway
-Renovation
-Old Stairs
-
-
-// 3F
-Hammam Roof
 Old Roof
 Old
 Modern Roof
@@ -33,6 +6,10 @@ Courtyard Balcony
 West Tower
 East Tower
 Guard Tower
+
+
+
+
 hereford: {
 Tower
 Spitfire
