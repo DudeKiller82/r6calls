@@ -359,9 +359,13 @@ var R6MMainControls = (function($, window, document, undefined) {
         var mainSVG = svgObject.getElementById('mainSVG');
         var top = -1 * mainSVG.getAttribute('height') / 2;
         var left = -1 * mainSVG.getAttribute('width') / 2;
+        var height = mainSVG.getAttribute('height');
+        var width = mainSVG.getAttribute('width');
 
         svgMaps[i].parentElement.style.top = top + 'px';
         svgMaps[i].parentElement.style.left = left + 'px';
+        svgMaps[i].parentElement.style.height = height + 'px';
+        svgMaps[i].parentElement.style.width = width + 'px';
       }
     };
   };
