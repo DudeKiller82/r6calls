@@ -203,11 +203,6 @@ var R6MMainMapSelectionGrid = (function($, window, document, undefined) {
     setTimeout(function() {
       $selectMapGrid.addClass('enable-thumb-transition');
     }, 1);
-
-    $('<img/>').attr('src', 'img/map-thumbs.jpg').load(function() {
-      $(this).remove(); // prevent memory leaks
-      $selectMapGrid.find('.spinner').removeClass('loading');
-    });
   };
 
   return  {

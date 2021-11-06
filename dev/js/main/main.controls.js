@@ -473,13 +473,11 @@ var R6MMainControls = (function($, window, document, undefined) {
     $mapMains.on('mousewheel', function(event) {
       $zoomControl.val(+$zoomControl.val() + (event.deltaY * 0.06));
       $zoomControl.trigger('input');
-      //$zoomControl.trigger('change'); // todo: needed??
     });
 
     $zoomControl.on('change', getHandleZoomChangeFn($mapElements));
     $zoomControl.on('input', getHandleZoomChangeFn($mapElements));
 
-    // camera links were not working on touch devices:
     $mapMains.on('touchstart','a', function(e) {
       $(this).addClass('hover');
     });
