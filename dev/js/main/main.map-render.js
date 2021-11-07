@@ -1,8 +1,8 @@
 'use strict';
 
 var R6MMainRender = (function($,window,document,undefined) {
-  var SVG_WIDTH = 5000,
-    SVG_HEIGHT = 5000,
+  var SVG_WIDTH = 100000,
+    SVG_HEIGHT = 100000,
     SVG_DIM = {
       WIDTH: SVG_WIDTH,
       HEIGHT: SVG_HEIGHT,
@@ -37,7 +37,7 @@ var R6MMainRender = (function($,window,document,undefined) {
       imgSrc = 'img/maps/' + prefix + '/' + prefix + '.svg';
 
     html += '<div class="background loading">';
-    html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml"></object>';
+    html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml" style="visibility: hidden; top: -250px; left: -250px; height: 500px; width: 500px"></object>';
     html += '</div>';
     return html;
   };

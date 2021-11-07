@@ -316,7 +316,6 @@ body {
     }
 
     .background {
-      @include box-shadow(0, 0, 50px, rgba(0,0,0,0.5));
       z-index: $z-background;
       
       .svgMap {

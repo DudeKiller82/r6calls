@@ -133,9 +133,10 @@
 
     for (i = 0; i < svgMaps.length; i++) {
       svgMaps[i].onload = function() {
-        setBackgroundTopLeft();
+        setMapsPositionAndSize();
         setLayerDisplays();
         setFloorDisplay();
+        removeHidden();
       };
     }
 
@@ -146,8 +147,8 @@
     );
   };
 
-  var setBackgroundTopLeft = function setBackgroundTopLeft() {
-    R6MMainControls.setBackgroundTopLeft();
+  var setMapsPositionAndSize = function setMapsPositionAndSize() {
+    R6MMainControls.setMapsPositionAndSize();
   };
 
   var setLayerDisplays = function setLayerDisplays() {
@@ -158,6 +159,10 @@
 
   var setFloorDisplay = function setFloorDisplay() {
     R6MMainControls.setFoorDisplay(R6MMainControls.getSelectedFloor());
+  };
+
+  var removeHidden = function removeHidden() {
+    R6MMainControls.removeHidden();
   };
 
   var isMapLoaded = function isMapLoaded() {
