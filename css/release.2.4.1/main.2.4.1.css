@@ -1052,9 +1052,6 @@ body {
     .map-main .map-elements img, .map-main .map-elements div, .map-main .map-elements a {
       position: absolute; }
     .map-main .map-elements .background {
-      -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 1000; }
       .map-main .map-elements .background .svgMap {
         pointer-events: none; }
