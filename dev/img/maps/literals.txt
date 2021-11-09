@@ -1,4 +1,4 @@
-kafe: {
+kafe:
 Docks
 Market
 Park
