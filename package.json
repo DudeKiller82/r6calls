@@ -1,8 +1,5 @@
 {
   "name": "r6calls",
-  "//1": "When changing version # search and replace in this file and index.html.  This is hacky for now but it avoided some complexities.",
-  "//2": "Version number format: GAME_YEAR.GAME_SEASON.SITE_VERSION",
-  "version": "2.4.1",
   "description": "Rainbow Six Siege map calls quick references",
   "watch": {
     "build:js": "dev/js/**/*.js"
@@ -12,13 +9,13 @@
     "build:svg:mkdir": "mkdirp ./site/img/maps",
     "build:svg:main": "npm run build:css:mkdir && svgo --config=./dev/svgo/svgoConfig.yml -f ./dev/img/maps -o ./site/img/maps",
     "build:svg": "npm run build:svg:main",
-    "build:css:mkdir": "mkdirp ./site/css/release.2.4.1",
-    "build:css:main": "npm run build:css:mkdir && scss ./dev/scss/main/main.scss ./site/css/release.2.4.1/main.2.4.1.css",
-    "build:css:about": "npm run build:css:mkdir && scss ./dev/scss/about/about.scss ./site/css/release.2.4.1/about.2.4.1.css",
+    "build:css:mkdir": "mkdirp ./site/css",
+    "build:css:main": "npm run build:css:mkdir && scss ./dev/scss/main/main.scss ./site/css/main.css",
+    "build:css:about": "npm run build:css:mkdir && scss ./dev/scss/about/about.scss ./site/css/about.css",
     "build:css": "npm run build:css:main && npm run build:css:about",
-    "watch:css": "npm run build:css:mkdir && scss --watch ./dev/scss/main/main.scss ./site/css/release.2.4.1/main.2.4.1.css",
-    "build:js:mkdir": "mkdirp ./site/js/release.2.4.1",
-    "build:js:main": "npm run build:js:mkdir && uglifyjs --compress --mangle -o ./site/js/release.2.4.1/main.min.js --source-map  \"filename='./site/js/release.2.4.1/main.min.js.map', url='main.min.js.map', includeSources=true\" ./dev/js/main/main.map-data.js ./dev/js/main/main.map-render.js ./dev/js/main/main.controls.js ./dev/js/main/main.map-selection.js ./dev/js/main/main.drawing.js ./dev/js/main/main.js",
+    "watch:css": "npm run build:css:mkdir && scss --watch ./dev/scss/main/main.scss ./site/css/main.css",
+    "build:js:mkdir": "mkdirp ./site/js",
+    "build:js:main": "npm run build:js:mkdir && uglifyjs --compress --mangle -o ./site/js/main.min.js --source-map  \"filename='./site/js/main.min.js.map', url='main.min.js.map', includeSources=true\" ./dev/js/main/main.map-data.js ./dev/js/main/main.map-render.js ./dev/js/main/main.controls.js ./dev/js/main/main.map-selection.js ./dev/js/main/main.drawing.js ./dev/js/main/main.js",
     "build:js": "npm run build:js:main",
     "watch:js": "npm run build:js:mkdir && npm-watch",
     "build": "npm run build:css && npm run build:js",
