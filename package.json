@@ -8,6 +8,10 @@
     "build:js": "dev/js/**/*.js"
   },
   "scripts": {
+    "deploy": "gh-pages -d site",
+    "build:svg:mkdir": "mkdirp ./site/img/maps",
+    "build:svg:main": "npm run build:css:mkdir && svgo --config=./dev/svgo/svgoConfig.yml -f ./dev/img/maps -o ./site/img/maps",
+    "build:svg": "npm run build:svg:main",
     "build:css:mkdir": "mkdirp ./site/css/release.2.4.1",
     "build:css:main": "npm run build:css:mkdir && scss ./dev/scss/main/main.scss ./site/css/release.2.4.1/main.2.4.1.css",
     "build:css:about": "npm run build:css:mkdir && scss ./dev/scss/about/about.scss ./site/css/release.2.4.1/about.2.4.1.css",
@@ -18,7 +22,8 @@
     "build:js": "npm run build:js:main",
     "watch:js": "npm run build:js:mkdir && npm-watch",
     "build": "npm run build:css && npm run build:js",
-    "deploy": "gh-pages -d site"
+    "buildAll": "npm run build:css && npm run build:js && npm run build:svg",
+    "buildAllAndDeploy": "npm run build:css && npm run build:js && npm run build:svg && npm run deploy"
   },
   "repository": {
     "type": "git",
@@ -39,7 +44,7 @@
     "rimraf": "^2.5.4"
   },
   "dependencies": {
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.2.3",
     "sass": "^1.32.8",
     "svg-injector": "^1.1.3",
     "uglify-js": "^3.6.8"

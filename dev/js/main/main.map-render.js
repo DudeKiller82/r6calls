@@ -34,7 +34,7 @@ var R6MMainRender = (function($,window,document,undefined) {
   var getSVGMapHTML = function getSVGMapHTML(floors, imgUrlPrefix) {
     var html = '',
       prefix = imgUrlPrefix,
-      imgSrc = 'img/maps/' + prefix + '/' + prefix + '.svg';
+      imgSrc = 'img/maps/' + prefix + '.svg';
 
     html += '<div class="background loading">';
     html += '<object class="svgMap" data="' + imgSrc + '" type="image/svg+xml" style="visibility: hidden; top: -250px; left: -250px; height: 500px; width: 500px"></object>';

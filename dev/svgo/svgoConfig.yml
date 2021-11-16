@@ -1,0 +1,14 @@
+module.exports = {
+  plugins: [
+    {
+      name: 'preset-default',
+      params: {
+        overrides: {
+          removeHiddenElems: false,
+          cleanupIDs: false
+        },
+      },
+    },
+    'convertStyleToAttrs'
+  ],
+};

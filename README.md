@@ -12,6 +12,8 @@ r6calls is designed to be a quick reference for Rainbow Six Siege maps.  Please 
 - [Ruby](https://www.ruby-lang.org/en/)
     + [gem](https://rubygems.org/pages/download)
     + sass (`gem install sass`)
+    + gh-pages (`npm install gh-pages`)
+    + svgo (`npm -g install svgo`)
 
 To check the dependencies, just type `scss`. If the program waits for input, your dependencies are installed correctly.
 
