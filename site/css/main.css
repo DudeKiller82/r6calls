@@ -210,7 +210,7 @@ body, button, input, select {
   clear: both; }
 
 .loading {
-  background-image: url("../../img/spinner.svg");
+  background-image: url("../img/spinner.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%; }
@@ -296,7 +296,7 @@ nav {
     body.show-map-selection-grid nav #nav-logo div, nav #nav-logo:focus div {
       background-position: 0 -80px; }
     nav #nav-logo div {
-      background-image: url("../../img/r6calls-logo-nav-sprite.png");
+      background-image: url("../img/r6calls-logo-nav-sprite.png");
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 30px;
@@ -706,7 +706,7 @@ html.mm-pagedim-black #mm-blocker {
     bottom: 0px;
     right: 0;
     z-index: -100;
-    background-image: url("../../img/r6calls-logo-blue.png");
+    background-image: url("../img/r6calls-logo-blue.png");
     background-position: center bottom;
     background-position: 100% calc(100% + 18px);
     background-repeat: no-repeat;

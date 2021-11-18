@@ -1,91 +1,3 @@
-outback: {
-Storage Yard
-Pumps
-Camping
-// EXT
-Pumps
-Pumps
-Motel Parking
-Motel Parking
-Restaurant Parking
-Restaurant Parking
-Picnic
-Golf
-// 1F
-Walkway
-Walkway
-Restaurant Entrance
-Loading
-Garage Stairs
-Balcony Stairs
-Back Stairs
-Piano Stairs
-Shark Stairs
-Terrace Stairs
-Garage
-Garage
-Waiting
-Shop
-Beer
-Gear
-Compressor
-Reception
-Reptile
-Reptile
-Kitchen
-Restaurant
-Restaurant
-Back Entrance
-Ranger
-Nature
-Lobby
-Kitchen Hallway
-Connector
-Closet
-Bathroom
-// 2F
-Garage Stairs
-Balcony Stairs
-Back Stairs
-Piano Stairs
-Shark Stairs
-Terrace Stairs
-Lounge
-Shop Roof
-Balcony
-Office
-Supplies
-Bull
-Party
-Electrical
-Gaming
-Dorms
-Showers
-Shark
-Laundry
-Showers Hallway
-Piano
-Terrace
-// 3F
-Shop Roof
-Restaurant Roof
-Garage Roof
-Motel Roof
-plane: {
-Official Entrance
-Reporter Entrance
-Service Entrance
-// EXT
-Main Entrance
-Front Service Entrance
-Right Wing
-Back Service Entrance
-Reporter Entrance
-Left Wing
-Front Stairway
-Back Stairway
-// 0F
-// 1F
 Back Stairs
 Cargo
 Storage Corridor
@@ -94,6 +6,13 @@ Luggage
 Infirmary
 Front Stairs
 Technical
+
+
+
+
+
+
+
 // 2F
 Meeting
 Office Hallway
@@ -115,6 +34,12 @@ Bath room
 Cockpit Stairs
 Back Caterer
 Ladder
+
+
+
+
+
+
 // 3F
 Cockpit Stairs
 Cabin Staff
@@ -124,6 +49,24 @@ Front Caterer
 Server A
 Server B
 Server B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 skyscraper: {
 Helipad
 Tower
@@ -507,3 +450,76 @@ West Balcony
 East Balcony
 // 5F
 Roof
+outback: {
+Storage Yard
+Pumps
+Camping
+// EXT
+Pumps
+Pumps
+Motel Parking
+Motel Parking
+Restaurant Parking
+Restaurant Parking
+Picnic
+Golf
+// 1F
+Walkway
+Walkway
+Restaurant Entrance
+Loading
+Garage Stairs
+Balcony Stairs
+Back Stairs
+Piano Stairs
+Shark Stairs
+Terrace Stairs
+Garage
+Garage
+Waiting
+Shop
+Beer
+Gear
+Compressor
+Reception
+Reptile
+Reptile
+Kitchen
+Restaurant
+Restaurant
+Back Entrance
+Ranger
+Nature
+Lobby
+Kitchen Hallway
+Connector
+Closet
+Bathroom
+// 2F
+Garage Stairs
+Balcony Stairs
+Back Stairs
+Piano Stairs
+Shark Stairs
+Terrace Stairs
+Lounge
+Shop Roof
+Balcony
+Office
+Supplies
+Bull
+Party
+Electrical
+Gaming
+Dorms
+Showers
+Shark
+Laundry
+Showers Hallway
+Piano
+Terrace
+// 3F
+Shop Roof
+Restaurant Roof
+Garage Roof
+Motel Roof
