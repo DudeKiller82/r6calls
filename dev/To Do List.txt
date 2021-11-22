@@ -4,3 +4,4 @@ Add playable area layer
 Add learning mode
 Highlight Site texts
 Center Text on bomb sites
+Select Language
