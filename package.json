@@ -19,6 +19,7 @@
     "build:js": "npm run build:js:main",
     "watch:js": "npm run build:js:mkdir && npm-watch",
     "build": "npm run build:css && npm run build:js",
+    "buildAndDeploy": "npm run build:css && npm run build:js && npm run deploy",
     "buildAll": "npm run build:css && npm run build:js && npm run build:svg",
     "buildAllAndDeploy": "npm run build:css && npm run build:js && npm run build:svg && npm run deploy"
   },
