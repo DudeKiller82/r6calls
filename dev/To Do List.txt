@@ -1,7 +1,12 @@
-Split Breakable wall
-Fix Missing part on pictures
-Add playable area layer
-Add learning mode
-Highlight Site texts
+Bugs:
 Center Text on bomb sites
+Fix Missing part on pictures
+
+Missing features:
+Split Breakable wall
+Highlight Site texts
+
+Enhacements:
+Add learning mode
 Select Language
+Add playable area layer

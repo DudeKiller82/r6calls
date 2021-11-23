@@ -430,7 +430,7 @@ var R6MMainControls = (function($, window, document, undefined) {
       var svgObject = svgMaps[i].getSVGDocument();
 
       if (svgObject) {
-        for (j = -1; j < 5; j++) {
+        for (j = -1; j < 6; j++) {
           var layer = svgObject.getElementById('Floor ' + j);
 
           if (layer) {
