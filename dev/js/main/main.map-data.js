@@ -216,7 +216,8 @@ var R6MMainData = (function(undefined){
           { index: 1, name: floorTerms.firstFloor, default: true },
           { index: 2, name: floorTerms.secondFloor },
           { index: 3, name: floorTerms.thirdFloor },
-          { index: 4, name: floorTerms.roof }
+          { index: 4, name: floorTerms.fourthFloor },
+          { index: 5, name: floorTerms.roof }
         ]
       },
       villa: {
