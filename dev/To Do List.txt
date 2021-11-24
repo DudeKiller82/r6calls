@@ -10,3 +10,7 @@ Enhacements:
 Add learning mode
 Select Language
 Add playable area layer
+
+Legal:
+Licence
+Private project
