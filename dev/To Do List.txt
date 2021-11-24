@@ -6,7 +6,7 @@ Missing features:
 Split Breakable wall
 Highlight Site texts
 
-Enhacements:
+Enhancements:
 Add learning mode
 Select Language
 Add playable area layer

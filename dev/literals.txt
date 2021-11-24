@@ -1,31 +1,3 @@
-Bedroom Roof
-Main Stairs
-Red Stairs
-Astro Stairs
-Veranda
-Ninety
-Ninety Corner
-Ninety
-Study
-Gaming
-Bar
-Aviator
-Vault
-Landing
-Trophy Entrance
-Statue
-Trophy
-Master
-Astro
-Bathroom
-Closet
-
-
-
-
-
-
-
 yacht: {
 Submarine
 Zodiac
