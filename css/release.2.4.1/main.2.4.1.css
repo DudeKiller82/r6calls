@@ -296,7 +296,7 @@ nav {
     body.show-map-selection-grid nav #nav-logo div, nav #nav-logo:focus div {
       background-position: 0 -80px; }
     nav #nav-logo div {
-      background-image: url("../../img/r6calls-logo-nav-sprite.png");
+      background-image: url("../../img/r6calls-logo-nav-sprite@2x.png");
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 30px;
@@ -526,6 +526,7 @@ nav {
           #map-selection-grid ul li a div.wrapper.absolute.thumb {
             z-index: -1; }
             #map-selection-grid ul li a div.wrapper.absolute.thumb div {
+              background-image: url("../../img/map-thumbs.jpg");
               height: 278px;
               min-width: 495px;
               width: 495px;
@@ -563,6 +564,132 @@ nav {
             background-color: #3a6082 !important;
             color: #fff !important; }
         #map-selection-grid ul li a:active p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.bank div.image.thumb {
+          background-position: 0px 0px; }
+        body[loaded-map="bank"] #map-selection-grid ul li a.bank p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.bartlett div.image.thumb {
+          background-position: 0px -3892px; }
+        body[loaded-map="bartlett"] #map-selection-grid ul li a.bartlett p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.border div.image.thumb {
+          background-position: 0px -278px; }
+        body[loaded-map="border"] #map-selection-grid ul li a.border p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.chalet div.image.thumb {
+          background-position: 0px -556px; }
+        body[loaded-map="chalet"] #map-selection-grid ul li a.chalet p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.club div.image.thumb {
+          background-position: 0px -834px; }
+        body[loaded-map="club"] #map-selection-grid ul li a.club p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.consulate div.image.thumb {
+          background-position: 0px -1112px; }
+        body[loaded-map="consulate"] #map-selection-grid ul li a.consulate p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.coastline div.image.thumb {
+          background-position: 0px -4170px; }
+        body[loaded-map="coastline"] #map-selection-grid ul li a.coastline p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.favela div.image.thumb {
+          background-position: 0px -1390px; }
+        body[loaded-map="favela"] #map-selection-grid ul li a.favela p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.fortress div.image.thumb {
+          background-position: 0px -5282px; }
+        body[loaded-map="fortress"] #map-selection-grid ul li a.favela p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.hereford div.image.thumb {
+          background-position: 0px -1668px; }
+        body[loaded-map="hereford"] #map-selection-grid ul li a.hereford p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.house div.image.thumb {
+          background-position: 0px -1946px; }
+        body[loaded-map="house"] #map-selection-grid ul li a.house p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.kafe div.image.thumb {
+          background-position: 0px -2224px; }
+        body[loaded-map="kafe"] #map-selection-grid ul li a.kafe p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.kanal div.image.thumb {
+          background-position: 0px -2502px; }
+        body[loaded-map="kanal"] #map-selection-grid ul li a.kanal p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.oregon div.image.thumb {
+          background-position: 0px -2780px; }
+        body[loaded-map="oregon"] #map-selection-grid ul li a.oregon p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.outback div.image.thumb {
+          background-position: 0px -5560px; }
+        body[loaded-map="outback"] #map-selection-grid ul li a.outback p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.plane div.image.thumb {
+          background-position: 0px -3058px; }
+        body[loaded-map="plane"] #map-selection-grid ul li a.plane p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.skyscraper div.image.thumb {
+          background-position: 0px -3614px; }
+        body[loaded-map="skyscraper"] #map-selection-grid ul li a.skyscraper p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.themepark div.image.thumb {
+          background-position: 0px -4448px; }
+        body[loaded-map="themepark"] #map-selection-grid ul li a.themepark p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.tower div.image.thumb {
+          background-position: 0px -4726px; }
+        body[loaded-map="themepark"] #map-selection-grid ul li a.themepark p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.villa div.image.thumb {
+          background-position: 0px -5004px; }
+        body[loaded-map="villa"] #map-selection-grid ul li a.themepark p {
+          background-color: #ffdb00;
+          color: #000;
+          text-shadow: none; }
+        #map-selection-grid ul li a.yacht div.image.thumb {
+          background-position: 0px -3336px; }
+        body[loaded-map="yacht"] #map-selection-grid ul li a.yacht p {
           background-color: #ffdb00;
           color: #000;
           text-shadow: none; }
@@ -1052,6 +1179,9 @@ body {
     .map-main .map-elements img, .map-main .map-elements div, .map-main .map-elements a {
       position: absolute; }
     .map-main .map-elements .background {
+      -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 1000; }
       .map-main .map-elements .background .svgMap {
         pointer-events: none; }
