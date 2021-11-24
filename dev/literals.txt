@@ -1,68 +1,3 @@
-villa: {
-Main Road
-Ruins
-Fountain
-// EXT
-Ruins
-Roundabout
-Terrace
-Terrace
-Crypt Entrance
-Garden
-Driveway
-Driveway
-Driveway
-Main Road
-Balcony
-Pergola
-Stable YArd
-Chapel
-Fountain
-Stable
-Side Road
-// 0F
-Crypt Tunnel
-Crypt
-Garage
-Cellar Tunnel
-Tasting
-Arch
-Art
-Office
-Wine
-Red Stairs
-Back Stairs
-Pantry Stairs
-// 1F
-Main Stairs
-Red Stairs
-Astro Stairs
-Back Stairs
-Pantry Stairs
-Greenhouse
-Front Entrance
-Main
-Studio
-Library
-Library
-Piano Hallway
-Piano Hallway
-Piano
-Gallery
-Toilet
-Living
-Living
-Bicycle
-Memorial
-Mudroom
-Living Hallway
-Laundry
-Back Hallway
-Dining
-China
-Kitchen
-Pantry
-// 2F
 Bedroom Roof
 Main Stairs
 Red Stairs
@@ -84,9 +19,13 @@ Master
 Astro
 Bathroom
 Closet
-// 3F
-Roof
-Skyligh Roof
+
+
+
+
+
+
+
 yacht: {
 Submarine
 Zodiac
