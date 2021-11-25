@@ -182,6 +182,8 @@ var R6MMainControls = (function($, window, document, undefined) {
       html += '<button href="" id="full-screen">Full screen</button>';
       html += '<br>';
     }
+    html += '<a class="menu-item" id="menu-discord" href="https://discord.gg/uFXfpMnD57">Join Discord</a>';
+    html += '<br>';
     html += '<a class="menu-item" id="menu-about" href="about/about.html">About</a>';
     html += '</div>';
     return html;
