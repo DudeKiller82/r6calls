@@ -1,16 +1,3 @@
-yacht: {
-Submarine
-Zodiac
-Snow Mobile
-// EXT
-Submarine
-West Glacier
-East Breach
-East Glacier
-Frozen River
-Zodiac
-West Breach
-// 1F
 Engine
 Back Entrance
 Rear Deck
@@ -20,6 +7,10 @@ Back Stairs
 ladder
 Engine Hallway
 Front Stairs
+
+
+
+
 // 2F
 Cafeteria
 Control
@@ -37,6 +28,10 @@ Front Stairs
 Utility
 Anchor
 Boreal Entrance
+
+
+
+
 // 3F
 Spa Deck
 East Deck
@@ -58,6 +53,9 @@ Top Stairs
 Front Stairs
 Kitchen Stairs
 Back Stairs
+
+
+
 // 4F
 Maps
 Cockpit
@@ -69,8 +67,10 @@ Helipad Entrance
 Helipad
 West Balcony
 East Balcony
-// 5F
-Roof
+
+
+
+
 outback: {
 Storage Yard
 Pumps
