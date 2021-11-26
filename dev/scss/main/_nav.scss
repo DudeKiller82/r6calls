@@ -58,7 +58,7 @@ nav {
       }
     }
 
-    body.show-map-selection-grid &,
+    body.show-select-map &,
     &:focus {
       div {
         background-position: 0 -80px;
@@ -66,7 +66,7 @@ nav {
     }
 
     div {
-      background-image: url($img-location + 'r6calls-logo-nav-sprite.png');
+      background-image: url($img-location + 'r6calls-logo-nav-sprite@2x.png');
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 30px;
@@ -78,7 +78,7 @@ nav {
     }
   }
 
-  #map-selection-heading {
+  #select-map-heading {
     display: none;
     font-size: 1.4rem;
     font-weight: 700;
@@ -90,7 +90,7 @@ nav {
       margin-right: $control-padding-left-right;
     }
 
-    body.show-map-selection-grid & {
+    body.show-select-map & {
       display: inline;
     }
 
@@ -124,6 +124,12 @@ nav {
     }
   }
 
+  #objective-control {
+    @media screen and (max-width: $break-small) {
+      width: 80px;
+    }
+  }
+
   a {
     color: #fff;
     text-decoration: none;
@@ -133,7 +139,16 @@ nav {
     }
   }
 
-  #floor-control {
+  #toggle-control {
+      button:focus {
+        background-color: #fff;
+      }
+      button:focus:hover {
+        background-color: $r6-blue;
+      }
+  }
+
+  #floor-control, #toggle-control {
     display: inline-block;
     margin-left: $control-padding-left-right;
 

@@ -14,25 +14,30 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     $pingMarkersVertical,
     $pingMarkersHorizontal,
     $pingMarkersOtherFloor,
+    isCameraCallback,
     SVG_DIM
   ) {
     return function handleTap(event) {
-      var $mapWrapper =  $(event.target).closest('.map-container'),
-        pingPosition = getPingPosition(event.center.x, event.center.y, $mapWrapper),
-        newX = pingPosition.x,
-        newY = pingPosition.y,
-        originFloorIndex = $mapWrapper.attr('show-floor-index');
+      var $targetEl = $(event.srcEvent.target);
 
-      movePingMarkers(
-        $pingMarkers,
-        $pingMarkerAccents,
-        $pingMarkersVertical,
-        $pingMarkersHorizontal,
-        $pingMarkersOtherFloor,
-        newX + SVG_DIM.LEFT_OFFSET,
-        newY + SVG_DIM.TOP_OFFSET,
-        originFloorIndex
-      );
+      if (!isCameraCallback($targetEl)) {
+        var $mapWrapper =  $(event.target).closest('.map-wrapper'),
+          pingPosition = getPingPosition(event.center.x, event.center.y, $mapWrapper),
+          newX = pingPosition.x,
+          newY = pingPosition.y,
+          originFloorIndex = $mapWrapper.attr('show-floor-index');
+
+        movePingMarkers(
+          $pingMarkers,
+          $pingMarkerAccents,
+          $pingMarkersVertical,
+          $pingMarkersHorizontal,
+          $pingMarkersOtherFloor,
+          newX + SVG_DIM.LEFT_OFFSET,
+          newY + SVG_DIM.TOP_OFFSET,
+          originFloorIndex
+        );
+      }
     };
   };
 
@@ -114,7 +119,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     refreshPings = function refreshPings() {
       $.each($pingMarkersOtherFloor, function(index, otherFloorMarker) {
         var $marker = $(otherFloorMarker);
-        var currentFloorIndex = $marker.closest('.map-container').attr('show-floor-index');
+        var currentFloorIndex = $marker.closest('.map-wrapper').attr('show-floor-index');
 
         if (!originFloorIndex || originFloorIndex == currentFloorIndex) {
           $marker.attr('transform', 'translate(-10000 -10000)');
@@ -127,7 +132,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
 
       $.each($pingMarkers, function(index, pingMarker) {
         var $marker = $(pingMarker);
-        var currentFloorIndex = $marker.closest('.map-container').attr('show-floor-index');
+        var currentFloorIndex = $marker.closest('.map-wrapper').attr('show-floor-index');
 
         if (!originFloorIndex || originFloorIndex == currentFloorIndex) {
           $marker.removeClass('other-floor');
@@ -170,7 +175,12 @@ var R6MMainDrawing = (function($, window, document, undefined) {
     refreshPings();
   };
 
-  var setupMarkers = function setupMarkers ($mapMains, $drawingMarkerWrappers, SVG_DIM) {
+  var setup = function setup (
+    $mapMains,
+    $drawingMarkerWrappers,
+    isCameraCallback,
+    SVG_DIM
+  ) {
     populateStartingMarkers($drawingMarkerWrappers, SVG_DIM);
 
     var $pingMarkers = $drawingMarkerWrappers.find('.ping-marker.center'),
@@ -178,7 +188,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
       $pingMarkersVertical = $drawingMarkerWrappers.find('.ping-marker.vertical'),
       $pingMarkersHorizontal = $drawingMarkerWrappers.find('.ping-marker.horizontal'),
       $pingMarkersOtherFloor = $drawingMarkerWrappers.find('.ping-marker.other-floor'),
-      handleTap = getHandleTapFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor, SVG_DIM),
+      handleTap = getHandleTapFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor, isCameraCallback, SVG_DIM),
       resizePingMarkers = getResizePingMarkersFn($pingMarkers, $pingMarkerAccents, $mapMains, $pingMarkersOtherFloor),
       hidePingMarkers = getHidePingMarkersFn($pingMarkers, $pingMarkerAccents, $pingMarkersVertical, $pingMarkersHorizontal, $pingMarkersOtherFloor);
 
@@ -194,7 +204,7 @@ var R6MMainDrawing = (function($, window, document, undefined) {
   };
 
   return  {
-    setupMarkers: setupMarkers,
+    setup: setup,
     refreshPings: refreshPingsWrapper
   };
 })(window.jQuery, window, document);

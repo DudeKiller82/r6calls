@@ -10,7 +10,7 @@ $map-thumb-height: 278px;
   text-shadow: none;
 }
 
-#map-selection-grid {
+#select-map-grid {
   background-color: $less-faded-bg;
   height: 100vh;
   opacity: 0;
@@ -19,13 +19,13 @@ $map-thumb-height: 278px;
   transition: visibility 0.5s, opacity 0.5s linear;
   visibility: hidden;
   width: 100%;
-  z-index: $z-map-selection-grid;
+  z-index: $z-select-map-grid;
 
   &.enable-thumb-transition div.image.thumb {
     transition: all 0.6s;
   }
 
-  body.show-map-selection-grid & {
+  body.show-select-map & {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -67,6 +67,7 @@ $map-thumb-height: 278px;
             z-index: -1;
 
             div {
+              background-image: url($img-location + 'map-thumbs.jpg');
               height: 278px;
               min-width: 495px;
               width: 495px;
@@ -120,6 +121,153 @@ $map-thumb-height: 278px;
           p {
             @include map-name-selected();
           }
+        }
+
+        &.bank div.image.thumb {
+          @include map-thumb-icon(1);
+        }
+        body[loaded-map="bank"] &.bank p {
+          @include map-name-selected();
+        }
+
+        &.bartlett div.image.thumb {
+          @include map-thumb-icon(15);
+        }
+        body[loaded-map="bartlett"] &.bartlett p {
+          @include map-name-selected();
+        }
+
+        &.border div.image.thumb {
+          @include map-thumb-icon(2);
+        }
+        body[loaded-map="border"] &.border p {
+          @include map-name-selected();
+        }
+
+        &.chalet div.image.thumb {
+          @include map-thumb-icon(3);
+        }
+        body[loaded-map="chalet"] &.chalet p {
+          @include map-name-selected();
+        }
+
+        &.club div.image.thumb {
+          @include map-thumb-icon(4);
+        }
+        body[loaded-map="club"] &.club p {
+          @include map-name-selected();
+        }
+
+        &.consulate div.image.thumb {
+          @include map-thumb-icon(5);
+        }
+        body[loaded-map="consulate"] &.consulate p {
+          @include map-name-selected();
+        }
+
+        &.coastline div.image.thumb {
+          @include map-thumb-icon(16);
+        }
+        body[loaded-map="coastline"] &.coastline p {
+          @include map-name-selected();
+        }
+
+        &.favela div.image.thumb {
+          @include map-thumb-icon(6);
+        }
+        body[loaded-map="favela"] &.favela p {
+          @include map-name-selected();
+        }
+
+        &.fortress div.image.thumb {
+          @include map-thumb-icon(20);
+        }
+        body[loaded-map="fortress"] &.favela p {
+          @include map-name-selected();
+        }
+
+        &.hereford div.image.thumb {
+          @include map-thumb-icon(7);
+        }
+        body[loaded-map="hereford"] &.hereford p {
+          @include map-name-selected();
+        }
+
+        &.house div.image.thumb {
+          @include map-thumb-icon(8);
+        }
+        body[loaded-map="house"] &.house p {
+          @include map-name-selected();
+        }
+
+        &.kafe div.image.thumb {
+          @include map-thumb-icon(9);
+        }
+        body[loaded-map="kafe"] &.kafe p {
+          @include map-name-selected();
+        }
+
+        &.kanal div.image.thumb {
+          @include map-thumb-icon(10);
+        }
+        body[loaded-map="kanal"] &.kanal p {
+          @include map-name-selected();
+        }
+
+        &.oregon div.image.thumb {
+          @include map-thumb-icon(11);
+        }
+        body[loaded-map="oregon"] &.oregon p {
+          @include map-name-selected();
+        }
+
+        &.outback div.image.thumb {
+          @include map-thumb-icon(21);
+        }
+        body[loaded-map="outback"] &.outback p {
+          @include map-name-selected();
+        }
+
+        &.plane div.image.thumb {
+          @include map-thumb-icon(12);
+        }
+        body[loaded-map="plane"] &.plane p {
+          @include map-name-selected();
+        }
+
+        &.skyscraper div.image.thumb {
+          @include map-thumb-icon(14);
+        }
+        body[loaded-map="skyscraper"] &.skyscraper p {
+          @include map-name-selected();
+        }
+
+        &.themepark div.image.thumb {
+          @include map-thumb-icon(17);
+        }
+        body[loaded-map="themepark"] &.themepark p {
+          @include map-name-selected();
+        }
+
+        &.tower div.image.thumb {
+          @include map-thumb-icon(18);
+        }
+        body[loaded-map="themepark"] &.themepark p {
+          @include map-name-selected();
+        }
+
+        &.villa div.image.thumb {
+          @include map-thumb-icon(19);
+        }
+        body[loaded-map="villa"] &.themepark p {
+          @include map-name-selected();
+        }
+
+        &.yacht div.image.thumb {
+          @include map-thumb-icon(13);
+        }
+        body[loaded-map="yacht"] &.yacht p {
+          @include map-name-selected();
         }
       }
     }

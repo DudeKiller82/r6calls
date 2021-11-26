@@ -6,6 +6,8 @@ cache: npm
 
 jobs:
   include:
+    - stage: test
+      script: npm run test
     - stage: deploy
       if: branch = master
       before_script: gem install sass

@@ -128,10 +128,8 @@ $custom-mmenu-padding-smaller: 0.5rem;
     }
 
     .checkbox-wrapper {
-      display: flex;
-      flex-direction: column;
+      display: inline-block;
       font-size: 1.05rem;
-      font-weight: 700;
       margin-bottom: $custom-mmenu-padding-smaller;
       margin-left: $custom-mmenu-padding - 0.1;
       white-space: no-wrap;
@@ -149,12 +147,6 @@ $custom-mmenu-padding-smaller: 0.5rem;
           margin-left: $custom-mmenu-padding - 0.1;
         }
       }
-    }
-
-    .checkbox-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
     }
 
     .zoom.controls {
@@ -180,7 +172,7 @@ $custom-mmenu-padding-smaller: 0.5rem;
   padding-bottom: 1rem;
 }
 
-#lock-container {
+#lock-wrapper {
   margin-top: -0.3rem;
 }
 
