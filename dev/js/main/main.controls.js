@@ -205,7 +205,9 @@ var R6MMainControls = (function($, window, document, undefined) {
 
     html += '<div id="lock-container">';
     html += '<div class="checkbox-wrapper">';
+    html += '<div class="checkbox-item">';
     html += '<input type="checkbox" checked="checked" id="option-lfa">Lock floor alignment</input>';
+    html += '</div>';
     html += '</div>';
     html += '</div>';
 
