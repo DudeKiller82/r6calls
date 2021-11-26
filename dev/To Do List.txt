@@ -4,7 +4,6 @@ Fix Missing part on pictures
 
 Missing features:
 Split Breakable wall
-Highlight Site texts
 
 Enhancements:
 Add learning mode
